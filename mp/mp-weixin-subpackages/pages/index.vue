@@ -1,0 +1,16 @@
+<template>
+	<view class="">
+		<navigator url="/pages/classify/index">跳转classify</navigator>
+		
+		<view class="" style="height: 100rpx;width: 1px;">
+			
+		</view>
+		<navigator url="/pages/public/index">跳转public</navigator>
+	</view>
+</template>
+
+<script setup>
+</script>
+
+<style>
+</style>

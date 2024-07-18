@@ -1,0 +1,74 @@
+{
+	"pages": [{
+			"path": "pages/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		},{
+			"path": "pages/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}
+		
+	],
+	"subPackages": [{
+			"root": "pages/public",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				}
+				
+			]
+		},
+		{
+			"root": "pages/classify",
+			"pages": [{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "test",
+		"navigationBarBackgroundColor": "#F4F6FA",
+		"backgroundColor": "#F4F6FA",
+		"app-plus": {
+			// #ifdef H5
+			"titleNView": false,
+			// #endif
+			"scrollIndicator": "none"
+		}
+	},
+	"tabBar": {
+		"color": "#303133",
+		"selectedColor": "#F8A601",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index",
+			"text": "首页",
+			"iconPath": "/static/home.png",
+			"selectedIconPath": "/static/home_active.png"
+		},
+		{
+			"pagePath": "pages/home",
+			"text": "首页1",
+			"iconPath": "/static/home.png",
+			"selectedIconPath": "/static/home_active.png"
+		}]
+	}
+}
