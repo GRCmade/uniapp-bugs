@@ -1,0 +1,1 @@
+<view class="content"><view>使用作用域插槽时，后备内容没有展示</view><test1 u-s="{{['d']}}" u-i="01f7d7a4-0" onVI="__l"><view a:for="{{a}}" a:for-item="v0" a:key="a" slot="{{v0.b}}"></view></test1><view style="margin-top:20px">未使用作用域插槽时，后备内容正常展示</view><test1 u-s="{{['d']}}" u-i="01f7d7a4-1" onVI="__l"><view></view></test1></view>

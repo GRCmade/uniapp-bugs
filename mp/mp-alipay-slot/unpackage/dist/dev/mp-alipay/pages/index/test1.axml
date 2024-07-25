@@ -1,0 +1,1 @@
+<view> 我是子组件1 <slot name="d"></slot><view> 其他插槽: <slot name="other"><view style="color:red">后备内容</view></slot></view></view>
