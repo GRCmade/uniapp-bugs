@@ -1,4 +1,113 @@
 <template>
+	<view class="uni-margin-wrap">
+		<list>
+			<cell>
+				<swiper :style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px'}"
+					@change="swiperChange">
+				
+					<swiper-item v-for="(item,index) in detailimglist" :key="index">
+				
+						<image mode="aspectFill" fade-show="false"
+							style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px',}"
+							:src="item.imgurl" @load="load">
+						</image>
+				
+					</swiper-item>
+				
+				</swiper>
+			</cell>
+		</list>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				background: ['color1', 'color2', 'color3'],
+				indicatorDots: true,
+				autoplay: false,
+				interval: 2000,
+				duration: 500,
+				detailimglist: [{
+
+						imgurl: 'https://sns-webpic-qc.xhscdn.com/202407251134/d4a209fa96a06de29bda721a1d963d68/1040g00831550k0k3h46g5pa1rnv11frn78vqegg!nd_dft_wlteh_webp_3'
+
+					},
+					{
+						imgurl: require('@/static/pic1.png')
+					},
+					{
+						imgurl: require('@/static/pic2.png')
+
+					}
+				],
+			}
+		},
+		methods: {
+			load(e){
+				console.log("load",e)
+			},
+			changeIndicatorDots(e) {
+				this.indicatorDots = !this.indicatorDots
+			},
+			changeAutoplay(e) {
+				this.autoplay = !this.autoplay
+			},
+			intervalChange(e) {
+				this.interval = e.target.value
+			},
+			durationChange(e) {
+				this.duration = e.target.value
+			}
+		}
+	}
+</script>
+
+
+<style>
+	.uni-margin-wrap {
+			width: 300px;
+		}
+
+	.swiper {
+		height: 300px;
+		width: 300px;
+		background-color: red;
+	}
+
+	.swiper-item {
+		/* display: block; */
+		height: 300px;
+		line-height: 300px;
+		text-align: center;
+		width: 300px !important;
+	}
+
+	.swiper-list {
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+
+	.uni-common-mt {
+		margin-top: 60px;
+		position: relative;
+	}
+
+	.info {
+		position: absolute;
+		right: 20px;
+	}
+
+	.uni-padding-wrap {
+		width: 550px;
+		padding: 0 100px;
+	}
+</style>
+
+
+<!-- <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
@@ -57,4 +166,4 @@
 		font-size: 36rpx;
 		color: #8f8f94;
 	}
-</style>
+</style -->>

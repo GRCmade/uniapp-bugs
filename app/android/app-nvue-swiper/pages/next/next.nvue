@@ -1,18 +1,23 @@
 <template>
 	<view class="uni-margin-wrap">
-		<swiper :style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px'}"
-			@change="swiperChange">
+		<list>
+			<cell :recycle="false">
+				<swiper :style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px'}"
+					@change="swiperChange">
+				
+					<swiper-item v-for="(item,index) in detailimglist" :key="index">
+				
+						<image mode="aspectFill" fade-show="false"
+							style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px',}"
+							:src="item.imgurl">
+						</image>
+				
+					</swiper-item>
+				
+				</swiper>
+			</cell>
+		</list>
 		
-			<swiper-item v-for="(item,index) in detailimglist" :key="index">
-		
-				<image mode="aspectFill" fade-show="false"
-					style="{maxHeight: imgheight + 'px',minHeight: '300px',width: bwidth + 'px',}"
-					:src="item.imgurl">
-				</image>
-		
-			</swiper-item>
-		
-		</swiper>
 	</view>
 </template>
 
