@@ -1,0 +1,10 @@
+{
+  "name": "ask-include",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+	"node-xlsx": "^0.15.0"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
