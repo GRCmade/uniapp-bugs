@@ -1,0 +1,1 @@
+<view class="uni-tooltip"><slot></slot><view tt:if="{{a}}" class="uni-tooltip-popup"><slot name="content">{{b}}</slot></view></view>

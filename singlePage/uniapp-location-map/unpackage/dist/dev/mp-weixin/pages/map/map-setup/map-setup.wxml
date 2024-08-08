@@ -1,0 +1,1 @@
+<view><view class="page-body"><view class="page-section page-section-gap"><map catchtap="{{a}}" ref="mapref" id="map" style="width:100%;height:300px" latitude="{{b}}" longitude="{{c}}" markers="{{d}}"></map></view></view><view style="height:1000rpx"> 1 </view><button bindtap="{{e}}">click</button></view>

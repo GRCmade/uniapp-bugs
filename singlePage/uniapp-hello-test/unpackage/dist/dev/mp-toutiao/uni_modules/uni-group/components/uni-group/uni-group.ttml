@@ -1,0 +1,1 @@
+<view class="{{('uni-group') + ' ' + e + ' ' + f}}" style="{{'margin-top:' + g}}"><slot name="title"><view tt:if="{{a}}" class="uni-group__title" style="{{'padding-left:' + c}}"><text class="uni-group__title-text">{{b}}</text></view></slot><view class="{{('uni-group__content') + ' ' + (d && 'group-conent-padding')}}"><slot/></view></view>
