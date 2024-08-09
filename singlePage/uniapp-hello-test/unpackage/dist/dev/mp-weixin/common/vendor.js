@@ -8779,6 +8779,12 @@ const topWindow = {
 };
 const pages = [
   {
+    path: "pages/ask/index",
+    style: {
+      navigationBarTitleText: "index"
+    }
+  },
+  {
     path: "pages/tabBar/component/component",
     style: {
       navigationBarTitleText: "内置组件",
@@ -9074,6 +9080,72 @@ const pages = [
         titleNView: false
       },
       disableScroll: true
+    }
+  },
+  {
+    path: "pages/ask/problem/196244/196244",
+    style: {
+      navigationBarTitleText: "196244"
+    }
+  },
+  {
+    path: "pages/ask/problem/196246/196246",
+    style: {
+      navigationBarTitleText: "196246"
+    }
+  },
+  {
+    path: "pages/ask/problem/196231/196231",
+    style: {
+      navigationBarTitleText: "196231"
+    }
+  },
+  {
+    path: "pages/ask/problem/196205/196205",
+    style: {
+      navigationBarTitleText: "196205"
+    }
+  },
+  {
+    path: "pages/ask/problem/188927/188927",
+    style: {
+      navigationBarTitleText: "188927"
+    }
+  },
+  {
+    path: "pages/ask/doc/docisue141/docisue141",
+    style: {
+      navigationBarTitleText: "docisue141"
+    }
+  },
+  {
+    path: "pages/ask/problem/196306/196306",
+    style: {
+      navigationBarTitleText: "196306"
+    }
+  },
+  {
+    path: "pages/ask/problem/194699/194699",
+    style: {
+      navigationBarTitleText: "194699"
+    }
+  },
+  {
+    path: "pages/ask/doc/docisue122/docisue122",
+    style: {
+      navigationBarTitleText: "docisue122"
+    }
+  },
+  {
+    path: "pages/ask/problem/41230/41230",
+    style: {
+      navigationBarTitleText: "41230"
+    }
+  },
+  {
+    path: "pages/ask/doc/docisue124/docisue124",
+    style: {
+      navigationBarTitleText: "docisue124"
     }
   }
 ];
@@ -9835,6 +9907,12 @@ const tabBar = {
   borderStyle: "black",
   backgroundColor: "#F8F8F8",
   list: [
+    {
+      pagePath: "pages/ask/index",
+      iconPath: "static/logo.png",
+      selectedIconPath: "static/logo.png",
+      text: "首页"
+    },
     {
       pagePath: "pages/tabBar/component/component",
       iconPath: "static/component.png",
@@ -12598,7 +12676,7 @@ let Js = new class {
 })();
 var Vs = Js;
 var define_process_env_UNI_STATISTICS_CONFIG_default = { version: "2", enable: true };
-var define_process_env_UNI_STAT_TITLE_JSON_default = { "pages/tabBar/component/component": "内置组件", "pages/tabBar/API/API": "接口", "pages/tabBar/template/template": "模版", "pages/tabBar/extUI/extUI": "扩展组件", "pages/component/view/view": "view", "pages/component/scroll-view/scroll-view": "scroll-view", "pages/component/swiper/swiper": "swiper", "pages/component/cover-view/cover-view": "cover-view", "pages/component/movable-view/movable-view": "movable-view", "pages/component/text/text": "text", "pages/component/rich-text/rich-text": "rich-text", "pages/component/progress/progress": "progress", "pages/component/button/button": "button", "pages/component/checkbox/checkbox": "checkbox", "pages/component/form/form": "form", "pages/component/input/input": "input", "pages/component/label/label": "label", "pages/component/picker/picker": "picker", "pages/component/picker-view/picker-view": "picker-view", "pages/component/radio/radio": "radio", "pages/component/slider/slider": "slider", "pages/component/switch/switch": "switch", "pages/component/textarea/textarea": "textarea", "pages/component/editor/editor": "editor", "pages/component/navigator/navigator": "navigator", "pages/component/navigator/navigate/navigate": "navigatePage", "pages/component/navigator/redirect/redirect": "redirectPage", "pages/component/image/image": "image", "pages/component/video/video": "video", "pages/component/map/map": "map", "pages/component/canvas/canvas": "canvas", "pages/component/web-view/web-view": "web-view", "pages/API/login/login": "授权登录", "pages/API/get-user-info/get-user-info": "获取用户信息", "pages/API/request-payment/request-payment": "发起支付", "pages/API/share/share": "分享", "pages/API/set-navigation-bar-title/set-navigation-bar-title": "设置界面标题", "pages/API/show-loading/show-loading": "加载提示框", "pages/API/navigator/navigator": "页面跳转", "pages/API/navigator/new-page/new-vue-page-1": "新VUE页面1", "pages/API/navigator/new-page/new-vue-page-2": "新VUE页面2", "pages/API/pull-down-refresh/pull-down-refresh": "下拉刷新", "pages/API/animation/animation": "创建动画", "pages/API/get-node-info/get-node-info": "节点信息", "pages/API/intersection-observer/intersection-observer": "节点布局相交状态", "pages/API/canvas/canvas": "创建绘画", "pages/API/action-sheet/action-sheet": "操作菜单", "pages/API/modal/modal": "模态弹窗", "pages/API/toast/toast": "消息提示框", "pages/API/get-network-type/get-network-type": "获取设备网络状态", "pages/API/get-system-info/get-system-info": "获取设备系统信息", "pages/API/add-phone-contact/add-phone-contact": "添加手机联系人", "pages/API/on-accelerometer-change/on-accelerometer-change": "监听加速度计数据", "pages/API/on-compass-change/on-compass-change": "监听罗盘数据", "pages/API/make-phone-call/make-phone-call": "打电话", "pages/API/scan-code/scan-code": "扫码", "pages/API/clipboard/clipboard": "剪贴板", "pages/API/request/request": "网络请求", "pages/API/upload-file/upload-file": "上传文件", "pages/API/download-file/download-file": "下载文件", "pages/API/image/image": "图片", "pages/API/voice/voice": "录音", "pages/API/inner-audio/inner-audio": "音频", "pages/API/background-audio/background-audio": "背景音频", "pages/API/video/video": "视频", "pages/API/file/file": "文件", "pages/API/map/map": "map", "pages/API/get-location/get-location": "获取位置", "pages/API/open-location/open-location": "查看位置", "pages/API/choose-location/choose-location": "使用地图选择位置", "pages/API/storage/storage": "数据存储", "pages/API/sqlite/sqlite": "SQLite", "pages/API/rewarded-video-ad/rewarded-video-ad": "激励视频广告", "pages/API/brightness/brightness": "屏幕亮度", "pages/API/save-media/save-media": "保存媒体到本地", "pages/API/bluetooth/bluetooth": "蓝牙", "pages/API/soter/soter": "生物认证", "pages/API/ibeacon/ibeacon": "iBeacon", "pages/API/vibrate/vibrate": "震动", "pages/API/websocket-socketTask/websocket-socketTask": "websocket-socketTask", "pages/API/websocket-global/websocket-global": "websocket-global", "pages/extUI/forms/forms": "Form 表单", "pages/extUI/group/group": "Group 分组", "pages/extUI/badge/badge": "Badge 数字角标", "pages/extUI/breadcrumb/breadcrumb": "Breadcrumb 面包屑", "pages/extUI/countdown/countdown": "Countdown 倒计时", "pages/extUI/drawer/drawer": "Drawer 抽屉", "pages/extUI/icons/icons": "Icons 图标", "pages/extUI/load-more/load-more": "LoadMore 加载更多", "pages/extUI/nav-bar/nav-bar": "NavBar 导航栏", "pages/extUI/number-box/number-box": "NumberBox 数字输入框", "pages/extUI/popup/popup": "Popup 弹出层", "pages/extUI/segmented-control/segmented-control": "SegmentedControl 分段器", "pages/extUI/tag/tag": "Tag 标签", "pages/extUI/list/list": "List 列表", "pages/extUI/card/card": "Card 卡片", "pages/extUI/collapse/collapse": "Collapse 折叠面板", "pages/extUI/pagination/pagination": "Pagination 分页器", "pages/extUI/swiper-dot/swiper-dot": "SwiperDot 轮播图指示点", "pages/extUI/grid/grid": "Grid 宫格", "pages/extUI/rate/rate": "Rate 评分", "pages/extUI/steps/steps": "Steps 步骤条", "pages/extUI/notice-bar/notice-bar": "NoticeBar 通告栏", "pages/extUI/swipe-action/swipe-action": "SwipeAction 滑动操作", "pages/extUI/search-bar/search-bar": "SearchBar 搜索栏", "pages/extUI/calendar/calendar": "Calendar 日历", "pages/extUI/indexed-list/indexed-list": "IndexedList 索引列表", "pages/extUI/fab/fab": "Fab 悬浮按钮", "pages/extUI/fav/fav": "Fav 收藏按钮", "pages/extUI/goods-nav/goods-nav": "GoodsNav 商品导航", "pages/extUI/section/section": "Section 标题栏", "pages/extUI/transition/transition": "Transition 过渡动画", "pages/extUI/title/title": "Title 章节标题", "pages/extUI/tooltip/tooltip": "Tooltip 文字提示", "pages/extUI/link/link": "Link 链接", "pages/extUI/combox/combox": "Combox 组合框", "pages/extUI/dateformat/dateformat": "Dateformat 日期格式化", "pages/extUI/data-checkbox/data-checkbox": "DataCheckbox 单选复选框", "pages/extUI/easyinput/easyinput": "Easyinput 增强输入框", "pages/extUI/data-picker/data-picker": "DataPicker 级联选择", "pages/extUI/data-select/data-select": "DataSelect 下拉框", "pages/extUI/datetime-picker/datetime-picker": "DatetimePicker 日期时间", "pages/extUI/row/row": "Layout 布局", "pages/extUI/file-picker/file-picker": "FilePicker 文件选择上传", "pages/extUI/space/space": "间距", "pages/extUI/font/font": "字体", "pages/extUI/color/color": "颜色", "pages/extUI/radius/radius": "圆角", "pages/template/nav-default/nav-default": "默认导航栏", "pages/template/component-communication/component-communication": "组件通讯", "pages/template/list2detail-list/list2detail-list": "列表到详情示例", "pages/template/list2detail-detail/list2detail-detail": "详情", "pages/template/tabbar/tabbar": "可拖动顶部选项卡", "pages/template/tabbar/detail/detail": "详情页面", "pages/template/swiper-vertical/swiper-vertical": "上下滑动切换视频", "pages/template/swiper-list/swiper-list": "swiper-list", "pages/template/scheme/scheme": "打开外部应用", "pages/template/global/global": "GlobalData和vuex" };
+var define_process_env_UNI_STAT_TITLE_JSON_default = { "pages/ask/index": "index", "pages/tabBar/component/component": "内置组件", "pages/tabBar/API/API": "接口", "pages/tabBar/template/template": "模版", "pages/tabBar/extUI/extUI": "扩展组件", "pages/component/view/view": "view", "pages/component/scroll-view/scroll-view": "scroll-view", "pages/component/swiper/swiper": "swiper", "pages/component/cover-view/cover-view": "cover-view", "pages/component/movable-view/movable-view": "movable-view", "pages/component/text/text": "text", "pages/component/rich-text/rich-text": "rich-text", "pages/component/progress/progress": "progress", "pages/component/button/button": "button", "pages/component/checkbox/checkbox": "checkbox", "pages/component/form/form": "form", "pages/component/input/input": "input", "pages/component/label/label": "label", "pages/component/picker/picker": "picker", "pages/component/picker-view/picker-view": "picker-view", "pages/component/radio/radio": "radio", "pages/component/slider/slider": "slider", "pages/component/switch/switch": "switch", "pages/component/textarea/textarea": "textarea", "pages/component/editor/editor": "editor", "pages/component/navigator/navigator": "navigator", "pages/component/navigator/navigate/navigate": "navigatePage", "pages/component/navigator/redirect/redirect": "redirectPage", "pages/component/image/image": "image", "pages/component/video/video": "video", "pages/component/map/map": "map", "pages/component/canvas/canvas": "canvas", "pages/component/web-view/web-view": "web-view", "pages/ask/problem/196244/196244": "196244", "pages/ask/problem/196246/196246": "196246", "pages/ask/problem/196231/196231": "196231", "pages/ask/problem/196205/196205": "196205", "pages/ask/problem/188927/188927": "188927", "pages/ask/doc/docisue141/docisue141": "docisue141", "pages/ask/problem/196306/196306": "196306", "pages/ask/problem/194699/194699": "194699", "pages/ask/doc/docisue122/docisue122": "docisue122", "pages/ask/problem/41230/41230": "41230", "pages/API/login/login": "授权登录", "pages/API/get-user-info/get-user-info": "获取用户信息", "pages/API/request-payment/request-payment": "发起支付", "pages/API/share/share": "分享", "pages/API/set-navigation-bar-title/set-navigation-bar-title": "设置界面标题", "pages/API/show-loading/show-loading": "加载提示框", "pages/API/navigator/navigator": "页面跳转", "pages/API/navigator/new-page/new-vue-page-1": "新VUE页面1", "pages/API/navigator/new-page/new-vue-page-2": "新VUE页面2", "pages/API/pull-down-refresh/pull-down-refresh": "下拉刷新", "pages/API/animation/animation": "创建动画", "pages/API/get-node-info/get-node-info": "节点信息", "pages/API/intersection-observer/intersection-observer": "节点布局相交状态", "pages/API/canvas/canvas": "创建绘画", "pages/API/action-sheet/action-sheet": "操作菜单", "pages/API/modal/modal": "模态弹窗", "pages/API/toast/toast": "消息提示框", "pages/API/get-network-type/get-network-type": "获取设备网络状态", "pages/API/get-system-info/get-system-info": "获取设备系统信息", "pages/API/add-phone-contact/add-phone-contact": "添加手机联系人", "pages/API/on-accelerometer-change/on-accelerometer-change": "监听加速度计数据", "pages/API/on-compass-change/on-compass-change": "监听罗盘数据", "pages/API/make-phone-call/make-phone-call": "打电话", "pages/API/scan-code/scan-code": "扫码", "pages/API/clipboard/clipboard": "剪贴板", "pages/API/request/request": "网络请求", "pages/API/upload-file/upload-file": "上传文件", "pages/API/download-file/download-file": "下载文件", "pages/API/image/image": "图片", "pages/API/voice/voice": "录音", "pages/API/inner-audio/inner-audio": "音频", "pages/API/background-audio/background-audio": "背景音频", "pages/API/video/video": "视频", "pages/API/file/file": "文件", "pages/API/map/map": "map", "pages/API/get-location/get-location": "获取位置", "pages/API/open-location/open-location": "查看位置", "pages/API/choose-location/choose-location": "使用地图选择位置", "pages/API/storage/storage": "数据存储", "pages/API/sqlite/sqlite": "SQLite", "pages/API/rewarded-video-ad/rewarded-video-ad": "激励视频广告", "pages/API/brightness/brightness": "屏幕亮度", "pages/API/save-media/save-media": "保存媒体到本地", "pages/API/bluetooth/bluetooth": "蓝牙", "pages/API/soter/soter": "生物认证", "pages/API/ibeacon/ibeacon": "iBeacon", "pages/API/vibrate/vibrate": "震动", "pages/API/websocket-socketTask/websocket-socketTask": "websocket-socketTask", "pages/API/websocket-global/websocket-global": "websocket-global", "pages/extUI/forms/forms": "Form 表单", "pages/extUI/group/group": "Group 分组", "pages/extUI/badge/badge": "Badge 数字角标", "pages/extUI/breadcrumb/breadcrumb": "Breadcrumb 面包屑", "pages/extUI/countdown/countdown": "Countdown 倒计时", "pages/extUI/drawer/drawer": "Drawer 抽屉", "pages/extUI/icons/icons": "Icons 图标", "pages/extUI/load-more/load-more": "LoadMore 加载更多", "pages/extUI/nav-bar/nav-bar": "NavBar 导航栏", "pages/extUI/number-box/number-box": "NumberBox 数字输入框", "pages/extUI/popup/popup": "Popup 弹出层", "pages/extUI/segmented-control/segmented-control": "SegmentedControl 分段器", "pages/extUI/tag/tag": "Tag 标签", "pages/extUI/list/list": "List 列表", "pages/extUI/card/card": "Card 卡片", "pages/extUI/collapse/collapse": "Collapse 折叠面板", "pages/extUI/pagination/pagination": "Pagination 分页器", "pages/extUI/swiper-dot/swiper-dot": "SwiperDot 轮播图指示点", "pages/extUI/grid/grid": "Grid 宫格", "pages/extUI/rate/rate": "Rate 评分", "pages/extUI/steps/steps": "Steps 步骤条", "pages/extUI/notice-bar/notice-bar": "NoticeBar 通告栏", "pages/extUI/swipe-action/swipe-action": "SwipeAction 滑动操作", "pages/extUI/search-bar/search-bar": "SearchBar 搜索栏", "pages/extUI/calendar/calendar": "Calendar 日历", "pages/extUI/indexed-list/indexed-list": "IndexedList 索引列表", "pages/extUI/fab/fab": "Fab 悬浮按钮", "pages/extUI/fav/fav": "Fav 收藏按钮", "pages/extUI/goods-nav/goods-nav": "GoodsNav 商品导航", "pages/extUI/section/section": "Section 标题栏", "pages/extUI/transition/transition": "Transition 过渡动画", "pages/extUI/title/title": "Title 章节标题", "pages/extUI/tooltip/tooltip": "Tooltip 文字提示", "pages/extUI/link/link": "Link 链接", "pages/extUI/combox/combox": "Combox 组合框", "pages/extUI/dateformat/dateformat": "Dateformat 日期格式化", "pages/extUI/data-checkbox/data-checkbox": "DataCheckbox 单选复选框", "pages/extUI/easyinput/easyinput": "Easyinput 增强输入框", "pages/extUI/data-picker/data-picker": "DataPicker 级联选择", "pages/extUI/data-select/data-select": "DataSelect 下拉框", "pages/extUI/datetime-picker/datetime-picker": "DatetimePicker 日期时间", "pages/extUI/row/row": "Layout 布局", "pages/extUI/file-picker/file-picker": "FilePicker 文件选择上传", "pages/extUI/space/space": "间距", "pages/extUI/font/font": "字体", "pages/extUI/color/color": "颜色", "pages/extUI/radius/radius": "圆角", "pages/template/nav-default/nav-default": "默认导航栏", "pages/template/component-communication/component-communication": "组件通讯", "pages/template/list2detail-list/list2detail-list": "列表到详情示例", "pages/template/list2detail-detail/list2detail-detail": "详情", "pages/template/tabbar/tabbar": "可拖动顶部选项卡", "pages/template/tabbar/detail/detail": "详情页面", "pages/template/swiper-vertical/swiper-vertical": "上下滑动切换视频", "pages/template/swiper-list/swiper-list": "swiper-list", "pages/template/scheme/scheme": "打开外部应用", "pages/template/global/global": "GlobalData和vuex" };
 var define_process_env_UNI_STAT_UNI_CLOUD_default = {};
 const sys = index.getSystemInfoSync();
 const STAT_VERSION = "4.24";
@@ -13724,6 +13802,7 @@ exports.createSSRApp = createSSRApp;
 exports.createStore = createStore;
 exports.e = e$1;
 exports.f = f$1;
+exports.getCurrentInstance = getCurrentInstance;
 exports.index = index;
 exports.initVueI18n = initVueI18n;
 exports.mapActions = mapActions;
@@ -13732,8 +13811,11 @@ exports.mapMutations = mapMutations;
 exports.mapState = mapState;
 exports.n = n$1;
 exports.o = o$1;
+exports.onBeforeMount = onBeforeMount;
+exports.onMounted = onMounted;
 exports.p = p$1;
 exports.r = r$1;
+exports.ref = ref;
 exports.resolveComponent = resolveComponent;
 exports.s = s$1;
 exports.sr = sr;

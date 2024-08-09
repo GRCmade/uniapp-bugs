@@ -1,0 +1,1 @@
+<view><view tt:for="{{a}}" tt:for-item="it" tt:key="c"><view class="title">{{it.a}}</view><view class="box"><view tt:for="{{it.b}}" tt:for-item="item" tt:key="c"><button bindtap="{{item.b}}" size="mini" type="primary">{{item.a}}</button></view></view></view></view>

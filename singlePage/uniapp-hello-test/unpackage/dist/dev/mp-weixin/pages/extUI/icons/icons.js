@@ -523,7 +523,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     c: common_vendor.o((...args) => $options.change && $options.change(...args)),
     d: common_vendor.f($data.iconClassList, (item, index, i0) => {
       return {
-        a: "36b46445-2-" + i0 + ",36b46445-1",
+        a: "533d3c99-2-" + i0 + ",533d3c99-1",
         b: common_vendor.p({
           type: item.name,
           color: $data.activeIndex === index ? "#007aff" : "#5e6d82",

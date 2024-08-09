@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/ask/index",
     "pages/tabBar/component/component",
     "pages/tabBar/API/API",
     "pages/tabBar/template/template",
@@ -38,7 +39,18 @@
     "platforms/app-plus/push/push",
     "platforms/app-plus/shake/shake",
     "platforms/app-plus/feedback/feedback",
-    "uni_modules/uni-upgrade-center-app/pages/upgrade-popup"
+    "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+    "pages/ask/problem/196244/196244",
+    "pages/ask/problem/196246/196246",
+    "pages/ask/problem/196231/196231",
+    "pages/ask/problem/196205/196205",
+    "pages/ask/problem/188927/188927",
+    "pages/ask/doc/docisue141/docisue141",
+    "pages/ask/problem/196306/196306",
+    "pages/ask/problem/194699/194699",
+    "pages/ask/doc/docisue122/docisue122",
+    "pages/ask/problem/41230/41230",
+    "pages/ask/doc/docisue124/docisue124"
   ],
   "subPackages": [
     {
@@ -181,6 +193,12 @@
     "borderStyle": "black",
     "backgroundColor": "#F8F8F8",
     "list": [
+      {
+        "pagePath": "pages/ask/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "首页"
+      },
       {
         "pagePath": "pages/tabBar/component/component",
         "iconPath": "static/component.png",

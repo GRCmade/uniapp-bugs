@@ -80,7 +80,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       ["is-full"]: true,
       ["is-shadow"]: false
     }),
-    b: common_vendor.sr("ani", "eb56cf3a-2,eb56cf3a-1"),
+    b: common_vendor.sr("ani", "2657de8f-2,2657de8f-1"),
     c: common_vendor.p({
       ["custom-class"]: "transition",
       ["mode-class"]: $data.modeClass,

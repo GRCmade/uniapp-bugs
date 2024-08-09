@@ -60,7 +60,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     b: common_vendor.o(($event) => $options.showDrawer("showLeft")),
     c: common_vendor.o(($event) => $options.closeDrawer("showLeft")),
-    d: common_vendor.sr("showLeft", "239519e3-2,239519e3-1"),
+    d: common_vendor.sr("showLeft", "cfb167e2-2,cfb167e2-1"),
     e: common_vendor.o(($event) => $options.change($event, "showLeft")),
     f: common_vendor.p({
       mode: "left",
@@ -79,7 +79,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       };
     }),
     k: common_vendor.o(($event) => $options.closeDrawer("showRight")),
-    l: common_vendor.sr("showRight", "239519e3-4,239519e3-3"),
+    l: common_vendor.sr("showRight", "cfb167e2-4,cfb167e2-3"),
     m: common_vendor.o(($event) => $options.change($event, "showRight")),
     n: common_vendor.p({
       mode: "right",

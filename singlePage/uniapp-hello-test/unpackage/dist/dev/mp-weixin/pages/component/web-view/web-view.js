@@ -3,13 +3,11 @@ const common_vendor = require("../../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
-      url: "https://uniapp.dcloud.io/static/web-view.html"
+      // url: 'https://uniapp.dcloud.io/static/web-view.html'
+      url: "https://dcloud.yuhe.space/test.html"
     };
   },
   onLoad(options) {
-    if (options && options.url) {
-      this.url = options.url;
-    }
   },
   methods: {
     getMessage(event) {

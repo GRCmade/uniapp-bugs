@@ -27,11 +27,21 @@
 		},
 		methods: {
 			click(id){
-				const str = `/pages/ask/problem/${id}/${id}`
-				console.log(str)
-				uni.navigateTo({
-					url:str
-				})
+				const prefixPattern = /^docisue/;
+				if(prefixPattern.test(id)){
+					const str = `/pages/ask/doc/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url:str
+					})
+				}else{
+					const str = `/pages/ask/problem/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url:str
+					})
+				}
+				
 			}
 		}
 	}

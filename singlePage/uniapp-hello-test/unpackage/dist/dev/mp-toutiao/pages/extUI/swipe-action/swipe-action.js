@@ -268,13 +268,13 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: item.id,
         c: common_vendor.o(($event) => $options.swipeChange($event, index)),
         d: common_vendor.o(($event) => $options.swipeClick($event, index)),
-        e: "72c9c73a-14-" + i0 + ",72c9c73a-13",
+        e: "f41126e2-14-" + i0 + ",f41126e2-13",
         f: common_vendor.p({
           ["right-options"]: item.options
         })
       };
     }),
-    y: common_vendor.sr("swipeAction", "72c9c73a-13")
+    y: common_vendor.sr("swipeAction", "f41126e2-13")
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);

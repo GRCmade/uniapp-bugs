@@ -24,8 +24,11 @@
 		},
 		methods: {
 			map(){
+				// uni.navigateTo({
+				// 	url:"/pages/map/map-setup/map-setup"
+				// })
 				uni.navigateTo({
-					url:"/pages/map/map-setup/map-setup"
+					url:"/pages/page/page"
 				})
 			},
 			openLocation(){

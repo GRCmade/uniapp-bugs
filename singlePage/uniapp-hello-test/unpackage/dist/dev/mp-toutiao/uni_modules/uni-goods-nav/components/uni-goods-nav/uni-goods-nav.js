@@ -74,7 +74,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.f($props.options, (item, index, i0) => {
       return common_vendor.e({
-        a: "6cdfee24-0-" + i0,
+        a: "ab823b10-0-" + i0,
         b: common_vendor.p({
           type: item.icon,
           size: "20",

@@ -41,7 +41,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return {
         a: common_vendor.t(route.name),
         b: index,
-        c: "5a201fa3-3-" + i0 + ",5a201fa3-2",
+        c: "13b93462-3-" + i0 + ",13b93462-2",
         d: common_vendor.p({
           to: route.to
         })
@@ -59,7 +59,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return {
         a: common_vendor.t(route.name),
         b: index,
-        c: "5a201fa3-6-" + i0 + ",5a201fa3-5",
+        c: "13b93462-6-" + i0 + ",13b93462-5",
         d: common_vendor.p({
           to: route.to
         })

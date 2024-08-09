@@ -87,114 +87,121 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.t(JSON.stringify($data.radio1)),
     c: common_vendor.o(($event) => $data.radio1 = $event),
     d: common_vendor.p({
+      mode: "list",
       localdata: $data.sex,
       modelValue: $data.radio1
     }),
-    e: common_vendor.p({
+    e: common_vendor.t(JSON.stringify($data.radio1)),
+    f: common_vendor.o(($event) => $data.radio1 = $event),
+    g: common_vendor.p({
+      localdata: $data.sex,
+      modelValue: $data.radio1
+    }),
+    h: common_vendor.p({
       title: "单选",
       type: "line"
     }),
-    f: common_vendor.t(JSON.stringify($data.checkbox1)),
-    g: common_vendor.o(($event) => $data.checkbox1 = $event),
-    h: common_vendor.p({
+    i: common_vendor.t(JSON.stringify($data.checkbox1)),
+    j: common_vendor.o(($event) => $data.checkbox1 = $event),
+    k: common_vendor.p({
       multiple: true,
       localdata: $data.hobby,
       modelValue: $data.checkbox1
     }),
-    i: common_vendor.p({
+    l: common_vendor.p({
       title: "多选",
       subTitle: "使用multiple属性开启多选",
       type: "line"
     }),
-    j: common_vendor.t(JSON.stringify($data.checkbox6)),
-    k: common_vendor.o(($event) => $data.checkbox6 = $event),
-    l: common_vendor.p({
+    m: common_vendor.t(JSON.stringify($data.checkbox6)),
+    n: common_vendor.o(($event) => $data.checkbox6 = $event),
+    o: common_vendor.p({
       min: "1",
       max: "2",
       multiple: true,
       localdata: $data.hobby,
       modelValue: $data.checkbox6
     }),
-    m: common_vendor.p({
+    p: common_vendor.p({
       title: "最大最小值",
       subTitle: "使用 min / max 设置多选的最大最小值,单选无效"
     }),
-    n: common_vendor.t(JSON.stringify($data.radio2)),
-    o: common_vendor.o(($event) => $data.radio2 = $event),
-    p: common_vendor.p({
+    q: common_vendor.t(JSON.stringify($data.radio2)),
+    r: common_vendor.o(($event) => $data.radio2 = $event),
+    s: common_vendor.p({
       mode: "button",
       localdata: $data.sex,
       modelValue: $data.radio2
     }),
-    q: common_vendor.t(JSON.stringify($data.checkbox2)),
-    r: common_vendor.o(($event) => $data.checkbox2 = $event),
-    s: common_vendor.p({
+    t: common_vendor.t(JSON.stringify($data.checkbox2)),
+    v: common_vendor.o(($event) => $data.checkbox2 = $event),
+    w: common_vendor.p({
       mode: "button",
       multiple: true,
       localdata: $data.hobby,
       modelValue: $data.checkbox2
     }),
-    t: common_vendor.p({
+    x: common_vendor.p({
       title: "更多样式 - button",
       subTitle: "使用mode=button属性使用按钮样式",
       type: "line"
     }),
-    v: common_vendor.t(JSON.stringify($data.radio3)),
-    w: common_vendor.o(($event) => $data.radio3 = $event),
-    x: common_vendor.p({
+    y: common_vendor.t(JSON.stringify($data.radio3)),
+    z: common_vendor.o(($event) => $data.radio3 = $event),
+    A: common_vendor.p({
       mode: "tag",
       localdata: $data.sex,
       modelValue: $data.radio3
     }),
-    y: common_vendor.t(JSON.stringify($data.checkbox3)),
-    z: common_vendor.o(($event) => $data.checkbox3 = $event),
-    A: common_vendor.p({
+    B: common_vendor.t(JSON.stringify($data.checkbox3)),
+    C: common_vendor.o(($event) => $data.checkbox3 = $event),
+    D: common_vendor.p({
       mode: "tag",
       multiple: true,
       localdata: $data.hobby,
       modelValue: $data.checkbox3
     }),
-    B: common_vendor.p({
+    E: common_vendor.p({
       title: "更多样式 - tag",
       subTitle: "使用mode=tag属性使用标签样式",
       type: "line"
     }),
-    C: common_vendor.t(JSON.stringify($data.radio4)),
-    D: common_vendor.o(($event) => $data.radio4 = $event),
-    E: common_vendor.p({
+    F: common_vendor.t(JSON.stringify($data.radio4)),
+    G: common_vendor.o(($event) => $data.radio4 = $event),
+    H: common_vendor.p({
       mode: "button",
       localdata: $data.sex1,
       modelValue: $data.radio4
     }),
-    F: common_vendor.t(JSON.stringify($data.checkbox4)),
-    G: common_vendor.o(($event) => $data.checkbox4 = $event),
-    H: common_vendor.p({
+    I: common_vendor.t(JSON.stringify($data.checkbox4)),
+    J: common_vendor.o(($event) => $data.checkbox4 = $event),
+    K: common_vendor.p({
       mode: "button",
       multiple: true,
       localdata: $data.hobby2,
       modelValue: $data.checkbox4
     }),
-    I: common_vendor.p({
+    L: common_vendor.p({
       title: "禁用",
       subTitle: "数据中使用 disable 属性实现单独禁用,组件使用 disable 属性实现全部禁用",
       type: "line"
     }),
-    J: common_vendor.t(JSON.stringify($data.radio5)),
-    K: common_vendor.o(($event) => $data.radio5 = $event),
-    L: common_vendor.p({
+    M: common_vendor.t(JSON.stringify($data.radio5)),
+    N: common_vendor.o(($event) => $data.radio5 = $event),
+    O: common_vendor.p({
       selectedColor: "red",
       localdata: $data.sex1,
       modelValue: $data.radio5
     }),
-    M: common_vendor.t(JSON.stringify($data.checkbox5)),
-    N: common_vendor.o(($event) => $data.checkbox5 = $event),
-    O: common_vendor.p({
+    P: common_vendor.t(JSON.stringify($data.checkbox5)),
+    Q: common_vendor.o(($event) => $data.checkbox5 = $event),
+    R: common_vendor.p({
       selectedColor: "red",
       multiple: true,
       localdata: $data.hobby2,
       modelValue: $data.checkbox5
     }),
-    P: common_vendor.p({
+    S: common_vendor.p({
       title: "自定义高亮颜色",
       subTitle: "使用 selectedColor 属性修改颜色",
       type: "line"

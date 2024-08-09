@@ -19,6 +19,13 @@
 			{
 				"navigationBarTitleText" : "map-setup"
 			}
+		},
+		{
+			"path" : "pages/page/page",
+			"style" : 
+			{
+				"navigationBarTitleText" : "page"
+			}
 		}
 	],
 	"globalStyle": {

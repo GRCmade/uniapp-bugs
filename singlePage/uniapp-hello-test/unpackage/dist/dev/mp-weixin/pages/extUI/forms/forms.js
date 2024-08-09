@@ -308,7 +308,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     z: common_vendor.p({
       label: "选择技能"
     }),
-    A: common_vendor.sr("baseForm", "06adf13a-2,06adf13a-1"),
+    A: common_vendor.sr("baseForm", "db8c56e2-2,db8c56e2-1"),
     B: common_vendor.p({
       model: $data.baseFormData,
       labelWidth: "80px"
@@ -341,7 +341,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       label: "年龄",
       required: true
     }),
-    L: common_vendor.sr("baseForm", "06adf13a-21,06adf13a-19"),
+    L: common_vendor.sr("baseForm", "db8c56e2-21,db8c56e2-19"),
     M: common_vendor.p({
       modelValue: $data.alignmentFormData,
       ["label-position"]: $options.alignment
@@ -379,7 +379,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     W: common_vendor.p({
       label: "自我介绍"
     }),
-    X: common_vendor.sr("valiForm", "06adf13a-27,06adf13a-26"),
+    X: common_vendor.sr("valiForm", "db8c56e2-27,db8c56e2-26"),
     Y: common_vendor.p({
       rules: $data.rules,
       model: $data.valiFormData,
@@ -421,7 +421,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       required: true,
       name: "hobby"
     }),
-    ak: common_vendor.sr("customForm", "06adf13a-35,06adf13a-34"),
+    ak: common_vendor.sr("customForm", "db8c56e2-35,db8c56e2-34"),
     al: common_vendor.p({
       rules: $data.customRules,
       labelWidth: "80px",
@@ -444,7 +444,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     ar: common_vendor.f($data.dynamicFormData.domains, (item, index, i0) => {
       return {
-        a: "06adf13a-47-" + i0 + "," + ("06adf13a-46-" + i0),
+        a: "db8c56e2-47-" + i0 + "," + ("db8c56e2-46-" + i0),
         b: common_vendor.o(($event) => $data.dynamicFormData.domains[index].value = $event, item.id),
         c: common_vendor.p({
           placeholder: "请输入域名",
@@ -452,7 +452,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         }),
         d: common_vendor.o(($event) => $options.del(item.id), item.id),
         e: item.id,
-        f: "06adf13a-46-" + i0 + ",06adf13a-43",
+        f: "db8c56e2-46-" + i0 + ",db8c56e2-43",
         g: common_vendor.p({
           label: item.label + " " + index,
           required: true,
@@ -461,7 +461,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       };
     }),
-    as: common_vendor.sr("dynamicForm", "06adf13a-43,06adf13a-42"),
+    as: common_vendor.sr("dynamicForm", "db8c56e2-43,db8c56e2-42"),
     at: common_vendor.p({
       rules: $data.dynamicRules,
       model: $data.dynamicFormData,

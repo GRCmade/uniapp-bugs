@@ -1,0 +1,113 @@
+<template>
+	<view class="content">
+		<image class="logo" src="/static/logo.png"></image>
+		<view class="text-area">
+			<view class="title" @click="getLocation">{{'getLocation'}}</view>
+			<view class="title" @click="chooseLocation">{{'chooseLocation'}}</view>
+			<view class="title" @click="openLocation">{{'openLocation'}}</view>
+			<view>{{info}}</view>
+		</view>
+		<button @click="map">map</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				title: 'page',
+				info:''
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+			map(){
+				uni.navigateTo({
+					url:"/pages/map/map-setup/map-setup"
+				})
+			},
+			openLocation(){
+				uni.getLocation({
+					type: 'gcj02', //返回可以用于uni.openLocation的经纬度
+					success: function (res) {
+						const latitude = res.latitude;
+						const longitude = res.longitude;
+						uni.openLocation({
+							latitude: latitude,
+							longitude: longitude,
+							success: function () {
+								console.log('success');
+							}
+						});
+					}
+				});
+
+			},
+			/**
+			 * @param {Object} url 通过url获取
+			 */
+			getLocation(url){
+				uni.getLocation({
+					type: 'gcj02', // 坐标类型，默认为wgs84，可选的值为gcj02和bd09ll
+					geocode:true,
+					success: res => {
+						// 获取成功，经度和纬度在res.longitude和res.latitude中  
+						console.log('res', res);
+						console.log('longitude1111111111:', res.longitude);
+						console.log('latitude11111111111:', res.latitude);
+						uni.showToast({
+							title: '成功'+res.longitude
+						});
+					},
+					fail: err => {
+						// 获取失败，err为错误信息  
+						console.log('获取位置失败:', err);
+						this.info = err
+					}
+				});
+			},
+			chooseLocation() {
+				uni.chooseLocation({
+					success(e) {
+						console.log("success",e)
+					},
+					fail(e) {
+						console.log("fail",e)
+						this.info = e
+					}
+				})
+			}
+		}
+	}
+</script>
+
+<style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		/* display: flex;
+		justify-content: center;
+		align-items: center; */
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
+</style>

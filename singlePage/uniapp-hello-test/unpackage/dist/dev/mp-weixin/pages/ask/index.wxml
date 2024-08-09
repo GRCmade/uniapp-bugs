@@ -1,0 +1,1 @@
+<view><view wx:for="{{a}}" wx:for-item="it" wx:key="c"><view class="title">{{it.a}}</view><view class="box"><view wx:for="{{it.b}}" wx:for-item="item" wx:key="c"><button bindtap="{{item.b}}" size="mini" type="primary">{{item.a}}</button></view></view></view></view>

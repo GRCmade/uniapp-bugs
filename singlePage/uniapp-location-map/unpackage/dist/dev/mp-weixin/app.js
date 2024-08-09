@@ -5,6 +5,7 @@ if (!Math) {
   "./pages/index/index.js";
   "./pages/map/map.js";
   "./pages/map/map-setup/map-setup.js";
+  "./pages/page/page.js";
 }
 const _sfc_main = {
   onLaunch: function() {

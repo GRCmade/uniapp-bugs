@@ -4,6 +4,7 @@ const _sfc_main = {
   data() {
     return {
       url: "https://uniapp.dcloud.io/static/web-view.html"
+      // url:'http://dcloud.yuhe.space/test.html'
     };
   },
   onLoad(options) {

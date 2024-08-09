@@ -68,7 +68,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         a: index <= $props.active && index !== 0 ? $props.activeColor : index === 0 ? "transparent" : $props.deactiveColor,
         b: index === $props.active
       }, index === $props.active ? {
-        c: "0dd535ff-0-" + i0,
+        c: "f53def5a-0-" + i0,
         d: common_vendor.p({
           color: $props.activeColor,
           type: $props.activeIcon,

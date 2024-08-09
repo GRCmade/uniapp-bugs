@@ -3,6 +3,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
 const store_index = require("./store/index.js");
 if (!Math) {
+  "./pages/ask/index.js";
   "./pages/tabBar/component/component.js";
   "./pages/tabBar/API/API.js";
   "./pages/tabBar/template/template.js";
@@ -38,6 +39,10 @@ if (!Math) {
   "./platforms/app-plus/shake/shake.js";
   "./platforms/app-plus/feedback/feedback.js";
   "./uni_modules/uni-upgrade-center-app/pages/upgrade-popup.js";
+  "./pages/ask/problem/196244/196244.js";
+  "./pages/ask/problem/196246/196246.js";
+  "./pages/ask/problem/196231/196231.js";
+  "./pages/ask/problem/196205/196205.js";
   "./pages/API/login/login.js";
   "./pages/API/get-user-info/get-user-info.js";
   "./pages/API/request-payment/request-payment.js";

@@ -1,1 +1,1 @@
-<view><page-head wx:if="{{a}}" u-i="dd9259f0-0" bind:__l="__l" u-p="{{a}}"></page-head><view class="uni-padding-wrap"><view class="uni-btn-v"><button class="target" type="default" bindtap="{{b}}">弹出action sheet</button></view></view></view>
+<view><page-head wx:if="{{a}}" u-i="39813e34-0" bind:__l="__l" u-p="{{a}}"></page-head><view class="uni-padding-wrap"><view class="uni-btn-v"><button class="target" type="default" bindtap="{{b}}">弹出action sheet</button></view></view></view>

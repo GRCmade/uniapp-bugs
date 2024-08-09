@@ -248,7 +248,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           return {
             a: common_vendor.o(($event) => $options.close(index1, index2), newsitem.id),
             b: common_vendor.o(($event) => $options.goDetail(newsitem), newsitem.id),
-            c: "310a2882-0-" + i0 + "-" + i1,
+            c: "60c136a4-0-" + i0 + "-" + i1,
             d: common_vendor.p({
               options: newsitem
             }),

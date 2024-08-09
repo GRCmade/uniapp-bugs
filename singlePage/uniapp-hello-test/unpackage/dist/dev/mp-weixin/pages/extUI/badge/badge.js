@@ -43,101 +43,105 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       text: "1"
     }),
     c: common_vendor.p({
+      size: "normal",
+      text: "1"
+    }),
+    d: common_vendor.p({
       text: "2",
       type: "primary"
     }),
-    d: common_vendor.p({
+    e: common_vendor.p({
       text: "34",
       type: "success"
     }),
-    e: common_vendor.p({
+    f: common_vendor.p({
       text: "45",
       type: "warning"
     }),
-    f: common_vendor.p({
+    g: common_vendor.p({
       text: "123",
       type: "info"
     }),
-    g: common_vendor.p({
+    h: common_vendor.p({
       title: "基础用法",
       type: "line",
       padding: true
     }),
-    h: common_vendor.p({
+    i: common_vendor.p({
       inverted: true,
       text: "1"
     }),
-    i: common_vendor.p({
+    j: common_vendor.p({
       inverted: true,
       text: "2",
       type: "primary"
     }),
-    j: common_vendor.p({
+    k: common_vendor.p({
       inverted: true,
       text: "34",
       type: "success"
     }),
-    k: common_vendor.p({
+    l: common_vendor.p({
       inverted: true,
       text: "45",
       type: "warning"
     }),
-    l: common_vendor.p({
+    m: common_vendor.p({
       inverted: true,
       text: "123",
       type: "info"
     }),
-    m: common_vendor.p({
+    n: common_vendor.p({
       title: "无底色",
       type: "line",
       padding: true
     }),
-    n: common_vendor.p({
+    o: common_vendor.p({
       text: "2",
       type: "primary",
       customStyle: {
         background: "#4335d6"
       }
     }),
-    o: common_vendor.p({
+    p: common_vendor.p({
       text: "2",
       type: "primary",
       customStyle: $data.customStyle
     }),
-    p: common_vendor.p({
+    q: common_vendor.p({
       title: "自定义样式",
       type: "line",
       padding: true
     }),
-    q: common_vendor.p({
+    r: common_vendor.p({
       text: $data.value,
       absolute: "rightTop",
       size: "small"
     }),
-    r: common_vendor.p({
+    s: common_vendor.p({
       title: "定位: aboslute 属性",
       subTitle: "注：在安卓端不支持 nvue",
       type: "line",
       padding: true
     }),
-    s: common_vendor.p({
+    t: common_vendor.p({
       text: 8,
       absolute: "rightTop",
       offset: [-3, -3],
       size: "small"
     }),
-    t: common_vendor.p({
+    v: common_vendor.p({
       title: "偏移: offset 属性(存在 aboslute)",
       type: "line",
       padding: true
     }),
-    v: common_vendor.p({
+    w: common_vendor.p({
       ["is-dot"]: true,
       text: $data.value,
       absolute: "rightTop",
       size: "small"
     }),
-    w: common_vendor.p({
+    x: common_vendor.p({
       title: "仅显示点: is-dot 属性",
       type: "line",
       padding: true

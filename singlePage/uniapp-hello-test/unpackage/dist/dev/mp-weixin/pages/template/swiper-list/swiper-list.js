@@ -168,10 +168,10 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: $data.scrollInto,
     f: common_vendor.f($data.tabList, (page, index, i0) => {
       return {
-        a: common_vendor.sr("page", "377a615a-0-" + i0, {
+        a: common_vendor.sr("page", "ddf952f4-0-" + i0, {
           "f": 1
         }),
-        b: "377a615a-0-" + i0,
+        b: "ddf952f4-0-" + i0,
         c: common_vendor.p({
           pid: page.pageid
         }),

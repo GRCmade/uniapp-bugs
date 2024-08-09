@@ -279,7 +279,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, $data.isOpened ? {
     r: common_vendor.t($props.popupTitle),
     s: common_vendor.o((...args) => $options.handleClose && $options.handleClose(...args)),
-    t: common_vendor.sr("pickerView", "7d7271a9-2"),
+    t: common_vendor.sr("pickerView", "ef545206-2"),
     v: common_vendor.o($options.onchange),
     w: common_vendor.o($options.ondatachange),
     x: common_vendor.o($options.onnodeclick),

@@ -384,6 +384,7 @@
 			setStyleBackgroud(item) {
 				let styles = {}
 				let selectedColor = this.selectedColor?this.selectedColor:'#2979ff'
+				console.log(selectedColor)
 				if (this.selectedColor) {
 					if (this.mode !== 'list') {
 						styles['border-color'] = item.selected?selectedColor:'#DCDFE6'
@@ -410,6 +411,10 @@
 						styles['background-color'] = '#F2F6FC'
 						styles['border-color'] = item.selected?selectedColor:'#DCDFE6'
 					}
+				}else{
+					// yuhe 
+					// styles['background-color'] = 'yellow'
+					// styles['border-color'] = 'yellow'
 				}
 				for (let i in styles) {
 					classles += `${i}:${styles[i]};`

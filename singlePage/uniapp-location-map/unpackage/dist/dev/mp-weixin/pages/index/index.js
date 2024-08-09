@@ -13,7 +13,7 @@ const _sfc_main = {
   methods: {
     map() {
       common_vendor.index.navigateTo({
-        url: "/pages/map/map-setup/map-setup"
+        url: "/pages/page/page"
       });
     },
     openLocation() {
@@ -39,7 +39,8 @@ const _sfc_main = {
     getLocation(url) {
       common_vendor.index.getLocation({
         type: "gcj02",
-        // 坐标类型，默认为wgs84，可选的值为gcj02和bd09ll  
+        // 坐标类型，默认为wgs84，可选的值为gcj02和bd09ll
+        geocode: true,
         success: (res) => {
           console.log("res", res);
           console.log("longitude1111111111:", res.longitude);

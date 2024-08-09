@@ -5,7 +5,9 @@
 		</uni-card>
 		<uni-section title="单选" type="line">
 			<view class="uni-px-5 uni-pb-5">
-				<view class="text">单选选中：{{JSON.stringify(radio1)}}</view>
+				<view class="text">有mode=list：{{JSON.stringify(radio1)}}</view>
+				<uni-data-checkbox mode="list" v-model="radio1" :localdata="sex"></uni-data-checkbox>
+				<view class="text">没有mode=list：{{JSON.stringify(radio1)}}</view>
 				<uni-data-checkbox v-model="radio1" :localdata="sex"></uni-data-checkbox>
 			</view>
 		</uni-section>
