@@ -1,17 +1,25 @@
 <template>
-	<view class="box">
-		<view v-for="(item,index) in ls" :key="index">
-			<button @click="click(item)" size="mini" type="primary">{{item}}</button>
+	<view>
+		<view v-for="(it,i) in ls" :key="i">
+			<view class="title">{{it.day}}</view>
+			<view class="box">
+				<view v-for="(item,index) in it.list" :key="index">
+					<button @click="click(item)" size="mini" type="primary">{{item}}</button>
+				</view>
+			</view>
 		</view>
+		
 	</view>
+	
 </template>
 
 <script>
+	import {list} from './hellolist'
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				ls:[196265]
+				ls:list
 			}
 		},
 		onLoad() {
@@ -19,9 +27,21 @@
 		},
 		methods: {
 			click(id){
-				uni.navigateTo({
-					url:`/pages/ask/${id}/${id}`
-				})
+				const prefixPattern = /^docisue/;
+				if(prefixPattern.test(id)){
+					const str = `/pages/ask/doc/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url:str
+					})
+				}else{
+					const str = `/pages/ask/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url:str
+					})
+				}
+				
 			}
 		}
 	}
@@ -36,7 +56,7 @@
 			margin: 10rpx;
 			font-size: 30rpx;
 			font-weight: 700;
-			padding: 15rpx;
+			padding: 5rpx 8rpx;
 		}
 	}
 	.content {
@@ -61,6 +81,7 @@
 	}
 
 	.title {
+		margin-left: 20rpx;
 		font-size: 36rpx;
 		color: #8f8f94;
 	}

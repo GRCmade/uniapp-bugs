@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/index/test.uvue"],"sourcesContent":["<template>\r\n\t<view class=\"\">\r\n\t\t<text>{{name}}</text>\r\n\t</view>\r\n</template>\r\n\r\n<script setup>\r\n\tconst name = 10\r\n</script>"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;YAOC,IAAM,eAAO,EAAE;;uBANf,mBAEO,QAAA,SAFD,WAAM,KAAE;oBACb,mBAAqB,QAAA,IAAA,EAAA,gBAAb"}

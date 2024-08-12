@@ -1,8 +1,14 @@
-const obj = {
+const obj = 
+{
 	"day": '',
 	"list": []
 }
-export const list = [{
+export const list = [
+{
+	"day": '8.10',
+	"list": [196453,196452,196474]
+},
+{
 	"day": '8.9',
 	"list": [188927,'docisue141',196306,194699,'docisue122',41230,'docisue124']
 },{

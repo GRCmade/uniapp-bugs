@@ -284,6 +284,13 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
 
   // ../../../../../../Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/unpackage/dist/dev/.nvue/uni-app.es.js
   var import_vue2 = __toESM(require_vue());
+  function formatAppLog(type, filename, ...args) {
+    if (uni.__log__) {
+      uni.__log__(type, filename, ...args);
+    } else {
+      console[type].apply(console, [...args, filename]);
+    }
+  }
   function resolveEasycom(component, easycom) {
     return typeof component === "string" ? easycom : component;
   }
@@ -675,6 +682,30 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
       path: "pages/ask/doc/docisue122/docisue122",
       style: {
         navigationBarTitleText: "docisue122"
+      }
+    },
+    {
+      path: "pages/ask/problem/41230/41230",
+      style: {
+        navigationBarTitleText: "41230"
+      }
+    },
+    {
+      path: "pages/ask/doc/docisue124/docisue124",
+      style: {
+        navigationBarTitleText: "docisue124"
+      }
+    },
+    {
+      path: "pages/ask/problem/196453/196453",
+      style: {
+        navigationBarTitleText: "196453"
+      }
+    },
+    {
+      path: "pages/ask/problem/196452/196452",
+      style: {
+        navigationBarTitleText: "196452"
       }
     }
   ];
@@ -5247,6 +5278,7 @@ ${i3}
       setStyleBackgroud(item) {
         let styles = {};
         let selectedColor = this.selectedColor ? this.selectedColor : "#2979ff";
+        formatAppLog("log", "at uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox.vue:387", selectedColor);
         if (this.selectedColor) {
           if (this.mode !== "list") {
             styles["border-color"] = item.selected ? selectedColor : "#DCDFE6";

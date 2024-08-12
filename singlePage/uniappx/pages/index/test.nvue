@@ -1,9 +1,0 @@
-<template>
-	<view class="">
-		<text>{{name}}</text>
-	</view>
-</template>
-
-<script setup>
-	const name = 10
-</script>

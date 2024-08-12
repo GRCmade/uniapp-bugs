@@ -12,6 +12,13 @@
 			{
 				"navigationBarTitleText" : "196265"
 			}
+		},
+		{
+			"path" : "pages/ask/196451/196451",
+			"style" : 
+			{
+				"navigationBarTitleText" : "196451"
+			}
 		}
 	],
 	"globalStyle": {

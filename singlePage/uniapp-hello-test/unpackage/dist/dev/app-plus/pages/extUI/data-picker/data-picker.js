@@ -2359,6 +2359,30 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
       style: {
         navigationBarTitleText: "docisue122"
       }
+    },
+    {
+      path: "pages/ask/problem/41230/41230",
+      style: {
+        navigationBarTitleText: "41230"
+      }
+    },
+    {
+      path: "pages/ask/doc/docisue124/docisue124",
+      style: {
+        navigationBarTitleText: "docisue124"
+      }
+    },
+    {
+      path: "pages/ask/problem/196453/196453",
+      style: {
+        navigationBarTitleText: "196453"
+      }
+    },
+    {
+      path: "pages/ask/problem/196452/196452",
+      style: {
+        navigationBarTitleText: "196452"
+      }
     }
   ];
   var subPackages = [
