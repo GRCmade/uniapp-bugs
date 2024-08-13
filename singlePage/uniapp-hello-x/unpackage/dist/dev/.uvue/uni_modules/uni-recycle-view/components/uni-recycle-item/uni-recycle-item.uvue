@@ -1,0 +1,38 @@
+
+  /**
+   * recycle-item 长列表子项组件
+   * @description 用于展示超长列表数据每一项
+   * @property {any[]} item 当前组件渲染的列表项
+   */
+  const __sfc__ = defineComponent({
+    name: "uni-recycle-item",
+    props: {
+      item: {
+        type: Object as PropType<any>,
+        required: true
+      }
+    },
+    inject: {
+      setCachedSize: {
+        type: Function as PropType<(item : any, size : number) => void>
+      },
+    },
+    mounted() {
+      uni.createSelectorQuery().in(this).select('.item-container').boundingClientRect().exec((ret) => {
+        this.setCachedSize(this.item, (ret[0] as NodeInfo).height!)
+      })
+    }
+  })
+
+export default __sfc__
+function GenUniModulesUniRecycleViewComponentsUniRecycleItemUniRecycleItemRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+  return createElementVNode("view", utsMapOf({ class: "item-container" }), [
+    renderSlot(_ctx.$slots, "default")
+  ])
+}
+export type UniRecycleItemComponentPublicInstance = InstanceType<typeof __sfc__>;
+const GenUniModulesUniRecycleViewComponentsUniRecycleItemUniRecycleItemStyles = []
+
+//# sourceMappingURL=uni-recycle-item.uvue.map

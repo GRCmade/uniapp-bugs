@@ -1,0 +1,660 @@
+
+  type Page = { __$originalPosition?: UTSSourceMapPosition<"Page", "pages/tabBar/API.uvue", 39, 8>;
+    name : string
+    url : string
+    enable ?: boolean
+    api ?: Array<string>
+  }
+  type ListItem = { __$originalPosition?: UTSSourceMapPosition<"ListItem", "pages/tabBar/API.uvue", 45, 8>;
+    id : string
+    name : string
+    pages : Page[]
+    url ?: string
+    enable ?: boolean
+  }
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        list: [
+          {
+            id: 'global',
+            name: '全局',
+            pages: [
+              {
+                name: 'getApp',
+                url: 'get-app',
+              },
+              {
+                name: 'getCurrentPages',
+                url: 'get-current-pages',
+              }
+            ] as Page[],
+          },
+          {
+            id: 'base',
+            name: '基础',
+            pages: [
+              {
+                name: '事件总线event-bus',
+                url: 'event-bus',
+                api: ["$on", "$once", "$off", "$emit"]
+              },
+              {
+                name: '拦截器',
+                url: 'interceptor',
+                api: ["addInterceptor", "removeInterceptor"]
+              },
+              {
+                name: '获取启动参数',
+                url: 'get-launch-options-sync',
+              },
+
+              {
+                name: 'env环境变量',
+                url: 'env'
+              },
+
+
+              {
+                name: '退出应用',
+                url: 'exit',
+              }
+
+            ] as Page[],
+          },
+          {
+            id: 'page',
+            name: '页面和路由',
+            pages: [
+              {
+                name: '页面跳转',
+                url: 'navigator',
+                api: ["navigateTo", "reLaunch", "navigateBack", "redirectTo", "switchTab"]
+              },
+
+              {
+                name: '设置导航条标题',
+                url: 'set-navigation-bar-title',
+              },
+              {
+                name: '设置导航条颜色',
+                url: 'set-navigation-bar-color',
+              },
+              {
+                name: '设置页面容器背景色',
+                url: 'set-page-backgroundColorContent',
+              },
+              {
+                name: '设置TabBar',
+                url: 'set-tabbar',
+                api: ["showTabBar", "hideTabBar", "showTabBarRedDot", "hideTabBarRedDot", "setTabBarBadge", "removeTabBarBadge", "setTabBarStyle", "setTabBarItem"]
+              },
+              {
+                name: '页面下拉刷新',
+                url: 'pull-down-refresh',
+                api: ["stopPullDownRefresh"]
+              },
+              {
+                name: '将页面滚动到指定位置',
+                url: 'page-scroll-to',
+              },
+            ] as Page[],
+          },
+          {
+            id: 'ui',
+            name: '界面',
+            pages: [
+              // {
+              //   name: "创建动画",
+              //   url: "animation",
+              //   enable: false
+              // },
+              // {
+              //   name: "创建绘画",
+              //   url: "canvas",
+              //   enable: true
+              // },
+              // {
+              //   name: "节点布局交互状态",
+              //   url: "intersection-observer",
+              //   enable: false
+              // },
+              {
+                name: 'element元素',
+                url: 'get-element-by-id',
+                api: ["getElementById"],
+              },
+
+              {
+                name: 'element draw',
+                url: 'element-draw',
+                api: ["Element.getDrawableContext"]
+              }, {
+                name: 'element截图',
+                url: 'element-takesnapshot',
+                api: ["Element.takeSnapshot"]
+              },
+
+              {
+                name: 'element大小变化监听',
+                url: 'resize-observer'
+              },
+              {
+                name: 'node节点',
+                url: 'nodes-info',
+                api: ["createSelectorQuery"]
+              },
+              {
+                name: '动态加载字体',
+                url: 'load-font-face',
+              },
+              {
+                name: 'rpx2px',
+                url: 'rpx2px'
+              },
+              {
+                name: 'actionSheet操作菜单',
+                url: 'action-sheet',
+              },
+              {
+                name: 'showModal模态弹窗',
+                url: 'modal',
+                api: ["showModal"]
+              },
+              {
+                name: 'showLoading等待框',
+                url: 'loading',
+              },
+              {
+                name: 'showToast轻提示框',
+                url: 'toast',
+                api: ["showToast"]
+              }
+
+              ,{
+                name: '主题切换',
+                url: 'theme-change',
+                api: ["setAppTheme","onOsThemeChange","offOsThemeChange","onAppThemeChange","offAppThemeChange"]
+              }
+
+            ] as Page[],
+          },
+          {
+            id: 'network',
+            name: '网络',
+            pages: [
+              {
+                name: '发起请求request',
+                url: 'request',
+              },
+              {
+                name: '上传文件',
+                url: 'upload-file',
+              },
+              {
+                name: '下载文件',
+                url: 'download-file',
+              },
+              {
+                name: '获取设备网络状态',
+                url: 'get-network-type',
+              },
+              {
+                name: 'socketTask',
+                url: 'websocket-socketTask',
+                api: [""] //它不是uni.的api
+              },
+              {
+                name: '全局websocket',
+                url: 'websocket-global',
+                api: ["connectSocket", "onSocketOpen", "onSocketError", "sendSocketMessage", "onSocketMessage", "closeSocket", "onSocketClose"]
+              },
+            ] as Page[],
+          },
+          {
+            id: 'device',
+            name: '设备',
+            pages: [
+              {
+                name: '获取系统信息',
+                url: 'get-system-info',
+              },
+              {
+                name: '获取设备信息',
+                url: 'get-device-info',
+              },
+              {
+                name: '获取窗口信息',
+                url: 'get-window-info',
+              },
+              {
+                name: '获取APP基础信息',
+                url: 'get-app-base-info',
+              },
+
+              {
+                name: '获取APP授权设置',
+                url: 'get-app-authorize-setting',
+              },
+              {
+                name: '获取系统设置',
+                url: 'get-system-setting',
+              },
+
+              {
+                name: '电量',
+                url: 'get-battery-info',
+              },
+
+              {
+                name: '安装Apk',
+                url: 'install-apk'
+              },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*
+              {
+                name: "震动",
+                url: "vibrate",
+              },
+              {
+                name: "添加手机联系人",
+                url: "add-phone-contact",
+              },
+              {
+                name: "扫码",
+                url: "scan-code",
+              },
+              {
+                name: "屏幕亮度",
+                url: "brightness",
+              },
+              {
+                name: "蓝牙",
+                url: "bluetooth",
+              },
+              {
+                name: "生物认证",
+                url: "soter",
+              },
+              {
+                name: "iBeacon",
+                url: "ibeacon",
+              },
+              {
+                name: "监听加速度传感器",
+                url: "on-accelerometer-change",
+              },
+              {
+                name: "监听距离传感器",
+                url: "/platforms/app-plus/proximity/proximity",
+              },
+              {
+                name: "监听方向传感器",
+                url: "/platforms/app-plus/orientation/orientation",
+              }, */
+            ] as Page[],
+          },
+          {
+            id: 'media',
+            name: '媒体',
+            pages: [
+              {
+                name: "拍摄图片或从相册中选择图片",
+                url: 'choose-image'
+              },
+              {
+                name: '图片预览',
+                url: 'preview-image',
+                api: ["previewImage", "closePreviewImage"]
+              },
+
+              {
+                name: "保存图片到相册",
+                url: 'save-image-to-photos-album'
+              },
+
+
+              {
+                name: "获取图片信息",
+                url: 'get-image-info'
+              },
+
+
+              {
+                name: "压缩图片",
+                url: 'compress-image'
+              },
+
+              {
+                name: "拍摄视频或从相册中选择视频",
+                url: 'choose-video'
+              },
+
+              {
+                name: "保存视频到相册",
+                url: 'save-video-to-photos-album'
+              },
+
+
+
+              {
+                name: "获取视频信息",
+                url: 'get-video-info'
+              },
+
+
+              {
+                name: "压缩视频",
+                url: 'compress-video'
+              },
+
+
+
+
+
+
+
+              /*
+              {
+                name: "背景音频",
+                url: "background-audio",
+              },
+              {
+                name: "录音",
+                url: "rec",
+              },
+              {
+                name: "文件",
+                url: "file",
+              },
+              */
+            ] as Page[],
+          },
+          {
+            id: 'location',
+            name: '位置',
+            pages: [
+              {
+                name: '获取当前位置',
+                url: 'get-location',
+              },
+
+
+
+
+
+
+
+
+
+
+              /*
+              {
+                name: "地图搜索",
+                url: "map-search",
+              }, */
+            ] as Page[],
+          },
+          {
+            id: 'storage',
+            name: '数据存储',
+            pages: [
+              {
+                name: 'storage（key-value存储）',
+                url: 'storage',
+                api: ["getStorageInfo", "getStorageInfoSync", "getStorage", "getStorageSync", "setStorage", "setStorageSync", "removeStorage", "removeStorageSync", "clearStorage", "clearStorageSync"]
+              }
+            ] as Page[],
+          },
+
+          {
+            id: 'file',
+            name: '文件',
+            pages: [
+              {
+                name: 'fileSystemManager文件管理',
+                url: 'get-file-system-manager'
+              }
+            ] as Page[],
+          },
+
+          {
+            id: 'unicloud',
+            name: 'uniCloud',
+            pages: [
+              {
+                name: '云函数',
+                url: 'unicloud-call-function',
+              },
+              {
+                name: '云对象',
+                url: 'unicloud-import-object',
+              },
+              {
+                name: '云存储',
+                url: 'unicloud-file-api',
+              },
+              {
+                name: 'clientDB',
+                url: 'unicloud-database',
+              },
+            ] as Page[],
+          },
+
+          {
+            id: 'login',
+            name: '登录与认证',
+            pages: [
+              {
+                name: '一键登录',
+                url: 'get-univerify-manager',
+              },
+              {
+                name: '实人认证',
+                url: 'facial-recognition-verify',
+              }
+            ] as Page[],
+          },
+          {
+            id: 'ad',
+            name: '广告',
+            pages: [
+              {
+                name: '激励视频广告',
+                url: 'rewarded-video-ad',
+              }
+              /* {
+                id: "full-screen-video-ad",
+                url: "full-screen-video-ad",
+                name: "全屏视频广告",
+                enable: false,
+                pages: [] as Page[]
+              }, */
+            ] as Page[],
+          },
+
+          {
+            id: "payment",
+            name: "支付",
+            pages: [
+
+              {
+                name: "简易支付示例",
+                url: "request-payment",
+              },
+
+              {
+                name: "uni-pay支付示例",
+                url: "request-payment-uni-pay",
+              }
+            ] as Page[],
+          },
+
+          {
+            id: 'permission-listener',
+            name: '权限申请监听',
+            pages: [
+              {
+                name: '权限申请监听',
+                url: 'create-request-permission-listener',
+              }
+            ] as Page[]
+          },
+
+          /*
+          {
+            id: "share",
+            name: "分享",
+            pages: [
+              {
+                name: "分享",
+                url: "share",
+              },
+            ] as Page[],
+          },
+          */
+        ] as ListItem[],
+        arrowUpIcon: '/static/icons/arrow-up.png',
+        arrowDownIcon: '/static/icons/arrow-down.png',
+        arrowRightIcon: '/static/icons/arrow-right.png',
+      }
+    },
+    onLoad() {
+      // console.log("API page onLoad")
+    },
+    onShow() {
+      // console.log("API page onShow")
+    },
+    onHide() {
+      // console.log("API page onHide")
+    },
+    methods: {
+      goDetailPage(e : Page) {
+        if (e.enable == false) {
+          uni.showToast({
+            title: '暂不支持',
+            icon: 'none',
+          })
+          return
+        }
+        if (e.url === 'set-tabbar') {
+          this.showPop()
+          return;
+        }
+        const url =
+          e.url.indexOf('platform') > -1 ? e.url : `/pages/API/${e.url}/${e.url}`
+        uni.navigateTo({
+          url,
+        })
+      },
+      showPop: function () {
+        (this.$refs["pop"] as UniElement).style.setProperty("display", "flex")
+      },
+      hidePop: function () {
+        (this.$refs["pop"] as UniElement).style.setProperty("display", "none")
+      },
+      stopClickPop: function (e : PointerEvent) {
+        e.stopPropagation() //点击到pop的非灰色区域，拦截点击事件
+      }
+    },
+  })
+
+export default __sfc__
+function GenPagesTabBarAPIRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+const _component_u_link = resolveEasyComponent("u-link",_easycom_u_link)
+const _component_uni_collapse_item = resolveEasyComponent("uni-collapse-item",_easycom_uni_collapse_item)
+const _component_uni_collapse = resolveEasyComponent("uni-collapse",_easycom_uni_collapse)
+const _component_api_set_tabbar = resolveEasyComponent("api-set-tabbar",_easycom_api_set_tabbar)
+
+  return createElementVNode(Fragment, null, [
+    createElementVNode("scroll-view", utsMapOf({
+      style: normalizeStyle(utsMapOf({"flex":"1","background-color":"#f8f8f8"})),
+      "enable-back-to-top": "true"
+    }), [
+      createElementVNode("view", utsMapOf({ class: "uni-container" }), [
+        createElementVNode("view", utsMapOf({ class: "uni-header-logo" }), [
+          createElementVNode("image", utsMapOf({
+            class: "uni-header-image",
+            src: "/static/apiIndex.png"
+          }))
+        ]),
+        createElementVNode("view", utsMapOf({ class: "uni-text-box" }), [
+          createElementVNode("text", utsMapOf({ class: "hello-text" }), "以下将演示uni-app接口能力，详细文档见："),
+          createVNode(_component_u_link, utsMapOf({
+            href: 'https://uniapp.dcloud.io/uni-app-x/api/',
+            text: 'https://uniapp.dcloud.io/uni-app-x/api/',
+            inWhiteList: true
+          }), null, 8 /* PROPS */, ["href", "text"])
+        ]),
+        createVNode(_component_uni_collapse, null, utsMapOf({
+          default: withSlotCtx((): any[] => [
+            createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.list, (item, __key, __index, _cached): any => {
+              return createVNode(_component_uni_collapse_item, utsMapOf({
+                key: item.id,
+                title: item.name,
+                class: "item"
+              }), utsMapOf({
+                default: withSlotCtx((): any[] => [
+                  createElementVNode(Fragment, null, RenderHelpers.renderList(item.pages, (page, key, __index, _cached): any => {
+                    return createElementVNode("view", utsMapOf({
+                      class: "uni-navigate-item",
+                      "hover-class": page.enable == false ? '' : 'is--active',
+                      key: key,
+                      onClick: () => {_ctx.goDetailPage(page)}
+                    }), [
+                      createElementVNode("text", utsMapOf({
+                        class: normalizeClass(["uni-navigate-text", page.enable == false ? 'text-disabled' : ''])
+                      }), toDisplayString(page.name), 3 /* TEXT, CLASS */),
+                      createElementVNode("image", utsMapOf({
+                        src: _ctx.arrowRightIcon,
+                        class: "uni-icon-size"
+                      }), null, 8 /* PROPS */, ["src"])
+                    ], 8 /* PROPS */, ["hover-class", "onClick"])
+                  }), 128 /* KEYED_FRAGMENT */)
+                ]),
+                _: 2 /* DYNAMIC */
+              }), 1032 /* PROPS, DYNAMIC_SLOTS */, ["title"])
+            }), 128 /* KEYED_FRAGMENT */)
+          ]),
+          _: 1 /* STABLE */
+        }))
+      ])
+    ], 4 /* STYLE */),
+    createElementVNode("view", utsMapOf({
+      ref: "pop",
+      onClick: () => {_ctx.hidePop()},
+      class: "popup"
+    }), [
+      createElementVNode("view", utsMapOf({
+        style: normalizeStyle(utsMapOf({"width":"90%","background-color":"white"})),
+        onClick: _ctx.stopClickPop
+      }), [
+        createVNode(_component_api_set_tabbar)
+      ], 12 /* STYLE, PROPS */, ["onClick"])
+    ], 8 /* PROPS */, ["onClick"])
+  ], 64 /* STABLE_FRAGMENT */)
+}
+const GenPagesTabBarAPIStyles = [utsMapOf([["item", padStyleMapOf(utsMapOf([["marginBottom", 12]]))], ["popup", padStyleMapOf(utsMapOf([["width", "100%"], ["position", "absolute"], ["height", "100%"], ["alignItems", "center"], ["justifyContent", "center"], ["display", "none"], ["backgroundColor", "rgba(16,16,16,0.5)"]]))]])]
+
+import _easycom_u_link from '@/components/u-link/u-link.vue'
+import _easycom_uni_collapse_item from '@/components/uni-collapse-item/uni-collapse-item.vue'
+import _easycom_uni_collapse from '@/components/uni-collapse/uni-collapse.vue'
+import _easycom_api_set_tabbar from '@/components/api-set-tabbar/api-set-tabbar.vue'
+
+//# sourceMappingURL=API.uvue.map

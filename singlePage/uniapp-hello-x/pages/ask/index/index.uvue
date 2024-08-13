@@ -2,51 +2,56 @@
 	<!-- #ifdef APP -->
 	<scroll-view style="flex:1">
 	<!-- #endif -->
-	<view class="">
-		<view v-for="(it,i) in ls" :key="i">
-			<view class="title">{{it.day}}</view>
-			<view class="box">
-				<view v-for="(item,index) in it.list" :key="index">
-					<button @click="click(item)" size="mini" type="primary">{{item}}</button>
+		<view class="">
+			<view v-for="(it,i) in ls" :key="i">
+				<view class="title">{{it.day}}</view>
+				<view class="box">
+					<view v-for="(item,index) in it.list" :key="index">
+						<button @click="click(item)" size="mini" type="primary">{{item}}</button>
+					</view>
 				</view>
 			</view>
 		</view>
-	</view>
-		
+
 	<!-- #ifdef APP -->
 	</scroll-view>
 	<!-- #endif -->
 </template>
 
-<script>
-	import {list} from './hellolist.js'
+<script lang="uts">
+	type ItemType = {
+		day : string,
+		list : Array,
+	}
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				ls:list
+				ls: [{
+					"day": '8.10',
+					"list": [196402]
+				}] as ItemType[]
 			}
 		},
 		onLoad() {
-			
 		},
 		methods: {
-			click(id){
+			click(id : any) {
 				const prefixPattern = /^docisue/;
-				if(prefixPattern.test(id)){
+				if (prefixPattern.test(id)) {
 					const str = `/pages/ask/doc/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
-						url:str
+						url: str
 					})
-				}else{
+				} else {
 					const str = `/pages/ask/problem/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
-						url:str
+						url: str
 					})
 				}
-				
+
 			}
 		}
 	}
@@ -54,19 +59,22 @@
 
 
 <style lang="scss">
-	.box{
+	.box {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		flex-wrap: wrap;
-		button{
-			// width: 200rpx;
-			margin: 10rpx;
-			font-size: 30rpx;
-			font-weight: 700;
-			padding: 5rpx 8rpx;
-		}
+
 	}
+
+	button {
+		// width: 200rpx;
+		margin: 10rpx;
+		font-size: 30rpx;
+		font-weight: 700;
+		padding: 5rpx 8rpx;
+	}
+
 	.content {
 		display: flex;
 		flex-direction: column;

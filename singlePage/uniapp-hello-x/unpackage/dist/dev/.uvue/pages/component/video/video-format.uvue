@@ -1,0 +1,125 @@
+
+  type VideoFormat = { __$originalPosition?: UTSSourceMapPosition<"VideoFormat", "pages/component/video/video-format.uvue", 29, 8>;
+    format : string
+    src : string
+  }
+
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        title: 'video-format',
+        supportFormats: [
+          // TODO web本地运行时本地服务返回的content-type不对，导致本地视频无法播放。此外web端原生video不支持flv、m3u8、avi格式，但是和app端相比多了ogg格式的支持
+          {
+            format: 'mp4',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.mp4'
+          },
+          {
+            format: 'm4v',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.m4v'
+          },
+          {
+            format: 'mov',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.mov'
+          },
+          {
+            format: 'webm（iOS和Safari不支持）',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.webm'
+          },
+          {
+            format: '3gp',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.3gp'
+          },
+
+          {
+            format: 'flv',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.flv'
+          },
+          {
+            format: 'm3u8',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.m3u8'
+          },
+          {
+            format: '本地m3u8',
+            src: '/static/test-video/2minute-demo.m3u8'
+          },
+
+          {
+            format: '错误路径',
+            src: 'https://www.dcloud.net.cn/errorpath.mp4'
+          },
+        ] as Array<VideoFormat>,
+        notSupportFormats: [
+
+          {
+            format: 'ogg',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.ogg'
+          },
+
+          {
+            format: 'avi',
+            src: 'https://qiniu-web-assets.dcloud.net.cn/video/sample/2minute-demo.avi'
+          }
+        ] as Array<VideoFormat>,
+        // 自动化测试
+        isError: false
+      }
+    },
+    methods: {
+      onError: function (format : string, e : UniVideoErrorEvent) {
+        console.log(format + ":" + JSON.stringify(e), " at pages/component/video/video-format.uvue:97");
+        if (format != "错误路径") {
+          this.isError = true;
+        }
+      }
+    }
+  })
+
+export default __sfc__
+function GenPagesComponentVideoVideoFormatRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+const _component_page_head = resolveEasyComponent("page-head",_easycom_page_head)
+
+  return createElementVNode("scroll-view", utsMapOf({ class: "page-scroll-view" }), [
+    createVNode(_component_page_head, utsMapOf({ title: _ctx.title }), null, 8 /* PROPS */, ["title"]),
+    createElementVNode("view", utsMapOf({ class: "uni-padding-wrap uni-common-mt" }), [
+      createElementVNode("view", utsMapOf({ class: "uni-title" }), [
+        createElementVNode("text", utsMapOf({ class: "uni-title-text" }), "支持的视频格式示例")
+      ]),
+      createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.supportFormats, (item, index, __index, _cached): any => {
+        return createElementVNode("view", utsMapOf({ key: index }), [
+          createElementVNode("text", utsMapOf({ class: "uni-subtitle-text" }), toDisplayString(item.format), 1 /* TEXT */),
+          createElementVNode("video", utsMapOf({
+            id: 'video-' + item.format,
+            class: "video",
+            src: item.src,
+            controls: true,
+            direction: -90,
+            onError: ($event: any) => {_ctx.onError(item.format, $event as UniVideoErrorEvent)}
+          }), null, 40 /* PROPS, NEED_HYDRATION */, ["id", "src", "onError"])
+        ])
+      }), 128 /* KEYED_FRAGMENT */),
+      createElementVNode("view", utsMapOf({ class: "uni-title" }), [
+        createElementVNode("text", utsMapOf({ class: "uni-title-text" }), "暂不支持的格式")
+      ]),
+      createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.notSupportFormats, (item, index, __index, _cached): any => {
+        return createElementVNode("view", utsMapOf({ key: index }), [
+          createElementVNode("text", utsMapOf({ class: "uni-subtitle-text" }), toDisplayString(item.format), 1 /* TEXT */),
+          createElementVNode("video", utsMapOf({
+            id: 'video-' + item.format,
+            class: "video",
+            src: item.src,
+            controls: true,
+            direction: -90
+          }), null, 8 /* PROPS */, ["id", "src"])
+        ])
+      }), 128 /* KEYED_FRAGMENT */)
+    ])
+  ])
+}
+const GenPagesComponentVideoVideoFormatStyles = [utsMapOf([["video", padStyleMapOf(utsMapOf([["height", 200]]))]])]
+
+import _easycom_page_head from '@/components/page-head/page-head.vue'
+
+//# sourceMappingURL=video-format.uvue.map

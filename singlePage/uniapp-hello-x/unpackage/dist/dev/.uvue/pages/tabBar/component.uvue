@@ -1,0 +1,377 @@
+
+
+  import checkUpdate from '@/uni_modules/uni-upgrade-center-app/utils/check-update'
+
+
+  type Page = { __$originalPosition?: UTSSourceMapPosition<"Page", "pages/tabBar/component.uvue", 41, 8>;
+    name : string
+    enable ?: boolean
+    url ?: string.PageURIString
+  }
+  type ListItem = { __$originalPosition?: UTSSourceMapPosition<"ListItem", "pages/tabBar/component.uvue", 46, 8>;
+    id : string
+    name : string
+    pages : Page[]
+    url ?: string
+    enable ?: boolean
+  }
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        list: [
+          {
+            id: 'view',
+            name: '视图容器',
+            pages: [
+              {
+                name: 'view',
+              },
+              {
+                name: 'scroll-view',
+              },
+              {
+                name: 'swiper',
+              },
+
+
+
+
+
+
+
+
+              {
+                name: 'list-view',
+              },
+              {
+                name: 'sticky-header',
+              },
+              {
+                name: 'sticky-section',
+              },
+
+              {
+                name: 'nested-scroll-header',
+              },
+              {
+                name: 'nested-scroll-body',
+              },
+
+            ] as Page[],
+          },
+          {
+            id: 'content',
+            name: '基础内容',
+            pages: [
+              {
+                name: 'text',
+              },
+              {
+                name: 'rich-text',
+                enable: true,
+              },
+              {
+                name: 'progress',
+              },
+            ] as Page[],
+          },
+          {
+            id: 'form',
+            name: '表单组件',
+            pages: [
+              {
+                name: 'button',
+              },
+              {
+                name: 'checkbox',
+              },
+              {
+                name: 'form',
+              },
+              {
+                name: 'input',
+              },
+
+
+
+
+
+
+
+
+
+
+
+              {
+                name: 'picker-view',
+              },
+              {
+                name: 'radio',
+              },
+              {
+                name: 'slider',
+              },
+              {
+                name: 'slider-100',
+              },
+              {
+                name: 'switch',
+              },
+              {
+                name: 'textarea',
+              },
+            ] as Page[],
+          },
+          {
+            id: 'nav',
+            name: '导航',
+            pages: [{
+              name: 'navigator',
+              enable: true
+            }] as Page[],
+          },
+          {
+            id: 'media',
+            name: '媒体组件',
+            pages: [
+              {
+                name: 'image',
+                enable: true,
+              },
+              {
+                name: 'video',
+                enable: true,
+              },
+              /* {
+                name: 'animation-view',
+                enable: false,
+              }, */
+            ] as Page[],
+          },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {
+            id: 'web-view',
+            name: '网页',
+            pages: [
+              {
+                name: '网络网页',
+                enable: true,
+                url: '/pages/component/web-view/web-view',
+              },
+              {
+                name: '本地网页',
+                enable: true,
+                url: '/pages/component/web-view-local/web-view-local',
+              },
+            ] as Page[],
+          },
+          {
+            id: 'unicloud-db',
+            name: 'unicloud-db',
+            pages: [
+              {
+                name: '联系人',
+                enable: true,
+                url: '/pages/component/unicloud-db-contacts/list'
+              },
+              {
+                name: 'mixinDatacom',
+                enable: true,
+                url: '/pages/component/mixin-datacom/mixin-datacom'
+              }
+            ] as Page[],
+          },
+          /*
+            {
+              id: 'ad',
+              url: 'ad',
+              name: 'AD组件',
+              enable: false,
+              pages: [] as Page[]
+            }
+            */
+          {
+            id: 'general-attr-event',
+            name: '通用属性和事件',
+            pages: [
+              {
+                name: '通用属性',
+                url: '/pages/component/general-attribute/general-attribute',
+                enable: true,
+              },
+              {
+                name: '通用事件',
+                url: '/pages/component/general-event/general-event',
+                enable: true,
+              },
+              {
+                name: 'touch事件',
+                url: '/pages/component/general-event/touch-event',
+                enable: true,
+              },
+              {
+                name: 'Transition事件',
+                url: '/pages/component/general-event/transition-event',
+                enable: true,
+              },
+            ] as Page[],
+          }
+        ] as ListItem[],
+        arrowUpIcon: '/static/icons/arrow-up.png' as string.ImageURIString,
+        arrowDownIcon: '/static/icons/arrow-down.png' as string.ImageURIString,
+        arrowRightIcon: '/static/icons/arrow-right.png' as string.ImageURIString,
+        pageHiden: false
+      }
+    },
+    methods: {
+      goDetailPage(e : Page) {
+        if (e.enable == false) {
+          uni.showToast({
+            title: '暂不支持',
+            icon: 'none'
+          })
+          return
+        }
+        const url =
+          e.url != null ? e.url! : `/pages/component/${e.name}/${e.name}`
+        uni.navigateTo({
+          url,
+        })
+      }
+
+      , upgradePopupShow() {
+        console.log('upgradePopup show', " at pages/tabBar/component.uvue:304");
+        if (!this.pageHiden) {
+          uni.hideTabBar()?.catch(_ => { })
+        }
+      }
+      , upgradePopupClose() {
+        console.log('upgradePopup close', " at pages/tabBar/component.uvue:310");
+        uni.showTabBar()?.catch(_ => { })
+      }
+
+    },
+    onReady() {
+
+      checkUpdate(this.$refs['upgradePopup'] as UniUpgradeCenterAppComponentPublicInstance)
+
+    },
+    onLoad() {
+      // console.log("component page onLoad")
+    },
+    onShow() {
+      // console.log("component page onShow")
+      this.pageHiden = false
+    },
+    onHide() {
+      // console.log("component page onHide")
+      this.pageHiden = true
+    },
+    beforeUnmount() {
+      uni.showTabBar()?.catch(_ => { })
+    }
+  })
+
+export default __sfc__
+function GenPagesTabBarComponentRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+const _component_u_link = resolveEasyComponent("u-link",_easycom_u_link)
+const _component_uni_collapse_item = resolveEasyComponent("uni-collapse-item",_easycom_uni_collapse_item)
+const _component_uni_collapse = resolveEasyComponent("uni-collapse",_easycom_uni_collapse)
+const _component_uni_upgrade_center_app = resolveEasyComponent("uni-upgrade-center-app",_easycom_uni_upgrade_center_app)
+
+  return createElementVNode("scroll-view", utsMapOf({
+    style: normalizeStyle(utsMapOf({"flex":"1","background-color":"#f8f8f8"})),
+    "enable-back-to-top": "true"
+  }), [
+    createElementVNode("view", utsMapOf({ class: "uni-container" }), [
+      createElementVNode("view", utsMapOf({ class: "uni-header-logo" }), [
+        createElementVNode("image", utsMapOf({
+          class: "uni-header-image",
+          src: "/static/componentIndex.png"
+        }))
+      ]),
+      createElementVNode("view", utsMapOf({ class: "uni-text-box" }), [
+        createElementVNode("text", utsMapOf({ class: "hello-text" }), "uni-app内置组件，展示样式仅供参考，文档详见："),
+        createVNode(_component_u_link, utsMapOf({
+          href: 'https://uniapp.dcloud.io/uni-app-x/component/',
+          text: 'https://uniapp.dcloud.io/uni-app-x/component/',
+          inWhiteList: true
+        }), null, 8 /* PROPS */, ["href", "text"])
+      ]),
+      createVNode(_component_uni_collapse, null, utsMapOf({
+        default: withSlotCtx((): any[] => [
+          createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.list, (item, __key, __index, _cached): any => {
+            return createVNode(_component_uni_collapse_item, utsMapOf({
+              key: item.id,
+              title: item.name,
+              class: "item"
+            }), utsMapOf({
+              default: withSlotCtx((): any[] => [
+                createElementVNode(Fragment, null, RenderHelpers.renderList(item.pages, (page, key, __index, _cached): any => {
+                  return createElementVNode("view", utsMapOf({
+                    class: "uni-navigate-item",
+                    "hover-class": page.enable == false ? '' : 'is--active',
+                    key: key,
+                    onClick: () => {_ctx.goDetailPage(page)}
+                  }), [
+                    createElementVNode("text", utsMapOf({
+                      class: normalizeClass(["uni-navigate-text", page.enable == false ? 'text-disabled' : ''])
+                    }), toDisplayString(page.name), 3 /* TEXT, CLASS */),
+                    createElementVNode("image", utsMapOf({
+                      src: _ctx.arrowRightIcon,
+                      class: "uni-icon-size"
+                    }), null, 8 /* PROPS */, ["src"])
+                  ], 8 /* PROPS */, ["hover-class", "onClick"])
+                }), 128 /* KEYED_FRAGMENT */)
+              ]),
+              _: 2 /* DYNAMIC */
+            }), 1032 /* PROPS, DYNAMIC_SLOTS */, ["title"])
+          }), 128 /* KEYED_FRAGMENT */)
+        ]),
+        _: 1 /* STABLE */
+      })),
+      createVNode(_component_uni_upgrade_center_app, utsMapOf({
+        ref: "upgradePopup",
+        onShow: _ctx.upgradePopupShow,
+        onClose: _ctx.upgradePopupClose
+      }), null, 8 /* PROPS */, ["onShow", "onClose"])
+    ])
+  ], 4 /* STYLE */)
+}
+const GenPagesTabBarComponentStyles = [utsMapOf([["item", padStyleMapOf(utsMapOf([["marginBottom", 12]]))]])]
+
+import _easycom_u_link from '@/components/u-link/u-link.vue'
+import _easycom_uni_collapse_item from '@/components/uni-collapse-item/uni-collapse-item.vue'
+import _easycom_uni_collapse from '@/components/uni-collapse/uni-collapse.vue'
+import _easycom_uni_upgrade_center_app from '@/uni_modules/uni-upgrade-center-app/components/uni-upgrade-center-app/uni-upgrade-center-app.uvue'
+
+import { UniUpgradeCenterAppComponentPublicInstance  } from "@/uni_modules/uni-upgrade-center-app/components/uni-upgrade-center-app/uni-upgrade-center-app.uvue"
+//# sourceMappingURL=component.uvue.map

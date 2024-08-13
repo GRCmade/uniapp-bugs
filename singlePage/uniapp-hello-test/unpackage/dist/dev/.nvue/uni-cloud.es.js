@@ -409,6 +409,36 @@ const pages = [
     style: {
       navigationBarTitleText: "196452"
     }
+  },
+  {
+    path: "pages/ask/problem/196474/196474",
+    style: {
+      navigationBarTitleText: "196474"
+    }
+  },
+  {
+    path: "pages/ask/problem/196459/196459",
+    style: {
+      navigationBarTitleText: "196459"
+    }
+  },
+  {
+    path: "pages/ask/problem/196524/196524",
+    style: {
+      navigationBarTitleText: "196524"
+    }
+  },
+  {
+    path: "pages/ask/problem/196541/196541",
+    style: {
+      navigationBarTitleText: "196541"
+    }
+  },
+  {
+    path: "pages/ask/problem/196514/196514",
+    style: {
+      navigationBarTitleText: "196514"
+    }
   }
 ];
 const subPackages = [

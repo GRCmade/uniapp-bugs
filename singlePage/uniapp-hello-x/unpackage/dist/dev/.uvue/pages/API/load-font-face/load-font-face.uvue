@@ -1,0 +1,132 @@
+
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        uniIcon1: '\ue100',
+        uniIcon2: '\ue101',
+      }
+    },
+    onLoad() {
+      uni.loadFontFace({
+        global: true,
+        family: 'UniFontFamily',
+        source: "url('/static/font/uni.ttf')",
+        success() {
+          console.log('global loadFontFace uni.ttf success', " at pages/API/load-font-face/load-font-face.uvue:40")
+        },
+        fail(error) {
+          console.warn('global loadFontFace uni.ttf fail', error.errMsg, " at pages/API/load-font-face/load-font-face.uvue:43")
+        },
+      })
+      uni.loadFontFace({
+        family: 'AlimamaDaoLiTiTTF',
+        source:
+          "url('https://qiniu-web-assets.dcloud.net.cn/uni-app-x/static/font/AlimamaDaoLiTi.ttf')",
+        success() {
+          console.log('loadFontFace Remote AlimamaDaoLiTi.ttf success', " at pages/API/load-font-face/load-font-face.uvue:51")
+        },
+        fail(error) {
+          console.warn('loadFontFace Remote AlimamaDaoLiTi.ttf fail', error.errMsg, " at pages/API/load-font-face/load-font-face.uvue:54")
+        },
+      })
+      uni.loadFontFace({
+        family: 'AlimamaDaoLiTiOTF',
+        source: "url('/static/font/AlimamaDaoLiTi.otf')",
+        success() {
+          console.log('loadFontFace AlimamaDaoLiTi.otf success', " at pages/API/load-font-face/load-font-face.uvue:61")
+        },
+        fail(error) {
+          console.warn('loadFontFace AlimamaDaoLiTi.otf fail', error.errMsg, " at pages/API/load-font-face/load-font-face.uvue:64")
+        },
+      })
+      uni.loadFontFace({
+        family: 'AlimamaDaoLiTiWOFF',
+        source: "url('/static/font/AlimamaDaoLiTi.woff')",
+        success() {
+          console.log('loadFontFace AlimamaDaoLiTi.woff success', " at pages/API/load-font-face/load-font-face.uvue:71")
+        },
+        fail(error) {
+          console.warn('loadFontFace AlimamaDaoLiTi.woff fail', error.errMsg, " at pages/API/load-font-face/load-font-face.uvue:74")
+        },
+      })
+      uni.loadFontFace({
+        family: 'AlimamaDaoLiTiWOFF2',
+        source: "url('/static/font/AlimamaDaoLiTi.woff2')",
+        success() {
+          console.log('loadFontFace AlimamaDaoLiTi.woff2 success', " at pages/API/load-font-face/load-font-face.uvue:81")
+        },
+        fail(error) {
+          console.warn('loadFontFace AlimamaDaoLiTi.woff2 fail', error.errMsg, " at pages/API/load-font-face/load-font-face.uvue:84")
+        },
+      })
+    },
+    methods: {
+      navigateToChild() {
+        uni.navigateTo({
+          url: '/pages/API/load-font-face/load-font-face-child',
+        })
+      },
+    },
+  })
+
+export default __sfc__
+function GenPagesAPILoadFontFaceLoadFontFaceRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+const _component_page_head = resolveEasyComponent("page-head",_easycom_page_head)
+
+  return createElementVNode(Fragment, null, [
+    createVNode(_component_page_head, utsMapOf({ title: "loadFontFace" })),
+    createElementVNode("view", utsMapOf({ class: "uni-padding-wrap" }), [
+      createElementVNode("text", utsMapOf({ class: "font-size-20" }), "全局加载字体："),
+      createElementVNode("text", utsMapOf({
+        class: "font-size-20 line-height-40",
+        style: normalizeStyle(utsMapOf({"font-family":"UniFontFamily"}))
+      }), "font-family: uni.ttf", 4 /* STYLE */),
+      createElementVNode("view", utsMapOf({
+        style: normalizeStyle(utsMapOf({"flex-direction":"row"}))
+      }), [
+        createElementVNode("text", utsMapOf({
+          class: "font-size-20",
+          style: normalizeStyle(utsMapOf({"font-family":"UniFontFamily"}))
+        }), toDisplayString(_ctx.uniIcon1), 5 /* TEXT, STYLE */),
+        createElementVNode("text", utsMapOf({
+          style: normalizeStyle(utsMapOf({"margin-left":"5px","margin-right":"20px","line-height":"22px"}))
+        }), "\\ue100", 4 /* STYLE */),
+        createElementVNode("text", utsMapOf({
+          class: "font-size-20",
+          style: normalizeStyle(utsMapOf({"font-family":"UniFontFamily"}))
+        }), toDisplayString(_ctx.uniIcon2), 5 /* TEXT, STYLE */),
+        createElementVNode("text", utsMapOf({
+          style: normalizeStyle(utsMapOf({"margin-left":"5px","line-height":"22px"}))
+        }), "\\ue101", 4 /* STYLE */)
+      ], 4 /* STYLE */),
+      createElementVNode("text", utsMapOf({ class: "uni-common-mt font-size-20" }), "非全局加载字体："),
+      createElementVNode("text", utsMapOf({
+        class: "font-size-20 line-height-40",
+        style: normalizeStyle(utsMapOf({"font-family":"AlimamaDaoLiTiTTF"}))
+      }), "font-family: 阿里妈妈刀隶体-ttf (网络字体下载后生效)", 4 /* STYLE */),
+      createElementVNode("text", utsMapOf({
+        class: "font-size-20 line-height-40",
+        style: normalizeStyle(utsMapOf({"font-family":"AlimamaDaoLiTiOTF"}))
+      }), "font-family: 阿里妈妈刀隶体-otf", 4 /* STYLE */),
+      createElementVNode("text", utsMapOf({
+        class: "item",
+        style: normalizeStyle(utsMapOf({"font-family":"AlimamaDaoLiTiWOFF"}))
+      }), "font-family: 阿里妈妈刀隶体-woff", 4 /* STYLE */),
+      createElementVNode("text", utsMapOf({
+        class: "item",
+        style: normalizeStyle(utsMapOf({"font-family":"AlimamaDaoLiTiWOFF2"}))
+      }), "font-family: 阿里妈妈刀隶体-woff2", 4 /* STYLE */),
+      createElementVNode("button", utsMapOf({
+        class: "uni-btn",
+        onClick: _ctx.navigateToChild
+      }), "跳转子页面测试字体生效范围", 8 /* PROPS */, ["onClick"])
+    ])
+  ], 64 /* STABLE_FRAGMENT */)
+}
+const GenPagesAPILoadFontFaceLoadFontFaceStyles = [utsMapOf([["font-size-20", padStyleMapOf(utsMapOf([["fontSize", 20]]))], ["line-height-40", padStyleMapOf(utsMapOf([["lineHeight", "40px"]]))]])]
+
+import _easycom_page_head from '@/components/page-head/page-head.vue'
+
+//# sourceMappingURL=load-font-face.uvue.map

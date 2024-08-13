@@ -1,0 +1,58 @@
+
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        jest_result: false,
+        jest_click_x: -1,
+        jest_click_y: -1
+      }
+    },
+    methods: {
+      handleClickOverflowPart() {
+        console.log("click", " at pages/CSS/overflow/overflow-visible-event.uvue:25");
+        this.jest_result = true;
+        uni.showToast({"title":"点击红色区域"})
+      },
+      handleTouchMoveOverflowPart(e:UniTouchEvent) {
+        console.log("touchmove:" + e.touches[0].clientX + "," + e.touches[0].clientY, " at pages/CSS/overflow/overflow-visible-event.uvue:30");
+      },
+      handleClick(str : string) {
+        console.log(`点击了 ${str} view`, " at pages/CSS/overflow/overflow-visible-event.uvue:33");
+        if (str == 'red') {
+          this.jest_result = true;
+        }
+      },
+      jest_getRect() {
+        const rect = uni.getElementById('child')?.getBoundingClientRect()
+        if (rect != null) {
+          const ratio = uni.getSystemInfoSync().devicePixelRatio
+          this.jest_click_x = rect.x * ratio + 10
+          this.jest_click_y = rect.bottom * ratio - 10
+        }
+      }
+    }
+  })
+
+export default __sfc__
+function GenPagesCSSOverflowOverflowVisibleEventRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+  return createElementVNode("view", null, [
+    createElementVNode("text", utsMapOf({
+      style: normalizeStyle(utsMapOf({"font-size":"15px"}))
+    }), "overflow=visible 父view（绿色），子view（红色），点击超出父view区域的部分也可触发事件。", 4 /* STYLE */),
+    createElementVNode("view", utsMapOf({ class: "backgroundview" }), [
+      createElementVNode("view", utsMapOf({ class: "box-visible-border-radius" }), [
+        createElementVNode("view", utsMapOf({
+          id: "child",
+          style: normalizeStyle(utsMapOf({"width":"50px","height":"150px","background-color":"red"})),
+          onClick: _ctx.handleClickOverflowPart,
+          onTouchmove: _ctx.handleTouchMoveOverflowPart
+        }), null, 44 /* STYLE, PROPS, NEED_HYDRATION */, ["onClick", "onTouchmove"])
+      ])
+    ])
+  ])
+}
+const GenPagesCSSOverflowOverflowVisibleEventStyles = [utsMapOf([["backgroundview", padStyleMapOf(utsMapOf([["width", 300], ["height", 300], ["marginBottom", 20], ["backgroundColor", "#FFFFFF"], ["justifyContent", "center"], ["alignItems", "center"]]))], ["box-visible-border-radius", padStyleMapOf(utsMapOf([["width", 100], ["height", 100], ["borderRadius", 20], ["overflow", "visible"], ["backgroundColor", "#008000"]]))], ["hover-class", padStyleMapOf(utsMapOf([["backgroundColor", "#00FFFF"]]))]])]
+
+//# sourceMappingURL=overflow-visible-event.uvue.map

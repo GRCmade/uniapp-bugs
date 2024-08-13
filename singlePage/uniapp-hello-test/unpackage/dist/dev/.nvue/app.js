@@ -22,6 +22,9 @@ Promise.resolve("./pages/component/video/video.js").then((res) => {
 Promise.resolve("./pages/component/map/map.js").then((res) => {
   res.length;
 });
+Promise.resolve("./pages/ask/problem/196514/196514.js").then((res) => {
+  res.length;
+});
 Promise.resolve("./pages/API/map/map.js").then((res) => {
   res.length;
 });

@@ -1,0 +1,63 @@
+
+  const __sfc__ = defineComponent({
+    data() {
+      return {
+        log: [] as string[],
+      }
+    },
+    methods: {
+      fn(res : string) {
+        this.log.push(res)
+      },
+      fn2(res : string) {
+        this.log.push(res)
+      },
+      on() {
+        uni.$on('test', this.fn)
+      },
+      on2() {
+        uni.$on('test', this.fn2)
+      },
+      once() {
+        uni.$once('test', this.fn)
+      },
+      off() {
+        uni.$off('test', this.fn)
+      },
+      offAll() {
+        uni.$off('test')
+      },
+      emit() {
+        uni.$emit('test', 'msg:' + Date.now())
+      },
+      clear() {
+        this.log.length = 0
+      },
+    },
+  })
+
+export default __sfc__
+function GenPagesAPIEventBusEventBusRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+  return createElementVNode("scroll-view", utsMapOf({ class: "page-scroll-view" }), [
+    createElementVNode("view", null, [
+      createElementVNode("button", utsMapOf({ onClick: _ctx.on }), "开始监听", 8 /* PROPS */, ["onClick"]),
+      createElementVNode("button", utsMapOf({ onClick: _ctx.once }), "监听一次", 8 /* PROPS */, ["onClick"]),
+      createElementVNode("button", utsMapOf({ onClick: _ctx.off }), "取消监听", 8 /* PROPS */, ["onClick"]),
+      createElementVNode("button", utsMapOf({ onClick: _ctx.emit }), "触发监听", 8 /* PROPS */, ["onClick"]),
+      createElementVNode("button", utsMapOf({ onClick: _ctx.clear }), "清空消息", 8 /* PROPS */, ["onClick"]),
+      createElementVNode("view", utsMapOf({ class: "box" }), [
+        createElementVNode("view", null, "收到的消息："),
+        createElementVNode("view", null, [
+          createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.log, (item, index, __index, _cached): any => {
+            return createElementVNode("view", utsMapOf({ key: index }), toDisplayString(item), 1 /* TEXT */)
+          }), 128 /* KEYED_FRAGMENT */)
+        ])
+      ])
+    ])
+  ])
+}
+const GenPagesAPIEventBusEventBusStyles = [utsMapOf([["box", padStyleMapOf(utsMapOf([["paddingTop", 10], ["paddingRight", 10], ["paddingBottom", 10], ["paddingLeft", 10]]))]])]
+
+//# sourceMappingURL=event-bus.uvue.map

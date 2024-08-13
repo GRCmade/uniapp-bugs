@@ -1,0 +1,68 @@
+
+	type ItemType = { __$originalPosition?: UTSSourceMapPosition<"ItemType", "pages/ask/index/index.uvue", 22, 7>;
+		day : string,
+		list : Array,
+	}
+	const __sfc__ = defineComponent({
+		data() {
+			return {
+				title: 'Hello',
+				ls: [{
+					"day": '8.10',
+					"list": [196402]
+				}] as ItemType[]
+			}
+		},
+		onLoad() {
+		},
+		methods: {
+			click(id : any) {
+				const prefixPattern = /^docisue/;
+				if (prefixPattern.test(id)) {
+					const str = `/pages/ask/doc/${id}/${id}`
+					console.log(str, " at pages/ask/index/index.uvue:43")
+					uni.navigateTo({
+						url: str
+					})
+				} else {
+					const str = `/pages/ask/problem/${id}/${id}`
+					console.log(str, " at pages/ask/index/index.uvue:49")
+					uni.navigateTo({
+						url: str
+					})
+				}
+
+			}
+		}
+	})
+
+export default __sfc__
+function GenPagesAskIndexIndexRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+  return createElementVNode("scroll-view", utsMapOf({
+    style: normalizeStyle(utsMapOf({"flex":"1"}))
+  }), [
+    createElementVNode("view", utsMapOf({ class: "" }), [
+      createElementVNode(Fragment, null, RenderHelpers.renderList(_ctx.ls, (it, i, __index, _cached): any => {
+        return createElementVNode("view", utsMapOf({ key: i }), [
+          createElementVNode("view", utsMapOf({ class: "title" }), toDisplayString(it.day), 1 /* TEXT */),
+          createElementVNode("view", utsMapOf({ class: "box" }), [
+            createElementVNode(Fragment, null, RenderHelpers.renderList(it.list, (item, index, __index, _cached): any => {
+              return createElementVNode("view", utsMapOf({ key: index }), [
+                createElementVNode("button", utsMapOf({
+                  onClick: () => {_ctx.click(item)},
+                  size: "mini",
+                  type: "primary"
+                }), toDisplayString(item), 9 /* TEXT, PROPS */, ["onClick"])
+              ])
+            }), 128 /* KEYED_FRAGMENT */)
+          ])
+        ])
+      }), 128 /* KEYED_FRAGMENT */)
+    ])
+  ], 4 /* STYLE */)
+}
+const GenPagesAskIndexIndexStyles = [utsMapOf([["box", padStyleMapOf(utsMapOf([["display", "flex"], ["flexDirection", "row"], ["width", "100%"], ["flexWrap", "wrap"]]))], ["content", padStyleMapOf(utsMapOf([["display", "flex"], ["flexDirection", "column"], ["alignItems", "center"], ["justifyContent", "center"]]))], ["logo", padStyleMapOf(utsMapOf([["height", "200rpx"], ["width", "200rpx"], ["marginTop", "200rpx"], ["marginLeft", "auto"], ["marginRight", "auto"], ["marginBottom", "50rpx"]]))], ["text-area", padStyleMapOf(utsMapOf([["display", "flex"], ["justifyContent", "center"]]))], ["title", padStyleMapOf(utsMapOf([["marginLeft", "20rpx"], ["fontSize", "36rpx"], ["color", "#8f8f94"]]))]])]
+
+//# sourceMappingURL=index.uvue.map

@@ -1,0 +1,44 @@
+const __sfc__ = defineComponent({})
+export default __sfc__
+function GenPagesComponentRichTextRichTextRender(this: InstanceType<typeof __sfc__>): any | null {
+const _ctx = this
+const _cache = this.$.renderCache
+const _component_page_head = resolveEasyComponent("page-head",_easycom_page_head)
+const _component_navigator = resolveComponent("navigator")
+
+  return createElementVNode("view", null, [
+    createVNode(_component_page_head, utsMapOf({ title: "rich-text" })),
+    createElementVNode("view", utsMapOf({ class: "uni-padding-wrap uni-common-mt" }), [
+      createElementVNode("view", utsMapOf({ class: "uni-btn-v" }), [
+        createVNode(_component_navigator, utsMapOf({ url: "/pages/component/rich-text/rich-text-tags" }), utsMapOf({
+          default: withSlotCtx((): any[] => [
+            createElementVNode("button", utsMapOf({ type: "primary" }), "rich-text渲染单个HTML标签示例")
+          ]),
+          _: 1 /* STABLE */
+        }))
+      ]),
+      createElementVNode("view", utsMapOf({ class: "uni-btn-v" }), [
+        createVNode(_component_navigator, utsMapOf({ url: "/pages/component/rich-text/rich-text-complex" }), utsMapOf({
+          default: withSlotCtx((): any[] => [
+            createElementVNode("button", utsMapOf({ type: "primary" }), "rich-text渲染复杂HTML示例")
+          ]),
+          _: 1 /* STABLE */
+        }))
+      ]),
+      createElementVNode("view", utsMapOf({ class: "uni-title" }), [
+        createElementVNode("text", utsMapOf({ class: "uni-subtitle-text" }), "selectable")
+      ]),
+      createElementVNode("view", utsMapOf({ class: "text-box" }), [
+        createElementVNode("rich-text", utsMapOf({
+          selectable: true,
+          nodes: "<span>hello uni-app x!</span><br/><span>uni-app x，终极跨平台方案</span>"
+        }))
+      ])
+    ])
+  ])
+}
+const GenPagesComponentRichTextRichTextStyles = [utsMapOf([["text-box", padStyleMapOf(utsMapOf([["paddingTop", 20], ["paddingRight", 0], ["paddingBottom", 20], ["paddingLeft", 0], ["backgroundColor", "#FFFFFF"]]))]])]
+
+import _easycom_page_head from '@/components/page-head/page-head.vue'
+
+//# sourceMappingURL=rich-text.uvue.map

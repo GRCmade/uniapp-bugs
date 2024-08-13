@@ -2,9 +2,9 @@
 	<view class="uni-forms-item"
 		:class="['is-direction-' + localLabelPos ,border?'uni-forms-item--border':'' ,border && isFirstBorder?'is-first-border':'']">
 		<slot name="label">
-			<view class="uni-forms-item__label" :class="{'no-label':!label && !isRequired}"
+			<view class="uni-forms-item__label" :class="{'no-label':!label && !required}"
 				:style="{width:localLabelWidth,justifyContent: localLabelAlign}">
-				<text v-if="isRequired" class="is-required">*</text>
+				<text v-if="required" class="is-required">*</text>
 				<text>{{label}}</text>
 			</view>
 		</slot>

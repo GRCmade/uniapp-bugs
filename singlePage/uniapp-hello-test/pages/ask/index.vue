@@ -22,8 +22,8 @@
 				ls:list
 			}
 		},
-		onLoad() {
-			
+		onShow() {
+			console.log(getCurrentPages())
 		},
 		methods: {
 			click(id){
