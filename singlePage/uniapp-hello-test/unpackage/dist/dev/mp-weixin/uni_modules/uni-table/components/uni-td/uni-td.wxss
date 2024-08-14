@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -36,3 +37,4 @@
 .table--border {
   border-right: 1px #EBEEF5 solid;
 }
+

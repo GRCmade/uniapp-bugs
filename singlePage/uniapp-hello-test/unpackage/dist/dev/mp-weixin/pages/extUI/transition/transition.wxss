@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -39,7 +40,7 @@
   flex: 1;
   margin-bottom: 10px;
 }
-.example .transition {
+.example  .transition {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,3 +55,4 @@
   font-size: 14px;
   color: #fff;
 }
+

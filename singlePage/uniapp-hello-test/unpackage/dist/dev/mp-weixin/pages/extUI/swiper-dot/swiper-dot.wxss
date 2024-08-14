@@ -1,4 +1,37 @@
-@import "../../../nvue.wxss";
+
+view,
+label,
+swiper-item,
+scroll-view {
+  display:flex;
+  flex-direction:column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
+}
+view,
+image,
+input,
+scroll-view,
+swiper,
+swiper-item,
+text,
+textarea,
+video {
+  position: relative;
+  border: 0px solid #000000;
+  box-sizing: border-box;
+}
+swiper-item {
+  position: absolute;
+}
+button {
+  margin: 0;
+}
+
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -47,7 +80,7 @@
 .image {
   width: 750rpx;
 }
- .image img {
+ .image ._img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -109,3 +142,4 @@
   border-color: #007aff;
   border-width: 1px;
 }
+

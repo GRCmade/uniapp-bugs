@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -28,3 +29,4 @@
   border: 1px red solid;
   background: blue;
 }
+

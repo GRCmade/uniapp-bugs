@@ -1,185 +1,431 @@
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/API/share/share"],{
+
+/***/ 479:
+/*!***********************************************************************************************************************************************************!*\
+  !*** /Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/main.js?{"page":"pages%2FAPI%2Fshare%2Fshare"} ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
-const common_vendor = require("../../../common/vendor.js");
-const _sfc_main = {
-  data() {
+/* WEBPACK VAR INJECTION */(function(wx, createPage) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+__webpack_require__(/*! uni-pages */ 26);
+__webpack_require__(/*! @dcloudio/uni-stat/dist/uni-cloud-stat.es.js */ 27);
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
+var _share = _interopRequireDefault(__webpack_require__(/*! ./pages/API/share/share.vue */ 480));
+// @ts-ignore
+wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
+createPage(_share.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createPage"]))
+
+/***/ }),
+
+/***/ 480:
+/*!**************************************************************************************************************************************!*\
+  !*** /Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/pages/API/share/share.vue ***!
+  \**************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./share.vue?vue&type=template&id=1475fe9e& */ 481);
+/* harmony import */ var _share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./share.vue?vue&type=script&lang=js& */ 483);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 50);
+
+var renderjs
+
+
+
+
+/* normalize component */
+
+var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null,
+  false,
+  _share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["components"],
+  renderjs
+)
+
+component.options.__file = "pages/API/share/share.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ 481:
+/*!*********************************************************************************************************************************************************************!*\
+  !*** /Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/pages/API/share/share.vue?vue&type=template&id=1475fe9e& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./share.vue?vue&type=template&id=1475fe9e& */ 482);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_template_id_1475fe9e___WEBPACK_IMPORTED_MODULE_0__["components"]; });
+
+
+
+/***/ }),
+
+/***/ 482:
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/pages/API/share/share.vue?vue&type=template&id=1475fe9e& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
+var components
+try {
+  components = {
+    pageHead: function () {
+      return __webpack_require__.e(/*! import() | components/page-head/page-head */ "components/page-head/page-head").then(__webpack_require__.bind(null, /*! @/components/page-head/page-head.vue */ 1380))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ 483:
+/*!***************************************************************************************************************************************************************!*\
+  !*** /Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/pages/API/share/share.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./share.vue?vue&type=script&lang=js& */ 484);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_13_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_share_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ 484:
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-hello-test/pages/API/share/share.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 29));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
     return {
-      title: "share",
-      shareText: "uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！",
+      title: 'share',
+      shareText: 'uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！',
       href: "https://uniapp.dcloud.io",
-      image: "",
+      image: '',
       shareType: 1,
       providerList: []
     };
   },
   computed: {
-    isDisableButton() {
-      return function(item) {
-        if (this.shareType === 0 && item.id === "qq") {
+    isDisableButton: function isDisableButton() {
+      return function (item) {
+        if (this.shareType === 0 && item.id === 'qq') {
           return true;
         }
-        if (this.shareType === 5 && item.name !== "分享到微信好友") {
+        if (this.shareType === 5 && item.name !== '分享到微信好友') {
           return true;
         }
         return false;
       };
     }
   },
-  onShareAppMessage() {
+  onShareAppMessage: function onShareAppMessage() {
     return {
       title: this.shareText ? this.shareText : "欢迎体验uni-app",
-      path: "/pages/tabBar/component/component",
-      imageUrl: this.image ? this.image : "https://web-assets.dcloud.net.cn/unidoc/zh/share-logo@3.png"
+      path: '/pages/tabBar/component/component',
+      imageUrl: this.image ? this.image : 'https://web-assets.dcloud.net.cn/unidoc/zh/share-logo@3.png'
     };
   },
-  onUnload: function() {
-    this.shareText = "uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！", this.href = "https://uniapp.dcloud.io", this.image = "";
+  onUnload: function onUnload() {
+    this.shareText = 'uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！', this.href = 'https://uniapp.dcloud.io', this.image = '';
   },
-  onLoad: function() {
-    common_vendor.index.getProvider({
-      service: "share",
-      success: (e) => {
-        console.log("success", e);
-        let data = [];
-        for (let i = 0; i < e.provider.length; i++) {
+  onLoad: function onLoad() {
+    var _this = this;
+    uni.getProvider({
+      service: 'share',
+      success: function success(e) {
+        console.log('success', e);
+        var data = [];
+        for (var i = 0; i < e.provider.length; i++) {
           switch (e.provider[i]) {
-            case "weixin":
+            case 'weixin':
               data.push({
-                name: "分享到微信好友",
-                id: "weixin",
+                name: '分享到微信好友',
+                id: 'weixin',
                 sort: 0
               });
               data.push({
-                name: "分享到微信朋友圈",
-                id: "weixin",
-                type: "WXSenceTimeline",
+                name: '分享到微信朋友圈',
+                id: 'weixin',
+                type: 'WXSenceTimeline',
                 sort: 1
               });
               break;
-            case "sinaweibo":
+            case 'sinaweibo':
               data.push({
-                name: "分享到新浪微博",
-                id: "sinaweibo",
+                name: '分享到新浪微博',
+                id: 'sinaweibo',
                 sort: 2
               });
               break;
-            case "qq":
+            case 'qq':
               data.push({
-                name: "分享到QQ",
-                id: "qq",
+                name: '分享到QQ',
+                id: 'qq',
                 sort: 3
               });
               break;
+            default:
+              break;
           }
         }
-        this.providerList = data.sort((x, y) => {
+        _this.providerList = data.sort(function (x, y) {
           return x.sort - y.sort;
         });
       },
-      fail: (e) => {
-        console.log("获取分享通道失败", e);
-        common_vendor.index.showModal({
-          content: "获取分享通道失败",
+      fail: function fail(e) {
+        console.log('获取分享通道失败', e);
+        uni.showModal({
+          content: '获取分享通道失败',
           showCancel: false
         });
       }
     });
   },
   methods: {
-    async share(e) {
-      console.log("分享通道:" + e.id + "； 分享类型:" + this.shareType);
-      if (!this.shareText && (this.shareType === 1 || this.shareType === 0)) {
-        common_vendor.index.showModal({
-          content: "分享内容不能为空",
-          showCancel: false
-        });
-        return;
-      }
-      if (!this.image && (this.shareType === 2 || this.shareType === 0)) {
-        common_vendor.index.showModal({
-          content: "分享图片不能为空",
-          showCancel: false
-        });
-        return;
-      }
-      let shareOPtions = {
-        provider: e.id,
-        scene: e.type && e.type === "WXSceneTimeline" ? "WXSceneTimeline" : "WXSceneSession",
-        //WXSceneSession”分享到聊天界面，“WXSceneTimeline”分享到朋友圈，“WXSceneFavorite”分享到微信收藏     
-        type: this.shareType,
-        success: (e2) => {
-          console.log("success", e2);
-          common_vendor.index.showModal({
-            content: "已分享",
-            showCancel: false
-          });
-        },
-        fail: (e2) => {
-          console.log("fail", e2);
-          common_vendor.index.showModal({
-            content: e2.errMsg,
-            showCancel: false
-          });
-        },
-        complete: function() {
-          console.log("分享操作结束!");
-        }
-      };
-      switch (this.shareType) {
-        case 0:
-          shareOPtions.summary = this.shareText;
-          shareOPtions.imageUrl = this.image;
-          shareOPtions.title = "欢迎体验uniapp";
-          shareOPtions.href = "https://uniapp.dcloud.io";
-          break;
-        case 1:
-          shareOPtions.summary = this.shareText;
-          break;
-        case 2:
-          shareOPtions.imageUrl = this.image;
-          break;
-        case 5:
-          shareOPtions.imageUrl = this.image ? this.image : "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/b6304f00-5168-11eb-bd01-97bc1429a9ff.png";
-          shareOPtions.title = "欢迎体验uniapp";
-          shareOPtions.miniProgram = {
-            id: "gh_33446d7f7a26",
-            path: "/pages/tabBar/component/component",
-            webUrl: "https://uniapp.dcloud.io",
-            type: 0
-          };
-          break;
-      }
-      if (shareOPtions.type === 0 && plus.os.name === "iOS") {
-        shareOPtions.imageUrl = await this.compress();
-      }
-      if (shareOPtions.type === 1 && shareOPtions.provider === "qq") {
-        shareOPtions.href = "https://uniapp.dcloud.io";
-        shareOPtions.title = "欢迎体验uniapp";
-      }
-      common_vendor.index.share(shareOPtions);
+    share: function share(e) {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var shareOPtions;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                console.log('分享通道:' + e.id + '； 分享类型:' + _this2.shareType);
+                if (!(!_this2.shareText && (_this2.shareType === 1 || _this2.shareType === 0))) {
+                  _context.next = 4;
+                  break;
+                }
+                uni.showModal({
+                  content: '分享内容不能为空',
+                  showCancel: false
+                });
+                return _context.abrupt("return");
+              case 4:
+                if (!(!_this2.image && (_this2.shareType === 2 || _this2.shareType === 0))) {
+                  _context.next = 7;
+                  break;
+                }
+                uni.showModal({
+                  content: '分享图片不能为空',
+                  showCancel: false
+                });
+                return _context.abrupt("return");
+              case 7:
+                shareOPtions = {
+                  provider: e.id,
+                  scene: e.type && e.type === 'WXSceneTimeline' ? 'WXSceneTimeline' : 'WXSceneSession',
+                  //WXSceneSession”分享到聊天界面，“WXSceneTimeline”分享到朋友圈，“WXSceneFavorite”分享到微信收藏     
+                  type: _this2.shareType,
+                  success: function success(e) {
+                    console.log('success', e);
+                    uni.showModal({
+                      content: '已分享',
+                      showCancel: false
+                    });
+                  },
+                  fail: function fail(e) {
+                    console.log('fail', e);
+                    uni.showModal({
+                      content: e.errMsg,
+                      showCancel: false
+                    });
+                  },
+                  complete: function complete() {
+                    console.log('分享操作结束!');
+                  }
+                };
+                _context.t0 = _this2.shareType;
+                _context.next = _context.t0 === 0 ? 11 : _context.t0 === 1 ? 16 : _context.t0 === 2 ? 18 : _context.t0 === 5 ? 20 : 24;
+                break;
+              case 11:
+                shareOPtions.summary = _this2.shareText;
+                shareOPtions.imageUrl = _this2.image;
+                shareOPtions.title = '欢迎体验uniapp';
+                shareOPtions.href = 'https://uniapp.dcloud.io';
+                return _context.abrupt("break", 25);
+              case 16:
+                shareOPtions.summary = _this2.shareText;
+                return _context.abrupt("break", 25);
+              case 18:
+                shareOPtions.imageUrl = _this2.image;
+                return _context.abrupt("break", 25);
+              case 20:
+                shareOPtions.imageUrl = _this2.image ? _this2.image : 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/b6304f00-5168-11eb-bd01-97bc1429a9ff.png';
+                shareOPtions.title = '欢迎体验uniapp';
+                shareOPtions.miniProgram = {
+                  id: 'gh_33446d7f7a26',
+                  path: '/pages/tabBar/component/component',
+                  webUrl: 'https://uniapp.dcloud.io',
+                  type: 0
+                };
+                return _context.abrupt("break", 25);
+              case 24:
+                return _context.abrupt("break", 25);
+              case 25:
+                if (!(shareOPtions.type === 0 && plus.os.name === 'iOS')) {
+                  _context.next = 29;
+                  break;
+                }
+                _context.next = 28;
+                return _this2.compress();
+              case 28:
+                shareOPtions.imageUrl = _context.sent;
+              case 29:
+                if (shareOPtions.type === 1 && shareOPtions.provider === 'qq') {
+                  //如果是分享文字到qq，则必须加上href和title
+                  shareOPtions.href = 'https://uniapp.dcloud.io';
+                  shareOPtions.title = '欢迎体验uniapp';
+                }
+                uni.share(shareOPtions);
+              case 31:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
     },
-    radioChange(e) {
-      console.log("type:" + e.detail.value);
+    radioChange: function radioChange(e) {
+      console.log('type:' + e.detail.value);
       this.shareType = parseInt(e.detail.value);
     },
-    chooseImage() {
-      common_vendor.index.chooseImage({
+    chooseImage: function chooseImage() {
+      var _this3 = this;
+      uni.chooseImage({
         count: 1,
-        sourceType: ["album", "camera"],
-        sizeType: ["compressed", "original"],
-        success: (res) => {
-          this.image = res.tempFilePaths[0];
+        sourceType: ['album', 'camera'],
+        sizeType: ['compressed', 'original'],
+        success: function success(res) {
+          _this3.image = res.tempFilePaths[0];
         },
-        fail: (err) => {
-          common_vendor.index.getSetting({
-            success: (res) => {
-              let authStatus = res.authSetting["scope.album"] && res.authSetting["scope.camera"];
+        fail: function fail(err) {
+          uni.getSetting({
+            success: function success(res) {
+              var authStatus = res.authSetting['scope.album'] && res.authSetting['scope.camera'];
               if (!authStatus) {
-                common_vendor.index.showModal({
-                  title: "授权失败",
-                  content: "Hello uni-app需要从您的相机或相册获取图片，请在设置界面打开相关权限",
-                  success: (res2) => {
-                    if (res2.confirm) {
-                      common_vendor.index.openSetting();
+                uni.showModal({
+                  title: '授权失败',
+                  content: 'Hello uni-app需要从您的相机或相册获取图片，请在设置界面打开相关权限',
+                  success: function success(res) {
+                    if (res.confirm) {
+                      uni.openSetting();
                     }
                   }
                 });
@@ -189,39 +435,43 @@ const _sfc_main = {
         }
       });
     },
-    compress() {
-      console.log("开始压缩");
-      let img = this.image;
-      return new Promise((res) => {
-        var localPath = plus.io.convertAbsoluteFileSystem(img.replace("file://", ""));
-        console.log("after" + localPath);
-        plus.io.resolveLocalFileSystemURL(localPath, (entry) => {
-          entry.file((file) => {
-            console.log("getFile:" + JSON.stringify(file));
+    compress: function compress() {
+      //压缩图片 图文分享要求分享图片大小不能超过20Kb
+      console.log('开始压缩');
+      var img = this.image;
+      return new Promise(function (res) {
+        var localPath = plus.io.convertAbsoluteFileSystem(img.replace('file://', ''));
+        console.log('after' + localPath);
+        // 压缩size
+        plus.io.resolveLocalFileSystemURL(localPath, function (entry) {
+          entry.file(function (file) {
+            // 可通过entry对象操作图片 
+            console.log('getFile:' + JSON.stringify(file));
             if (file.size > 20480) {
+              // 压缩后size 大于20Kb
               plus.zip.compressImage({
                 src: img,
-                dst: img.replace(".jpg", "2222.jpg").replace(".JPG", "2222.JPG"),
-                width: "10%",
-                height: "10%",
+                dst: img.replace('.jpg', '2222.jpg').replace('.JPG', '2222.JPG'),
+                width: '10%',
+                height: '10%',
                 quality: 1,
                 overwrite: true
-              }, (event) => {
-                console.log("success zip****" + event.size);
-                let newImg = img.replace(".jpg", "2222.jpg").replace(".JPG", "2222.JPG");
+              }, function (event) {
+                console.log('success zip****' + event.size);
+                var newImg = img.replace('.jpg', '2222.jpg').replace('.JPG', '2222.JPG');
                 res(newImg);
-              }, function(error) {
-                common_vendor.index.showModal({
-                  content: "分享图片太大,需要请重新选择图片!",
+              }, function (error) {
+                uni.showModal({
+                  content: '分享图片太大,需要请重新选择图片!',
                   showCancel: false
                 });
               });
             }
           });
-        }, (e) => {
-          console.log("Resolve file URL failed: " + e.message);
-          common_vendor.index.showModal({
-            content: "分享图片太大,需要请重新选择图片!",
+        }, function (e) {
+          console.log('Resolve file URL failed: ' + e.message);
+          uni.showModal({
+            content: '分享图片太大,需要请重新选择图片!',
             showCancel: false
           });
         });
@@ -229,30 +479,10 @@ const _sfc_main = {
     }
   }
 };
-if (!Array) {
-  const _easycom_page_head2 = common_vendor.resolveComponent("page-head");
-  _easycom_page_head2();
-}
-const _easycom_page_head = () => "../../../components/page-head/page-head.js";
-if (!Math) {
-  _easycom_page_head();
-}
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return common_vendor.e({
-    a: common_vendor.p({
-      title: $data.title
-    }),
-    b: $data.shareText,
-    c: common_vendor.o(($event) => $data.shareText = $event.detail.value),
-    d: !$data.image
-  }, !$data.image ? {
-    e: common_vendor.o((...args) => $options.chooseImage && $options.chooseImage(...args))
-  } : {}, {
-    f: $data.image
-  }, $data.image ? {
-    g: $data.image
-  } : {});
-}
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
-_sfc_main.__runtimeHooks = 2;
-wx.createPage(MiniProgramPage);
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ })
+
+},[[479,"common/runtime","common/vendor"]]]);
+//# sourceMappingURL=../../../../.sourcemap/mp-weixin/pages/API/share/share.js.map

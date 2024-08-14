@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "env": {
+    "compilerVersion": "4.25.2024080907-alpha"
+  },
+  "files": {
+    "utssdk/app-ios/index.uts": {
+      "md5": "f0f714b2f0c271ada5a02fac994c1149"
+    },
+    "utssdk/interface.uts": {
+      "md5": "4bb86e3ec87af6beb281a5f0ba3d27f4"
+    },
+    "package.json": {
+      "md5": "c7f18649bb1352bab97d9b39b5e8c0db"
+    },
+    "utssdk/app-ios/config.json": {
+      "md5": "4ee016ce70148df3f20b06c0f4b689f2"
+    }
+  }
+}

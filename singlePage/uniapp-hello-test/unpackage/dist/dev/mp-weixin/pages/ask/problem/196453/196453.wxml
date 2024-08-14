@@ -1,0 +1,1 @@
+<view><uni-file-picker vue-id="cfd5ec74-1" mode="grid" file-mediatype="all" bind:__l="__l"></uni-file-picker></view>

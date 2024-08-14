@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -57,3 +58,4 @@
   font-size: 36rpx;
   color: #8f8f94;
 }
+

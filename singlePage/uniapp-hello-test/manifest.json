@@ -147,8 +147,10 @@
         },
         "sdkConfigs" : {
             "maps" : {
-                "qqmap" : {
-                    "key" : "TKUBZ-D24AF-GJ4JY-JDVM2-IBYKK-KEBCU"
+                "amap" : {
+                    "key" : "dfbba5195248d28ab9518db25befef44",
+                    "securityJsCode" : "b4d21b9b71494157191f5f4bf3bb1e20",
+                    "serviceHost" : ""
                 }
             }
         },

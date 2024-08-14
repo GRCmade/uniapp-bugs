@@ -1,4 +1,36 @@
-@import "../../../nvue.wxss";
+
+view,
+label,
+swiper-item,
+scroll-view {
+  display:flex;
+  flex-direction:column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
+}
+view,
+image,
+input,
+scroll-view,
+swiper,
+swiper-item,
+text,
+textarea,
+video {
+  position: relative;
+  border: 0px solid #000000;
+  box-sizing: border-box;
+}
+swiper-item {
+  position: absolute;
+}
+button {
+  margin: 0;
+}
+
 
 page {
         width: 100%;
@@ -99,12 +131,17 @@ page {
 		width: 30px;
 		height: 30px;
 		transition-duration: .5s;
+		transition-property: -webkit-transform;
 		transition-property: transform;
-		transform: rotate(0deg);
-		transform-origin: 15px 15px;
+		transition-property: transform, -webkit-transform;
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transform-origin: 15px 15px;
+		        transform-origin: 15px 15px;
 }
 .refresh-icon-active {
-		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg);
 }
 .loading-icon {
 		width: 20px;
@@ -128,3 +165,4 @@ page {
         font-size: 28rpx;
         color: #999;
 }
+

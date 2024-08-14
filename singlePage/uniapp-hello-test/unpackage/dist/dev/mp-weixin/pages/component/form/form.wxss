@@ -1,4 +1,5 @@
 
 .uni-form-item .title {
-		padding: 20rpx 0;
+	padding: 20rpx 0;
 }
+

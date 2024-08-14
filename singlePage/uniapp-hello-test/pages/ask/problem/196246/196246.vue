@@ -11,16 +11,16 @@
 </template>
 
 <script setup>
-	import {
-		onBeforeMount
-	} from 'vue';
-	onBeforeMount(() => {
-		const dom = uni.requireNativePlugin('dom')
-		dom.addRule('fontFace', {
-			'fontFamily': "testfamily",
-			'src': "url('https://byte-drama-series.s3.amazonaws.com/font/gordita-regular.otf')"
-		});
-	})
+	// import {
+	// 	onBeforeMount
+	// } from 'vue';
+	// onBeforeMount(() => {
+	// 	const dom = uni.requireNativePlugin('dom')
+	// 	dom.addRule('fontFace', {
+	// 		'fontFamily': "testfamily",
+	// 		'src': "url('https://byte-drama-series.s3.amazonaws.com/font/gordita-regular.otf')"
+	// 	});
+	// })
 </script>
 
 <style>

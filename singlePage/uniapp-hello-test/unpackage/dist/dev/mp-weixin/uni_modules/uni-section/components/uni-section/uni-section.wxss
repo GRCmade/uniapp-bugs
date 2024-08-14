@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -74,3 +75,4 @@
 .uni-section .uni-section-content {
   font-size: 14px;
 }
+

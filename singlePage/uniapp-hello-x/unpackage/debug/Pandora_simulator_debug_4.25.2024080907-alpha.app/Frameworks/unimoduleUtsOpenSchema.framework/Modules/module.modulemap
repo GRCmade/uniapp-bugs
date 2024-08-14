@@ -1,0 +1,11 @@
+framework module unimoduleUtsOpenSchema {
+  umbrella header "unimoduleUtsOpenSchema.h"
+  export *
+
+  module * { export * }
+}
+
+module unimoduleUtsOpenSchema.Swift {
+  header "unimoduleUtsOpenSchema-Swift.h"
+  requires objc
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -75,3 +76,4 @@
 .uni-list-item__content-title {
   font-size: 14px;
 }
+

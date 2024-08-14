@@ -1,1 +1,1 @@
-<view class="common-page-head"><view class="common-page-head-title">{{a}}</view></view>
+<view class="common-page-head"><view class="common-page-head-title">{{title}}</view></view>

@@ -1534,6 +1534,20 @@
     	{
     		"navigationBarTitleText" : "196402"
     	}
+    },
+    {
+    	"path" : "pages/ask/problem/196484/196484",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "196484"
+    	}
+    },
+    {
+    	"path" : "pages/ask/problem/182989/182989",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "182989"
+    	}
     }
   ],
   "globalStyle": {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -47,3 +48,4 @@
   padding: 5rpx 10rpx 0;
   overflow: hidden;
 }
+

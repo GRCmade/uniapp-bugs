@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -32,7 +33,7 @@
   box-sizing: border-box;
   flex-direction: row;
   align-items: center;
-  transition: border-bottom-color 0.3s;
+  transition: border-bottom-color .3s;
 }
 .uni-collapse-item__title-wrap {
   width: 100%;
@@ -83,10 +84,12 @@
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .uni-collapse-item__title-arrow-active {
-  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .uni-collapse-item__wrap {
   will-change: height;
@@ -118,7 +121,10 @@
   position: relative;
 }
 .uni-collapse-item--animation {
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
+

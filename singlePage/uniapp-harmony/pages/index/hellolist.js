@@ -4,5 +4,5 @@ const obj = {
 }
 export const list = [{
 	"day": '8月',
-	"list": [196451]
+	"list": [196451,196597]
 }]

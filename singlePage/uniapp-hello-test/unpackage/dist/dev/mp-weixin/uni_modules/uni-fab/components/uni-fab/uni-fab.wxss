@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -94,12 +95,16 @@
   font-weight: bold;
 }
 .fab-circle-icon {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   font-weight: 200;
 }
 .uni-fab__plus--active {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .uni-fab__content {
   box-sizing: border-box;
@@ -163,3 +168,4 @@
 .uni-fab__item--first {
   width: 55px;
 }
+

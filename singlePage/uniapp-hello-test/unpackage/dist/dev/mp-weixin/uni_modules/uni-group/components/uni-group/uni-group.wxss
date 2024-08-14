@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -57,3 +58,4 @@
   overflow: hidden;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.08);
 }
+

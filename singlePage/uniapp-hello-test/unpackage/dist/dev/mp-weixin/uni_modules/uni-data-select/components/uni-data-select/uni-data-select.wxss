@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -135,7 +136,6 @@
   opacity: 0.4;
   cursor: default;
 }
-
 /* picker 弹出层通用的指示小三角 */
 .uni-popper__arrow,
 .uni-popper__arrow::after {
@@ -148,7 +148,8 @@
   border-width: 6px;
 }
 .uni-popper__arrow {
-  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+  -webkit-filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+          filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
   top: -6px;
   left: 10%;
   margin-right: 3px;
@@ -181,3 +182,4 @@
   right: 0;
   left: 0;
 }
+

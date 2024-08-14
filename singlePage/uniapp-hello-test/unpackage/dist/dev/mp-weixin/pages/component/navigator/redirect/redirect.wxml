@@ -1,1 +1,1 @@
-<view><page-head wx:if="{{a}}" u-i="1c6a4cbf-0" bind:__l="__l" u-p="{{a}}"></page-head></view>
+<view><page-head vue-id="1a880a6c-1" title="{{title}}" bind:__l="__l"></page-head></view>

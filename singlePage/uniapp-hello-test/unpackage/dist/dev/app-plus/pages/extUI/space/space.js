@@ -737,6 +737,45 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
       style: {
         navigationBarTitleText: "196514"
       }
+    },
+    {
+      path: "pages/ask/problem/196550/196550",
+      style: {
+        navigationBarTitleText: "196550",
+        enablePullDownRefresh: false
+      }
+    },
+    {
+      path: "pages/ask/problem/196568/196568",
+      style: {
+        navigationBarTitleText: "196568",
+        enablePullDownRefresh: false
+      }
+    },
+    {
+      path: "pages/ask/doc/test/test",
+      style: {
+        navigationBarTitleText: "test",
+        enablePullDownRefresh: false
+      }
+    },
+    {
+      path: "pages/ask/problem/196586/196586",
+      style: {
+        navigationBarTitleText: "196586"
+      }
+    },
+    {
+      path: "pages/ask/problem/196598/196598",
+      style: {
+        navigationBarTitleText: "196598"
+      }
+    },
+    {
+      path: "pages/ask/problem/196551/196551",
+      style: {
+        navigationBarTitleText: "196551"
+      }
     }
   ];
   var subPackages = [

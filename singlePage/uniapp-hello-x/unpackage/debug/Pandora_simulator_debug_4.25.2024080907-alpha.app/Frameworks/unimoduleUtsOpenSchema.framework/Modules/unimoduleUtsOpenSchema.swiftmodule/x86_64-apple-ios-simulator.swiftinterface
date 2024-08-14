@@ -1,0 +1,18 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name unimoduleUtsOpenSchema
+import DCloudUTSFoundation
+import DCloudUniappRuntime
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import unimoduleUtsOpenSchema
+public typealias OpenSchema = (_ url: Swift.String) -> Swift.Void
+public var openSchema: (_ url: Swift.String) -> Swift.Void
+public func openSchemaByJs(_ url: Swift.String)
+@_inheritsConvenienceInitializers @objc(UTSSDKModulesUtsOpenSchemaIndexSwift) @objcMembers public class UTSSDKModulesUtsOpenSchemaIndexSwift : ObjectiveC.NSObject {
+  @objc public static func s_openSchemaByJs(_ url: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}

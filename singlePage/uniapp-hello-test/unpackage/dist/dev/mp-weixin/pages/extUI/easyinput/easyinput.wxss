@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -26,3 +27,4 @@
 .uni-mt-5 {
   margin-top: 5px;
 }
+

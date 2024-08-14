@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -23,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-drawer.data-v-f7c32d22 {
+.uni-drawer.data-v-558f1882 {
   display: block;
   position: fixed;
   top: 0;
@@ -33,27 +34,32 @@
   overflow: hidden;
   z-index: 999;
 }
-.uni-drawer__content.data-v-f7c32d22 {
+.uni-drawer__content.data-v-558f1882 {
   display: block;
   position: absolute;
   top: 0;
   width: 220px;
   bottom: 0;
   background-color: #ffffff;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.uni-drawer--left.data-v-f7c32d22 {
+.uni-drawer--left.data-v-558f1882 {
   left: 0;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
-.uni-drawer--right.data-v-f7c32d22 {
+.uni-drawer--right.data-v-558f1882 {
   right: 0;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
-.uni-drawer__content--visible.data-v-f7c32d22 {
-  transform: translateX(0px);
+.uni-drawer__content--visible.data-v-558f1882 {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
-.uni-drawer__mask.data-v-f7c32d22 {
+.uni-drawer__mask.data-v-558f1882 {
   display: block;
   opacity: 0;
   position: absolute;
@@ -64,7 +70,8 @@
   background-color: rgba(0, 0, 0, 0.4);
   transition: opacity 0.3s;
 }
-.uni-drawer__mask--visible.data-v-f7c32d22 {
+.uni-drawer__mask--visible.data-v-558f1882 {
   display: block;
   opacity: 1;
 }
+

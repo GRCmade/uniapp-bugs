@@ -1,7 +1,8 @@
 
 .cell-pd {
-		padding: 22rpx 30rpx;
+	padding: 22rpx 30rpx;
 }
 .list-pd {
-		margin-top: 50rpx;
+	margin-top: 50rpx;
 }
+

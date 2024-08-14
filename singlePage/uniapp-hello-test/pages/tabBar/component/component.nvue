@@ -41,6 +41,9 @@
 				type: String
 			}
 		},
+		onShow() {
+			console.log(getCurrentPages())
+		},
 		data() {
 			return {
 				list: [{

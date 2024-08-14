@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -98,7 +99,8 @@
 }
 .rotate {
   position: absolute;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .icon-del-box {
   display: flex;
@@ -112,10 +114,12 @@
   height: 26px;
   width: 26px;
   z-index: 2;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .icon-del {
   width: 15px;
   height: 1px;
   background-color: #333;
 }
+

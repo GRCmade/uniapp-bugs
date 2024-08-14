@@ -1,5 +1,6 @@
 
 .btn-setstorage {
-		background-color: #007aff;
-		color: #ffffff;
+	background-color: #007aff;
+	color: #ffffff;
 }
+

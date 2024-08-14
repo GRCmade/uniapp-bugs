@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -123,3 +124,4 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+

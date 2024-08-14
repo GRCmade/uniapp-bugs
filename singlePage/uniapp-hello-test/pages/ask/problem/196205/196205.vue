@@ -5,22 +5,22 @@
 	</view>
 </template>
 <script setup>
-	import {
-		onMounted,
-		ref,
-		getCurrentInstance
-	} from "vue"
-	const instance = ref()
-	const observer = ref()
-	onMounted(() => {
-		instance.value = getCurrentInstance()
-		observer.value = uni.createIntersectionObserver(instance.value)
-		observer.value
-			.relativeTo('.box')
-			.observe('.wrap', (res) => {
-				console.log('createIntersectionObserver res', res)
-			})
-	})
+	// import {
+	// 	onMounted,
+	// 	ref,
+	// 	getCurrentInstance
+	// } from "vue"
+	// const instance = ref()
+	// const observer = ref()
+	// onMounted(() => {
+	// 	instance.value = getCurrentInstance()
+	// 	observer.value = uni.createIntersectionObserver(instance.value)
+	// 	observer.value
+	// 		.relativeTo('.box')
+	// 		.observe('.wrap', (res) => {
+	// 			console.log('createIntersectionObserver res', res)
+	// 		})
+	// })
 </script>
 <style lang='scss' scoped>
 	.container {

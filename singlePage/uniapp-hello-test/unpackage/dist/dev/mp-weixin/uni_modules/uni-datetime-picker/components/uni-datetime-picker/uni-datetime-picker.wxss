@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -121,7 +122,6 @@
   height: 16px;
   vertical-align: middle;
 }
-
 /* 添加时间 */
 .popup-x-header {
   display: flex;
@@ -174,7 +174,6 @@
 .mr-50 {
   margin-right: 50px;
 }
-
 /* picker 弹出层通用的指示小三角, todo：扩展至上下左右方向定位 */
 .uni-popper__arrow,
 .uni-popper__arrow::after {
@@ -186,7 +185,8 @@
   border-top-width: 0;
 }
 .uni-popper__arrow {
-  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+  -webkit-filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+          filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
   top: -6px;
   left: 10%;
   margin-right: 3px;
@@ -198,3 +198,4 @@
   margin-left: -6px;
   border-bottom-color: #fff;
 }
+
