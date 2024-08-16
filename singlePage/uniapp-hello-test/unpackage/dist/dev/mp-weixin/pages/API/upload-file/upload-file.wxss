@@ -1,9 +1,8 @@
 
 .image {
-	width: 100%;
+		width: 100%;
 }
 .demo {
-	background: #FFF;
-	padding: 50rpx;
+		background: #FFF;
+		padding: 50rpx;
 }
-

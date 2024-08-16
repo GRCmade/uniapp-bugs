@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -24,10 +23,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container.data-v-189118c0 {
+.container.data-v-d727a616 {
   height: 1000vh;
 }
-.container .box.data-v-189118c0 {
+.container .box.data-v-d727a616 {
   position: fixed;
   top: 20rpx;
   width: 100%;
@@ -35,7 +34,7 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
-.container .wrap.data-v-189118c0 {
+.container .wrap.data-v-d727a616 {
   width: 200rpx;
   height: 200rpx;
   background: cyan;
@@ -44,4 +43,3 @@
   top: 0;
   z-index: 3;
 }
-

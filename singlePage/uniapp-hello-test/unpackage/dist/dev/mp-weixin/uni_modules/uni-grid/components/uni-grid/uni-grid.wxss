@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -24,19 +23,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-grid-wrap.data-v-aaae28a6 {
+.uni-grid-wrap.data-v-07acefee {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
-.uni-grid.data-v-aaae28a6 {
+.uni-grid.data-v-07acefee {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.uni-grid--border.data-v-aaae28a6 {
+.uni-grid--border.data-v-07acefee {
   position: relative;
   z-index: 1;
   border-left: 1px #D2D2D2 solid;
 }
-

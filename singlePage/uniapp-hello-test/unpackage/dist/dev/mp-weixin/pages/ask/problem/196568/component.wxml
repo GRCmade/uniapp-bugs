@@ -1,1 +1,1 @@
-<view>{{''+props.a+''}}</view>
+<view class="">{{a}}</view>

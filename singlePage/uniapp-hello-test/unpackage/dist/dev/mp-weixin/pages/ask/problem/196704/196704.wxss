@@ -1,0 +1,6 @@
+@import "../../../../nvue.wxss";
+
+.webview{
+		width: 200px;
+		height: 1000px;
+}

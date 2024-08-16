@@ -123,11 +123,8 @@
 		background-color: #aaaaaa;
 }
 .close-h {
-		-webkit-transform: rotate(45deg);
-		        transform: rotate(45deg);
+		transform: rotate(45deg);
 }
 .close-v {
-		-webkit-transform: rotate(-45deg);
-		        transform: rotate(-45deg);
+		transform: rotate(-45deg);
 }
-

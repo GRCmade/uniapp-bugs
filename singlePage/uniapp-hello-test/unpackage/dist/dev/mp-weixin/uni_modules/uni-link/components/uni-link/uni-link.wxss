@@ -1,8 +1,7 @@
 
 .uni-link {
-	cursor: pointer;
+		cursor: pointer;
 }
 .uni-link--withline {
-	text-decoration: underline;
+		text-decoration: underline;
 }
-

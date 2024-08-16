@@ -33,6 +33,12 @@
     "pages/component/map/map",
     "pages/component/canvas/canvas",
     "pages/component/web-view/web-view",
+    "platforms/app-plus/speech/speech",
+    "platforms/app-plus/orientation/orientation",
+    "platforms/app-plus/proximity/proximity",
+    "platforms/app-plus/push/push",
+    "platforms/app-plus/shake/shake",
+    "platforms/app-plus/feedback/feedback",
     "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
     "pages/ask/problem/196244/196244",
     "pages/ask/problem/196246/196246",
@@ -54,7 +60,17 @@
     "pages/ask/problem/196514/196514",
     "pages/ask/problem/196550/196550",
     "pages/ask/problem/196568/196568",
-    "pages/ask/doc/test/test"
+    "pages/ask/doc/test/test",
+    "pages/ask/problem/196586/196586",
+    "pages/ask/problem/196598/196598",
+    "pages/ask/problem/196551/196551",
+    "pages/ask/alpha/alpha4-25/alpha4-25",
+    "pages/ask/problem/196704/196704",
+    "pages/ask/problem/196715/196715",
+    "pages/ask/problem/196718/196718",
+    "pages/ask/problem/196614/196614",
+    "pages/ask/doc/docisue120/docisue120",
+    "pages/ask/problem/196750/196750"
   ],
   "subPackages": [
     {
@@ -69,8 +85,6 @@
         "navigator/navigator",
         "navigator/new-page/new-vue-page-1",
         "navigator/new-page/new-vue-page-2",
-        "navigator/new-page/new-nvue-page-1",
-        "navigator/new-page/new-nvue-page-2",
         "pull-down-refresh/pull-down-refresh",
         "animation/animation",
         "get-node-info/get-node-info",
@@ -171,7 +185,6 @@
     {
       "root": "pages/template",
       "pages": [
-        "ucharts/ucharts",
         "nav-default/nav-default",
         "component-communication/component-communication",
         "list2detail-list/list2detail-list",
@@ -181,7 +194,6 @@
         "swiper-vertical/swiper-vertical",
         "swiper-list/swiper-list",
         "scheme/scheme",
-        "vant-button/vant-button",
         "global/global"
       ]
     }
@@ -238,5 +250,7 @@
       "desc": "演示定位能力"
     }
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "custom-tab-bar": "/components/CustomTabBar/CustomTabBar"
+  }
 }

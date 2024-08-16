@@ -1,1 +1,1 @@
-<block wx:if="{{text}}"><text data-event-opts="{{[['tap',[['onClick',['$event']]]]]}}" class="{{['uni-tag','data-v-1516016e',classes]}}" style="{{(customStyle)}}" bindtap="__e">{{text}}</text></block>
+<text wx:if="{{a}}" class="{{['uni-tag', 'data-v-1f94d070', c]}}" style="{{d}}" bindtap="{{e}}">{{b}}</text>

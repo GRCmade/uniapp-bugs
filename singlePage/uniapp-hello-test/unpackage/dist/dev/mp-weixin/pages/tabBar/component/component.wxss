@@ -1,36 +1,4 @@
-
-view,
-label,
-swiper-item,
-scroll-view {
-  display:flex;
-  flex-direction:column;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: auto;
-  align-items: stretch;
-  align-content: flex-start;
-}
-view,
-image,
-input,
-scroll-view,
-swiper,
-swiper-item,
-text,
-textarea,
-video {
-  position: relative;
-  border: 0px solid #000000;
-  box-sizing: border-box;
-}
-swiper-item {
-  position: absolute;
-}
-button {
-  margin: 0;
-}
-
+@import "../../../nvue.wxss";
 
 page {
     min-height: 100%;
@@ -105,16 +73,12 @@ page {
     color: #999999;
     font-size: 14px;
     font-weight: normal;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     transition-duration: 0s;
-    transition-property: -webkit-transform;
     transition-property: transform;
-    transition-property: transform, -webkit-transform;
 }
 .uni-panel-icon-on {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .uni-navigate-item {
 
@@ -143,4 +107,3 @@ page {
     font-size: 14px;
     font-weight: normal;
 }
-

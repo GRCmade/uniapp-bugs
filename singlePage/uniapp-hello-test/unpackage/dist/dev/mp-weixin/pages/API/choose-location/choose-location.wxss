@@ -1,6 +1,5 @@
 
 .page-body-info {
-	padding-bottom: 0;
-	height: 440rpx;
+		padding-bottom: 0;
+		height: 440rpx;
 }
-

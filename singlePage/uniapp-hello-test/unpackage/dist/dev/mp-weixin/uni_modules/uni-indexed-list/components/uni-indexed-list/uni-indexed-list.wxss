@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -24,7 +23,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-indexed-list.data-v-0f58ddf9 {
+.uni-indexed-list.data-v-476e099e {
   position: absolute;
   left: 0;
   top: 0;
@@ -33,26 +32,26 @@
   display: flex;
   flex-direction: row;
 }
-.uni-indexed-list__scroll.data-v-0f58ddf9 {
+.uni-indexed-list__scroll.data-v-476e099e {
   flex: 1;
 }
-.uni-indexed-list__menu.data-v-0f58ddf9 {
+.uni-indexed-list__menu.data-v-476e099e {
   width: 24px;
   display: flex;
   flex-direction: column;
 }
-.uni-indexed-list__menu-item.data-v-0f58ddf9 {
+.uni-indexed-list__menu-item.data-v-476e099e {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
 }
-.uni-indexed-list__menu-text.data-v-0f58ddf9 {
+.uni-indexed-list__menu-text.data-v-476e099e {
   font-size: 12px;
   text-align: center;
   color: #aaa;
 }
-.uni-indexed-list__menu-text--active.data-v-0f58ddf9 {
+.uni-indexed-list__menu-text--active.data-v-476e099e {
   border-radius: 16px;
   width: 16px;
   height: 16px;
@@ -60,7 +59,7 @@
   background-color: #007aff;
   color: #fff;
 }
-.uni-indexed-list__alert-wrapper.data-v-0f58ddf9 {
+.uni-indexed-list__alert-wrapper.data-v-476e099e {
   position: absolute;
   left: 0;
   top: 0;
@@ -71,7 +70,7 @@
   align-items: center;
   justify-content: center;
 }
-.uni-indexed-list__alert.data-v-0f58ddf9 {
+.uni-indexed-list__alert.data-v-476e099e {
   width: 80px;
   height: 80px;
   border-radius: 80px;
@@ -81,4 +80,3 @@
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
 }
-

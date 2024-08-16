@@ -1,0 +1,65 @@
+<template>
+	<view>
+		<map id="test_map" style="width: 750rpx; height: 300px;" :show-location="true" :markers="markers"
+			:longitude="map.longitude" :latitude="map.latitude">
+		</map>
+		<button @click="dingwei">移动</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				map: {
+					longitude: '', //经度  
+					latitude: '', //纬度  
+
+				},
+				markers: [{
+					id: 1,
+					latitude: '39.9496252',
+					longitude: '116.3485888',
+					iconPath: '/static/logo.png',
+					width: 32,
+					height: 32
+				}]
+			}
+		},
+		onReady() {
+			this.context = uni.createMapContext('test_map', this)
+		},
+		onLoad() {
+			let _this = this;
+			_this.map.longitude = '116.3485888'
+			_this.map.latitude = '39.9496252'
+		},
+		methods: {
+			dingwei() {
+				console.log('test----- dingwei start')
+				this.context.translateMarker({
+					markerId: 1,
+					duration: 2000,
+					destination: {
+						latitude: 39.9599999,
+						longitude: 116.3585888,
+					},
+					// rotate: 20,
+					autoRotate: true,
+					animationEnd() {
+						console.log('test----- dingwei end')
+					},
+					success(res) {
+						console.log('移动完成:', res)
+					},
+					fail(res) {
+						console.log('移动完成fail:', res)
+					}
+				})
+			}
+		}
+	}
+</script>
+
+<style scoped>
+</style>

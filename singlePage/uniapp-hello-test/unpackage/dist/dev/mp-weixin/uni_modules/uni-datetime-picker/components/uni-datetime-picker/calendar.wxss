@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -45,20 +44,16 @@
 }
 .uni-calendar--fixed {
   position: fixed;
-  bottom: calc(0px);
+  bottom: calc(var(--window-bottom));
   left: 0;
   right: 0;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   transition-duration: 0.3s;
-  -webkit-transform: translateY(460px);
-          transform: translateY(460px);
+  transform: translateY(460px);
   z-index: 99;
 }
 .uni-calendar--ani-show {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .uni-calendar__content {
   background-color: #fff;
@@ -137,12 +132,10 @@
   border-top-width: 1px;
 }
 .uni-calendar--left {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .uni-calendar--right {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 .uni-calendar__weeks {
   position: relative;
@@ -238,13 +231,11 @@
   height: 2px;
   background-color: #737987;
   border-radius: 2px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .dialog-close-rotate {
   position: absolute;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .uni-datetime-picker--btn {
   border-radius: 100px;
@@ -258,4 +249,3 @@
 .uni-datetime-picker--btn:active {
   opacity: 0.7;
 }
-

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -54,4 +53,3 @@
   justify-content: center;
   font-size: 12px;
 }
-

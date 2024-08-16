@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -74,8 +73,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   transition-duration: 0.3s;
   z-index: 999;
 }
@@ -127,4 +125,3 @@
 .time-hide-second {
   width: 180px;
 }
-

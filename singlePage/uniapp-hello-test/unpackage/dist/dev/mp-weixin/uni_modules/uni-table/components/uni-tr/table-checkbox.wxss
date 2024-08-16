@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -54,10 +53,8 @@
   border-left: 0;
   border-top: 0;
   opacity: 0;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform-origin: center;
+  transform: rotate(45deg);
   box-sizing: content-box;
 }
 .uni-table-checkbox .checkbox__inner.checkbox--indeterminate {
@@ -67,8 +64,7 @@
 .uni-table-checkbox .checkbox__inner.checkbox--indeterminate .checkbox__inner-icon {
   position: absolute;
   opacity: 1;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
   height: 2px;
   top: 0;
   bottom: 0;
@@ -79,8 +75,7 @@
   width: auto;
   border: none;
   border-radius: 2px;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  transform: scale(0.5);
   background-color: #fff;
 }
 .uni-table-checkbox .checkbox__inner:hover {
@@ -96,10 +91,8 @@
 }
 .uni-table-checkbox .checkbox__inner.is-checked .checkbox__inner-icon {
   opacity: 1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .uni-table-checkbox .checkbox__inner.is-checked.is-disable {
   opacity: 0.4;
 }
-

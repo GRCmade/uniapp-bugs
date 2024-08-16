@@ -8,9 +8,7 @@
 				</view>
 			</view>
 		</view>
-		
 	</view>
-	
 </template>
 
 <script>
@@ -28,8 +26,15 @@
 		methods: {
 			click(id){
 				const prefixPattern = /^docisue/;
+				const alphaPattern = /^alpha/;
 				if(prefixPattern.test(id)){
 					const str = `/pages/ask/doc/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url:str
+					})
+				}else if(alphaPattern.test(id)){
+					const str = `/pages/ask/alpha/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
 						url:str

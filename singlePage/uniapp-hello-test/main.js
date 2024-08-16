@@ -23,9 +23,11 @@ app.$mount()
 import {
 	createSSRApp
 } from 'vue'
+import CustomTabBar from './components/CustomTabBar/CustomTabBar.vue';  
 export function createApp() {
 	const app = createSSRApp(App)
 	app.use(store)
+	app.component('CustomTabBar', CustomTabBar);  
 	app.config.globalProperties.$adpid = "1111111111"
 	app.config.globalProperties.$backgroundAudioData = {
 		playing: false,

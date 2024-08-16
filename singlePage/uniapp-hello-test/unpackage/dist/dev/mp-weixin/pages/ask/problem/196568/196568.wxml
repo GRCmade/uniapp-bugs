@@ -1,1 +1,1 @@
-<view><components vue-id="21ad0166-1" a="66" bind:__l="__l"></components></view>
+<view><components wx:if="{{a}}" u-i="1cb7a1ba-0" bind:__l="__l" u-p="{{a}}"></components></view>

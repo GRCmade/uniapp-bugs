@@ -1,0 +1,1 @@
+<view><map id="test_map" style="width:750rpx;height:300px" show-location="{{true}}" markers="{{a}}" longitude="{{b}}" latitude="{{c}}"></map><button bindtap="{{d}}">移动</button></view>
