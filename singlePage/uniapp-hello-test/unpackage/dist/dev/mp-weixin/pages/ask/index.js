@@ -11,6 +11,20 @@ const _sfc_main = {
   onShow() {
     console.log(getCurrentPages());
   },
+  onLoad() {
+    common_vendor.index.setTabBarBadge({
+      index: 0,
+      text: "1",
+      fail(e) {
+        common_vendor.index.showToast({
+          title: e.errMsg || e.message,
+          icon: "none"
+        });
+      }
+    });
+  },
+  onHide() {
+  },
   methods: {
     click(id) {
       const prefixPattern = /^docisue/;

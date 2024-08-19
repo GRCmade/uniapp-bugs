@@ -74,6 +74,11 @@ if (!Math) {
   "./pages/ask/problem/196614/196614.js";
   "./pages/ask/doc/docisue120/docisue120.js";
   "./pages/ask/problem/196750/196750.js";
+  "./pages/ask/problem/196811/196811.js";
+  "./pages/ask/problem/196820/196820.js";
+  "./pages/ask/problem/196766/196766.js";
+  "./pages/ask/problem/196855/196855.js";
+  "./pages/ask/problem/196802/196802.js";
   "./pages/API/login/login.js";
   "./pages/API/get-user-info/get-user-info.js";
   "./pages/API/request-payment/request-payment.js";

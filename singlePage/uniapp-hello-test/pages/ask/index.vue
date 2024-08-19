@@ -12,58 +12,88 @@
 </template>
 
 <script>
-	import {list} from './hellolist'
+	import {
+		list
+	} from './hellolist'
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				ls:list
+				ls: list
 			}
 		},
 		onShow() {
 			console.log(getCurrentPages())
 		},
+		onLoad() {
+			uni.setTabBarBadge({
+				index: 0,
+				text: "1",
+				fail(e) {
+					uni.showToast({
+						title: e.errMsg || e.message,
+						icon: "none"
+					})
+				}
+			})
+		},
+		onHide() {
+			// setTimeout(() => {
+			// 	uni.removeTabBarBadge({
+			// 		index: 0,
+			// 		fail(e) {
+			// 			console.log("e: ", e);
+			// 			uni.showToast({
+			// 				title: e.errMsg || e.message,
+			// 				icon: "none"
+			// 			})
+			// 		}
+			// 	})
+			// }, 300)
+		},
 		methods: {
-			click(id){
+			click(id) {
 				const prefixPattern = /^docisue/;
 				const alphaPattern = /^alpha/;
-				if(prefixPattern.test(id)){
+				if (prefixPattern.test(id)) {
 					const str = `/pages/ask/doc/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
-						url:str
+						url: str
 					})
-				}else if(alphaPattern.test(id)){
+				} else if (alphaPattern.test(id)) {
 					const str = `/pages/ask/alpha/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
-						url:str
+						url: str
 					})
-				}else{
+				} else {
 					const str = `/pages/ask/problem/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
-						url:str
+						url: str
 					})
 				}
-				
+
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.box{
+	.box {
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
-		button{
+
+		button {
 			margin: 10rpx;
 			font-size: 30rpx;
 			font-weight: 700;
 			padding: 5rpx 8rpx;
 		}
 	}
+
 	.content {
 		display: flex;
 		flex-direction: column;

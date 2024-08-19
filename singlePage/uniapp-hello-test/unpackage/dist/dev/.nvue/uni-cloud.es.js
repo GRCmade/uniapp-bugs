@@ -1,16 +1,4 @@
 import "vue";
-const leftWindow = {
-  path: "windows/left-window.vue",
-  style: {
-    width: "350px"
-  }
-};
-const topWindow = {
-  path: "windows/top-window.vue",
-  style: {
-    height: "60px"
-  }
-};
 const pages = [
   {
     path: "pages/ask/index",
@@ -477,6 +465,78 @@ const pages = [
     path: "pages/ask/problem/196551/196551",
     style: {
       navigationBarTitleText: "196551"
+    }
+  },
+  {
+    path: "pages/ask/alpha/alpha4-25/alpha4-25",
+    style: {
+      navigationBarTitleText: "alpha4-25"
+    }
+  },
+  {
+    path: "pages/ask/problem/196704/196704",
+    style: {
+      navigationBarTitleText: "196704"
+    }
+  },
+  {
+    path: "pages/ask/problem/196715/196715",
+    style: {
+      navigationBarTitleText: "196715"
+    }
+  },
+  {
+    path: "pages/ask/problem/196718/196718",
+    style: {
+      navigationBarTitleText: "196718"
+    }
+  },
+  {
+    path: "pages/ask/problem/196614/196614",
+    style: {
+      navigationBarTitleText: "196614"
+    }
+  },
+  {
+    path: "pages/ask/doc/docisue120/docisue120",
+    style: {
+      navigationBarTitleText: "docisue120"
+    }
+  },
+  {
+    path: "pages/ask/problem/196750/196750",
+    style: {
+      navigationBarTitleText: "196750"
+    }
+  },
+  {
+    path: "pages/ask/problem/196811/196811",
+    style: {
+      navigationBarTitleText: "196811"
+    }
+  },
+  {
+    path: "pages/ask/problem/196820/196820",
+    style: {
+      navigationBarTitleText: "196820"
+    }
+  },
+  {
+    path: "pages/ask/problem/196766/196766",
+    style: {
+      navigationBarTitleText: "196766"
+    }
+  },
+  {
+    path: "pages/ask/problem/196855/196855",
+    style: {
+      navigationBarTitleText: "196855"
+    }
+  },
+  {
+    path: "pages/ask/problem/196802/196802",
+    style: {
+      navigationBarTitleText: "196802"
     }
   }
 ];
@@ -1458,8 +1518,6 @@ const tabBar = {
   ]
 };
 const e = {
-  leftWindow,
-  topWindow,
   pages,
   subPackages,
   globalStyle,
