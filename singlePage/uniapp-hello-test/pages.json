@@ -482,116 +482,139 @@
 			}
 		},
 		{
-			"path" : "pages/ask/doc/test/test",
-			"style" : 
-			{
-				"navigationBarTitleText" : "test",
-				"enablePullDownRefresh" : false
+			"path": "pages/ask/doc/test/test",
+			"style": {
+				"navigationBarTitleText": "test",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196586/196586",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196586"
+			"path": "pages/ask/problem/196586/196586",
+			"style": {
+				"navigationBarTitleText": "196586"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196598/196598",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196598"
+			"path": "pages/ask/problem/196598/196598",
+			"style": {
+				"navigationBarTitleText": "196598"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196551/196551",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196551"
+			"path": "pages/ask/problem/196551/196551",
+			"style": {
+				"navigationBarTitleText": "196551"
 			}
 		},
 		{
-			"path" : "pages/ask/alpha/alpha4-25/alpha4-25",
-			"style" : 
-			{
-				"navigationBarTitleText" : "alpha4-25"
+			"path": "pages/ask/alpha/alpha4-25/alpha4-25",
+			"style": {
+				"navigationBarTitleText": "alpha4-25"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196704/196704",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196704"
+			"path": "pages/ask/problem/196704/196704",
+			"style": {
+				"navigationBarTitleText": "196704"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196715/196715",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196715"
+			"path": "pages/ask/problem/196715/196715",
+			"style": {
+				"navigationBarTitleText": "196715"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196718/196718",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196718"
+			"path": "pages/ask/problem/196718/196718",
+			"style": {
+				"navigationBarTitleText": "196718"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196614/196614",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196614"
+			"path": "pages/ask/problem/196614/196614",
+			"style": {
+				"navigationBarTitleText": "196614"
 			}
 		},
 		{
-			"path" : "pages/ask/doc/docisue120/docisue120",
-			"style" : 
-			{
-				"navigationBarTitleText" : "docisue120"
+			"path": "pages/ask/doc/docisue120/docisue120",
+			"style": {
+				"navigationBarTitleText": "docisue120"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196750/196750",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196750"
+			"path": "pages/ask/problem/196750/196750",
+			"style": {
+				"navigationBarTitleText": "196750"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196811/196811",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196811"
+			"path": "pages/ask/problem/196811/196811",
+			"style": {
+				"navigationBarTitleText": "196811"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196820/196820",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196820"
+			"path": "pages/ask/problem/196820/196820",
+			"style": {
+				"navigationBarTitleText": "196820"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196766/196766",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196766"
+			"path": "pages/ask/problem/196766/196766",
+			"style": {
+				"navigationBarTitleText": "196766"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196855/196855",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196855"
+			"path": "pages/ask/problem/196855/196855",
+			"style": {
+				"navigationBarTitleText": "196855"
 			}
 		},
 		{
-			"path" : "pages/ask/problem/196802/196802",
+			"path": "pages/ask/problem/196802/196802",
+			"style": {
+				"navigationBarTitleText": "196802"
+			}
+		},
+		{
+			"path": "pages/ask/problem/196888/196888",
+			"style": {
+				"navigationBarTitleText": "196888"
+			}
+		},
+		{
+			"path": "pages/ask/problem/196888/subpage/196888-1",
+			"style": {
+				"navigationBarTitleText": "196888-1"
+			}
+		},
+		{
+			"path": "pages/ask/problem/196888/subpage/196888-2",
+			"style": {
+				"navigationBarTitleText": "196888-2"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/196916/196916",
 			"style" : 
 			{
-				"navigationBarTitleText" : "196802"
+				"navigationBarTitleText" : "196916"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/196931/196931",
+			"style" : 
+			{
+				"navigationBarTitleText" : "196931"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/196936/196936",
+			"style" : 
+			{
+				"navigationBarTitleText" : "196936"
 			}
 		}
 	],

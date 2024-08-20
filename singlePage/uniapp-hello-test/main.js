@@ -39,3 +39,6 @@ export function createApp() {
 	}
 }
 // #endif
+
+console.log(getCurrentPages,getApp)
+console.log(getCurrentPages())
