@@ -1,1 +1,0 @@
-<view><uni-data-checkbox wx:if="{{c}}" bindchange="{{a}}" u-i="0ea1bc7c-0" bind:__l="__l" bindupdateModelValue="{{b}}" u-p="{{c}}"></uni-data-checkbox></view>

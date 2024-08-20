@@ -1,1 +1,0 @@
-<view><page-head tt:if="{{a}}" u-i="b698d204-0" bind:__l="__l" u-p="{{a}}"></page-head><view class="uni-padding-wrap"><view class="uni-btn-v"><reciver u-i="b698d204-1" bind:__l="__l"></reciver><sender u-i="b698d204-2" bind:__l="__l"></sender><sender-bus u-i="b698d204-3" bind:__l="__l"></sender-bus></view></view></view>

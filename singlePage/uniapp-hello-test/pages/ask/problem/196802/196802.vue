@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<web-view src="http://192.168.31.90:5173/pages/ask/problem/196802/test.html"></web-view>
+		<web-view src="https://download.twins-tech.com/user_terms.html"></web-view>
 	</view>
 </template>
 

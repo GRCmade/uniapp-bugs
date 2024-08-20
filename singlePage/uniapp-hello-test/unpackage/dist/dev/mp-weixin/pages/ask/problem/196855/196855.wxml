@@ -1,1 +1,0 @@
-<view><input type="number" placeholder="请输入--." bindinput="{{a}}" bindconfirm="{{b}}" value="{{c}}"/></view>

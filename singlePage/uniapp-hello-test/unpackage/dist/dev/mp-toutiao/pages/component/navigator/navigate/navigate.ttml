@@ -1,1 +1,0 @@
-<view><page-head tt:if="{{a}}" u-i="0c32f45f-0" bind:__l="__l" u-p="{{a}}"></page-head></view>

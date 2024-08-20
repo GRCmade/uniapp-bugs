@@ -1,1 +1,0 @@
-<view><page-head tt:if="{{a}}" u-i="d2105c74-0" bind:__l="__l" u-p="{{a}}"></page-head><view class="uni-padding-wrap uni-common-mt"><view class="demo"><block tt:if="{{b}}"><image src="{{c}}" class="image" mode="widthFix"></image></block><block tt:else><view class="uni-hello-addfile" bindtap="{{d}}">+ 选择图片</view></block></view></view></view>
