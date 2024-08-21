@@ -64,7 +64,8 @@
 		data() {
 			return {
 				readOnly: false,
-				formats: {}
+				formats: {},
+				yuhe:'yuhe'
 			}
 		},
 		onLoad() {

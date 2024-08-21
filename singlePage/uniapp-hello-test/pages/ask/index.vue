@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<button @click="Iclick">hideTabBar</button>
 		<view v-for="(it,i) in ls" :key="i">
 			<view class="title">{{it.day}}</view>
 			<view class="box">
@@ -52,6 +53,9 @@
 			// }, 300)
 		},
 		methods: {
+			Iclick(){
+				uni.hideTabBar()
+			},
 			click(id) {
 				const prefixPattern = /^docisue/;
 				const alphaPattern = /^alpha/;
