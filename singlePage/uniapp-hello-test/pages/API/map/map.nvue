@@ -213,24 +213,9 @@
             radius: 15000,
             strokeWidth: 5,
             color: '#CCFFFF',
-            fillColor: '#CC0000'
+            fillColor: '#ff00004F'
         },
-        {
-            latitude: 40.096441,
-            longitude: 116.511146,
-            radius: 12000,
-            strokeWidth: 3,
-            color: '#CCFFFF',
-            fillColor: '#FFCCFF'
-        },
-        {
-            latitude: 39.896441,
-            longitude: 116.311146,
-            radius: 9000,
-            strokeWidth: 1,
-            color: '#CCFFFF',
-            fillColor: '#CC0000'
-        }
+
     ];
     const testIncludePoints = [{
             latitude: 39.989631,

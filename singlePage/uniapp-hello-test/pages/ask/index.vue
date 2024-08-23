@@ -24,7 +24,7 @@
 			}
 		},
 		onShow() {
-			console.log(getCurrentPages())
+			// console.log(getCurrentPages())
 		},
 		onLoad() {
 			uni.setTabBarBadge({
@@ -54,7 +54,10 @@
 		},
 		methods: {
 			Iclick(){
-				uni.hideTabBar()
+				console.log("Iclick")
+				uni.hideTabBar({
+					animation:true
+				})
 			},
 			click(id) {
 				const prefixPattern = /^docisue/;
