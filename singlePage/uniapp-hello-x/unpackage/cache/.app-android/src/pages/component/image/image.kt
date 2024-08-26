@@ -88,22 +88,40 @@ open class GenPagesComponentImageImage : BasePage {
             this.loadError = true;
             console.log(event.type, event.detail, " at pages/component/image/image.uvue:45");
             if (this.autoTest) {
-                this.eventError = object : UTSJSONObject() {
-                    var tagName = event.target?.tagName
-                    var type = event.type
-                };
+                this.eventError = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "tagName",
+                        event.target?.tagName
+                    ),
+                    utsArrayOf(
+                        "type",
+                        event.type
+                    )
+                )));
             }
         }
         ;
         this.load = fun(event: ImageLoadEvent) {
             console.log(event.type, event.detail, " at pages/component/image/image.uvue:55");
             if (this.autoTest) {
-                this.eventLoad = object : UTSJSONObject() {
-                    var tagName = event.target?.tagName
-                    var type = event.type
-                    var width = event.detail.width
-                    var height = event.detail.height
-                };
+                this.eventLoad = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "tagName",
+                        event.target?.tagName
+                    ),
+                    utsArrayOf(
+                        "type",
+                        event.type
+                    ),
+                    utsArrayOf(
+                        "width",
+                        event.detail.width
+                    ),
+                    utsArrayOf(
+                        "height",
+                        event.detail.height
+                    )
+                )));
             }
         }
         ;

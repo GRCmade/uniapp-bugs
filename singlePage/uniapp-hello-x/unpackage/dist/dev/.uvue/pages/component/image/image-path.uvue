@@ -83,7 +83,6 @@
   }
 
 export default __sfc__
-
 function GenPagesComponentImageImagePathRender(this: InstanceType<typeof __sfc__>): any | null {
 const _ctx = this
 const _cache = this.$.renderCache

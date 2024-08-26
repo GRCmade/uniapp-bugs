@@ -132,37 +132,76 @@ open class GenPagesComponentWebViewWebView : BasePage {
             this.loadError = true;
             console.log(JSON.stringify(event.detail), " at pages/component/web-view/web-view.uvue:88");
             if (this.autoTest) {
-                this.eventError = object : UTSJSONObject() {
-                    var tagName = event.target?.tagName
-                    var type = event.type
-                    var errCode = event.detail.errCode
-                    var errMsg = event.detail.errMsg
-                    var url = event.detail.url
-                    var fullUrl = event.detail.fullUrl
-                    var src = event.detail.src
-                };
+                this.eventError = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "tagName",
+                        event.target?.tagName
+                    ),
+                    utsArrayOf(
+                        "type",
+                        event.type
+                    ),
+                    utsArrayOf(
+                        "errCode",
+                        event.detail.errCode
+                    ),
+                    utsArrayOf(
+                        "errMsg",
+                        event.detail.errMsg
+                    ),
+                    utsArrayOf(
+                        "url",
+                        event.detail.url
+                    ),
+                    utsArrayOf(
+                        "fullUrl",
+                        event.detail.fullUrl
+                    ),
+                    utsArrayOf(
+                        "src",
+                        event.detail.src
+                    )
+                )));
             }
         }
         ;
         this.loading = fun(event: UniWebViewLoadingEvent) {
             console.log(JSON.stringify(event.detail), " at pages/component/web-view/web-view.uvue:102");
             if (this.autoTest) {
-                this.eventLoading = object : UTSJSONObject() {
-                    var tagName = event.target?.tagName
-                    var type = event.type
-                    var src = event.detail.src
-                };
+                this.eventLoading = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "tagName",
+                        event.target?.tagName
+                    ),
+                    utsArrayOf(
+                        "type",
+                        event.type
+                    ),
+                    utsArrayOf(
+                        "src",
+                        event.detail.src
+                    )
+                )));
             }
         }
         ;
         this.load = fun(event: UniWebViewLoadEvent) {
             console.log(JSON.stringify(event.detail), " at pages/component/web-view/web-view.uvue:112");
             if (this.autoTest) {
-                this.eventLoad = object : UTSJSONObject() {
-                    var tagName = event.target?.tagName
-                    var type = event.type
-                    var src = event.detail.src
-                };
+                this.eventLoad = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "tagName",
+                        event.target?.tagName
+                    ),
+                    utsArrayOf(
+                        "type",
+                        event.type
+                    ),
+                    utsArrayOf(
+                        "src",
+                        event.detail.src
+                    )
+                )));
             }
         }
         ;

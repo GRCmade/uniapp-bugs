@@ -131,9 +131,12 @@ open class GenPagesAPIRequestPaymentRequestPayment : BasePage {
             if (packageName == "io.dcloud.hellouniappx") {
                 url = "https://demo.dcloud.net.cn/payment/wxpayv3.__UNI__HelloUniAppX/?total=0.01";
             }
-            uni_request<Any>(RequestOptions(url = url, method = "GET", timeout = 6000, header = object : UTSJSONObject() {
-                var `Content-Type` = "application/json"
-            }, success = fun(res){
+            uni_request<Any>(RequestOptions(url = url, method = "GET", timeout = 6000, header = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                utsArrayOf(
+                    "Content-Type",
+                    "application/json"
+                )
+            ))), success = fun(res){
                 console.log(res.data, " at pages/API/request-payment/request-payment.uvue:143");
                 uni_hideLoading();
                 uni_requestPayment(RequestPaymentOptions(provider = "wxpay", orderInfo = JSON.stringify(res.data), fail = fun(res){

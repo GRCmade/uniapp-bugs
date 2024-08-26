@@ -1548,6 +1548,34 @@
     	{
     		"navigationBarTitleText" : "182989"
     	}
+    },
+    {
+    	"path" : "pages/ask/problem/197240/197240",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "197240"
+    	}
+    },
+    {
+    	"path" : "pages/ask/problem/197219/197219",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "197219"
+    	}
+    },
+    {
+    	"path" : "pages/ask/problem/197227/197227",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "197227"
+    	}
+    },
+    {
+    	"path" : "pages/ask/problem/197226/197226",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "197226"
+    	}
     }
   ],
   "globalStyle": {

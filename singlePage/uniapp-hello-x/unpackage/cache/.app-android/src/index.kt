@@ -30,6 +30,10 @@ val runBlock1 = run {
         UTSAndroid.registerProvider("payment", "wxpay", UniPaymentWxpayProviderImpl());
     }
      catch (e: Throwable) {}
+    try {
+        UTSAndroid.registerProvider("location", "system", UniLocationSystemProviderImpl());
+    }
+     catch (e: Throwable) {}
 }
 open class TestConsole : IUTSSourceMap {
     override fun `__$getOriginalPosition`(): UTSSourceMapPosition? {
@@ -352,7 +356,7 @@ open class ItemType (
     @JsonNotNull
     open var day: String,
     @JsonNotNull
-    open var list: UTSArray<*>,
+    open var list: UTSArray<Number>,
 ) : UTSReactiveObject(), IUTSSourceMap {
     override fun `__$getOriginalPosition`(): UTSSourceMapPosition? {
         return UTSSourceMapPosition("ItemType", "pages/ask/index/index.uvue", 22, 7)
@@ -387,7 +391,7 @@ open class ItemTypeReactiveObject : ItemType, IUTSReactive<ItemType> {
             __v_raw.day = value;
             triggerReactiveSet(__v_raw, "day", oldValue, value);
         }
-    override var list: UTSArray
+    override var list: UTSArray<Number>
         get() {
             return trackReactiveGet(__v_raw, "list", __v_raw.list, this.__v_isReadonly, this.__v_isShallow);
         }
@@ -3394,15 +3398,40 @@ open class GETDataType : IUTSSourceMap {
     open var data: UTSJSONObject? = null;
 }
 val duration: Number = 2000;
-val methodMap = object : UTSJSONObject(UTSSourceMapPosition("methodMap", "pages/API/request/request.uvue", 84, 9)) {
-    var GET = "/api/http/method/get"
-    var POST = "/api/http/method/post"
-    var PUT = "/api/http/method/put"
-    var DELETE = "/api/http/method/delete"
-    var PATCH = "/api/http/method/patch"
-    var OPTIONS = "/api/http/method/options"
-    var HEAD = "/api/http/method/head"
-};
+val methodMap = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+    utsArrayOf(
+        "__\$originalPosition",
+        UTSSourceMapPosition("methodMap", "pages/API/request/request.uvue", 84, 9)
+    ),
+    utsArrayOf(
+        "GET",
+        "/api/http/method/get"
+    ),
+    utsArrayOf(
+        "POST",
+        "/api/http/method/post"
+    ),
+    utsArrayOf(
+        "PUT",
+        "/api/http/method/put"
+    ),
+    utsArrayOf(
+        "DELETE",
+        "/api/http/method/delete"
+    ),
+    utsArrayOf(
+        "PATCH",
+        "/api/http/method/patch"
+    ),
+    utsArrayOf(
+        "OPTIONS",
+        "/api/http/method/options"
+    ),
+    utsArrayOf(
+        "HEAD",
+        "/api/http/method/head"
+    )
+)));
 val GenPagesAPIRequestRequestClass = CreateVueComponent(GenPagesAPIRequestRequest::class.java, fun(): VueComponentOptions {
     return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAPIRequestRequest.inheritAttrs, inject = GenPagesAPIRequestRequest.inject, props = GenPagesAPIRequestRequest.props, propsNeedCastKeys = GenPagesAPIRequestRequest.propsNeedCastKeys, emits = GenPagesAPIRequestRequest.emits, components = GenPagesAPIRequestRequest.components, styles = GenPagesAPIRequestRequest.styles);
 }
@@ -7206,6 +7235,67 @@ val GenPagesAskProblem196402196402Class = CreateVueComponent(GenPagesAskProblem1
     return GenPagesAskProblem196402196402(instance);
 }
 );
+val GenPagesAskProblem196484196484Class = CreateVueComponent(GenPagesAskProblem196484196484::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem196484196484.inheritAttrs, inject = GenPagesAskProblem196484196484.inject, props = GenPagesAskProblem196484196484.props, propsNeedCastKeys = GenPagesAskProblem196484196484.propsNeedCastKeys, emits = GenPagesAskProblem196484196484.emits, components = GenPagesAskProblem196484196484.components, styles = GenPagesAskProblem196484196484.styles);
+}
+, fun(instance): GenPagesAskProblem196484196484 {
+    return GenPagesAskProblem196484196484(instance);
+}
+);
+val GenPagesAskProblem182989182989Class = CreateVueComponent(GenPagesAskProblem182989182989::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem182989182989.inheritAttrs, inject = GenPagesAskProblem182989182989.inject, props = GenPagesAskProblem182989182989.props, propsNeedCastKeys = GenPagesAskProblem182989182989.propsNeedCastKeys, emits = GenPagesAskProblem182989182989.emits, components = GenPagesAskProblem182989182989.components, styles = GenPagesAskProblem182989182989.styles);
+}
+, fun(instance): GenPagesAskProblem182989182989 {
+    return GenPagesAskProblem182989182989(instance);
+}
+);
+val GenPagesAskProblem197240197240Class = CreateVueComponent(GenPagesAskProblem197240197240::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem197240197240.inheritAttrs, inject = GenPagesAskProblem197240197240.inject, props = GenPagesAskProblem197240197240.props, propsNeedCastKeys = GenPagesAskProblem197240197240.propsNeedCastKeys, emits = GenPagesAskProblem197240197240.emits, components = GenPagesAskProblem197240197240.components, styles = GenPagesAskProblem197240197240.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenPagesAskProblem197240197240.setup(props as GenPagesAskProblem197240197240);
+    }
+    );
+}
+, fun(instance): GenPagesAskProblem197240197240 {
+    return GenPagesAskProblem197240197240(instance);
+}
+);
+val GenPagesAskProblem197219197219Class = CreateVueComponent(GenPagesAskProblem197219197219::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem197219197219.inheritAttrs, inject = GenPagesAskProblem197219197219.inject, props = GenPagesAskProblem197219197219.props, propsNeedCastKeys = GenPagesAskProblem197219197219.propsNeedCastKeys, emits = GenPagesAskProblem197219197219.emits, components = GenPagesAskProblem197219197219.components, styles = GenPagesAskProblem197219197219.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenPagesAskProblem197219197219.setup(props as GenPagesAskProblem197219197219);
+    }
+    );
+}
+, fun(instance): GenPagesAskProblem197219197219 {
+    return GenPagesAskProblem197219197219(instance);
+}
+);
+val GenPagesAskProblem197227197227Class = CreateVueComponent(GenPagesAskProblem197227197227::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem197227197227.inheritAttrs, inject = GenPagesAskProblem197227197227.inject, props = GenPagesAskProblem197227197227.props, propsNeedCastKeys = GenPagesAskProblem197227197227.propsNeedCastKeys, emits = GenPagesAskProblem197227197227.emits, components = GenPagesAskProblem197227197227.components, styles = GenPagesAskProblem197227197227.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenPagesAskProblem197227197227.setup(props as GenPagesAskProblem197227197227);
+    }
+    );
+}
+, fun(instance): GenPagesAskProblem197227197227 {
+    return GenPagesAskProblem197227197227(instance);
+}
+);
+val GenPagesAskProblem197226ComponentClass = CreateVueComponent(GenPagesAskProblem197226Component::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "component", name = "", inheritAttrs = GenPagesAskProblem197226Component.inheritAttrs, inject = GenPagesAskProblem197226Component.inject, props = GenPagesAskProblem197226Component.props, propsNeedCastKeys = GenPagesAskProblem197226Component.propsNeedCastKeys, emits = GenPagesAskProblem197226Component.emits, components = GenPagesAskProblem197226Component.components, styles = GenPagesAskProblem197226Component.styles);
+}
+, fun(instance): GenPagesAskProblem197226Component {
+    return GenPagesAskProblem197226Component(instance);
+}
+);
+val GenPagesAskProblem197226197226Class = CreateVueComponent(GenPagesAskProblem197226197226::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem197226197226.inheritAttrs, inject = GenPagesAskProblem197226197226.inject, props = GenPagesAskProblem197226197226.props, propsNeedCastKeys = GenPagesAskProblem197226197226.propsNeedCastKeys, emits = GenPagesAskProblem197226197226.emits, components = GenPagesAskProblem197226197226.components, styles = GenPagesAskProblem197226197226.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenPagesAskProblem197226197226.setup(props as GenPagesAskProblem197226197226);
+    }
+    );
+}
+, fun(instance): GenPagesAskProblem197226197226 {
+    return GenPagesAskProblem197226197226(instance);
+}
+);
 fun createApp(): UTSJSONObject {
     val app = createSSRApp(GenAppClass);
     return UTSJSONObject(Map<String, Any?>(utsArrayOf(
@@ -7449,6 +7539,12 @@ fun definePageRoutes() {
     __uniRoutes.push(UniPageRoute(path = "pages/template/custom-long-list/custom-long-list", component = GenPagesTemplateCustomLongListCustomLongListClass, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "自定义虚拟长列表", "enablePullDownRefresh" to false)));
     __uniRoutes.push(UniPageRoute(path = "pages/template/test-background-color-content/test-background-color-content", component = GenPagesTemplateTestBackgroundColorContentTestBackgroundColorContentClass, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "", "backgroundColorContent" to "#fffae8")));
     __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/196402/196402", component = GenPagesAskProblem196402196402Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "196402")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/196484/196484", component = GenPagesAskProblem196484196484Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "196484")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/182989/182989", component = GenPagesAskProblem182989182989Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "182989")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197240/197240", component = GenPagesAskProblem197240197240Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197240")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197219/197219", component = GenPagesAskProblem197219197219Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197219")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197227/197227", component = GenPagesAskProblem197227197227Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197227")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197226/197226", component = GenPagesAskProblem197226197226Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197226")));
 }
 val __uniTabBar: Map<String, Any?>? = utsMapOf("color" to "@tabBarColor", "selectedColor" to "@tabBarSelectedColor", "borderStyle" to "@tabBarBorderStyle", "backgroundColor" to "@tabBarBackgroundColor", "list" to utsArrayOf(
     utsMapOf("pagePath" to "pages/ask/index/index", "iconPath" to "/static/test-image/logo.bmp", "selectedIconPath" to "/static/test-image/logo.bmp", "text" to "首页"),

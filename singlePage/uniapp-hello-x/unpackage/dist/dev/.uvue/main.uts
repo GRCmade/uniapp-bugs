@@ -255,6 +255,12 @@ import GenUniModulesUniPayXPagesPayDeskPayDeskClass from './uni_modules/uni-pay-
 import GenPagesTemplateCustomLongListCustomLongListClass from './pages/template/custom-long-list/custom-long-list.uvue?type=page'
 import GenPagesTemplateTestBackgroundColorContentTestBackgroundColorContentClass from './pages/template/test-background-color-content/test-background-color-content.uvue?type=page'
 import GenPagesAskProblem196402196402Class from './pages/ask/problem/196402/196402.uvue?type=page'
+import GenPagesAskProblem196484196484Class from './pages/ask/problem/196484/196484.uvue?type=page'
+import GenPagesAskProblem182989182989Class from './pages/ask/problem/182989/182989.uvue?type=page'
+import GenPagesAskProblem197240197240Class from './pages/ask/problem/197240/197240.uvue?type=page'
+import GenPagesAskProblem197219197219Class from './pages/ask/problem/197219/197219.uvue?type=page'
+import GenPagesAskProblem197227197227Class from './pages/ask/problem/197227/197227.uvue?type=page'
+import GenPagesAskProblem197226197226Class from './pages/ask/problem/197226/197226.uvue?type=page'
 function definePageRoutes() {
 __uniRoutes.push({ path: "pages/ask/index/index", component: GenPagesAskIndexIndexClass, meta: { isQuit: true } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","首页"]]) } as UniPageRoute)
 __uniRoutes.push({ path: "pages/tabBar/component", component: GenPagesTabBarComponentClass, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","内置组件"],["backgroundColor","#F8F8F8"]]) } as UniPageRoute)
@@ -476,6 +482,12 @@ __uniRoutes.push({ path: "uni_modules/uni-pay-x/pages/pay-desk/pay-desk", compon
 __uniRoutes.push({ path: "pages/template/custom-long-list/custom-long-list", component: GenPagesTemplateCustomLongListCustomLongListClass, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","自定义虚拟长列表"],["enablePullDownRefresh",false]]) } as UniPageRoute)
 __uniRoutes.push({ path: "pages/template/test-background-color-content/test-background-color-content", component: GenPagesTemplateTestBackgroundColorContentTestBackgroundColorContentClass, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText",""],["backgroundColorContent","#fffae8"]]) } as UniPageRoute)
 __uniRoutes.push({ path: "pages/ask/problem/196402/196402", component: GenPagesAskProblem196402196402Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","196402"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/196484/196484", component: GenPagesAskProblem196484196484Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","196484"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/182989/182989", component: GenPagesAskProblem182989182989Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","182989"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/197240/197240", component: GenPagesAskProblem197240197240Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","197240"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/197219/197219", component: GenPagesAskProblem197219197219Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","197219"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/197227/197227", component: GenPagesAskProblem197227197227Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","197227"]]) } as UniPageRoute)
+__uniRoutes.push({ path: "pages/ask/problem/197226/197226", component: GenPagesAskProblem197226197226Class, meta: { isQuit: false } as UniPageMeta, style: utsMapOf([["navigationBarTitleText","197226"]]) } as UniPageRoute)
 }
 const __uniTabBar: Map<string, any | null> | null = utsMapOf([["color","@tabBarColor"],["selectedColor","@tabBarSelectedColor"],["borderStyle","@tabBarBorderStyle"],["backgroundColor","@tabBarBackgroundColor"],["list",[utsMapOf([["pagePath","pages/ask/index/index"],["iconPath","/static/test-image/logo.bmp"],["selectedIconPath","/static/test-image/logo.bmp"],["text","首页"]]),utsMapOf([["pagePath","pages/tabBar/component"],["iconPath","@tabBarComponentIconPath"],["selectedIconPath","@tabBarComponentSelectedIconPath"],["text","内置组件"]]),utsMapOf([["pagePath","pages/tabBar/API"],["iconPath","@tabBarAPIIconPath"],["selectedIconPath","@tabBarAPISelectedIconPath"],["text","接口"]]),utsMapOf([["pagePath","pages/tabBar/CSS"],["iconPath","@tabBarCSSIconPath"],["selectedIconPath","@tabBarCSSSelectedIconPath"],["text","CSS"]]),utsMapOf([["pagePath","pages/tabBar/template"],["iconPath","@tabBarTemplateIconPath"],["selectedIconPath","@tabBarTemplateSelectedIconPath"],["text","模板"]])]]])
 const __uniLaunchPage: Map<string, any | null> = utsMapOf([["url","pages/ask/index/index"],["style",utsMapOf([["navigationBarTitleText","首页"]])]])

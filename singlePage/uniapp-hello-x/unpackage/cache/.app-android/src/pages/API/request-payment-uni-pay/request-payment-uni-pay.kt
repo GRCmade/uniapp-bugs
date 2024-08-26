@@ -343,13 +343,32 @@ open class GenPagesAPIRequestPaymentUniPayRequestPaymentUniPay : BasePage {
                 var res = await(payInstance.getOrder(getOrderData));
                 if (res != null && res["errCode"] == 0) {
                     this.getOrderRes = res.getJSON("pay_order") as UTSJSONObject;
-                    var obj: UTSJSONObject = object : UTSJSONObject(UTSSourceMapPosition("obj", "pages/API/request-payment-uni-pay/request-payment-uni-pay.uvue", 256, 10)) {
-                        var `-1` = "已关闭"
-                        var `1` = "已支付"
-                        var `0` = "未支付"
-                        var `2` = "已部分退款"
-                        var `3` = "已全额退款"
-                    };
+                    var obj: UTSJSONObject = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                        utsArrayOf(
+                            "__\$originalPosition",
+                            UTSSourceMapPosition("obj", "pages/API/request-payment-uni-pay/request-payment-uni-pay.uvue", 256, 10)
+                        ),
+                        utsArrayOf(
+                            "-1",
+                            "已关闭"
+                        ),
+                        utsArrayOf(
+                            "1",
+                            "已支付"
+                        ),
+                        utsArrayOf(
+                            "0",
+                            "未支付"
+                        ),
+                        utsArrayOf(
+                            "2",
+                            "已部分退款"
+                        ),
+                        utsArrayOf(
+                            "3",
+                            "已全额退款"
+                        )
+                    )));
                     var status = res["status"] as Number;
                     var statusStr = status + "";
                     var title = obj[statusStr] as String;
@@ -479,11 +498,24 @@ open class GenPagesAPIRequestPaymentUniPayRequestPaymentUniPay : BasePage {
             if (provider == null) {
                 return "";
             }
-            var providerObj: UTSJSONObject = object : UTSJSONObject(UTSSourceMapPosition("providerObj", "pages/API/request-payment-uni-pay/request-payment-uni-pay.uvue", 383, 9)) {
-                var wxpay = "微信支付"
-                var alipay = "支付宝支付"
-                var appleiap = "ios内购"
-            };
+            var providerObj: UTSJSONObject = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                utsArrayOf(
+                    "__\$originalPosition",
+                    UTSSourceMapPosition("providerObj", "pages/API/request-payment-uni-pay/request-payment-uni-pay.uvue", 383, 9)
+                ),
+                utsArrayOf(
+                    "wxpay",
+                    "微信支付"
+                ),
+                utsArrayOf(
+                    "alipay",
+                    "支付宝支付"
+                ),
+                utsArrayOf(
+                    "appleiap",
+                    "ios内购"
+                )
+            )));
             var providerStr = providerObj[provider] as String;
             return providerStr;
         }

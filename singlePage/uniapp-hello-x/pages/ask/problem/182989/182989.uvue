@@ -1,21 +1,21 @@
 <template>
-	<celll :list="cellList">
+	<!-- <celll :list="cellList">
 		<template v-slot#content>
 			<text>Test</text>
 		</template>
-	</celll>
+	</celll> -->
 </template>
 <script lang="uts">
-	import celll from "./cell.uvue"
-	type list = {
-		bg : string,
-		title : string
-	}
-	export default {
-		data() {
-			return {
-				cellList: [{bg: "#ffffff", title: "Test"}] as list[]
-			}
-		}
-	}
+	// import celll from "./cell.uvue"
+	// type list = {
+	// 	bg : string,
+	// 	title : string
+	// }
+	// export default {
+	// 	data() {
+	// 		return {
+	// 			cellList: [{bg: "#ffffff", title: "Test"}] as list[]
+	// 		}
+	// 	}
+	// }
 </script>

@@ -24,13 +24,28 @@ open class GenPagesAPIGetImageInfoGetImageInfo : BasePage {
             uni_getImageInfo(GetImageInfoOptions(src = this.relativeImagePath, success = fun(res){
                 console.log("getImageInfo success", JSON.stringify(res), " at pages/API/get-image-info/get-image-info.uvue:74");
                 this.absoluteImageInfo = "\u56FE\u7247\u5BBD\u5EA6: " + res.width + "\n\u56FE\u7247\u9AD8\u5EA6: " + res.height + "\n\u56FE\u7247\u8DEF\u5F84: " + res.path + "\n\u56FE\u7247\u65B9\u5411: " + res.orientation + "\n\u56FE\u7247\u683C\u5F0F: " + res.type;
-                this.imageInfoForTest = object : UTSJSONObject() {
-                    var width = res.width
-                    var height = res.height
-                    var path = res.path.slice(res.path.indexOf("/static"))
-                    var orientation = res.orientation
-                    var type = res.type
-                };
+                this.imageInfoForTest = UTSJSONObject(Map<String, Any?>(utsArrayOf(
+                    utsArrayOf(
+                        "width",
+                        res.width
+                    ),
+                    utsArrayOf(
+                        "height",
+                        res.height
+                    ),
+                    utsArrayOf(
+                        "path",
+                        res.path.slice(res.path.indexOf("/static"))
+                    ),
+                    utsArrayOf(
+                        "orientation",
+                        res.orientation
+                    ),
+                    utsArrayOf(
+                        "type",
+                        res.type
+                    )
+                )));
             }
             , fail = fun(err){
                 uni_showModal(ShowModalOptions(title = "获取图片信息失败", content = JSON.stringify(err), showCancel = false));

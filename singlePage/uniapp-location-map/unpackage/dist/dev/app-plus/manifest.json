@@ -18,6 +18,9 @@
   },
   "permissions": {
     "Geolocation": {},
+    "Maps": {
+      "coordType": "gcj02"
+    },
     "UniNView": {
       "description": "UniNView原生渲染"
     }
@@ -37,7 +40,10 @@
     "launchwebview": {
       "render": "always",
       "id": "1",
-      "kernel": "WKWebview"
+      "kernel": "WKWebview",
+      "uniNView": {
+        "path": "pages/index/index.js"
+      }
     },
     "usingComponents": true,
     "nvueStyleCompiler": "uni-app",
@@ -101,7 +107,7 @@
     "uni-app": {
       "control": "uni-v3",
       "vueVersion": "3",
-      "compilerVersion": "4.24",
+      "compilerVersion": "4.25",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
       "nvue": {
@@ -112,6 +118,5 @@
         "minUserAgentVersion": "49.0"
       }
     }
-  },
-  "launch_path": "__uniappview.html"
+  }
 }

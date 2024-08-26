@@ -52,26 +52,33 @@ open class GenPagesAskIndexIndex : BasePage {
     open var ls: UTSArray<ItemType> by `$data`;
     @Suppress("USELESS_CAST")
     override fun data(): Map<String, Any?> {
-        return utsMapOf("title" to "Hello", "ls" to utsArrayOf<ItemType>(ItemType(day = "8.10", list = utsArrayOf(
-            196402
+        return utsMapOf("title" to "Hello", "ls" to utsArrayOf<ItemType>(ItemType(day = "week 9", list = utsArrayOf(
+            197240,
+            197219,
+            197227,
+            197226
+        )), ItemType(day = "8.10", list = utsArrayOf(
+            196402,
+            196484,
+            182989
         ))));
     }
     override fun `$initMethods`() {
-        this.click = fun(id: Any) {
+        this.click = fun(id: Number) {
             val prefixPattern = UTSRegExp("^docisue", "");
-            if (prefixPattern.test(id)) {
+            if (prefixPattern.test(JSON.stringify(id))) {
                 val str = "/pages/ask/doc/" + id + "/" + id;
-                console.log(str, " at pages/ask/index/index.uvue:43");
+                console.log(str, " at pages/ask/index/index.uvue:47");
                 uni_navigateTo(NavigateToOptions(url = str));
             } else {
                 val str = "/pages/ask/problem/" + id + "/" + id;
-                console.log(str, " at pages/ask/index/index.uvue:49");
+                console.log(str, " at pages/ask/index/index.uvue:53");
                 uni_navigateTo(NavigateToOptions(url = str));
             }
         }
         ;
     }
-    open lateinit var click: (id: Any) -> Unit;
+    open lateinit var click: (id: Number) -> Unit;
     companion object {
         val styles: Map<String, Map<String, Map<String, Any>>>
             get() {
@@ -83,7 +90,7 @@ open class GenPagesAskIndexIndex : BasePage {
             }
         val styles0: Map<String, Map<String, Map<String, Any>>>
             get() {
-                return utsMapOf("box" to padStyleMapOf(utsMapOf("display" to "flex", "flexDirection" to "row", "width" to "100%", "flexWrap" to "wrap")), "content" to padStyleMapOf(utsMapOf("display" to "flex", "flexDirection" to "column", "alignItems" to "center", "justifyContent" to "center")), "logo" to padStyleMapOf(utsMapOf("height" to "200rpx", "width" to "200rpx", "marginTop" to "200rpx", "marginLeft" to "auto", "marginRight" to "auto", "marginBottom" to "50rpx")), "text-area" to padStyleMapOf(utsMapOf("display" to "flex", "justifyContent" to "center")), "title" to padStyleMapOf(utsMapOf("marginLeft" to "20rpx", "fontSize" to "36rpx", "color" to "#8f8f94")));
+                return utsMapOf("box" to padStyleMapOf(utsMapOf("display" to "flex", "flexDirection" to "row", "width" to "100%", "flexWrap" to "wrap")), "button" to padStyleMapOf(utsMapOf("marginTop" to "10rpx", "marginRight" to "10rpx", "marginBottom" to "10rpx", "marginLeft" to "10rpx", "fontSize" to "30rpx", "fontWeight" to "700", "paddingTop" to "5rpx", "paddingRight" to "8rpx", "paddingBottom" to "5rpx", "paddingLeft" to "8rpx")), "content" to padStyleMapOf(utsMapOf("display" to "flex", "flexDirection" to "column", "alignItems" to "center", "justifyContent" to "center")), "logo" to padStyleMapOf(utsMapOf("height" to "200rpx", "width" to "200rpx", "marginTop" to "200rpx", "marginLeft" to "auto", "marginRight" to "auto", "marginBottom" to "50rpx")), "text-area" to padStyleMapOf(utsMapOf("display" to "flex", "justifyContent" to "center")), "title" to padStyleMapOf(utsMapOf("marginLeft" to "20rpx", "fontSize" to "36rpx", "color" to "#8f8f94")));
             }
         var inheritAttrs = true;
         var inject: Map<String, Map<String, Any?>> = utsMapOf();

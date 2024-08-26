@@ -21,13 +21,17 @@
 <script lang="uts">
 	type ItemType = {
 		day : string,
-		list : Array,
+		list : number[],
 	}
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				ls: [{
+				ls: [
+				{
+					"day": 'week 9',
+					"list": [197240,197219,197227,197226]
+				},{
 					"day": '8.10',
 					"list": [196402,196484,182989]
 				}] as ItemType[]
@@ -36,9 +40,9 @@
 		onLoad() {
 		},
 		methods: {
-			click(id : any) {
+			click(id : number) {
 				const prefixPattern = /^docisue/;
-				if (prefixPattern.test(id)) {
+				if (prefixPattern.test(JSON.stringify(id))) {
 					const str = `/pages/ask/doc/${id}/${id}`
 					console.log(str)
 					uni.navigateTo({
@@ -67,7 +71,7 @@
 
 	}
 
-	button {
+	.button {
 		// width: 200rpx;
 		margin: 10rpx;
 		font-size: 30rpx;
