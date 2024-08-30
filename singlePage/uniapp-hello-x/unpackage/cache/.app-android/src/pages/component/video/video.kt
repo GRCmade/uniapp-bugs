@@ -340,20 +340,11 @@ open class GenPagesComponentVideoVideo : BasePage {
             0,
             1,
             2
-        ), "header" to UTSJSONObject(Map<String, Any?>(utsArrayOf(
-            utsArrayOf(
-                "User-Agent",
-                "User-Agent test"
-            ),
-            utsArrayOf(
-                "header",
-                "header test"
-            ),
-            utsArrayOf(
-                "cookie",
-                "cookie test"
-            )
-        ))), "pos" to 0, "requestFullScreenOptions" to RequestFullScreenOptions(direction = -90), "danmu" to Danmu(text = "要显示的文本", color = "#FF0000"), "rate" to 1, "rateItemTypes" to utsArrayOf<ItemType1>(ItemType1(value = 0, name = "0.5"), ItemType1(value = 1, name = "0.8"), ItemType1(value = 2, name = "1.0"), ItemType1(value = 3, name = "1.25"), ItemType1(value = 4, name = "1.5")), "rateItems" to utsArrayOf(
+        ), "header" to object : UTSJSONObject() {
+            var `User-Agent` = "User-Agent test"
+            var header = "header test"
+            var cookie = "cookie test"
+        }, "pos" to 0, "requestFullScreenOptions" to RequestFullScreenOptions(direction = -90), "danmu" to Danmu(text = "要显示的文本", color = "#FF0000"), "rate" to 1, "rateItemTypes" to utsArrayOf<ItemType1>(ItemType1(value = 0, name = "0.5"), ItemType1(value = 1, name = "0.8"), ItemType1(value = 2, name = "1.0"), ItemType1(value = 3, name = "1.25"), ItemType1(value = 4, name = "1.5")), "rateItems" to utsArrayOf(
             0.5,
             0.8,
             1.0,
@@ -592,16 +583,10 @@ open class GenPagesComponentVideoVideo : BasePage {
             this.isPlaying = true;
             this.isPause = false;
             if (this.autoTest) {
-                this.eventPlay = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    )
-                )));
+                this.eventPlay = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                };
             }
         }
         ;
@@ -610,96 +595,54 @@ open class GenPagesComponentVideoVideo : BasePage {
             this.isPlaying = false;
             this.isPause = true;
             if (this.autoTest) {
-                this.eventPause = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    )
-                )));
+                this.eventPause = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                };
             }
         }
         ;
         this.onEnded = fun(res: UniEvent) {
             console.log(res.type, " at pages/component/video/video.uvue:394");
             if (this.autoTest) {
-                this.eventEnded = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    )
-                )));
+                this.eventEnded = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                };
             }
         }
         ;
         this.onTimeUpdate = fun(res: UniVideoTimeUpdateEvent) {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:403");
             if (this.autoTest) {
-                this.eventTimeupdate = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "currentTime",
-                        Math.round(res.detail.currentTime)
-                    ),
-                    utsArrayOf(
-                        "duration",
-                        res.detail.duration.toInt()
-                    )
-                )));
+                this.eventTimeupdate = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var currentTime = Math.round(res.detail.currentTime)
+                    var duration = res.detail.duration.toInt()
+                };
             }
         }
         ;
         this.onFullScreenChange = fun(res: UniVideoFullScreenChangeEvent) {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:414");
             if (this.autoTest) {
-                this.eventFullscreenchange = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "fullScreen",
-                        res.detail.fullScreen
-                    ),
-                    utsArrayOf(
-                        "direction",
-                        res.detail.direction
-                    )
-                )));
+                this.eventFullscreenchange = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var fullScreen = res.detail.fullScreen
+                    var direction = res.detail.direction
+                };
             }
         }
         ;
         this.onWaiting = fun(res: UniEvent) {
             console.log(res.type, " at pages/component/video/video.uvue:425");
             if (this.autoTest) {
-                this.eventWaiting = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    )
-                )));
+                this.eventWaiting = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                };
             }
         }
         ;
@@ -707,92 +650,47 @@ open class GenPagesComponentVideoVideo : BasePage {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:434");
             this.isError = true;
             if (this.autoTest) {
-                this.eventError = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "errCode",
-                        res.detail.errCode
-                    )
-                )));
+                this.eventError = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var errCode = res.detail.errCode
+                };
             }
         }
         ;
         this.onProgress = fun(res: UniVideoProgressEvent) {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:445");
             if (this.autoTest) {
-                this.eventProgress = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "isBufferedValid",
-                        (res.detail.buffered > 0)
-                    )
-                )));
+                this.eventProgress = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var isBufferedValid = res.detail.buffered > 0
+                };
             }
         }
         ;
         this.onFullScreenClick = fun(res: UniVideoFullScreenClickEvent) {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:455");
             if (this.autoTest) {
-                this.eventFullscreenclick = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "screenX",
-                        res.detail.screenX.toInt()
-                    ),
-                    utsArrayOf(
-                        "screenY",
-                        res.detail.screenY.toInt()
-                    ),
-                    utsArrayOf(
-                        "screenWidth",
-                        res.detail.screenWidth.toInt()
-                    ),
-                    utsArrayOf(
-                        "screenHeight",
-                        res.detail.screenHeight.toInt()
-                    )
-                )));
+                this.eventFullscreenclick = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var screenX = res.detail.screenX.toInt()
+                    var screenY = res.detail.screenY.toInt()
+                    var screenWidth = res.detail.screenWidth.toInt()
+                    var screenHeight = res.detail.screenHeight.toInt()
+                };
             }
         }
         ;
         this.onControlsToggle = fun(res: UniVideoControlsToggleEvent) {
             console.log(res.type + " -> " + JSON.stringify(res.detail), " at pages/component/video/video.uvue:468");
             if (this.autoTest) {
-                this.eventControlstoggle = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        res.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "show",
-                        res.detail.show
-                    )
-                )));
+                this.eventControlstoggle = object : UTSJSONObject() {
+                    var tagName = res.target?.tagName
+                    var type = res.type
+                    var show = res.detail.show
+                };
             }
         }
         ;

@@ -71,40 +71,16 @@ open class GenPagesAPIGetVideoInfoGetVideoInfo : BasePage {
         ;
         this.testGetVideoInfo = fun() {
             uni_getVideoInfo(GetVideoInfoOptions(src = "/static/test-video/10second-demo.mp4", success = fun(res){
-                this.videoInfoForTest = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "orientation",
-                        res.orientation
-                    ),
-                    utsArrayOf(
-                        "type",
-                        res.type
-                    ),
-                    utsArrayOf(
-                        "duration",
-                        res.duration.toInt()
-                    ),
-                    utsArrayOf(
-                        "size",
-                        res.size
-                    ),
-                    utsArrayOf(
-                        "width",
-                        res.width
-                    ),
-                    utsArrayOf(
-                        "height",
-                        res.height
-                    ),
-                    utsArrayOf(
-                        "fps",
-                        res.fps
-                    ),
-                    utsArrayOf(
-                        "bitrate",
-                        res.bitrate
-                    )
-                )));
+                this.videoInfoForTest = object : UTSJSONObject() {
+                    var orientation = res.orientation
+                    var type = res.type
+                    var duration = res.duration.toInt()
+                    var size = res.size
+                    var width = res.width
+                    var height = res.height
+                    var fps = res.fps
+                    var bitrate = res.bitrate
+                };
             }
             , fail = fun(_){
                 this.videoInfoForTest = null;

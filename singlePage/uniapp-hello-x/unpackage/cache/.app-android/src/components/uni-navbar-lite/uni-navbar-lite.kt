@@ -54,7 +54,7 @@ open class GenComponentsUniNavbarLiteUniNavbarLite : VueComponent {
                     utsMapOf("is-left" to _ctx.isLeft)
                 ))), utsArrayOf(
                     createElementVNode("text", utsMapOf("style" to normalizeStyle(utsMapOf("color" to _ctx.textColor))), utsArrayOf(
-                        renderSlot(_ctx.`$slots`, "default", UTSJSONObject(Map<String, Any?>(utsArrayOf())), fun(): UTSArray<Any> {
+                        renderSlot(_ctx.`$slots`, "default", UTSJSONObject(), fun(): UTSArray<Any> {
                             return utsArrayOf(
                                 toDisplayString(_ctx.title)
                             );

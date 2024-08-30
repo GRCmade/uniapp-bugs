@@ -46,20 +46,11 @@ open class GenPagesComponentWebViewLocalWebViewLocal : BasePage {
             var contentStr = JSON.stringify(event.detail);
             uni_showModal(ShowModalOptions(content = contentStr, showCancel = false));
             if (this.autoTest) {
-                this.eventMessage = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        event.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        event.type
-                    ),
-                    utsArrayOf(
-                        "data",
-                        event.detail.data
-                    )
-                )));
+                this.eventMessage = object : UTSJSONObject() {
+                    var tagName = event.target?.tagName
+                    var type = event.type
+                    var data = event.detail.data
+                };
             }
         }
         ;
@@ -81,36 +72,15 @@ open class GenPagesComponentWebViewLocalWebViewLocal : BasePage {
             console.log(JSON.stringify(event.detail), " at pages/component/web-view-local/web-view-local.uvue:50");
             if (this.autoTest) {
                 val arr = event.detail.userAgent.split(" ");
-                this.eventDownload = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "tagName",
-                        event.target?.tagName
-                    ),
-                    utsArrayOf(
-                        "type",
-                        event.type
-                    ),
-                    utsArrayOf(
-                        "url",
-                        event.detail.url
-                    ),
-                    utsArrayOf(
-                        "userAgent",
-                        arr[arr.length - 1]
-                    ),
-                    utsArrayOf(
-                        "contentDisposition",
-                        event.detail.contentDisposition
-                    ),
-                    utsArrayOf(
-                        "mimetype",
-                        event.detail.mimetype
-                    ),
-                    utsArrayOf(
-                        "isContentLengthValid",
-                        ((event.detail.contentLength / 1024 / 1024).toInt() > 1)
-                    )
-                )));
+                this.eventDownload = object : UTSJSONObject() {
+                    var tagName = event.target?.tagName
+                    var type = event.type
+                    var url = event.detail.url
+                    var userAgent = arr[arr.length - 1]
+                    var contentDisposition = event.detail.contentDisposition
+                    var mimetype = event.detail.mimetype
+                    var isContentLengthValid = (event.detail.contentLength / 1024 / 1024).toInt() > 1
+                };
             }
         }
         ;

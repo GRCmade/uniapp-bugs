@@ -175,20 +175,11 @@ open class GenPagesAPICompressImageCompressImage : BasePage {
                     var afterComoressSize: Number;
                     beforeCompressSize = FileInputStream(UTSAndroid.convert2AbsFullPath(this.imageSrcForTest)).available();
                     afterComoressSize = FileInputStream(res.tempFilePath.substring(7)).available();
-                    this.imageInfoForTest = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                        utsArrayOf(
-                            "width",
-                            _res.width
-                        ),
-                        utsArrayOf(
-                            "height",
-                            _res.height
-                        ),
-                        utsArrayOf(
-                            "isSizeReduce",
-                            (afterComoressSize < beforeCompressSize)
-                        )
-                    )));
+                    this.imageInfoForTest = object : UTSJSONObject() {
+                        var width = _res.width
+                        var height = _res.height
+                        var isSizeReduce = afterComoressSize < beforeCompressSize
+                    };
                 }
                 ));
             }

@@ -81,12 +81,9 @@ open class GenPagesAPIUploadFileUploadFile : BasePage {
                 console.log("chooseImage success, temp path is", res.tempFilePaths[0], " at pages/API/upload-file/upload-file.uvue:50");
                 var imageSrc = res.tempFilePaths[0];
                 uni_showLoading(ShowLoadingOptions(title = "上传中"));
-                this.task = uni_uploadFile(UploadFileOptions(url = "https://unidemo.dcloud.net.cn/upload", filePath = imageSrc, name = "file", formData = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "user",
-                        "test"
-                    )
-                ))), success = fun(res){
+                this.task = uni_uploadFile(UploadFileOptions(url = "https://unidemo.dcloud.net.cn/upload", filePath = imageSrc, name = "file", formData = object : UTSJSONObject() {
+                    var user = "test"
+                }, success = fun(res){
                     console.log("uploadImage success, res is:", res, " at pages/API/upload-file/upload-file.uvue:63");
                     uni_hideLoading();
                     uni_showToast(ShowToastOptions(title = "上传成功", icon = "success", duration = 1000));
@@ -107,12 +104,9 @@ open class GenPagesAPIUploadFileUploadFile : BasePage {
         ;
         this.jest_uploadFile = fun() {
             val imageSrc = "/static/uni.png";
-            this.task = uni_uploadFile(UploadFileOptions(url = "https://unidemo.dcloud.net.cn/upload", filePath = imageSrc, name = "file", formData = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                utsArrayOf(
-                    "user",
-                    "test"
-                )
-            ))), success = fun(_){
+            this.task = uni_uploadFile(UploadFileOptions(url = "https://unidemo.dcloud.net.cn/upload", filePath = imageSrc, name = "file", formData = object : UTSJSONObject() {
+                var user = "test"
+            }, success = fun(_){
                 this.jest_result = true;
             }
             , fail = fun(_){

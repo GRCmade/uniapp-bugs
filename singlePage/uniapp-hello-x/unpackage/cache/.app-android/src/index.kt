@@ -3398,40 +3398,15 @@ open class GETDataType : IUTSSourceMap {
     open var data: UTSJSONObject? = null;
 }
 val duration: Number = 2000;
-val methodMap = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-    utsArrayOf(
-        "__\$originalPosition",
-        UTSSourceMapPosition("methodMap", "pages/API/request/request.uvue", 84, 9)
-    ),
-    utsArrayOf(
-        "GET",
-        "/api/http/method/get"
-    ),
-    utsArrayOf(
-        "POST",
-        "/api/http/method/post"
-    ),
-    utsArrayOf(
-        "PUT",
-        "/api/http/method/put"
-    ),
-    utsArrayOf(
-        "DELETE",
-        "/api/http/method/delete"
-    ),
-    utsArrayOf(
-        "PATCH",
-        "/api/http/method/patch"
-    ),
-    utsArrayOf(
-        "OPTIONS",
-        "/api/http/method/options"
-    ),
-    utsArrayOf(
-        "HEAD",
-        "/api/http/method/head"
-    )
-)));
+val methodMap = object : UTSJSONObject(UTSSourceMapPosition("methodMap", "pages/API/request/request.uvue", 84, 9)) {
+    var GET = "/api/http/method/get"
+    var POST = "/api/http/method/post"
+    var PUT = "/api/http/method/put"
+    var DELETE = "/api/http/method/delete"
+    var PATCH = "/api/http/method/patch"
+    var OPTIONS = "/api/http/method/options"
+    var HEAD = "/api/http/method/head"
+};
 val GenPagesAPIRequestRequestClass = CreateVueComponent(GenPagesAPIRequestRequest::class.java, fun(): VueComponentOptions {
     return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAPIRequestRequest.inheritAttrs, inject = GenPagesAPIRequestRequest.inject, props = GenPagesAPIRequestRequest.props, propsNeedCastKeys = GenPagesAPIRequestRequest.propsNeedCastKeys, emits = GenPagesAPIRequestRequest.emits, components = GenPagesAPIRequestRequest.components, styles = GenPagesAPIRequestRequest.styles);
 }
@@ -7296,6 +7271,13 @@ val GenPagesAskProblem197226197226Class = CreateVueComponent(GenPagesAskProblem1
     return GenPagesAskProblem197226197226(instance);
 }
 );
+val GenPagesAskProblem197517197517Class = CreateVueComponent(GenPagesAskProblem197517197517::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesAskProblem197517197517.inheritAttrs, inject = GenPagesAskProblem197517197517.inject, props = GenPagesAskProblem197517197517.props, propsNeedCastKeys = GenPagesAskProblem197517197517.propsNeedCastKeys, emits = GenPagesAskProblem197517197517.emits, components = GenPagesAskProblem197517197517.components, styles = GenPagesAskProblem197517197517.styles);
+}
+, fun(instance): GenPagesAskProblem197517197517 {
+    return GenPagesAskProblem197517197517(instance);
+}
+);
 fun createApp(): UTSJSONObject {
     val app = createSSRApp(GenAppClass);
     return UTSJSONObject(Map<String, Any?>(utsArrayOf(
@@ -7315,7 +7297,7 @@ open class UniAppConfig : io.dcloud.uniapp.appframe.AppConfig {
     override var appid: String = "__UNI__174BAC2";
     override var versionName: String = "1.4";
     override var versionCode: String = "10400";
-    override var uniCompilerVersion: String = "4.25";
+    override var uniCompilerVersion: String = "4.26";
     constructor() : super() {}
 }
 fun definePageRoutes() {
@@ -7545,6 +7527,7 @@ fun definePageRoutes() {
     __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197219/197219", component = GenPagesAskProblem197219197219Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197219")));
     __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197227/197227", component = GenPagesAskProblem197227197227Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197227")));
     __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197226/197226", component = GenPagesAskProblem197226197226Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197226")));
+    __uniRoutes.push(UniPageRoute(path = "pages/ask/problem/197517/197517", component = GenPagesAskProblem197517197517Class, meta = UniPageMeta(isQuit = false), style = utsMapOf("navigationBarTitleText" to "197517")));
 }
 val __uniTabBar: Map<String, Any?>? = utsMapOf("color" to "@tabBarColor", "selectedColor" to "@tabBarSelectedColor", "borderStyle" to "@tabBarBorderStyle", "backgroundColor" to "@tabBarBackgroundColor", "list" to utsArrayOf(
     utsMapOf("pagePath" to "pages/ask/index/index", "iconPath" to "/static/test-image/logo.bmp", "selectedIconPath" to "/static/test-image/logo.bmp", "text" to "首页"),

@@ -209,26 +209,14 @@ open class GenPagesAPIStorageStorage : BasePage {
                 var name = "张三"
                 var age: Number = 12
                 var classMate = utsArrayOf(
-                    UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                        utsArrayOf(
-                            "id",
-                            1001
-                        ),
-                        utsArrayOf(
-                            "name",
-                            "李四"
-                        )
-                    ))),
-                    UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                        utsArrayOf(
-                            "id",
-                            1002
-                        ),
-                        utsArrayOf(
-                            "name",
-                            "jack ma"
-                        )
-                    )))
+                    object : UTSJSONObject() {
+                        var id: Number = 1001
+                        var name = "李四"
+                    },
+                    object : UTSJSONObject() {
+                        var id: Number = 1002
+                        var name = "jack ma"
+                    }
                 )
             };
             this.data = jsonObj;

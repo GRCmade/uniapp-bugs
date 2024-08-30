@@ -63,16 +63,10 @@ open class GenPagesComponentRichTextRichTextTags : BasePage {
                 var style = "text-align: center; text-decoration: line-through;"
             }
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "p"
@@ -80,80 +74,38 @@ open class GenPagesComponentRichTextRichTextTags : BasePage {
                 var style = "background-color: green; color: red;"
             }
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<ul/> <li/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "ul"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "name",
-                        "li"
-                    ),
-                    utsArrayOf(
-                        "attrs",
-                        UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "style",
-                                "text-decoration: line-through; text-align: center;"
-                            )
-                        )))
-                    ),
-                    utsArrayOf(
-                        "children",
-                        utsArrayOf(
-                            UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                                utsArrayOf(
-                                    "type",
-                                    "text"
-                                ),
-                                utsArrayOf(
-                                    "text",
-                                    "hello uni-app x"
-                                )
-                            )))
-                        )
+                object : UTSJSONObject() {
+                    var name = "li"
+                    var attrs = object : UTSJSONObject() {
+                        var style = "text-decoration: line-through; text-align: center;"
+                    }
+                    var children = utsArrayOf(
+                        object : UTSJSONObject() {
+                            var type = "text"
+                            var text = "hello uni-app x"
+                        }
                     )
-                ))),
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "name",
-                        "li"
-                    ),
-                    utsArrayOf(
-                        "attrs",
-                        UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "style",
-                                "color: red; background-color: green; text-align: center;"
-                            )
-                        )))
-                    ),
-                    utsArrayOf(
-                        "children",
-                        utsArrayOf(
-                            UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                                utsArrayOf(
-                                    "type",
-                                    "text"
-                                ),
-                                utsArrayOf(
-                                    "text",
-                                    "hello uni-app x"
-                                )
-                            )))
-                        )
+                },
+                object : UTSJSONObject() {
+                    var name = "li"
+                    var attrs = object : UTSJSONObject() {
+                        var style = "color: red; background-color: green; text-align: center;"
+                    }
+                    var children = utsArrayOf(
+                        object : UTSJSONObject() {
+                            var type = "text"
+                            var text = "hello uni-app x"
+                        }
                     )
-                )))
+                }
             )
         })), TagInfo(name = "<span/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "span"
@@ -161,72 +113,42 @@ open class GenPagesComponentRichTextRichTextTags : BasePage {
                 var style = "color: red; background-color: green; text-decoration: line-through;"
             }
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<strong/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "strong"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<i/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "i"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<big/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "big"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<small/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "small"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<a/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "a"
@@ -234,128 +156,74 @@ open class GenPagesComponentRichTextRichTextTags : BasePage {
                 var href = "https://www.baidu.com"
             }
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "百度"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "百度"
+                }
             )
         })), TagInfo(name = "<u/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "u"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<del/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "del"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<h1/> <h2/> <h3/> <h4/> <h5/> <h6/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "h1"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "h2"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "h3"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "h4"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "h5"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         }, object : UTSJSONObject() {
             var name = "h6"
             var children = utsArrayOf(
-                UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                    utsArrayOf(
-                        "type",
-                        "text"
-                    ),
-                    utsArrayOf(
-                        "text",
-                        "hello uni-app x"
-                    )
-                )))
+                object : UTSJSONObject() {
+                    var type = "text"
+                    var text = "hello uni-app x"
+                }
             )
         })), TagInfo(name = "<img/>", html = utsArrayOf<UTSJSONObject>(object : UTSJSONObject() {
             var name = "img"

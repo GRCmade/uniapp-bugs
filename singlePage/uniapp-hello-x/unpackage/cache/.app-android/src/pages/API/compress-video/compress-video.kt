@@ -148,20 +148,11 @@ open class GenPagesAPICompressVideoCompressVideo : BasePage {
                     beforeCompressSize = _res.size.toInt();
                     uni_getVideoInfo(GetVideoInfoOptions(src = res.tempFilePath, success = fun(__res){
                         afterComoressSize = __res.size.toInt();
-                        this.videoInfoForTest = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "width",
-                                __res.width
-                            ),
-                            utsArrayOf(
-                                "height",
-                                __res.height
-                            ),
-                            utsArrayOf(
-                                "isSizeReduce",
-                                (afterComoressSize < beforeCompressSize)
-                            )
-                        )));
+                        this.videoInfoForTest = object : UTSJSONObject() {
+                            var width = __res.width
+                            var height = __res.height
+                            var isSizeReduce = afterComoressSize < beforeCompressSize
+                        };
                     }
                     ));
                 }

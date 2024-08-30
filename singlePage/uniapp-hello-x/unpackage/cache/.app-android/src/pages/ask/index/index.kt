@@ -56,7 +56,8 @@ open class GenPagesAskIndexIndex : BasePage {
             197240,
             197219,
             197227,
-            197226
+            197226,
+            197517
         )), ItemType(day = "8.10", list = utsArrayOf(
             196402,
             196484,

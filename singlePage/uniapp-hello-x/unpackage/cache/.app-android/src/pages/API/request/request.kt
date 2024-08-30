@@ -236,27 +236,18 @@ open class GenPagesAPIRequestRequest : BasePage {
             when (e) {
                 "/api/http/contentType/json" -> 
                     {
-                        this.header = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "Content-Type",
-                                "application/json"
-                            )
-                        )));
-                        this.data = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "hello",
-                                "world"
-                            )
-                        )));
+                        this.header = object : UTSJSONObject() {
+                            var `Content-Type` = "application/json"
+                        };
+                        this.data = object : UTSJSONObject() {
+                            var hello = "world"
+                        };
                     }
                 "/api/http/contentType/xWwwFormUrlencoded" -> 
                     {
-                        this.header = UTSJSONObject(Map<String, Any?>(utsArrayOf(
-                            utsArrayOf(
-                                "Content-Type",
-                                "application/x-www-form-urlencoded"
-                            )
-                        )));
+                        this.header = object : UTSJSONObject() {
+                            var `Content-Type` = "application/x-www-form-urlencoded"
+                        };
                         this.data = "hello=world";
                     }
             }
