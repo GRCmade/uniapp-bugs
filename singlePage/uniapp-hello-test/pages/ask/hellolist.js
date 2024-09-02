@@ -3,8 +3,11 @@ const obj = {
 	"list": []
 }
 export const list = [{
+		"day": 'week 10',
+		"list": [197595,197646]
+	}, {
 		"day": 'week 9',
-		"list": [197316,197487]
+		"list": [197316, 197487]
 	},
 	{
 		"day": '8.23',
