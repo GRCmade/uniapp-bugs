@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<button @click="Iclick">hideTabBar</button>
+		<button @click="Iclick">Iclick</button>
 		<view v-for="(it,i) in ls" :key="i">
 			<view class="title">{{it.day}}</view>
 			<view class="box">
@@ -27,36 +27,39 @@
 			// console.log(getCurrentPages())
 		},
 		onLoad() {
-			uni.setTabBarBadge({
-				index: 0,
-				text: "1",
-				fail(e) {
-					uni.showToast({
-						title: e.errMsg || e.message,
-						icon: "none"
-					})
-				}
-			})
+			// uni.setTabBarBadge({
+			// 	index: 0,
+			// 	text: "1",
+			// 	fail(e) {
+			// 		uni.showToast({
+			// 			title: e.errMsg || e.message,
+			// 			icon: "none"
+			// 		})
+			// 	}
+			// })
+		},
+		onTabItemTap(e) {
+			const {
+				text
+			} = e
+			console.error('text', text)
 		},
 		onHide() {
-			// setTimeout(() => {
-			// 	uni.removeTabBarBadge({
-			// 		index: 0,
-			// 		fail(e) {
-			// 			console.log("e: ", e);
-			// 			uni.showToast({
-			// 				title: e.errMsg || e.message,
-			// 				icon: "none"
-			// 			})
-			// 		}
-			// 	})
-			// }, 300)
+			setTimeout(()=>{
+				uni.setTabBarItem({
+					index: 0,
+					text: '测试'
+				})
+			},0)
+			
 		},
 		methods: {
-			Iclick(){
-				console.log("Iclick")
-				uni.hideTabBar({
-					animation:true
+			Iclick() {
+				const a = true
+
+				uni.setTabBarItem({
+					index: 0,
+					text: a ? '回顶部' : '首页',
 				})
 			},
 			click(id) {

@@ -4,7 +4,7 @@ const obj = {
 }
 export const list = [{
 		"day": 'week 10',
-		"list": [197595,197646]
+		"list": [197595,197646,197761,197796]
 	}, {
 		"day": 'week 9',
 		"list": [197316, 197487]
