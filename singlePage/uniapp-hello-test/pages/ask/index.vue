@@ -39,27 +39,33 @@
 			// })
 		},
 		onTabItemTap(e) {
+			// uni.setTabBarItem({
+			// 	index: 0,
+			// 	text: 'yuhe',
+			// })
 			const {
 				text
 			} = e
-			console.error('text', text)
+			console.log('text', e.text)
 		},
 		onHide() {
-			setTimeout(()=>{
-				uni.setTabBarItem({
-					index: 0,
-					text: '测试'
-				})
-			},0)
+			// setTimeout(()=>{
+			// 	uni.setTabBarItem({
+			// 		index: 0,
+			// 		text: '测试'
+			// 	})
+			// },0)
 			
 		},
 		methods: {
 			Iclick() {
 				const a = true
-
+				// uni.switchTab({
+				// 	url:"/pages/tabBar/component/component"
+				// })
 				uni.setTabBarItem({
-					index: 0,
-					text: a ? '回顶部' : '首页',
+					index: 1,
+					text: '修改2',
 				})
 			},
 			click(id) {

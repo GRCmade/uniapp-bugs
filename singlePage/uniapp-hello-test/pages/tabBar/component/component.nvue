@@ -41,6 +41,12 @@
 				type: String
 			}
 		},
+		onTabItemTap(e) {
+			const {
+				text
+			} = e
+			console.log('2 - text', e.text)
+		},
 		onShow() {
 			console.log(getCurrentPages())
 		},

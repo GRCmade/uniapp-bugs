@@ -714,6 +714,20 @@
 			{
 				"navigationBarTitleText" : "197761"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/197867/197867",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197867"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/197872/197872",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197872"
+			}
 		}
 	],
 	"subPackages": [{
