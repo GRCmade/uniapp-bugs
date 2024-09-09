@@ -106,6 +106,7 @@
                 "desc" : "演示定位能力"
             }
         },
+				"requiredPrivateInfos":["getLocation"],
         "uniStatistics" : {
             "enable" : true
         }

@@ -728,6 +728,36 @@
 			{
 				"navigationBarTitleText" : "197872"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/197901/197901",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197901"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/197803/197803",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197803",
+				"navigationStyle": "custom"
+				
+			}
+		},
+		{
+			"path" : "pages/ask/problem/197943/197943",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197943"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198027/198027",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198027"
+			}
 		}
 	],
 	"subPackages": [{
