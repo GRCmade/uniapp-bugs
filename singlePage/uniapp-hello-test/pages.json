@@ -758,6 +758,13 @@
 			{
 				"navigationBarTitleText" : "198027"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/198084/198084",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198084"
+			}
 		}
 	],
 	"subPackages": [{
