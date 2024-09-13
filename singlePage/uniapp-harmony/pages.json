@@ -26,6 +26,27 @@
 			{
 				"navigationBarTitleText" : "196597"
 			}
+		},
+		{
+			"path" : "pages/ask/198192/198192",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198192"
+			}
+		},
+		{
+			"path" : "pages/ask/198259/198259",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198259"
+			}
+		},
+		{
+			"path" : "pages/ask/198312/198312",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198312"
+			}
 		}
 	],
 	"globalStyle": {

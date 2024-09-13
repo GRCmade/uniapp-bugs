@@ -765,6 +765,41 @@
 			{
 				"navigationBarTitleText" : "198084"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/198105/198105",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198105"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198228/198228",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198228"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198313/198313",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198313"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198317/198317",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198317"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198325/198325",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198325"
+			}
 		}
 	],
 	"subPackages": [{
