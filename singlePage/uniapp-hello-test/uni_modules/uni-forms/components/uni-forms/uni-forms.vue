@@ -180,7 +180,9 @@
 							}
 						}
 						if (!formVm) return console.error('当前 uni-froms 组件缺少 ref 属性');
-						formVm.setValue(name, value);
+						if(formVm.model)formVm.model[name] = value
+						if(formVm.modelValue)formVm.modelValue[name] = value
+						if(formVm.value)formVm.model[name] = value
 					}
 				}
 			}
@@ -215,7 +217,8 @@
 				let example = this.childrens.find(child => child.name === key);
 				if (!example) return null;
 				this.formData[key] = getValue(key, value, (this.formRules[key] && this.formRules[key].rules) || [])
-				return example.onFieldChange(this.formData[key]);
+				const res = example.onFieldChange(this.formData[key])
+				return res;
 			},
 
 			/**

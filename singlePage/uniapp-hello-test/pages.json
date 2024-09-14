@@ -800,6 +800,27 @@
 			{
 				"navigationBarTitleText" : "198325"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/198364/198364",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198364"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198344/198344",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198344"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/vk/vk",
+			"style" : 
+			{
+				"navigationBarTitleText" : "vk"
+			}
 		}
 	],
 	"subPackages": [{
