@@ -821,6 +821,69 @@
 			{
 				"navigationBarTitleText" : "vk"
 			}
+		},
+		{
+			"path" : "pages/ask/problem/198457/198457",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198457"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198439/198439",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198439"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/im-937/im-937",
+			"style" : 
+			{
+				"navigationBarTitleText" : "im-937"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198507/198507",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198507"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198531/198531",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198531"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198537/198537",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198537"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198523/198523",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198523"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198597/198597",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198597"
+			}
+		},
+		{
+			"path" : "pages/ask/problem/198636/198636",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198636"
+			}
 		}
 	],
 	"subPackages": [{
@@ -1831,12 +1894,13 @@
 				"selectedIconPath": "static/componentHL.png",
 				"text": "内置组件"
 			},
+			// {
+			// 	"pagePath": "pages/tabBar/API/API",
+			// 	"iconPath": "static/api.png",
+			// 	"selectedIconPath": "static/apiHL.png",
+			// 	"text": "接口"
+			// },
 			{
-				"pagePath": "pages/tabBar/API/API",
-				"iconPath": "static/api.png",
-				"selectedIconPath": "static/apiHL.png",
-				"text": "接口"
-			}, {
 				"pagePath": "pages/tabBar/extUI/extUI",
 				"iconPath": "static/extui.png",
 				"selectedIconPath": "static/extuiHL.png",
@@ -1847,6 +1911,14 @@
 				"selectedIconPath": "static/templateHL.png",
 				"text": "模板"
 			}
-		]
+		],
+				"midButton": {
+					"width": "80px",
+					"height": "50px",
+					"text": "文字",
+					"iconPath": "/static/api.png",
+					"iconWidth": "24px"
+					// "backgroundImage": "/static/api.png"
+				}
 	}
 }

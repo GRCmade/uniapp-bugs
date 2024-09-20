@@ -8,8 +8,9 @@
 	export default {
 		data() {
 			return {
+				url: 'http://localhost:5173/hybrid/html/local.html'
 				// url: 'https://uniapp.dcloud.io/static/web-view.html'
-				url:'https://dcloud.yuhe.space/test.html'
+				// url:'https://dcloud.yuhe.space/test.html'
 			}
 		},
 		onLoad(options) {
@@ -19,6 +20,7 @@
 		},
 		methods: {
 			getMessage(event) {
+				console.log(event)
 				uni.showModal({
 					content: JSON.stringify(event.detail),
 					showCancel: false

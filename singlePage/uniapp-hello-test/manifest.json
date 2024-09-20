@@ -70,7 +70,8 @@
             "sdkConfigs" : {
                 "speech" : {
                     "ifly" : {}
-                }
+                },
+                "maps" : {}
             },
             "orientation" : [ "portrait-primary" ]
         },
@@ -106,7 +107,7 @@
                 "desc" : "演示定位能力"
             }
         },
-				"requiredPrivateInfos":["getLocation"],
+        "requiredPrivateInfos" : [ "getLocation" ],
         "uniStatistics" : {
             "enable" : true
         }

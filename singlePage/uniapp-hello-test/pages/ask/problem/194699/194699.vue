@@ -4,7 +4,14 @@
 	</view>
 </template>
 
-<script setup>
+<script>
+	export default{
+		onLoad() {
+			uni.onKeyboardHeightChange(res => {
+			  console.log(res.height)
+			})
+		}
+	}
 	// import {
 	// 	onReady,
 	// 	onLoad,

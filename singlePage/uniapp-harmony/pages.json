@@ -47,6 +47,20 @@
 			{
 				"navigationBarTitleText" : "198312"
 			}
+		},
+		{
+			"path" : "pages/ask/197555/197555",
+			"style" : 
+			{
+				"navigationBarTitleText" : "197555"
+			}
+		},
+		{
+			"path" : "pages/ask/198534/198534",
+			"style" : 
+			{
+				"navigationBarTitleText" : "198534"
+			}
 		}
 	],
 	"globalStyle": {

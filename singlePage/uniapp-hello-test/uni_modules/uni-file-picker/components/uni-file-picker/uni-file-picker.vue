@@ -369,6 +369,7 @@
 					})
 					.catch(err => {
 						console.log('选择失败', err)
+						this.$emit('fail')
 					})
 			},
 

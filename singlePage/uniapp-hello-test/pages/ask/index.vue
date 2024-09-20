@@ -37,6 +37,7 @@
 			// 		})
 			// 	}
 			// })
+			
 		},
 		onTabItemTap(e) {
 			// uni.setTabBarItem({
@@ -57,15 +58,21 @@
 			// },0)
 			
 		},
+		onBackPress(e) {
+			console.log('onBackPress')
+		},
 		methods: {
 			Iclick() {
-				const a = true
+				console.log("Iclick");
 				// uni.switchTab({
 				// 	url:"/pages/tabBar/component/component"
 				// })
-				uni.setTabBarItem({
-					index: 1,
-					text: '修改2',
+				// uni.setTabBarItem({
+				// 	index: 1,
+				// 	text: '修改2',
+				// })
+				uni.onTabBarMidButtonTap(()=>{
+					console.log("yuhe");
 				})
 			},
 			click(id) {
