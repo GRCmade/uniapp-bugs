@@ -6,9 +6,9 @@
     "versionCode" : "100",
     "transformPx" : false,
     /* 5+App特有相关 */
-	"app-harmony": {
-	  "projectPath": "/Users/gaoruicheng/myapp/1.3.7/package"
-	},
+    "app-harmony" : {
+        "projectPath" : "/Users/gaoruicheng/myapp/1.3.7/package"
+    },
     "app-plus" : {
         "usingComponents" : true,
         "nvueStyleCompiler" : "uni-app",
@@ -71,5 +71,7 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "3"
+    "vueVersion" : "3",
+    "fallbackLocale" : "zh-Hans",
+    "locale" : "zh-Hans"
 }

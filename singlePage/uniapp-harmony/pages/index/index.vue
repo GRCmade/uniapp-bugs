@@ -8,9 +8,8 @@
 				</view>
 			</view>
 		</view>
-		
+		<button @click="click2">click</button>
 	</view>
-	
 </template>
 
 <script>
@@ -23,9 +22,12 @@
 			}
 		},
 		onLoad() {
-			
 		},
 		methods: {
+			click2(){
+				plus.runtime.quit();
+				
+			},
 			click(id){
 				const prefixPattern = /^docisue/;
 				if(prefixPattern.test(id)){
@@ -47,8 +49,8 @@
 	}
 </script>
 
-<style lang="scss">
-	.box{
+<style>
+	/* .box{
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
@@ -84,5 +86,5 @@
 		margin-left: 20rpx;
 		font-size: 36rpx;
 		color: #8f8f94;
-	}
+	} */
 </style>

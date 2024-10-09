@@ -97,7 +97,7 @@
         "versionCode" : 100
     },
     "mp-weixin" : {
-        "appid" : "wx84abd7c997413458",
+        "appid" : "wx340d2e38375bd2c0",
         "setting" : {
             "urlCheck" : false
         },
@@ -145,7 +145,7 @@
         "template" : "template.h5.html",
         "router" : {
             "mode" : "history",
-            "base" : ""
+            "base" : "/hello"
         },
         "sdkConfigs" : {
             "maps" : {

@@ -7297,7 +7297,7 @@ open class UniAppConfig : io.dcloud.uniapp.appframe.AppConfig {
     override var appid: String = "__UNI__174BAC2";
     override var versionName: String = "1.4";
     override var versionCode: String = "10400";
-    override var uniCompilerVersion: String = "4.26";
+    override var uniCompilerVersion: String = "4.29";
     constructor() : super() {}
 }
 fun definePageRoutes() {

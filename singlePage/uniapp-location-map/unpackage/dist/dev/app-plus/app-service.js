@@ -74,7 +74,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("view", { class: "page-body" }, [
         vue.createElementVNode("view", { class: "page-section page-section-gap" }, [
@@ -92,11 +92,10 @@ if (uni.restoreGlobal) {
       }, "click")
     ]);
   }
-  const PagesMapMap = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map.vue"]]);
+  const PagesMapMap = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map.vue"]]);
   const _sfc_main$2 = {
     __name: "map-setup",
-    setup(__props, { expose: __expose }) {
-      __expose();
+    setup(__props) {
       let latitude = vue.ref(39.909);
       let longitude = vue.ref(116.39742);
       const mapref = vue.ref();
@@ -118,44 +117,30 @@ if (uni.restoreGlobal) {
         const mapContext = uni.createMapContext("map");
         mapContext.moveToLocation();
       };
-      const __returned__ = { get latitude() {
-        return latitude;
-      }, set latitude(v) {
-        latitude = v;
-      }, get longitude() {
-        return longitude;
-      }, set longitude(v) {
-        longitude = v;
-      }, mapref, get covers() {
-        return covers;
-      }, set covers(v) {
-        covers = v;
-      }, click, ref: vue.ref };
-      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-      return __returned__;
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", null, [
+          vue.createElementVNode("view", { class: "page-body" }, [
+            vue.createElementVNode("view", { class: "page-section page-section-gap" }, [
+              vue.createElementVNode("map", {
+                onTap: _cache[0] || (_cache[0] = vue.withModifiers(() => {
+                }, ["stop"])),
+                ref_key: "mapref",
+                ref: mapref,
+                id: "map",
+                style: { "width": "100%", "height": "300px" },
+                latitude: vue.unref(latitude),
+                longitude: vue.unref(longitude),
+                markers: vue.unref(covers)
+              }, null, 40, ["latitude", "longitude", "markers"])
+            ])
+          ]),
+          vue.createElementVNode("view", { style: { "height": "1000rpx" } }, " 1 "),
+          vue.createElementVNode("button", { onClick: click }, "click")
+        ]);
+      };
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", null, [
-      vue.createElementVNode("view", { class: "page-body" }, [
-        vue.createElementVNode("view", { class: "page-section page-section-gap" }, [
-          vue.createElementVNode("map", {
-            onTap: _cache[0] || (_cache[0] = vue.withModifiers(() => {
-            }, ["stop"])),
-            ref: "mapref",
-            id: "map",
-            style: { "width": "100%", "height": "300px" },
-            latitude: $setup.latitude,
-            longitude: $setup.longitude,
-            markers: $setup.covers
-          }, null, 40, ["latitude", "longitude", "markers"])
-        ])
-      ]),
-      vue.createElementVNode("view", { style: { "height": "1000rpx" } }, " 1 "),
-      vue.createElementVNode("button", { onClick: $setup.click }, "click")
-    ]);
-  }
-  const PagesMapMapSetupMapSetup = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map-setup/map-setup.vue"]]);
+  const PagesMapMapSetupMapSetup = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map-setup/map-setup.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
