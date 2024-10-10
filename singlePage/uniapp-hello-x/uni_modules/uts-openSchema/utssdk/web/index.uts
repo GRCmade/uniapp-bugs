@@ -1,5 +1,0 @@
-import { OpenSchema } from '../interface.uts'
-
-export const openSchema: OpenSchema = function(url: string): void {
-	location.href = url;
-}

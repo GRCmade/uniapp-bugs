@@ -1,0 +1,11 @@
+export type item = {
+	day:string,
+	list:Array<number>
+}
+
+export const list:Array<item> = [
+	{
+		day:"yuhe",
+		list:[199470]
+	}
+]
