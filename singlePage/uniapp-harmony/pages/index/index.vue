@@ -50,7 +50,7 @@
 </script>
 
 <style>
-	/* .box{
+	.box{
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
@@ -61,6 +61,7 @@
 			padding: 5rpx 8rpx;
 		}
 	}
+	/* 
 	.content {
 		display: flex;
 		flex-direction: column;
