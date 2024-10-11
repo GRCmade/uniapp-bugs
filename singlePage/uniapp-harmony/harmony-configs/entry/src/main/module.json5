@@ -63,6 +63,13 @@
         }
       },
       {
+        "name": "ohos.permission.WRITE_CONTACTS",
+        "reason": "$string:write_contacts",
+        "usedScene": {
+          "when": "inuse"
+        }
+      },
+      {
         "name": "ohos.permission.MICROPHONE",
         "reason": "$string:microphone",
         "usedScene": {
@@ -72,6 +79,27 @@
       {
         "name": "ohos.permission.ACCESS_BIOMETRIC",
         "reason": "$string:access_biometric",
+        "usedScene": {
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.READ_PASTEBOARD",
+        "reason": "$string:read_pasteboard",
+        "usedScene": {
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:get_access_bluetooth",
+        "usedScene": {
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.PRIVACY_WINDOW",
+        "reason": "$string:privacy_window",
         "usedScene": {
           "when": "inuse"
         }

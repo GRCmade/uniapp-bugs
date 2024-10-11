@@ -8,7 +8,7 @@
 				</view>
 			</view>
 		</view>
-		<button @click="click2">click</button>
+		<button @click="click2">click2</button>
 	</view>
 </template>
 
