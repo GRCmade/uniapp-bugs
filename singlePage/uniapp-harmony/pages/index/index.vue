@@ -8,12 +8,15 @@
 				</view>
 			</view>
 		</view>
-		<button @click="click2">click2</button>
+		<button @click="click2">click getBatteryCapacity</button>
 	</view>
 </template>
 
 <script>
-	import {list} from './hellolist'
+	import {list} from './hellolist';
+	import { getBatteryInfoSync } from "@/uni_modules/uni-getbatteryinfo";
+
+
 	export default {
 		data() {
 			return {
@@ -25,8 +28,10 @@
 		},
 		methods: {
 			click2(){
-				plus.runtime.quit();
-				
+				// plus.runtime.quit();
+				const res = getBatteryInfoSync()
+				console.log(JSON.stringify(res))
+
 			},
 			click(id){
 				const prefixPattern = /^docisue/;
