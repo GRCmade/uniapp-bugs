@@ -7,87 +7,87 @@
 			}
 		},
 		{
-			"path" : "pages/ask/196265/196265",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196265"
+			"path": "pages/ask/196265/196265",
+			"style": {
+				"navigationBarTitleText": "196265"
 			}
 		},
 		{
-			"path" : "pages/ask/196451/196451",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196451"
+			"path": "pages/ask/196451/196451",
+			"style": {
+				"navigationBarTitleText": "196451"
 			}
 		},
 		{
-			"path" : "pages/ask/196597/196597",
-			"style" : 
-			{
-				"navigationBarTitleText" : "196597"
+			"path": "pages/ask/196597/196597",
+			"style": {
+				"navigationBarTitleText": "196597"
 			}
 		},
 		{
-			"path" : "pages/ask/198192/198192",
-			"style" : 
-			{
-				"navigationBarTitleText" : "198192"
+			"path": "pages/ask/198192/198192",
+			"style": {
+				"navigationBarTitleText": "198192"
 			}
 		},
 		{
-			"path" : "pages/ask/198259/198259",
-			"style" : 
-			{
-				"navigationBarTitleText" : "198259"
+			"path": "pages/ask/198259/198259",
+			"style": {
+				"navigationBarTitleText": "198259"
 			}
 		},
 		{
-			"path" : "pages/ask/198312/198312",
-			"style" : 
-			{
-				"navigationBarTitleText" : "198312"
+			"path": "pages/ask/198312/198312",
+			"style": {
+				"navigationBarTitleText": "198312"
 			}
 		},
 		{
-			"path" : "pages/ask/197555/197555",
-			"style" : 
-			{
-				"navigationBarTitleText" : "197555"
+			"path": "pages/ask/197555/197555",
+			"style": {
+				"navigationBarTitleText": "197555"
 			}
 		},
 		{
-			"path" : "pages/ask/198534/198534",
-			"style" : 
-			{
-				"navigationBarTitleText" : "198534"
+			"path": "pages/ask/198534/198534",
+			"style": {
+				"navigationBarTitleText": "198534"
 			}
 		},
 		{
-			"path" : "pages/ask/198672/198672",
-			"style" : 
-			{
-				"navigationBarTitleText" : "198672"
+			"path": "pages/ask/198672/198672",
+			"style": {
+				"navigationBarTitleText": "198672"
 			}
 		},
 		{
-			"path" : "pages/ask/199401/199401",
-			"style" : 
-			{
-				"navigationBarTitleText" : "199401"
+			"path": "pages/ask/199401/199401",
+			"style": {
+				"navigationBarTitleText": "199401"
 			}
 		},
 		{
-			"path" : "pages/ask/199440/199440",
-			"style" : 
-			{
-				"navigationBarTitleText" : "199440"
+			"path": "pages/ask/199440/199440",
+			"style": {
+				"navigationBarTitleText": "199440"
 			}
 		},
 		{
-			"path" : "pages/ask/199542/199542",
-			"style" : 
-			{
-				"navigationBarTitleText" : "199542"
+			"path": "pages/ask/199542/199542",
+			"style": {
+				"navigationBarTitleText": "199542"
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-center",
+			"style": {
+				"navigationBarTitleText": "tabbar-center"
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-third",
+			"style": {
+				"navigationBarTitleText": "tabbar-third"
 			}
 		}
 	],
@@ -98,5 +98,23 @@
 		"backgroundColor": "#F8F8F8",
 		"pageOrientation": "auto"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/logo.png",
+			"selectedIconPath": "static/logo.png",
+			"text": "index"
+		}, {
+			"pagePath": "pages/tabbar/tabbar-center",
+			"iconPath": "static/logo.png",
+			"selectedIconPath": "static/logo.png",
+			"text": "en"
+		}]
+	}
+
 }

@@ -23,7 +23,12 @@
 	export default {
 		name: 'uniTd',
 		options: {
+			// #ifdef MP-TOUTIAO
+			virtualHost: false,
+			// #endif
+			// #ifndef MP-TOUTIAO
 			virtualHost: true
+			// #endif
 		},
 		props: {
 			width: {

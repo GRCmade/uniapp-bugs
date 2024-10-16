@@ -36,7 +36,12 @@
 export default {
 	name: 'uniTable',
 	options: {
+		// #ifdef MP-TOUTIAO
+		virtualHost: false,
+		// #endif
+		// #ifndef MP-TOUTIAO
 		virtualHost: true
+		// #endif
 	},
 	emits:['selection-change'],
 	props: {
