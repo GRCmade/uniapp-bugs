@@ -2,6 +2,8 @@
   <view>
     <com type="default1d"></com>
    <button @click="click">click</button>
+   <flowexchange @onCounterFlowExchange="click" v-if='uid' ref="saveRefFlowExchange" :uid="uid" :channel="click"></flowexchange>  
+
   </view>
 </template>
 
@@ -9,6 +11,9 @@
 <script lang="ts" setup>
 import com from '@/components/com/com.vue'
 import { User, UserRole } from '@/types/com';
+import { ref } from 'vue';
+
+const uid = ref<string | null>(null)
 
 // 示例使用
 const user: User = {
