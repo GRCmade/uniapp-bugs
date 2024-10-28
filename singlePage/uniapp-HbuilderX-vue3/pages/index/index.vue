@@ -1,89 +1,68 @@
 <template>
-	<view class="">
-		<uni-fab></uni-fab>
-		<button @click="click">click</button>
-		<uni-popup ref="popup">
-			popup
-		</uni-popup>
-		<uni-nav-bar title="导航栏组件"></uni-nav-bar>
-		<uni-table border stripe emptyText="暂无更多数据" >
-			<!-- 表头行 -->
-			<uni-tr>
-				<uni-th align="center">日期</uni-th>
-				<uni-th align="center">姓名</uni-th>
-				<uni-th align="left">地址</uni-th>
-			</uni-tr>
-			<!-- 表格数据行 -->
-			<uni-tr>
-				<uni-td>2020-10-20</uni-td>
-				<uni-td>Jeson</uni-td>
-				<uni-td>北京市海淀区</uni-td>
-			</uni-tr>
-			<uni-tr>
-				<uni-td>2020-10-21</uni-td>
-				<uni-td>HanMeiMei</uni-td>
-				<uni-td>北京市海淀区</uni-td>
-			</uni-tr>
-			<uni-tr>
-				<uni-td>2020-10-22</uni-td>
-				<uni-td>LiLei</uni-td>
-				<uni-td>北京市海淀区</uni-td>
-			</uni-tr>
-			<uni-tr>
-				<uni-td>2020-10-23</uni-td>
-				<uni-td>Danner</uni-td>
-				<uni-td>北京市海淀区</uni-td>
-			</uni-tr>
-		
-		</uni-table>
-
-		<uni-datetime-picker></uni-datetime-picker>
-		<uni-load-more></uni-load-more>
+	<view>
+		<view v-for="(it,i) in ls" :key="i">
+			<view class="title">{{it.day}}</view>
+			<view class="box">
+				<view v-for="(item,index) in it.list" :key="index">
+					<button @click="click(item)" size="mini" type="primary">{{item}}</button>
+				</view>
+			</view>
+		</view>
+		<button @click="click2">click getBatteryCapacity</button>
 	</view>
 </template>
 
 <script>
+	import {
+		list
+	} from './hellolist';
+
+
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				ls: list
 			}
 		},
-		onLoad() {
-
-		},
+		onLoad() {},
 		methods: {
-			click(){
-				this.$refs.popup.open()
+			click2() {
+				// plus.runtime.quit();
+			},
+			click(id) {
+				const prefixPattern = /^docisue/;
+				if (prefixPattern.test(id)) {
+					const str = `/pages/ask/doc/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url: str
+					})
+				} else {
+					const str = `/pages/ask/${id}/${id}`
+					console.log(str)
+					uni.navigateTo({
+						url: str
+					})
+				}
+
 			}
 		}
 	}
 </script>
 
-<style>
-	.content {
+<style lang="scss">
+	.box {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		width: 100%;
+		flex-wrap: wrap;
+
+		button {
+			margin: 10rpx;
+			font-size: 30rpx;
+			font-weight: 700;
+			padding: 5rpx 8rpx;
+		}
 	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 </style>

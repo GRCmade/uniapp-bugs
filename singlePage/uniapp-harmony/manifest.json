@@ -70,5 +70,16 @@
     },
     "vueVersion" : "3",
     "fallbackLocale" : "zh-Hans",
-    "locale" : "zh-Hans"
+    "locale" : "zh-Hans",
+    "app-harmony" : {
+        "distribute" : {
+            "modules" : {
+                "uni-map" : {
+                    "tencent" : {
+                        "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
+                    }
+                }
+            }
+        }
+    }
 }

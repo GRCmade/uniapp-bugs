@@ -1,6 +1,6 @@
 {
   "app": {
-    "signingConfigs": [      {
+    "signingConfigs": [{
         "name": "default",
         "type": "HarmonyOS",
         "material": {
@@ -21,7 +21,8 @@
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {
-            "caseSensitiveCheck": true
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
           }
         }
       },
@@ -32,7 +33,8 @@
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {
-            "caseSensitiveCheck": true
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
           }
         }
       }
