@@ -33,6 +33,27 @@
 			{
 				"navigationBarTitleText" : "200452"
 			}
+		},
+		{
+			"path" : "pages/ask/200530/200530",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200530"
+			}
+		},
+		{
+			"path" : "pages/ask/200528/200528",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200528"
+			}
+		},
+		{
+			"path" : "pages/ask/200528/200528-next/200528-next",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200528-next"
+			}
 		}
 	],
 	"globalStyle": {

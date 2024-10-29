@@ -1,13 +1,13 @@
 {
   "app": {
-    "signingConfigs": [{
+    "signingConfigs": [      {
         "name": "default",
         "type": "HarmonyOS",
         "material": {
           "certpath": "/Users/gaoruicheng/.ohos/config/default_package_HLEzljqo6YJhG14INqOfgnBnpm883uRwCVqhRPYaNcs=.cer",
-          "storePassword": "0000001B7776C5EF1F742190C8B907E36C122829EBB29CBFB14F9800B884E3D87800B6536462F0B3AA99D9",
+          "storePassword": "0000001A126F7010AA368084F2305C370F2074BD2CF55014756D073474DB3816F2E28055F5A05F9F2B5D",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B3D69C62D306B51428DCF84C4869851C1438D0EEF24DCF1D3D3E69A7DF9788444484239631DAAB2",
+          "keyPassword": "0000001A61135E88BC6E0D4FC6504D9B0FA4B468CA53E12A8B338847C505CCDADC8B823AB3A4DF583BBD",
           "profile": "/Users/gaoruicheng/.ohos/config/default_package_HLEzljqo6YJhG14INqOfgnBnpm883uRwCVqhRPYaNcs=.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/gaoruicheng/.ohos/config/default_package_HLEzljqo6YJhG14INqOfgnBnpm883uRwCVqhRPYaNcs=.p12"

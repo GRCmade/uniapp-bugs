@@ -96,6 +96,48 @@
 			{
 				"navigationBarTitleText" : "200402"
 			}
+		},
+		{
+			"path" : "pages/ask/200533/200533",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200533"
+			}
+		},
+		{
+			"path" : "pages/ask/200540/200540",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200540"
+			}
+		},
+		{
+			"path" : "pages/ask/200536/200536",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200536"
+			}
+		},
+		{
+			"path" : "pages/ask/200564/200564",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200564"
+			}
+		},
+		{
+			"path" : "pages/ask/200572/200572",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200572"
+			}
+		},
+		{
+			"path" : "pages/ask/200556/200556",
+			"style" : 
+			{
+				"navigationBarTitleText" : "200556"
+			}
 		}
 	],
 	"globalStyle": {

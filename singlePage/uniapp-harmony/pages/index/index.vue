@@ -14,7 +14,7 @@
 
 <script>
 	import {list} from './hellolist';
-	import { getBatteryInfoSync } from "@/uni_modules/uni-getbatteryinfo";
+	// import { getBatteryInfoSync } from "@/uni_modules/uni-getbatteryinfo";
 
 
 	export default {
@@ -25,6 +25,7 @@
 			}
 		},
 		onLoad() {
+			getApp().globalData.yuhe = "yuhe"
 		},
 		methods: {
 			click2(){
