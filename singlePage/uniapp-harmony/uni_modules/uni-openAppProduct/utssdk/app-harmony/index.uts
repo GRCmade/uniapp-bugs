@@ -1,0 +1,72 @@
+import {
+	OpenAppProduct,
+	OpenAppProductOptions,
+	OpenAppProductSuccess,
+	OpenAppProductFail,
+	OpenAppProductComplete
+} from '../interface.uts'
+
+import bundleManager from '@ohos.bundle.bundleManager';
+
+export {
+	OpenAppProduct,
+	OpenAppProductOptions,
+	OpenAppProductSuccess,
+	OpenAppProductFail,
+	OpenAppProductComplete
+}
+
+import { productViewManager } from '@kit.StoreKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import type { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export function openAppProduct(options : OpenAppProductOptions) {
+	let isSuccess = true;
+	try {
+		const request : Want = {
+			parameters: {
+				// 此处填入要加载的应用包名，例如： bundleName: "com.huawei.hmsapp.appgallery"
+				bundleName: bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT).name // 加载当前包名
+			}
+		};
+		console.log("request",JSON.stringify(request));
+		productViewManager.loadProduct(getContext() as common.UIAbilityContext, request, {
+			onError: (err : BusinessError) => {
+				isSuccess = false;
+				hilog.info(0, 'TAG', `loadProduct onError. code is ${err.code}, message is ${err.message}`);
+				let result : OpenAppProductFail = {
+					errMsg: err.message ?? ""
+				};
+				const completeResult : OpenAppProductComplete = {
+					errMsg: err.message ?? ""
+				}
+				options?.fail?.(result);
+				options?.complete?.(completeResult);
+			}
+		} as productViewManager.ProductViewCallback);
+	} catch (err) {
+		isSuccess = false;
+		hilog.error(0, 'TAG', `loadProduct failed. code is ${err.code}, message is ${err.message}`);
+		let result : OpenAppProductFail = {
+			errMsg: err.message ?? ""
+		};
+		const completeResult : OpenAppProductComplete = {
+			errMsg: err.message ?? ""
+		}
+		options?.fail?.(result);
+		options?.complete?.(completeResult);
+	}
+
+	// productViewManager.loadProduct 没有成功回调，故以此方式判断是否成功执行
+	if (isSuccess) {
+		let result : OpenAppProductSuccess = {
+			errMsg: "ok"
+		};
+		const completeResult : OpenAppProductComplete = {
+			errMsg: "ok"
+		}
+		options?.success?.(result);
+		options?.complete?.(completeResult);
+	}
+}

@@ -3,7 +3,9 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": true
+				
 			}
 		},
 		{
@@ -123,7 +125,8 @@
 		{
 			"path": "pages/ask/200673/200673",
 			"style": {
-				"navigationBarTitleText": "200673"
+				"navigationBarTitleText": "200673",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -132,20 +135,146 @@
 				"navigationBarTitleText": "200558",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/ask/2006732/2006732",
+			"style" : 
+			{
+				"navigationBarTitleText" : "2006732"
+			}
+		},
+		{
+			"path" : "pages/ask/im1/im1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "im1"
+			}
+		},
+		{
+			"path" : "pages/ask/im2/im2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "im2"
+			}
+		},
+		{
+			"path" : "pages/ask/im-static-app/im-static-app",
+			"style" : 
+			{
+				"navigationBarTitleText" : "im-static-app"
+			}
+		},
+		{
+			"path" : "pages/ask/compressImage/compressImage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "compressImage"
+			}
+		},
+		{
+			"path" : "pages/ask/clearTimeout/clearTimeout",
+			"style" : 
+			{
+				"navigationBarTitleText" : "clearTimeout"
+			}
+		},
+		{
+			"path" : "pages/ask/uploadImage/uploadImage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "uploadImage"
+			}
+		},
+		{
+			"path" : "pages/ask/getTime/getTime",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getTime"
+			}
+		},
+		{
+			"path" : "pages/ask/getImageInfo/getImageInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getImageInfo"
+			}
+		},
+		{
+			"path" : "pages/ask/webview/webview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "webview"
+			}
+		},
+		{
+			"path" : "pages/ask/dtyr/dtyr",
+			"style" : 
+			{
+				"navigationBarTitleText" : "dtyr"
+			}
+		},
+		{
+			"path" : "pages/ask/picker/picker",
+			"style" : 
+			{
+				"navigationBarTitleText" : "picker"
+			}
+		},
+		{
+			"path" : "pages/ask/uts/uts",
+			"style" : 
+			{
+				"navigationBarTitleText" : "uts"
+			}
+		},
+		{
+			"path" : "pages/ask/request/request",
+			"style" : 
+			{
+				"navigationBarTitleText" : "request"
+			}
+		},
+		{
+			"path" : "pages/ask/openMarket/openMarket",
+			"style" : 
+			{
+				"navigationBarTitleText" : "openMarket"
+			}
+		},
+		{
+			"path" : "pages/ask/getSystemInfoSync/getSystemInfoSync",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getSystemInfoSync"
+			}
+		},
+		{
+			"path" : "pages/ask/chooseImage/chooseImage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "chooseImage"
+			}
+		},
+		{
+			"path" : "pages/ask/201091/201091",
+			"style" : 
+			{
+				"navigationBarTitleText" : "201091"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"pageOrientation": "auto"
+		"navigationBarBackgroundColor": "#F8F8F8"
+		// "backgroundColor": "#F8F8F8",
+		// "pageOrientation": "auto"
 	},
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#3cc51f",
 		"borderStyle": "black",
-		"backgroundColor": "#ffffff",
+		// "backgroundColor": "#ffffff",
 		"iconfontSrc": "/uni_modules/uni-icons/uni-icons/components/uni-icons/uniicons.ttf",
 		"list": [{
 			"pagePath": "pages/index/index",
@@ -161,6 +290,16 @@
 			}
 		}, {
 			"pagePath": "pages/ask/200673/200673",
+			"iconPath": "static/logo.png",
+			"selectedIconPath": "static/logo.png",
+			"text": "558"
+		}, {
+			"pagePath": "pages/ask/uts/uts",
+			"iconPath": "static/logo.png",
+			"selectedIconPath": "static/logo.png",
+			"text": "558"
+		}, {
+			"pagePath": "pages/ask/request/request",
 			"iconPath": "static/logo.png",
 			"selectedIconPath": "static/logo.png",
 			"text": "558"

@@ -12,7 +12,7 @@
 		methods: {
 			click() {
 				uni.request({
-					url: 'http://192.168.31.220:3000/get', //仅为示例，并非真实接口地址。
+					url: 'http://192.168.31.156:3000/get', //仅为示例，并非真实接口地址。
 					data: {
 						text: 'uni.request'
 					},

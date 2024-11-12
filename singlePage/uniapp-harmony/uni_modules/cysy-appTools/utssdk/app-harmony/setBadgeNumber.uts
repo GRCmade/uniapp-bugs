@@ -1,0 +1,9 @@
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationManager } from '@kit.NotificationKit';
+export const setBadgeNumber = (badgeNumber : number) => {
+	notificationManager.setBadgeNumber(badgeNumber).then(() => {
+		console.info("setBadgeNumber success");
+	}).catch((err : BusinessError) => {
+		console.error(`setBadgeNumber fail: ${JSON.stringify(err)}`);
+	});
+}

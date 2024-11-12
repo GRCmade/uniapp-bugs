@@ -3,8 +3,11 @@ const obj = {
 	"list": []
 }
 export const list = [{
-	"day": 'now',
-	"list": [200558,200673,200556,200572,200564,200536,200540, 200533, 200402, 196451, 196597, 198192, 198259, 198312, 197555, 198534, 198672, 199401, 199440,
+	"day": 'ask',
+	"list": [201091,2006732,200558,200673,200556,200572,200564,200536,200540, 200533, 200402, 196451, 196597, 198192, 198259, 198312, 197555, 198534, 198672, 199401, 199440,
 		199542
 	]
+},{
+	"day": 'now',
+	"list": ["chooseImage","getSystemInfoSync","openMarket","request","uts","picker","im1","im2","im-static-app","compressImage","clearTimeout","uploadImage","getTime","getImageInfo","webview","dtyr"]
 }]

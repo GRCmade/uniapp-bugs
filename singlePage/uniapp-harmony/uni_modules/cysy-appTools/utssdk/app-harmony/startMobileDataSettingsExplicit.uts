@@ -1,0 +1,19 @@
+import common from '@ohos.app.ability.common';
+import Want from '@ohos.app.ability.Want';
+import { BusinessError } from '@ohos.base';
+// 拉起移动网络设置界面
+export const startMobileDataSettingsExplicit = function () : void {
+	let want : Want = {
+		bundleName: 'com.huawei.hmos.settings',
+		moduleName: 'phone_settings',
+		abilityName: 'com.huawei.hmos.settings.MainAbility',
+		uri: "wifi_entry"
+	};
+	UTSHarmony.getUIAbilityContext().startAbility(want)
+		.then(() => {
+			// ...
+		})
+		.catch((err : BusinessError) => {
+			console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
+		});
+}

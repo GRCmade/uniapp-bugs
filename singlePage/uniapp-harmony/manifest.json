@@ -79,6 +79,10 @@
                         "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
                     }
                 }
+            },
+            "bundleName" : "com.example.test.template",
+            "icons" : {
+                "foreground" : "/Users/gaoruicheng/Pictures/Screenshot_2024-10-11T105613.png"
             }
         }
     }

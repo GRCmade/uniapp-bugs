@@ -9,64 +9,69 @@
 			</view>
 		</view>
 		<button @click="click2">click getBatteryCapacity</button>
+		<view class="">
+			愈合
+		</view>
 	</view>
 </template>
 
 <script>
-	import {list} from './hellolist';
-	// import { getBatteryInfoSync } from "@/uni_modules/uni-getbatteryinfo";
+	import {
+		list
+	} from './hellolist';
+	import {
+		getBatteryInfoSync
+	} from "@/uni_modules/uni-getbatteryinfo";
 
 
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				ls:list
+				ls: list,
 			}
 		},
 		onLoad() {
 			getApp().globalData.yuhe = "yuhe"
+			// this.click("clearTimeout")
 		},
 		methods: {
-			click2(){
+			click2() {
 				// plus.runtime.quit();
 				const res = getBatteryInfoSync()
 				console.log(JSON.stringify(res))
 
 			},
-			click(id){
-				const prefixPattern = /^docisue/;
-				if(prefixPattern.test(id)){
-					const str = `/pages/ask/doc/${id}/${id}`
-					console.log(str)
-					uni.navigateTo({
-						url:str
-					})
-				}else{
-					const str = `/pages/ask/${id}/${id}`
-					console.log(str)
-					uni.navigateTo({
-						url:str
-					})
-				}
-				
+			click(id) {
+				const str = `/pages/ask/${id}/${id}`
+				console.log(str)
+				uni.navigateTo({
+					url: str
+				})
+
 			}
 		}
 	}
 </script>
 
 <style>
-	.box{
+	.title {
+		font-size: 30px;
+	}
+
+	.box {
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
-		button{
+
+		button {
 			margin: 10rpx;
 			font-size: 30rpx;
 			font-weight: 700;
 			padding: 5rpx 8rpx;
 		}
 	}
+
 	/* 
 	.content {
 		display: flex;

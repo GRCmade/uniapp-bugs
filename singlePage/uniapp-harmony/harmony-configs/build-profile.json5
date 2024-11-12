@@ -1,6 +1,7 @@
 {
   "app": {
-    "signingConfigs": [      {
+    "signingConfigs": [
+      {
         "name": "default",
         "type": "HarmonyOS",
         "material": {
@@ -12,7 +13,8 @@
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/gaoruicheng/.ohos/config/default_package_HLEzljqo6YJhG14INqOfgnBnpm883uRwCVqhRPYaNcs=.p12"
         }
-      }],
+      }
+    ],
     "products": [
       {
         "name": "default",
@@ -49,6 +51,10 @@
     ]
   },
   "modules": [
+    {
+      "name": "uni_modules__uni_getbatteryinfo",
+      "srcPath": "./uni_modules/uni-getbatteryinfo"
+    },
     {
       "name": "entry",
       "srcPath": "./entry",
