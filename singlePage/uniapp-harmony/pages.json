@@ -261,6 +261,97 @@
 			{
 				"navigationBarTitleText" : "201091"
 			}
+		},
+		{
+			"path" : "pages/ask/mqtt/mqtt",
+			"style" : 
+			{
+				"navigationBarTitleText" : "mqtt"
+			}
+		},
+		{
+			"path" : "pages/ask/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "login"
+			}
+		},
+		{
+			"path" : "pages/ask/rpx2px/rpx2px",
+			"style" : 
+			{
+				"navigationBarTitleText" : "rpx2px"
+			}
+		},
+		{
+			"path" : "pages/ask/getRecorderManager/getRecorderManager",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getRecorderManager"
+			}
+		},
+		{
+			"path" : "pages/ask/v-if/v-if",
+			"style" : 
+			{
+				"navigationBarTitleText" : "v-if"
+			}
+		},
+		{
+			"path" : "pages/ask/async/async",
+			"style" : 
+			{
+				"navigationBarTitleText" : "async"
+			}
+		},
+		{
+			"path" : "pages/ask/shareWithSystem/shareWithSystem",
+			"style" : 
+			{
+				"navigationBarTitleText" : "shareWithSystem"
+			}
+		},
+		{
+			"path" : "pages/ask/video/video",
+			"style" : 
+			{
+				"navigationBarTitleText" : "video"
+			}
+		},
+		{
+			"path" : "pages/ask/map/map",
+			"style" : 
+			{
+				"navigationBarTitleText" : "map"
+			}
+		},
+		{
+			"path" : "pages/ask/createPushMessage/createPushMessage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "createPushMessage"
+			}
+		},
+		{
+			"path" : "pages/ask/getLocation/getLocation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getLocation"
+			}
+		},
+		{
+			"path" : "pages/ask/onload/onload",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ask/createWebviewContext/createWebviewContext",
+			"style" : 
+			{
+				"navigationBarTitleText" : "createWebviewContext"
+			}
 		}
 	],
 	"globalStyle": {

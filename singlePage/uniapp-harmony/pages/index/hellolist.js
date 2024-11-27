@@ -9,5 +9,5 @@ export const list = [{
 	]
 },{
 	"day": 'now',
-	"list": ["chooseImage","getSystemInfoSync","openMarket","request","uts","picker","im1","im2","im-static-app","compressImage","clearTimeout","uploadImage","getTime","getImageInfo","webview","dtyr"]
+	"list": ["createWebviewContext","onload","getLocation","createPushMessage","map","video","shareWithSystem","async","v-if","getRecorderManager","rpx2px","login","mqtt","chooseImage","getSystemInfoSync","openMarket","request","uts","picker","im1","im2","im-static-app","compressImage","clearTimeout","uploadImage","getTime","getImageInfo","webview","dtyr"]
 }]

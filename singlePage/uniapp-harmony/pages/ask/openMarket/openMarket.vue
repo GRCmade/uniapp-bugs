@@ -5,7 +5,7 @@
 </template>
 
 <script lang="uts">
-	import { openAppProduct } from "@/uni_modules/uni-openAppProduct"
+	// import { openAppProduct } from "@/uni_modules/uni-openAppProduct"
 	export default {
 		data() {
 			return {

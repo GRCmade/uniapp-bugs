@@ -2,6 +2,9 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			uni.onPushMessage((res)=>{
+				console.log(res)
+			})
 		},
 		onShow: function() {
 			console.log('App Show')

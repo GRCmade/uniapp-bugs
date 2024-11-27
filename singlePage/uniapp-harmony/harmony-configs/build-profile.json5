@@ -52,10 +52,6 @@
   },
   "modules": [
     {
-      "name": "uni_modules__uni_getbatteryinfo",
-      "srcPath": "./uni_modules/uni-getbatteryinfo"
-    },
-    {
       "name": "entry",
       "srcPath": "./entry",
       "targets": [

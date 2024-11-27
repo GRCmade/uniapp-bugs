@@ -85,5 +85,10 @@
                 "foreground" : "/Users/gaoruicheng/Pictures/Screenshot_2024-10-11T105613.png"
             }
         }
+    },
+    "mp-harmony" : {
+        "distribute" : {
+            "bundleName" : "com.atomicservice.5765880207856005839"
+        }
     }
 }

@@ -13,6 +13,15 @@
             "default" : {
                 "launchtype" : "local"
             },
+            "h5" : {
+                "launchtype" : "local"
+            },
+            "mp-alipay" : {
+                "launchtype" : "local"
+            },
+            "mp-harmony" : {
+                "launchtype" : "local"
+            },
             "provider" : "aliyun",
             "type" : "uniCloud"
         }

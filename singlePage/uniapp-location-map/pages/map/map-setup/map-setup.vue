@@ -1,49 +1,65 @@
 <template>
-	<view>
-		<view class="page-body">
-			<view class="page-section page-section-gap">
-				<map @tap.stop ref="mapref" id="map" style="width: 100%; height: 300px;" :latitude="latitude" :longitude="longitude"
-					:markers="covers">
-				</map>
-			</view>
-		</view>
-		<view style="height: 1000rpx;">
-			1
-		</view>
-		<button @click="click">click</button>
-	</view>
+			<map style="width: 750rpx; height: 90vh;"
+			:latitude="latitude" :longitude="longitude"
+			:scale='scale'>
+			</map>
+			<button @click="changeScale8">changeScale8</button>
+			<button @click="changeScale85">changeScale85</button>
 </template>
 
-<script setup>
-	import {
-		ref
-	} from 'vue';
-	let latitude = ref(39.909)
-	let longitude = ref(116.39742)
-	const mapref = ref()
-	let covers = ref([{
-		latitude: 39.909,
-		longitude: 116.39742,
-		iconPath: '/static/logo.png'
-	}, {
-		latitude: 39.90,
-		longitude: 116.39,
-		iconPath: '/static/logo.png'
-	}])
+<script>
+	export default {
+		data() {
+			return {
+				latitude: 39.91092,
+				longitude: 116.41338,
+				scale: 6
+			}
+		},
+		onLoad() {
 
-	covers.value.push({
-		latitude: 31.850769,
-		longitude: 117.152592,
-		iconPath: '/static/logo.png'
-	})
-	const click = ()=>{
-		const mapContext = uni.createMapContext("map");
-		mapContext.moveToLocation();
+		},
+		methods: {
+			changeScale8() {
+				this.scale == 8 ? this.scale = 5 : this.scale = 8;
+				this.latitude = 30.651696; // 30.651696
+				this.longitude = 104.076452; // 104.076452
+				// this.latitude = 25.046432; // 30.651696
+				// this.longitude = 102.709372; // 104.076452
+			},
+			changeScale85(){
+				this.scale == 8.5 ? this.scale = 5 : this.scale = 8.5;
+				this.latitude = 30.651696; // 30.651696
+				this.longitude = 104.076452; // 104.076452
+			}
+		}
 	}
-	
 </script>
 
-
 <style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
 </style>

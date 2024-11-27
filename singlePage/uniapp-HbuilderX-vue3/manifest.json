@@ -50,11 +50,20 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx84abd7c997413458",
+        "appid" : "wxddb2059a2f685ec5",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+				"mergeVirtualHostAttributes":true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "yuhe test"
+            }
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -68,5 +77,16 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "3"
+    "vueVersion" : "3",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "amap" : {
+                    "key" : "dfbba5195248d28ab9518db25befef44",
+                    "securityJsCode" : "b4d21b9b71494157191f5f4bf3bb1e20",
+                    "serviceHost" : ""
+                }
+            }
+        }
+    }
 }

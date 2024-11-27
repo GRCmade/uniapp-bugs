@@ -5,9 +5,9 @@
 </template>
 
 <script>
-	import {
-		openUrl
-	} from "@/uni_modules/cysy-appTools"
+	// import {
+	// 	openUrl
+	// } from "@/uni_modules/cysy-appTools"
 	export default {
 		data() {
 			return {

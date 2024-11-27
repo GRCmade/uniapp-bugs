@@ -19,9 +19,9 @@
 	import {
 		list
 	} from './hellolist';
-	import {
-		getBatteryInfoSync
-	} from "@/uni_modules/uni-getbatteryinfo";
+	// import {
+	// 	OpenAppProducts
+	// } from "@/uni_modules/srh-openAppProducts";
 
 
 	export default {
@@ -38,7 +38,7 @@
 		methods: {
 			click2() {
 				// plus.runtime.quit();
-				const res = getBatteryInfoSync()
+				// const res = OpenAppProducts()
 				console.log(JSON.stringify(res))
 
 			},

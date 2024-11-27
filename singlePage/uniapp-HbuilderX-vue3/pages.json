@@ -41,20 +41,20 @@
 				"navigationBarTitleText" : "200530"
 			}
 		},
-		{
-			"path" : "pages/ask/200528/200528",
-			"style" : 
-			{
-				"navigationBarTitleText" : "200528"
-			}
-		},
-		{
-			"path" : "pages/ask/200528/200528-next/200528-next",
-			"style" : 
-			{
-				"navigationBarTitleText" : "200528-next"
-			}
-		},
+		// {
+		// 	"path" : "pages/ask/200528/200528",
+		// 	"style" : 
+		// 	{
+		// 		"navigationBarTitleText" : "200528"
+		// 	}
+		// },
+		// {
+		// 	"path" : "pages/ask/200528/200528-next/200528-next",
+		// 	"style" : 
+		// 	{
+		// 		"navigationBarTitleText" : "200528-next"
+		// 	}
+		// },
 		{
 			"path" : "pages/ask/200692/200692",
 			"style" : 
@@ -68,8 +68,74 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/ask/video/video",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ask/map/map",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ask/request/request",
+			"style" : 
+			{
+				"navigationBarTitleText" : "request"
+			}
+		},
+		{
+			"path" : "pages/ask/uicons/uicons",
+			"style" : 
+			{
+				"navigationBarTitleText" : "uicons"
+			}
+		},
+		{
+			"path" : "pages/ask/cloud/cloud",
+			"style" : 
+			{
+				"navigationBarTitleText" : "cloud"
+			}
 		}
-	],
+	,{
+    "path": "uni_modules/test/pages/test/add",
+    "style": {
+        "navigationBarTitleText": "新增"
+    }
+}
+,{
+    "path": "uni_modules/test/pages/test/edit",
+    "style": {
+        "navigationBarTitleText": "编辑"
+    }
+}
+,{
+    "path": "uni_modules/test/pages/test/list",
+    "style": {
+        "navigationBarTitleText": "列表"
+    }
+}
+,{
+    "path": "uni_modules/test/pages/test/detail",
+    "style": {
+        "navigationBarTitleText": "详情"
+    }
+},
+{
+	"path" : "pages/ask/wxref/wxref",
+	"style" : 
+	{
+		"navigationBarTitleText" : "wxref"
+	}
+}
+],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
