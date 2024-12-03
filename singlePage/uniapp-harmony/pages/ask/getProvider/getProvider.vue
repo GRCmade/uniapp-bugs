@@ -12,16 +12,10 @@ export default {
   },
   methods: {
     click(){
-			uni.getLocation({
-				type:'gcj02',
-				geocode:true,
-				isHighAccuracy:true,
+			uni.getProvider({
+				service:'payment',
 				success(res) {
-					
-					console.log(JSON.stringify(res));
-				},
-				fail(res) {
-					console.log(JSON.stringify(res));
+					console.log("res",JSON.stringify(res));
 				}
 			})
     }

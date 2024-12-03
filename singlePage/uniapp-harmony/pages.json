@@ -352,6 +352,55 @@
 			{
 				"navigationBarTitleText" : "createWebviewContext"
 			}
+		},
+		{
+			"path" : "pages/ask/getProvider/getProvider",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getProvider"
+			}
+		},
+		{
+			"path" : "pages/ask/chooseVideo/chooseVideo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "chooseVideo"
+			}
+		},
+		{
+			"path" : "pages/ask/request-obj/request-obj",
+			"style" : 
+			{
+				"navigationBarTitleText" : "request-obj"
+			}
+		},
+		{
+			"path" : "pages/ask/openLocation/openLocation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "openLocation"
+			}
+		},
+		{
+			"path" : "pages/ask/textdecode/textdecode",
+			"style" : 
+			{
+				"navigationBarTitleText" : "textdecode"
+			}
+		},
+		{
+			"path" : "pages/ask/getAppAuthorizeSetting/getAppAuthorizeSetting",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getAppAuthorizeSetting"
+			}
+		},
+		{
+			"path" : "pages/ask/showToast/showToast",
+			"style" : 
+			{
+				"navigationBarTitleText" : "showToast"
+			}
 		}
 	],
 	"globalStyle": {

@@ -40,9 +40,17 @@
       },
 			{
 				"name":"ohos.permission.APPROXIMATELY_LOCATION",
+				"reason":"$string:EntryAbility_desc",
+				"usedScene":{
+					"when":"inuse"
+				}
 			},
 			{
-				"name":"ohos.permission.LOCATION"
+				"name":"ohos.permission.LOCATION",
+				"reason":"$string:EntryAbility_desc",
+				"usedScene":{
+					"when":"inuse"
+				}
 			}
     ],
     "metadata": [

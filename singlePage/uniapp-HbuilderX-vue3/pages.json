@@ -134,6 +134,13 @@
 	{
 		"navigationBarTitleText" : "wxref"
 	}
+},
+{
+	"path" : "pages/ask/scrolltable/scrolltable",
+	"style" : 
+	{
+		"navigationBarTitleText" : "scrolltable"
+	}
 }
 ],
 	"globalStyle": {

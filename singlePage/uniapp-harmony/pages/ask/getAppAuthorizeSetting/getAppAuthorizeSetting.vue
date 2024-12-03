@@ -1,6 +1,7 @@
 <template>
   <view>
    <button @click="click">click</button>
+   <button @click="click2">click2</button>
   </view>
 </template>
 
@@ -12,19 +13,18 @@ export default {
   },
   methods: {
     click(){
-			uni.getLocation({
-				type:'gcj02',
-				geocode:true,
-				isHighAccuracy:true,
-				success(res) {
-					
-					console.log(JSON.stringify(res));
-				},
+			const res = uni.getAppAuthorizeSetting()
+			console.log(JSON.stringify(res));
+    },
+		click2(){
+			uni.chooseImage({
+				count:1,
+				sourceType:['camera'],
 				fail(res) {
 					console.log(JSON.stringify(res));
 				}
 			})
-    }
+		}
   }
 }
 </script>

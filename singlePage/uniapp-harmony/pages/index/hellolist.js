@@ -9,5 +9,8 @@ export const list = [{
 	]
 },{
 	"day": 'now',
-	"list": ["createWebviewContext","onload","getLocation","createPushMessage","map","video","shareWithSystem","async","v-if","getRecorderManager","rpx2px","login","mqtt","chooseImage","getSystemInfoSync","openMarket","request","uts","picker","im1","im2","im-static-app","compressImage","clearTimeout","uploadImage","getTime","getImageInfo","webview","dtyr"]
+	"list": ['showToast','getAppAuthorizeSetting','textdecode','request-obj',"openLocation"]
+},{
+	"day": 'used',
+	"list": ["chooseVideo","getProvider","createWebviewContext","onload","getLocation","createPushMessage","map","video","shareWithSystem","async","v-if","getRecorderManager","rpx2px","login","mqtt","chooseImage","getSystemInfoSync","openMarket","request","uts","picker","im1","im2","im-static-app","compressImage","clearTimeout","uploadImage","getTime","getImageInfo","webview","dtyr"]
 }]
