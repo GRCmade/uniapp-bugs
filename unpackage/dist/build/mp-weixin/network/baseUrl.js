@@ -1,0 +1,1 @@
+"use strict";const t={baseUrl:function(){let t="";return console.log("生产环境"),t="http://218.245.63.50:9139/capital/m/","http://218.245.63.50:9139/capital/m/"}(),uploadImgUrl:function(){return""}()};exports.base=t;

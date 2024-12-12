@@ -1,0 +1,1 @@
+"use strict";const e={data:()=>({openUrl:""}),onLoad(){this.openUrl="http://192.168.31.148:3001/"},methods:{}};const o=require("../../common/vendor.js")._export_sfc(e,[["render",function(e,o,r,t,n,s){return{a:n.openUrl}}]]);wx.createPage(o);

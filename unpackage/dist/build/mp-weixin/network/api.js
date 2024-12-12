@@ -1,0 +1,1 @@
+"use strict";let e=(new(require("./request.js").Request)).http;let t={login_login:t=>function(t,r,i=!0,n,o,a){return e({url:t,method:"POST",data:r,header:a,whetherData:i,hideLoading:n,isRomteServer:o})}("/login",t,!1,!1,!0)};exports.api=t;

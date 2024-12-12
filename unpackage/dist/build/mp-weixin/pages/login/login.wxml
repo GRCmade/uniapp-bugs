@@ -1,0 +1,1 @@
+<view><view class="login-user"><view class="user-account"><input class="user-input" placeholder="请输入账号adminyg" value="{{a}}" bindinput="{{b}}"></input></view><view class="user-account"><input class="user-input" placeholder="请输入密码111111" value="{{c}}" bindinput="{{d}}"></input></view></view><view class="login-btn"><button class="b-login" bindtap="{{e}}">登录</button></view></view>
