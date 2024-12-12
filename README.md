@@ -1,6 +1,5 @@
-# uniapp-bugs-finish
-uniapp-bugs中，修复的
+# uniapp-bugs-template
+uniapp-bugs中一个模板
 
-fixed：已经修改好了的
-ignore：忽略不用管的
+这个是用来生成可以复现项目的模板
 
