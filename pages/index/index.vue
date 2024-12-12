@@ -12,7 +12,12 @@ export default {
   },
   methods: {
     click(){
-			
+			uni.setTabBarItem({
+			  index: 1,
+			  text: 'yuhe',
+			  iconPath: '/static/tabbar/1.png',
+			  selectedIconPath: '/static/tabbar/11.png'
+			})
     }
   }
 }
