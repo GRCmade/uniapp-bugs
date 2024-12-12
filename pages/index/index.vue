@@ -8,11 +8,18 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+			data:[{
+				"userid":"123456",
+				"ls":["0"]
+			}]
+		}
   },
   methods: {
     click(){
-			
+			uni.setStorageSync("data",this.data)
+			const res = uni.getStorageSync("data")
+			console.log(JSON.stringify(res))
     }
   }
 }
