@@ -39,7 +39,14 @@
 			click2() {
 				// plus.runtime.quit();
 				// const res = OpenAppProducts()
-				console.log(JSON.stringify(res))
+				console.log("system",JSON.stringify(uni.getSystemInfoSync()) )
+				uni.setTabBarItem({
+				  index: 1,
+				  text: 'yuhe',
+				  iconPath: '/static/3.png',
+				  selectedIconPath: '/static/4.png'
+				})
+
 
 			},
 			click(id) {

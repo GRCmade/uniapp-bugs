@@ -141,6 +141,27 @@
 	{
 		"navigationBarTitleText" : "scrolltable"
 	}
+},
+{
+	"path" : "pages/ask/inputdigit/inputdigit",
+	"style" : 
+	{
+		"navigationBarTitleText" : "inputdigit"
+	}
+},
+{
+	"path" : "pages/ask/markers/markers",
+	"style" : 
+	{
+		"navigationBarTitleText" : "markers"
+	}
+},
+{
+	"path" : "pages/ask/css/css",
+	"style" : 
+	{
+		"navigationBarTitleText" : "css"
+	}
 }
 ],
 	"globalStyle": {

@@ -74,7 +74,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("view", { class: "page-body" }, [
         vue.createElementVNode("view", { class: "page-section page-section-gap" }, [
@@ -92,55 +92,53 @@ if (uni.restoreGlobal) {
       }, "click")
     ]);
   }
-  const PagesMapMap = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map.vue"]]);
+  const PagesMapMap = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map.vue"]]);
   const _sfc_main$2 = {
-    __name: "map-setup",
-    setup(__props) {
-      let latitude = vue.ref(39.909);
-      let longitude = vue.ref(116.39742);
-      const mapref = vue.ref();
-      let covers = vue.ref([{
-        latitude: 39.909,
-        longitude: 116.39742,
-        iconPath: "/static/logo.png"
-      }, {
-        latitude: 39.9,
-        longitude: 116.39,
-        iconPath: "/static/logo.png"
-      }]);
-      covers.value.push({
-        latitude: 31.850769,
-        longitude: 117.152592,
-        iconPath: "/static/logo.png"
-      });
-      const click = () => {
-        const mapContext = uni.createMapContext("map");
-        mapContext.moveToLocation();
+    data() {
+      return {
+        latitude: 39.91092,
+        longitude: 116.41338,
+        scale: 6
       };
-      return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createElementBlock("view", null, [
-          vue.createElementVNode("view", { class: "page-body" }, [
-            vue.createElementVNode("view", { class: "page-section page-section-gap" }, [
-              vue.createElementVNode("map", {
-                onTap: _cache[0] || (_cache[0] = vue.withModifiers(() => {
-                }, ["stop"])),
-                ref_key: "mapref",
-                ref: mapref,
-                id: "map",
-                style: { "width": "100%", "height": "300px" },
-                latitude: vue.unref(latitude),
-                longitude: vue.unref(longitude),
-                markers: vue.unref(covers)
-              }, null, 40, ["latitude", "longitude", "markers"])
-            ])
-          ]),
-          vue.createElementVNode("view", { style: { "height": "1000rpx" } }, " 1 "),
-          vue.createElementVNode("button", { onClick: click }, "click")
-        ]);
-      };
+    },
+    onLoad() {
+    },
+    methods: {
+      changeScale8() {
+        this.scale == 8 ? this.scale = 5 : this.scale = 8;
+        this.latitude = 30.651696;
+        this.longitude = 104.076452;
+      },
+      changeScale85() {
+        this.scale == 8.5 ? this.scale = 5 : this.scale = 8.5;
+        this.latitude = 30.651696;
+        this.longitude = 104.076452;
+      }
     }
   };
-  const PagesMapMapSetupMapSetup = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map-setup/map-setup.vue"]]);
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      vue.Fragment,
+      null,
+      [
+        vue.createElementVNode("map", {
+          style: { "width": "750rpx", "height": "90vh" },
+          latitude: $data.latitude,
+          longitude: $data.longitude,
+          scale: $data.scale
+        }, null, 8, ["latitude", "longitude", "scale"]),
+        vue.createElementVNode("button", {
+          onClick: _cache[0] || (_cache[0] = (...args) => $options.changeScale8 && $options.changeScale8(...args))
+        }, "changeScale8"),
+        vue.createElementVNode("button", {
+          onClick: _cache[1] || (_cache[1] = (...args) => $options.changeScale85 && $options.changeScale85(...args))
+        }, "changeScale85")
+      ],
+      64
+      /* STABLE_FRAGMENT */
+    );
+  }
+  const PagesMapMapSetupMapSetup = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/map/map-setup/map-setup.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -248,7 +246,7 @@ if (uni.restoreGlobal) {
       }, "map")
     ]);
   }
-  const PagesPagePage = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/page/page.vue"]]);
+  const PagesPagePage = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/pages/page/page.vue"]]);
   __definePage("pages/map/map", PagesMapMap);
   __definePage("pages/map/map-setup/map-setup", PagesMapMapSetupMapSetup);
   __definePage("pages/page/page", PagesPagePage);
@@ -263,7 +261,7 @@ if (uni.restoreGlobal) {
       formatAppLog("log", "at App.vue:10", "App Hide");
     }
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/gaoruicheng/Documents/DcloudProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/App.vue"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-main/singlePage/uniapp-location-map/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {

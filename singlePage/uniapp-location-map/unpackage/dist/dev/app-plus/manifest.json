@@ -107,7 +107,7 @@
     "uni-app": {
       "control": "uni-v3",
       "vueVersion": "3",
-      "compilerVersion": "4.24",
+      "compilerVersion": "4.36",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
       "nvue": {
@@ -117,6 +117,15 @@
       "webView": {
         "minUserAgentVersion": "49.0"
       }
+    }
+  },
+  "app-harmony": {
+    "useragent": {
+      "value": "uni-app",
+      "concatenate": true
+    },
+    "uniStatistics": {
+      "enable": false
     }
   }
 }

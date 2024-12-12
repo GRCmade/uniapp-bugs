@@ -78,6 +78,10 @@
                     "tencent" : {
                         "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
                     }
+                },
+                "uni-payment" : {},
+                "uni-oauth" : {
+                    "huawei" : {}
                 }
             },
             "bundleName" : "com.example.test.template",

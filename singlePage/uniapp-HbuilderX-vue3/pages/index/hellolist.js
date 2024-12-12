@@ -4,5 +4,5 @@ const obj = {
 }
 export const list = [{
 	"day": 'now',
-	"list": ['scrolltable',"kuaishou","wxref","cloud","uicons","request","map","s",172386,200692,200528,199806,199828,199860,200452,200530,"video"]
+	"list": ['css','markers','inputdigit','scrolltable',"kuaishou","wxref","cloud","uicons","request","map","s",172386,200692,200528,199806,199828,199860,200452,200530,"video"]
 }]

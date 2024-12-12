@@ -1,0 +1,35 @@
+<template>
+	<view>
+		<button @click="click">click</button>
+		<web-view style="height: 500px;" src="http://192.168.31.148:3001/" @message="onmessage"></web-view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+			click() {
+				const res = this.$refs.webview
+				console.log(JSON.stringify(res));
+			},
+			onmessage(e) {
+				console.log(123,JSON.stringify(e))
+				uni.showToast({
+					title: JSON.stringify(e)
+				})
+			},
+		}
+	}
+</script>
+
+<style>
+
+</style>

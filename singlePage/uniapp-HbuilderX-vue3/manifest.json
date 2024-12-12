@@ -43,7 +43,17 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "maps" : {},
+                "geolocation" : {
+                    "amap" : {
+                        "name" : "amapu2XxlKDsc",
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "2a0199c954c6cce852188652c4503bf3",
+                        "appkey_android" : "2a0199c954c6cce852188652c4503bf3"
+                    }
+                }
+            }
         }
     },
     /* 快应用特有相关 */
@@ -86,5 +96,8 @@
                 }
             }
         }
+    },
+    "mp-qq" : {
+        "appid" : "1108100302"
     }
 }

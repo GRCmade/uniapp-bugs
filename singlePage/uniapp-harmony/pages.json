@@ -401,6 +401,49 @@
 			{
 				"navigationBarTitleText" : "showToast"
 			}
+		},
+		{
+			"path" : "pages/ask/lanzi/lanzi",
+			"style" : 
+			{
+				"navigationBarTitleText" : "lanzi"
+			}
+		},
+		{
+			"path" : "pages/ask/getWindowInfo/getWindowInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "getWindowInfo"
+			}
+		},
+		{
+			"path" : "pages/ask/refs/refs",
+			"style" : 
+			{
+				"navigationBarTitleText" : "refs"
+			}
+		},
+		{
+			"path" : "pages/ask/input/input",
+			"style" : 
+			{
+				"navigationBarTitleText" : "input"
+			}
+		},
+		{
+			"path" : "pages/ask/lubing/lubing",
+			"style" : 
+			{
+				"navigationBarTitleText" : "lubing"
+			}
+		},
+		{
+			"path" : "pages/ask/lubing/main",
+			"style" : 
+			{
+				"navigationBarTitleText" : "main",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
