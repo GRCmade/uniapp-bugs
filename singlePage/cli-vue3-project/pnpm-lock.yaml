@@ -102,6 +102,9 @@ importers:
       '@dcloudio/uni-stacktracey':
         specifier: 3.0.0-4020920240930001
         version: 3.0.0-4020920240930001
+      '@dcloudio/uni-uts-v1':
+        specifier: 3.0.0-4020920240930001
+        version: 3.0.0-4020920240930001(rollup@4.28.0)
       '@dcloudio/vite-plugin-uni':
         specifier: 3.0.0-4020920240930001
         version: 3.0.0-4020920240930001(@nuxt/kit@3.14.1592(rollup@4.28.0))(postcss@8.4.49)(rollup@4.28.0)(vite@5.2.8(@types/node@22.10.1)(sass@1.77.6)(terser@5.36.0))(vue@3.5.13(typescript@4.9.5))
@@ -816,6 +819,50 @@ packages:
 
   '@dcloudio/uni-stat@3.0.0-4020920240930001':
     resolution: {integrity: sha512-ZPn4WQPlZ3lObaZM9Q1fryewIsan1XD4qy+oWsqAuGop1kaHDQKUfg2D+jclAOCr4+95u4Jfn+RH0HNqrI0eqg==}
+
+  '@dcloudio/uni-uts-v1@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-AZpfrFnFHnEwBB+I7WjwwgeM6o+QktHE1WkZFPs+B3GUgOdMkJ9wA537Tr2RwQAjQFRKE2SzF6D3OoVkJ1lA6w==}
+
+  '@dcloudio/uts-darwin-arm64@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-LjrZ69JfnSXMD57Vexr1TpqGSx1fMqTQPrfv/x2L/kiTAmYkvspcGbpOwMwxMDZ/SnhgiKAzItpOh8rZ5enr0g==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@dcloudio/uts-darwin-x64@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-tbTxqLiYBSvGf2LVdZPmuR80h7NKjuBKP4vQXQPoJRjOEOD+IWbwfqpXM+sH8dDgP9DXOfLfQaiBxL9RPCKPBA==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@dcloudio/uts-linux-x64-gnu@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-EO255fMhG4/QpW/NyTwW7FNrYSrjW6NrNbaTI5g+ztu6oHHo3v2RAf3xNN1SgCUiVaEbNPVax3lQGJ91iSgoTw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [gnu]
+
+  '@dcloudio/uts-linux-x64-musl@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-SLPTMONlaqqYrmK+g6m0uJb4gYMRRuMKiVhHkR0co9q4li81Vt9XNfY7gumGtBbwPWPO9eKQFHe0pymD0wuJgQ==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@dcloudio/uts-win32-ia32-msvc@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-rjfC/00eIGqidQeLSufp7h7UvSVn7ja4eQoxKg0DOOOpQRMwrdkzMTBDx4Dcb2m+gfytyjE/UlEcjS4RsLVIgw==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@dcloudio/uts-win32-x64-msvc@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-102GoOnw8hoWHJl3n/p5/zqwDo0EYvuOUlYz2j7yyw7h3VaL1iQkZD1EcAKvhGbSmSWY3/c3UaB+Et+LMCl5xg==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@dcloudio/uts@3.0.0-4020920240930001':
+    resolution: {integrity: sha512-6PMQnPBRoR63KLR60ugTtl6K2sMS6tbwf5Ck3ZLAX/sGDQ8a0C4cLO5hDHlkvK/KYIWybxtsN/JeUzaVo6ovUg==}
 
   '@dcloudio/vite-plugin-uni@3.0.0-4020920240930001':
     resolution: {integrity: sha512-ZtV5x4Jj8d2FzaK8uamYdfYwzRbMseWY3l6MTUdc94uMNIvnb2fBhJccoY3xexSDYRFRElPKk7+ed6AQ7tYtuw==}
@@ -1573,6 +1620,9 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
 
+  android-versions@1.9.0:
+    resolution: {integrity: sha512-13O2B6PQMEM4ej9n13ePRQeckrCoKbZrvuzlLvK+9s2QmncpHDbYzZxhgapN32sJNoifN6VAHexLnd/6CYrs7Q==}
+
   ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
     engines: {node: '>=8'}
@@ -1799,12 +1849,19 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  colors@1.4.0:
+    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
+    engines: {node: '>=0.1.90'}
+
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+
+  commondir@1.0.1:
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
 
   compare-versions@3.6.0:
     resolution: {integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==}
@@ -2120,6 +2177,10 @@ packages:
     resolution: {integrity: sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==}
     engines: {node: '>= 0.8'}
 
+  find-cache-dir@3.3.2:
+    resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==}
+    engines: {node: '>=8'}
+
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
@@ -2227,6 +2288,9 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  graphlib@2.1.8:
+    resolution: {integrity: sha512-jcLLfkpoVGmH7/InMC/1hIvOPSUh38oJtGhvrOFGzioE1DZ+0YW16RgmOJhHiuWTvGiJQ9Z1Ik43JvkRPRvE+A==}
 
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -2663,12 +2727,21 @@ packages:
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
 
+  make-dir@3.1.0:
+    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
+    engines: {node: '>=8'}
+
   make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
     engines: {node: '>=10'}
 
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
+
+  md5-file@5.0.0:
+    resolution: {integrity: sha512-xbEFXCYVWrSx/gEKS1VPlg84h/4L20znVIulKw6kMfmBUAZNAnF00eczz9ICMl+/hjQGo5KSXRxbL/47X3rmMw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
 
   media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
@@ -2822,6 +2895,10 @@ packages:
     resolution: {integrity: sha512-D3pzNDWIvgA+7IORhD/IuWzEk4uXv6GsgOxiid4UU3h9oq5IqV1KtPDi63n4sZJ/xcWlr88c0QM2RgN5VbOhFA==}
     engines: {node: ^14.16.0 || >=16.10.0}
     hasBin: true
+
+  object-hash@3.0.0:
+    resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
+    engines: {node: '>= 6'}
 
   object-inspect@1.13.3:
     resolution: {integrity: sha512-kDCGIbxkDSXE3euJZZXzc6to7fCrKHNI/hSRQnRuQ+BWjFNzZwiFF8fj/6o2t2G9/jTj8PSIYTfCLelLZEeRpA==}
@@ -5025,6 +5102,58 @@ snapshots:
       - ts-node
       - vue
 
+  '@dcloudio/uni-uts-v1@3.0.0-4020920240930001(rollup@4.28.0)':
+    dependencies:
+      '@babel/code-frame': 7.26.2
+      '@dcloudio/uts': 3.0.0-4020920240930001
+      '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
+      '@vue/shared': 3.4.21
+      adm-zip: 0.5.16
+      android-versions: 1.9.0
+      colors: 1.4.0
+      debug: 4.3.7
+      fast-glob: 3.3.2
+      find-cache-dir: 3.3.2
+      fs-extra: 10.1.0
+      graphlib: 2.1.8
+      jsonc-parser: 3.3.1
+      lodash: 4.17.21
+      md5-file: 5.0.0
+      object-hash: 3.0.0
+      semver: 7.6.3
+      source-map: 0.7.4
+      source-map-js: 1.2.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+
+  '@dcloudio/uts-darwin-arm64@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts-darwin-x64@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts-linux-x64-gnu@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts-linux-x64-musl@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts-win32-ia32-msvc@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts-win32-x64-msvc@3.0.0-4020920240930001':
+    optional: true
+
+  '@dcloudio/uts@3.0.0-4020920240930001':
+    optionalDependencies:
+      '@dcloudio/uts-darwin-arm64': 3.0.0-4020920240930001
+      '@dcloudio/uts-darwin-x64': 3.0.0-4020920240930001
+      '@dcloudio/uts-linux-x64-gnu': 3.0.0-4020920240930001
+      '@dcloudio/uts-linux-x64-musl': 3.0.0-4020920240930001
+      '@dcloudio/uts-win32-ia32-msvc': 3.0.0-4020920240930001
+      '@dcloudio/uts-win32-x64-msvc': 3.0.0-4020920240930001
+
   '@dcloudio/vite-plugin-uni@3.0.0-4020920240930001(@nuxt/kit@3.14.1592(rollup@4.28.0))(postcss@8.4.49)(rollup@4.28.0)(vite@5.2.8(@types/node@22.10.1)(sass@1.77.6)(terser@5.36.0))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
       '@babel/core': 7.26.0
@@ -6016,6 +6145,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  android-versions@1.9.0:
+    dependencies:
+      semver: 7.6.3
+
   ansi-escapes@4.3.2:
     dependencies:
       type-fest: 0.21.3
@@ -6298,11 +6431,15 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  colors@1.4.0: {}
+
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
 
   commander@2.20.3: {}
+
+  commondir@1.0.1: {}
 
   compare-versions@3.6.0: {}
 
@@ -6617,6 +6754,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  find-cache-dir@3.3.2:
+    dependencies:
+      commondir: 1.0.1
+      make-dir: 3.1.0
+      pkg-dir: 4.2.0
+
   find-up@4.1.0:
     dependencies:
       locate-path: 5.0.0
@@ -6726,6 +6869,10 @@ snapshots:
       get-intrinsic: 1.2.4
 
   graceful-fs@4.2.11: {}
+
+  graphlib@2.1.8:
+    dependencies:
+      lodash: 4.17.21
 
   has-flag@4.0.0: {}
 
@@ -7374,6 +7521,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  make-dir@3.1.0:
+    dependencies:
+      semver: 6.3.1
+
   make-dir@4.0.0:
     dependencies:
       semver: 7.6.3
@@ -7381,6 +7532,8 @@ snapshots:
   makeerror@1.0.12:
     dependencies:
       tmpl: 1.0.5
+
+  md5-file@5.0.0: {}
 
   media-typer@0.3.0: {}
 
@@ -7497,6 +7650,8 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.2.1
       ufo: 1.5.4
+
+  object-hash@3.0.0: {}
 
   object-inspect@1.13.3: {}
 
