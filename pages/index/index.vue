@@ -12,7 +12,7 @@
 	export default {
 		data() {
 			return {
-				ls: ["/static/1..png", "static/2..png", "./static/3..png", "../static/4..png", "../../static/5..png","6..png"]
+				ls: ["/static/1..png", "static/2..png", "./static/3..png", "../static/4..png", "../../static/5..png","6..png","/static/err.png"]
 			}
 		},
 		methods: {
