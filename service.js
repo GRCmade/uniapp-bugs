@@ -24,52 +24,15 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-function objectToString(obj) {
-  return JSON.stringify(obj);
-}
-
-// 示例对象
-const exampleObject = {
-  key: "2e3b20b33c78f41be52c77604353a840",
-  policyName: "原价",
-  showSeats: [
-    {
-      salePrice: 300,
-      snapshot: "十三区/7排15号",
-      fareLevel: "D",
-      suitCode: null,
-      id: "1858723170526990337",
-      price: 300,
-      fareLevelVerboseName: "乙级票",
-    },
-  ],
-  totalAmount: 300,
-  deltaPrice: 0,
-  buyProtocolOn: false,
-  buyProtocol: "Empty_String",
-  imageUrl:
-    "https://res.dasheng.top/227/pro/ctms_tool/20241208/jpg/cebd003085e94068bfad67db82ba752a.jpg",
-  name: "【南京】2024-2025赛季CBA联赛常规赛南京赛区赛事",
-  venueAddress: "江苏省南京市鼓楼区华侨路街道双沟珍宝坊体育馆",
-  realNameType: "3",
-  id: "1838480455383248898",
-  performanceSource: null,
-  showTime: "2024-12-18 19:35:00",
-  showName: "2024-12-18 19:35 南京头排苏酒 VS 广东东阳光",
-  showId: "1858723021008441345",
-  douyinProductId: "7421175268624140326",
-  ticketOutletId: "",
-  plugInType: 1,
-};
-
-
-app.get('/api/data', (req, res) => {
+app.get("/api/jsontext", (req, res) => {
   // 手动转换为字符串
-  const jsonString = JSON.stringify(exampleObject) + "1";
-  console.log(jsonString+"111",typeof jsonString);
-  
+  const exampleObject =
+    "%7B%22key%22:%22c60976ae59470c6c5cbc57d69af677ef%22,%22policyName%22:%22%E5%8E%9F%E4%BB%B7%22,%22showSeats%22:%5B%7B%22salePrice%22:100,%22snapshot%22:%22%E8%A5%BF%E5%8C%BA%E4%B8%8B%E7%9C%8B%E5%8F%B0/4%E6%8E%9241%E5%8F%B7%22,%22fareLevel%22:%22B%22,%22suitCode%22:null,%22id%22:%221860581840986537986%22,%22price%22:100,%22fareLevelVerboseName%22:%22B%E6%A1%A3%E6%AC%A1%22%7D%5D,%22totalAmount%22:100,%22deltaPrice%22:0,%22buyProtocolOn%22:false,%22buyProtocol%22:%22Empty_String%22,%22imageUrl%22:%22https://res.dasheng.top/227/pro/ctms_tool/20241020/png/ca005c3bcb5346cca742d23303f1619c.png%22,%22name%22:%22%E3%80%90%E5%8C%97%E4%BA%AC%E3%80%912024-2025%E4%B8%AD%E5%9B%BD%E6%8E%92%E7%90%83%E8%B6%85%E7%BA%A7%E8%81%94%E8%B5%9B%E5%8C%97%E4%BA%AC%E5%8C%97%E6%B1%BD%E7%94%B7%E6%8E%92%22,%22venueAddress%22:%22%E5%8C%97%E4%BA%AC%E5%B8%82%E6%9C%9D%E9%98%B3%E5%8C%BA%E5%85%AD%E9%87%8C%E5%B1%AF%E8%A1%97%E9%81%93%E6%9C%9D%E9%98%B3%E4%BD%93%E8%82%B2%E9%A6%86%22,%22realNameType%22:%223%22,%22id%22:%221847619394166296577%22,%22performanceSource%22:null,%22showTime%22:%222024-12-15%2019:30:00%22,%22showName%22:%222024-12-15%2019:30%20%E5%8C%97%E4%BA%AC%E5%8C%97%E6%B1%BD%E7%94%B7%E6%8E%92%20VS%20%E5%B1%B1%E4%B8%9C%E6%9D%BE%E5%B1%B1%E5%B0%8F%E9%95%87%E7%94%B7%E6%8E%92%22,%22showId%22:%221860581783100948482%22,%22douyinProductId%22:%227437383587948677130%22,%22ticketOutletId%22:%22%22,%22plugInType%22:null%7D";
+
+  const jsonString = exampleObject;
+
   // 设置响应头，并返回字符串
-  res.setHeader('Content-Type', "text/plain");
+  res.setHeader("Content-Type", "text/plain");
   res.send(jsonString); // 返回字符串
 });
 
