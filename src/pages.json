@@ -5,6 +5,20 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path" : "pages/tabbar/tabbar-1/tabbar-1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "tabbar-1"
+			}
+		},
+		{
+			"path" : "pages/tabbar/tabbar-2/tabbar-2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "tabbar-2"
+			}
 		}
 	],
 	"globalStyle": {
@@ -12,5 +26,29 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/logo.png",
+			"selectedIconPath": "/static/logo-click.png",
+			"text": "组件"
+		}, {
+			"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+			"iconPath": "/static/logo.png",
+			"selectedIconPath": "/static/logo-click.png",
+			"text": "接口"
+		}, {
+			"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+			"iconPath": "/static/logo.png",
+			"selectedIconPath": "/static/logo-click.png",
+			"text": "接口"
+		}]
 	}
+
 }
