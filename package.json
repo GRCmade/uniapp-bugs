@@ -1,0 +1,16 @@
+{
+  "name": "uniapp-bugs-service",
+  "version": "1.0.0",
+  "description": "uniapp-bugs中一个模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
