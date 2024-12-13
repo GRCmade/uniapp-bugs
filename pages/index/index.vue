@@ -13,21 +13,22 @@
 		methods: {
 			click() {
 				uni.request({
-					url:"http://192.168.31.148:3000/api/data",
+					url:"http://192.168.31.148:3000/api/jsontext",
 					header:{
 						"content-type": "text/plain"
 					},
 					success(res) {
-						console.log(res.data.slice(0,-1))
+						console.log(res.data)
+						const str = res.data
+						let obj = {}
 						try {
-							const str = res.data.slice(0,-1)
-							const obj = JSON.parse(str)
-							console.log(obj)
+							// obj = JSON.parse(decodeURIComponent(str))
+							obj = JSON.parse(str)
 						} catch (error) {
 							console.log(error)
 							//TODO handle the exception
 						}
-
+						console.log(obj)
 					}
 				})
 			}
