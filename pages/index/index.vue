@@ -1,95 +1,78 @@
 <template>
-	<view>
-		<button @click="click">saveImageToPhotosAlbum</button>
-		<!-- 本示例未包含完整css，获取外链css请参考上文，在hello uni-app项目中查看 -->
-		<view>
-			<view class="uni-padding-wrap">
-				<view class="uni-title">日期：{{year}}年{{month}}月{{day}}日</view>
-			</view>
-			<picker-view v-if="visible" :indicator-style="indicatorStyle" :value="value" @change="bindChange"
-				class="picker-view">
-				<picker-view-column>
-					<view class="item" v-for="(item,index) in years" :key="index">{{item}}年</view>
-				</picker-view-column>
-				<picker-view-column>
-					<view class="item" v-for="(item,index) in months" :key="index">{{item}}月</view>
-				</picker-view-column>
-				<picker-view-column>
-					<view class="item" v-for="(item,index) in days" :key="index">{{item}}日</view>
-				</picker-view-column>
-			</picker-view>
-		</view>
-
-	</view>
+  <view>
+    <button @click="click">saveImageToPhotosAlbum</button>
+    <my-picker>
+      <template v-slot:years>
+        <view class="item" v-for="(item, index) in years" :key="index">{{item}}年</view>
+      </template>
+      <template v-slot:months>
+        <view class="item" v-for="(item, index) in months" :key="index">{{item}}月</view>
+      </template>
+      <template v-slot:days>
+        <view class="item" v-for="(item, index) in days" :key="index">{{item}}日</view>
+      </template>
+    </my-picker>
+		<image v-if="true" src="https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20241210113102.png"></image>
+		<input type="text" v-model="input" class="input" :focus="inputFocus" @focus="focus" @blur="blur"/>
+		<uni-load-more :status="'loading'"></uni-load-more>
+  </view>
 </template>
 
-
 <script>
-	export default {
-		data: function() {
-			const date = new Date()
-			const years = []
-			const year = date.getFullYear()
-			const months = []
-			const month = date.getMonth() + 1
-			const days = []
-			const day = date.getDate()
-			for (let i = 1990; i <= date.getFullYear(); i++) {
-				years.push(i)
-			}
-			for (let i = 1; i <= 12; i++) {
-				months.push(i)
-			}
-			for (let i = 1; i <= 31; i++) {
-				days.push(i)
-			}
-			return {
-				title: 'picker-view',
-				years,
-				year,
-				months,
-				month,
-				days,
-				day,
-				value: [9999, month - 1, day - 1],
-				visible: true,
-				indicatorStyle: `height: 50px;`
-			}
-		},
-		methods: {
-			click() {
-				uni.chooseImage({
-					count: 1,
-					sourceType: ['camera', 'album'],
-					success: function(res) {
-						uni.saveImageToPhotosAlbum({
-							filePath: res.tempFilePaths[0],
-							success: function() {
-								console.log('save success');
-							}
-						});
-					}
-				});
+  import myPicker from './my-picker.vue';
+  export default {
+    data() {
+      return {
+        years: [],
+        months: [],
+        days: [],
+				input:"",
+				inputFocus:true
+      }
+    },
+    components: { myPicker },
+    created() {
+      const date = new Date();
+      for (let i = 1990; i <= date.getFullYear(); i++) {
+        this.years.push(i);
+      }
+      for (let i = 1; i <= 12; i++) {
+        this.months.push(i);
+      }
+      for (let i = 1; i <= 31; i++) {
+        this.days.push(i);
+      }
+    },
+    methods: {
+      click() {
+        uni.chooseImage({
+          count: 1,
+          sourceType: ['camera', 'album'],
+          success: function(res) {
+            uni.saveImageToPhotosAlbum({
+              filePath: res.tempFilePaths[0],
+              success: function() {
+                console.log('save success');
+              }
+            });
+          }
+        });
+      },
+			focus(){
+				
 			},
-			bindChange: function(e) {
-				const val = e.detail.value
-				this.year = this.years[val[0]]
-				this.month = this.months[val[1]]
-				this.day = this.days[val[2]]
+			blur(){
+				
 			}
-		}
-	}
+    }
+  }
 </script>
 
 <style>
-	.picker-view {
-		width: 750rpx;
-		height: 600rpx;
-		margin-top: 20rpx;
-	}
-
-	.item {
-		line-height: 100rpx;
-		text-align: center;
+	.input{
+		padding: 20px;
+		border: 1px solid #000;
+		background-color: aqua;
 	}
 </style>
+
