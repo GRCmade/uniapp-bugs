@@ -33,6 +33,7 @@ function copyFiles(src, dest) {
             }
         }
     }
+    console.log(`Copied ${src} to ${dest}`);
 }
 
 copyFiles(a, b);

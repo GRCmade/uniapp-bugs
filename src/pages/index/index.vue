@@ -1,6 +1,6 @@
 <template>
   <view>
-   <button @click="click">click 12</button>
+   <button @click="click">click</button>
   </view>
 </template>
 
