@@ -1,0 +1,105 @@
+.coupon {
+    width: 100%;
+    background-image: linear-gradient(116deg, #FF6833 0%, #FC4478 100%);
+    border-radius: 32rpx;
+    padding: 24rpx 24rpx;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40rpx;
+    position: relative;
+    justify-content: space-between;
+
+    &-label {
+        display: block;
+        color: #fff;
+        font-size: 38rpx;
+    }
+
+    &-empty {
+        font-size: 28rpx;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        margin-bottom: 24rpx;
+    }
+
+    &-widget {
+        margin-top: -52rpx;
+        width: 100%;
+    }
+}
+
+.coupon-slip {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .coupon-item {
+        background-color: rgb(255, 246, 244);
+        border-radius: 24rpx;
+        margin-right: 24rpx;
+        margin-bottom: 24rpx;
+        min-width: calc(50% - 24rpx);
+        position: relative;
+        overflow: hidden;
+        min-width: 319rpx;
+        float: left;
+        height: 114rpx;
+
+        &-image {
+            position: absolute;
+            right: -1px;
+            top: 0;
+            height: 100%;
+        }
+
+        &-text {
+            &-value {
+                line-height: 38rpx;
+                margin-bottom: 4rpx;
+            }
+        }
+
+        &-slogan {
+            width: 56rpx;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 24rpx;
+            display: flex;
+            align-items: center;
+
+            .text {
+                font-size: 28rpx;
+                color: #2D201F;
+                font-weight: 600;
+            }
+        }
+
+        &-text {
+            color: #FB4A22;
+            margin-left: 32rpx;
+            display: flex;
+            flex-flow: column;
+            padding: 24rpx 0;
+        }
+
+        &-value {
+            font-size: 44rpx;
+
+            .text {
+                font-size: 24rpx;
+            }
+        }
+
+        &-extra {
+            font-size: 24rpx;
+            margin-top: -12rpx;
+        }
+    }
+}

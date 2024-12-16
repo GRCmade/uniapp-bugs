@@ -1,0 +1,36 @@
+.coupon-face-value {
+    width: 100%;
+}
+
+.coupon-item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-width: calc(33.33% - 12rpx);
+    position: relative;
+    padding: 12rpx 0 12rpx 0;
+}
+
+.coupon-item:last-child::after {
+    display: none;
+}
+
+.coupon-item::after {
+    content: "";
+    height: calc(100% - 36rpx);
+    border-right: 1px dashed rgba(0, 0, 0, 0.45);
+    position: absolute;
+    right: 0;
+}
+
+.coupon-card {
+    height: auto !important;
+    width: 100%;
+    overflow: scroll;
+}
+
+.coupon-item-extra {
+    margin-left: 0 !important;
+    margin-bottom: 12rpx;
+}

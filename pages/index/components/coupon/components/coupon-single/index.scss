@@ -1,0 +1,17 @@
+.coupon-face-value {
+    min-width: calc(200rpx - 48rpx);
+    padding: 0 24rpx;
+}
+
+.coupon-face-value::after {
+    content: "";
+    height: 80rpx;
+    border-right: 1px dashed rgba(0, 0, 0, 0.45);
+    position: absolute;
+    right: 0;
+}
+
+.coupon-item-slogan {
+    position: absolute;
+    right: 20rpx;
+}

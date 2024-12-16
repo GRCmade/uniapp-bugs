@@ -1,0 +1,80 @@
+.coupon-file {
+    width: calc(100% - 24rpx);
+    position: relative;
+    overflow: auto;
+    padding: 0 0 24rpx 0;
+}
+
+.coupon-card {
+    height: 112rpx;
+    background-image: linear-gradient(180deg, #FFFFFF 25%, #FFF0C5 100%) !important;
+    width: 100%;
+    border-radius: 24rpx 0 24rpx 24rpx !important;
+    float: right;
+    margin-top: -1px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 12rpx;
+    padding-bottom: 12rpx;
+}
+
+.coupon-card::-webkit-scrollbar {
+    display: none;
+}
+
+.coupon-face-value {
+    color: #FB4A22;
+    font-weight: 500;
+    display: flex;
+    min-width: 160rpx;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.coupon-face-value .amount {
+    font-size: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.coupon-face-value-middle .amount {
+    font-size: 62rpx;
+}
+
+.coupon-face-value-min .amount {
+    font-size: 48rpx;
+}
+
+.coupon-face-value .unit {
+    font-size: 24rpx;
+    display: flex;
+    align-items: flex-end;
+}
+
+.coupon-item-extra {
+    color: #FB4A22;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-left: 24rpx;
+}
+
+.coupon-item-slogan {
+    width: 160rpx;
+    height: 42rpx;
+    background-image: linear-gradient(104deg, #FE9A21 0%, #FE5315 100%);
+    border-radius: 21rpx;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.coupon-item-slogan .text {
+    font-size: 26rpx;
+    line-height: 42rpx;
+    font-weight: 600;
+}
