@@ -71,7 +71,14 @@
     "vueVersion" : "3",
     "app-harmony" : {
         "distribute" : {
-            "bundleName" : "com.example.test.template"
+            "bundleName" : "com.example.test.template",
+            "modules" : {
+                "uni-map" : {
+                    "tencent" : {
+                        "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
+                    }
+                }
+            }
         }
     },
     "h5" : {
