@@ -73,5 +73,14 @@
         "distribute" : {
             "bundleName" : "com.example.test.template"
         }
+    },
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "tencent" : {
+                    "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
+                }
+            }
+        }
     }
 }
