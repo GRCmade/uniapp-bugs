@@ -11,6 +11,12 @@
       "style": {
         "navigationBarTitleText": "登录"
       }
+    },
+    {
+      "path": "pages/index/index/index",
+      "style": {
+        "navigationBarTitleText": "index"
+      }
     }
   ],
   "globalStyle": {

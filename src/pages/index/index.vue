@@ -1,16 +1,31 @@
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
+    <view class="text-area" @click="click">
       <text class="title">{{ title }}</text>
     </view>
-    <uni-load-more status="more"></uni-load-more>
+    <button @click="click2">system</button>
+    <button @click="click3">nav</button>
+    <!-- <uni-load-more status="more"></uni-load-more> -->
   </view>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  const title = ref('Hello World');
+  const title = ref('Hello World yuhe test 1');
+  const click = () => {
+    uni.navigateTo({
+      url: '/pages/mock/index',
+    });
+  };
+  const click2 = () => {
+    console.log('system', JSON.stringify(uni.getSystemInfoSync()));
+  };
+  const click3 = () => {
+    uni.navigateTo({
+      url: '/pages/index/index/index',
+    });
+  };
 </script>
 
 <style scoped lang="scss">
