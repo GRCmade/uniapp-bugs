@@ -1,0 +1,55 @@
+{
+  "app": {
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/yaojun/.ohos/config/default_mashangban_y9hcb-ZNn4Xes79Tzk5vViaYEPSSrnUyCIFWE1oejNI=.cer",
+          "storePassword": "0000001B514C17C63F5A213A1157D5ED6C6DD91DB29C121B2D3834F154145D15B11B7E2D1D28C3003C1246",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC5C67D56C1BD55C8E62DBE888DF55E572F06FA66A2B068F6CC6FACDFF85C9C76ED38F8150162BB",
+          "profile": "/Users/yaojun/.ohos/config/default_mashangban_y9hcb-ZNn4Xes79Tzk5vViaYEPSSrnUyCIFWE1oejNI=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/yaojun/.ohos/config/default_mashangban_y9hcb-ZNn4Xes79Tzk5vViaYEPSSrnUyCIFWE1oejNI=.p12"
+        }
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
