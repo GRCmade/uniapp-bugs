@@ -1,8 +1,20 @@
 const express = require("express");
 const cors = require("cors");
+const multer = require("multer");
 const app = express();
 const port = 3000;
 const os = require("os");
+
+// 设置 multer 存储配置
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'file/'); // 修改存储路径为 file 文件夹
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+const upload = multer({ storage: storage });
 
 // 获取本地IP地址
 function getLocalIPAddress() {
@@ -34,6 +46,14 @@ app.get("/api/jsontext", (req, res) => {
   // 设置响应头，并返回字符串
   res.setHeader("Content-Type", "text/plain");
   res.send(jsonString); // 返回字符串
+});
+
+// 处理文件上传
+app.post('/uploadfile', upload.single('file'), (req, res) => {
+  res.send({
+    message: 'File uploaded successfully',
+    filename: req.file.filename
+  });
 });
 
 app.listen(port, () => {
