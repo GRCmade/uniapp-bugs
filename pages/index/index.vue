@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<button @click="click">click</button>
+		<button @click="getLocation">getLocation</button>
 	</view>
 </template>
 
@@ -12,7 +13,15 @@
 		},
 		methods: {
 			click() {
-				
+				const appAuthorizeSetting = uni.getAppAuthorizeSetting()
+				console.log(JSON.stringify(appAuthorizeSetting))
+			},
+			getLocation(){
+				uni.getLocation({
+					success(res) {
+						console.log(res);
+					}
+				})
 			}
 		}
 	}
