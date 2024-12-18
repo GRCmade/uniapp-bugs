@@ -1,6 +1,6 @@
 <template>
   <view>
-   <button @click="click">click</button>
+    <button @click="click">click</button>
   </view>
 </template>
 
@@ -8,11 +8,28 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      tempFilePaths: ''
+    }
   },
   methods: {
-    click(){
-			
+    async click() {
+      const res = await uni.chooseImage({
+        count: 1,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera']
+      });
+      const tempFilePaths = res.tempFilePaths;
+      console.log(tempFilePaths);
+      const result = await uni.uploadFile({
+        url: 'http://192.168.31.148:3000/uploadfile',
+        filePath: tempFilePaths[0],
+        name: 'file',
+        formData: {
+          'user': 'test'
+        },
+      });
+      console.log(JSON.stringify(result));
     }
   }
 }
@@ -20,4 +37,3 @@ export default {
 
 
 <style></style>
-

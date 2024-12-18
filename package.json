@@ -34,7 +34,7 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "copy-files": "node copy-runtime.js",
-    "build-and-copy": "npm run build:harmony && npm run copy-files"
+    "b-c": "npm run build:harmony && npm run copy-files"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-4040120241211001",
