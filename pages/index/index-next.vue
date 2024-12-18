@@ -1,7 +1,6 @@
 <template>
 	<view>
-		<button style="margin-top: 100px;" @click="click">click1</button>
-		<button @click="click2">nav</button>
+		<button @click="click">click2</button>
 	</view>
 </template>
 
@@ -19,11 +18,6 @@
 			click() {
 				const res = uni.getWindowInfo()
 				console.log(JSON.stringify(res))
-			},
-			click2(){
-				uni.navigateTo({
-					url:"/pages/index/index-next"
-				})
 			}
 		}
 	}
