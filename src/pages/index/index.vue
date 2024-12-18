@@ -1,6 +1,6 @@
 <template>
   <view>
-   <button @click="click">click</button>
+   <view v-for="i in 10" class="box">{{ i }}</view>
   </view>
 </template>
 
@@ -19,5 +19,11 @@ export default {
 </script>
 
 
-<style></style>
+<style>
+.box{
+  height: 200px;
+  width: 100%;
+  background-color: #36d;
+}
+</style>
 
