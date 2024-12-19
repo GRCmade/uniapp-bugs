@@ -1,0 +1,75 @@
+import {
+	ReadFileOptions,
+	ReadFileCallback
+} from '../interface.uts';
+
+import { fileIo as fs,ReadOptions } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer,util  } from '@kit.ArkTS';
+
+export function hsReadFile(tempFilePath: string,options: ReadFileCallback) {
+
+	try {
+		
+		if (!fs.accessSync(tempFilePath)) {
+			console.log('检测图片不存在')
+			throw new Error(`Temporary image does not exist at path: ${tempFilePath}`);
+		}
+
+		let sourceFileFd = fs.openSync(tempFilePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+		let pathSize = fs.statSync(sourceFileFd.fd).size;
+
+		if (sourceFileFd.fd >= 0) {
+			try {
+				
+				let arrayBuffer = new ArrayBuffer(pathSize);
+				
+				let buffSize:number = 4096;
+				
+				let buf = new ArrayBuffer(buffSize);
+				
+				let off:number = 0;
+				let len:number = 0;
+				let readedLen:number = 0;
+				
+				const targetBuffer = new Uint8Array(arrayBuffer);
+				
+				while ((len = fs.readSync(sourceFileFd.fd, buf, { offset: off, length: buffSize } as ReadOptions)) > 0) {
+				
+					readedLen += len;
+					
+					const result = new Uint8Array(buf, 0, len);
+				
+					targetBuffer.set(result, off);
+					
+					off += len;
+				
+				}
+				
+				const helper = new util.Base64Helper();
+				let base64 = helper.encodeToStringSync(targetBuffer)
+				
+				let res : ReadFileOptions = {
+					int8array: base64,
+					videoSize: pathSize,
+					readLen: readedLen
+				};
+					
+				options?.(res);
+				
+			} finally {
+				// 确保在操作完成后关闭文件描述符
+				fs.closeSync(sourceFileFd);
+			}
+		} else {
+			// 如果文件打开失败（例如，由于路径无效或权限问题），则抛出异常
+			throw new Error('Failed to open files for copying');
+		}
+		
+	} catch (error) {
+		// 捕获并处理异常
+		console.error('Error saving temporary image to local storage:', error);
+		throw new Error(error); // 重新抛出异常，以便调用者可以处理
+	}
+
+}

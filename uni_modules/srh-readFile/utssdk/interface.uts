@@ -1,0 +1,6 @@
+export type ReadFileOptions = {
+	int8array: string,
+	videoSize: number,
+	readLen: number
+}
+export type ReadFileCallback = (result: ReadFileOptions) => void;
