@@ -3,12 +3,12 @@
 		<page-head title="movable-view,可拖动视图"></page-head>
 		<view class="uni-padding-wrap uni-common-mt">
 			<view class="uni-title uni-common-mt">
-				示例 7
+				示例 - nvue
 				<text>\n可放缩</text>
 			</view>
-			<movable-area scale-area>
-				<movable-view direction="all" @scale="onScale" scale  :scale-value="scale">1：{{scale}}</movable-view>
-				<movable-view :x="400" direction="all" @scale="onScale" scale  :scale-value="scale2">2：{{scale2}}</movable-view>
+			<movable-area class="movable-area" scale-area>
+				<movable-view class="movable-view" direction="all" @scale="onScale" scale  :scale-value="scale">1：{{scale}}</movable-view>
+				<movable-view class="movable-view" :x="400" direction="all" @scale="onScale" scale  :scale-value="scale2">2：{{scale2}}</movable-view>
 			</movable-area>
 			<button @tap="tap1(0.5)" class="uni-link uni-center uni-common-mt">
 				点击这里给1 0.5倍
@@ -69,7 +69,7 @@
 </script>
 
 <style>
-	movable-view {
+	.movable-view {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -79,9 +79,9 @@
 		color: #fff;
 	}
 
-	movable-area {
+	.movable-area {
 		height: 300rpx;
-		width: 100%;
+		width: 750rpx;
 		background-color: #D8D8D8;
 		overflow: hidden;
 	}
