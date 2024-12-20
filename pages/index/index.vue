@@ -7,8 +7,10 @@
 				<text>\n可放缩</text>
 			</view>
 			<movable-area scale-area>
-				<movable-view direction="all" @scale="onScale" scale  :scale-value="scale">1：{{scale}}</movable-view>
-				<movable-view :x="400" direction="all" @scale="onScale" scale  :scale-value="scale2">2：{{scale2}}</movable-view>
+				<movable-view direction="all" @scale="onScale" scale :scale-value="scale">1：{{scale}}</movable-view>
+				<movable-view :x="400" direction="all" @scale="onScale" scale :scale-value="scale2">2：{{scale2}}</movable-view>
+				<movable-view :x="200" direction="all" @scale="onScale" scale :scale-min="0.3"
+					:scale-value="scale3">3：不能设为0.1</movable-view>
 			</movable-area>
 			<button @tap="tap1(0.5)" class="uni-link uni-center uni-common-mt">
 				点击这里给1 0.5倍
@@ -22,6 +24,9 @@
 			<button @tap="tap2(10)" class="uni-link uni-center uni-common-mt">
 				点击这里给2 10倍
 			</button>
+			<button @tap="tap3(0.1)" class="uni-link uni-center uni-common-mt">
+				不能设为0.1
+			</button>
 		</view>
 	</view>
 </template>
@@ -34,6 +39,7 @@
 				y: 0,
 				scale: 1,
 				scale2: 1,
+				scale3:1,
 				old: {
 					x: 0,
 					y: 0,
@@ -50,11 +56,18 @@
 					this.scale = num
 				})
 			},
-			tap2(num){
+			tap2(num) {
 				this.scale2 = this.old.scale
 				this.scale2 = this.old.scale
 				this.$nextTick(function() {
 					this.scale2 = num
+				})
+			},
+			tap3(num) {
+				this.scale3 = this.old.scale
+				this.scale3 = this.old.scale
+				this.$nextTick(function() {
+					this.scale3 = num
 				})
 			},
 			onChange: function(e) {
@@ -87,7 +100,7 @@
 	}
 
 	.max {
-		width:500rpx;
+		width: 500rpx;
 		height: 500rpx;
 	}
 </style>
