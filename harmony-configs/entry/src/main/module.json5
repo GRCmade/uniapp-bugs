@@ -51,7 +51,11 @@
       {
         "name": "TENCENT_MAP_KEY",
         "value": "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
-      }
+      },
+			{
+				"name":"client_id",
+				"value":"6917560643890499801"
+			}
     ]
   }
 }
