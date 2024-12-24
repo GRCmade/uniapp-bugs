@@ -1,5 +1,10 @@
 <template>
 	<view>
+		<view style="margin: 10px;display: flex;">
+			<view v-for="(item,index) in ls" :key="index">
+				<button @click="click3(item)" size="mini">{{ item.split('.')[item.split('.').length-1] }}</button>
+			</view>
+		</view>
 		<button @click="click">chooseImage</button>
 		<image :src="base64" mode=""></image>
 		<button @click="setStorage">setStorage</button>
@@ -26,10 +31,32 @@
 		data() {
 			return {
 				data: [1, 2, 3, 4],
-				base64: ''
+				base64: '',
+				ls:[
+					'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/yuhe.docx',
+					'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/yuhe.xlsx',
+					'https://www.gov.cn/zhengce/pdfFile/2023_PDF.pdf',
+					'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/yuhe.pptx'
+				]
 			}
 		},
 		methods: {
+			click3(item){
+				uni.downloadFile({
+				  url: item,
+				  success: function (res) {
+				    var filePath = res.tempFilePath;
+				    uni.openDocument({
+				      filePath: filePath,
+				      showMenu: true,
+				      success: function (res) {
+				        console.log('打开文档成功');
+				      }
+				    });
+				  }
+				});
+
+			},
 			click2() {
 				let imageUrl = "/static/logo.png";
 				let ctx = uni.createCanvasContext('myCanvas');
