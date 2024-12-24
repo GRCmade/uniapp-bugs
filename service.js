@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
+const fs = require('fs');
 const app = express();
 const port = 3000;
 const os = require("os");
@@ -53,6 +54,22 @@ app.post('/uploadfile', upload.single('file'), (req, res) => {
   res.send({
     message: 'File uploaded successfully',
     filename: req.file.filename
+  });
+});
+
+// 处理文件上传并转换为 base64 编码
+app.post('/uploadbase64', upload.single('file'), (req, res) => {
+  const filePath = req.file.path;
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      return res.status(500).send({ message: 'File read error' });
+    }
+    const base64Image = data.toString('base64');
+    res.send({
+      message: 'File uploaded and converted to base64 successfully',
+      filename: req.file.filename,
+      base64: base64Image
+    });
   });
 });
 
