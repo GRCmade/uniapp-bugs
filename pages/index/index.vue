@@ -1,6 +1,8 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<button @click="setStorage">setStorage</button>
+		<button @click="getStorageSync">getStorageSync</button>
+		<button @click="getStorage">getStorage</button>
 	</view>
 </template>
 
@@ -17,13 +19,34 @@
 
 		},
 		methods: {
-			click() {
-				let obj = { "Sex": "1", "PosnLevel": "职员", "Email": "", "Phone": "17614632382", "Dept": "IT部", "Posname": "ERP实施工程师", "Id": "1310405787763347456", "Code": "J02012", "Name": "陈超", "User": true, "Children": [], "ProfileUrl": "" }
+			setStorage(){
+				let obj = { name:"yuhe" }
 				uni.setStorageSync("itemabc", obj);
+			},
+			getStorage(){
+				uni.getStorage({
+					key:"itemabc",
+					success(res) {
+						let item = res.data
+						console.log('item对象', JSON.stringify(item))
+						res.data.pinyin = "12";
+						console.log('赋值后', item.pinyin)
+						console.log('赋值后', item)
+						console.log('赋值后', res)
+					}
+				})
+			},
+			getStorageSync() {
+				let obj = { name:"yuhe" }
+				// uni.setStorageSync("itemabc", obj);
 				let item = uni.getStorageSync("itemabc");
 				console.log('item对象', JSON.stringify(item))
-				item.pinyin = "测试";
+				item.pinyin = "12";
 				console.log('赋值后', item.pinyin)
+				console.log('赋值后', item)
+				obj.pinyin ="13"
+				console.log('obj', obj.pinyin)
+				console.log('obj', obj)
 			}
 		}
 	}
