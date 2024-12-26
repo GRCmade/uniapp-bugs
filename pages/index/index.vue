@@ -42,6 +42,7 @@
 				let item = uni.getStorageSync("itemabc");
 				console.log('item对象', JSON.stringify(item))
 				item.pinyin = "12";
+				item.name = 'yuhe1'
 				console.log('赋值后', item.pinyin)
 				console.log('赋值后', item)
 				obj.pinyin ="13"
