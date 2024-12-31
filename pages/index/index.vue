@@ -1,5 +1,11 @@
 <template>
 	<view>
+		<uni-popup type="bottom" ref="popup" :safe-area="false">
+			<view>
+				<input :adjust-position="false" :focus="true"  />
+			</view>
+		</uni-popup>
+		<button @click="popup">popup</button>
 		<button @touchend="show = !show">aa</button>
 		<input type="text" value="" class="input" auto-focus v-if="show" />
 		<my-input></my-input>
@@ -17,7 +23,11 @@
 				show: false
 			}
 		},
-		methods: {}
+		methods: {
+			popup(){
+				this.$refs.popup.open('center')
+			}
+		}
 	}
 </script>
 <style>
