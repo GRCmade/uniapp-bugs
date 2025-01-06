@@ -1,47 +1,79 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<button @click="connectSocket">连接</button>
+		<button @click="sendMessage">发送</button>
 	</view>
 </template>
-
 
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				socketOpen: false, // 表示 WebSocket 是否连接成功
+				socketMsgQueue: ["1", "2"], // 待发送的消息队列
+			};
 		},
 		methods: {
-			click() {
-				var socketOpen = false;
-				var socketMsgQueue = ["1","2"];
+			// 发送消息方法
+			sendSocketMessage(msg) {
+				uni.sendSocketMessage({
+					data: msg,
+					success(res) {
+						console.log("消息发送成功:", res);
+					},
+					fail(res) {
+						console.error("消息发送失败:", res);
+					},
+				});
+				// if (this.socketOpen) {
 
+				// } else {
+				// 	this.socketMsgQueue.push(msg);
+				// 	console.log("WebSocket 未连接，消息已加入队列:", msg);
+				// }
+			},
+			// 点击发送按钮时调用
+			sendMessage() {
+				this.sendSocketMessage("yuhe");
+			},
+			// 点击连接按钮时调用
+			connectSocket() {
 				uni.connectSocket({
-					url: "http://192.168.31.148:3000/connection", // 替换为您的 WebSocket 服务器 URL  
+					url: "ws://192.168.31.148:3000/connection", // 替换为您的 WebSocket 服务器 URL
 				});
-				console.log('连接HMsocket:connectSocket');
-				uni.onSocketOpen(function (res) {
-				  socketOpen = true;
-				  for (var i = 0; i < socketMsgQueue.length; i++) {
-				    sendSocketMessage(socketMsgQueue[i]);
-				  }
-				  socketMsgQueue = [];
+
+				// WebSocket 连接成功
+				uni.onSocketOpen(() => {
+					console.log("WebSocket 连接已打开");
+					this.socketOpen = true;
+
+					// 发送队列中的消息
+					while (this.socketMsgQueue.length > 0) {
+						const message = this.socketMsgQueue.shift();
+						this.sendSocketMessage(message);
+					}
 				});
-				uni.onSocketError(function(res) {
-					console.log('WebSocket连接打开失败，请检查！');
+
+				// WebSocket 连接失败
+				uni.onSocketError((res) => {
+					console.error("WebSocket 连接失败:", res);
 				});
-				function sendSocketMessage(msg) {
-				  if (socketOpen) {
-				    uni.sendSocketMessage({
-				      data: msg
-				    });
-				  } else {
-				    socketMsgQueue.push(msg);
-				  }
-				}
-			}
-		}
-	}
+
+				// WebSocket 收到消息
+				uni.onSocketMessage((res) => {
+					console.log("收到消息:", res.data);
+				});
+
+				// WebSocket 关闭
+				uni.onSocketClose(() => {
+					console.log("WebSocket 已关闭");
+					this.socketOpen = false;
+				});
+			},
+		},
+	};
 </script>
 
-
-<style></style>
+<style>
+	/* 样式部分可以根据需求调整 */
+</style>
