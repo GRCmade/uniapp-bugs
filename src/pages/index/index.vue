@@ -1,23 +1,23 @@
 <template>
   <view>
-   <button @click="click">click</button>
+    inputValue:{{ inputValue }}
+    <view class="box" v-for="item in 2">
+      <input type="text" v-model="inputValue" @input="change"/>
+    </view>
   </view>
 </template>
-
-
-<script>
-export default {
-  data() {
-    return {}
-  },
-  methods: {
-    click(){
-			
-    }
-  }
-}
+<script setup>
+import { ref } from "vue";
+const inputValue = ref('')
+const change = () => {
+  console.log("change");
+};
 </script>
 
-
-<style></style>
-
+<style lang="scss">
+.box{
+  background-color: #36d;
+  margin: 10px;
+  color: #fff;
+}
+</style>
