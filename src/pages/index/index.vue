@@ -1,51 +1,42 @@
 <template>
-  <view class="content">
-    <image class="logo" src="../../static/logo.png"></image>
-    <view>
-      <text class="title">{{ title }}</text>
-    </view>
-  </view>
+	<view>
+		<button @click="caniuse">caniuse</button>
+		<button @click="getAppBaseInfo">getAppBaseInfo</button>
+		<button @click="getWindowInfo">getWindowInfo</button>
+		<button @click="getDeviceInfo">getDeviceInfo</button>
+		<button @click="getAppAuthorizeSetting">getAppAuthorizeSetting</button>
+		<button @click="getSystemInfoSync">getSystemInfoSync</button>
+	</view>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
 
-export default Vue.extend({
-  data() {
-    return {
-      title: 'Hello'
-    }
-  },
-  onLoad() {
-
-  },
-  methods: {
-
-  }
-});
+<script>
+	export default {
+		data() {
+			return {}
+		},
+		methods: {
+			caniuse(){
+				// console.log(uni.canIUse());
+			},
+			getAppAuthorizeSetting(){
+				console.log(uni.getAppAuthorizeSetting())
+			},
+			getWindowInfo(){
+				console.log(uni.getWindowInfo())
+			},
+			getDeviceInfo(){
+				console.log(uni.getDeviceInfo());
+			},
+			getAppBaseInfo() {
+				console.log(uni.getAppBaseInfo())
+			},
+			getSystemInfoSync(){
+				console.log(uni.getSystemInfoSync())
+			}
+		}
+	}
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin: 200rpx auto 50rpx auto;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style></style>

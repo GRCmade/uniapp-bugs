@@ -61,7 +61,7 @@
     "@dcloudio/uni-mp-qq": "^2.0.2-4040520250103001",
     "@dcloudio/uni-mp-toutiao": "^2.0.2-4040520250103001",
     "@dcloudio/uni-mp-vue": "^2.0.2-4040520250103001",
-    "@dcloudio/uni-mp-weixin": "^2.0.2-4040520250103001",
+    "@dcloudio/uni-mp-weixin": "/Users/gaoruicheng/Documents/DcloudProject/uni-app-dev/packages/uni-mp-weixin",
     "@dcloudio/uni-mp-xhs": "^2.0.2-4040520250103001",
     "@dcloudio/uni-quickapp-native": "^2.0.2-4040520250103001",
     "@dcloudio/uni-quickapp-webview": "^2.0.2-4040520250103001",

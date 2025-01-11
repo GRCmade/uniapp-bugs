@@ -1079,10 +1079,8 @@
   resolved "https://registry.npmmirror.com/@dcloudio/uni-mp-vue/-/uni-mp-vue-2.0.2-4040520250103001.tgz#85219f314119ffee77473f66e2419e8f58c974ed"
   integrity sha512-K7SbNUc0kl7Wm747bVh+wLpopgpvBGFXALKnJFEVNL9WPkmPTKmVpIOEsB59P/6rFlbVSV/fRJgFUq5mJNfb1Q==
 
-"@dcloudio/uni-mp-weixin@^2.0.2-4040520250103001":
-  version "2.0.2-4040520250103001"
-  resolved "https://registry.npmmirror.com/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-2.0.2-4040520250103001.tgz#933ff560d30362eeeb70a8faa6f5ba37e715cf4f"
-  integrity sha512-SDB0+sQWw+whz+nnmtFjrxLrEk+FPdfHtFzH+GJ2mEb44QT//WWL+64keB2rCdX0V+FUWz2wWgDiKdbxd94pkw==
+"@dcloudio/uni-mp-weixin@file:../../../DcloudProject/uni-app-dev/packages/uni-mp-weixin":
+  version "2.0.0-32920211029001"
 
 "@dcloudio/uni-mp-xhs@^2.0.2-4040520250103001":
   version "2.0.2-4040520250103001"
