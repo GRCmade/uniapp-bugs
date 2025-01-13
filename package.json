@@ -4,8 +4,12 @@
   "description": "a script used for uni-app",
   "main": "config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mp": "node uni-app/mp.js",
+    "mp2weixin": "node uni-app/mp.js 2 weixin"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
 }
