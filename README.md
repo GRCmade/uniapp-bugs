@@ -1,19 +1,6 @@
 # uniapp-bugs-now-cli-vue2
 
-## Project setup
-```
-yarn install
-```
+# 
+yarn add @dcloudio/%包名%@%uni-app本地仓库路径%/packages/%包名%
+yarn add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-dev/packages/uni-mp-weixin
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
