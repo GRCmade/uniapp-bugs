@@ -5,7 +5,8 @@
   "main": "config.js",
   "scripts": {
     "mp": "node uni-app/mp.js",
-    "mp2weixin": "node uni-app/mp.js 2 weixin"
+    "mp2weixin": "node uni-app/mp.js 2 weixin",
+    "mp3weixin": "node uni-app/mp.js 3 weixin"
   },
   "author": "",
   "license": "ISC",
