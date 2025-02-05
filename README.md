@@ -1,5 +1,8 @@
-# uniapp-bugs-template
-uniapp-bugs中一个模板
+# template
+> uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
-这个是用来生成可以复现项目的模板
+# 问题
+
+
+# 过程
 
