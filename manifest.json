@@ -1,6 +1,6 @@
 {
     "name" : "now",
-    "appid" : "__UNI__3F0B853",
+    "appid" : "__UNI__6F0C758",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : 101,
@@ -77,7 +77,8 @@
                     "tencent" : {
                         "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
                     }
-                }
+                },
+                "uni-push" : {}
             }
         }
     },
