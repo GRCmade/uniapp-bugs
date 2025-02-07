@@ -13,6 +13,18 @@
           "signAlg": "SHA256withECDSA",
           "storeFile": "./signingConfigs/debug.p12"
         }
+      },{
+        "name": "release",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "0000001AF7423DE231FE9EA7EB188DFCFC17726363743FAEE336A2EAA60E527DDE2B58883B8CE8DA1787",
+          "certpath": "./signingConfigs/debug.cer",
+          "keyAlias": "debug",
+          "keyPassword": "0000001A9936A1534EF47197E44807ECDC46E806303EA4FA7332029AD8FEE5F2502462AA4B91D70AEDCD",
+          "profile": "./signingConfigs/debugDebug.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "./signingConfigs/debug.p12"
+        }
       }
 		],
     "products": [
@@ -34,6 +46,7 @@
         "signingConfig": "release",
         "compatibleSdkVersion": "5.0.0(12)",
         "runtimeOS": "HarmonyOS",
+				"compatibleSdkVersionStage": "beta6",
         "buildOption": {
           "strictMode": {
             "caseSensitiveCheck": true,
