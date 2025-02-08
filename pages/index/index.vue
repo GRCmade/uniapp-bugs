@@ -2,7 +2,7 @@
   <view class="content">
     <SomeTest ref="someRef" :content="someText"></SomeTest>
     <HighTest ref="testRef"></HighTest>
-    <button @click="onButton">点击获取ref</button>
+    <button @click="onButton">点击获取ref 3</button>
   </view>
 </template>
 
