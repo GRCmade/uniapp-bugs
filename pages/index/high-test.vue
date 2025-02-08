@@ -5,7 +5,7 @@
       <text>测试内容</text>
       <text>测试内容</text>
       <text>测试内容</text>
-      <text>测试内容1</text>
+      <text>测试内容2</text>
 
     </view>
 
