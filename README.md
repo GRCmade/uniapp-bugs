@@ -1,3 +1,7 @@
+
+
+======== README.md ======== 
+
 # 鸿蒙平台上 makePhoneCall 添加权限后报错
 > uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
@@ -16,4 +20,7 @@
 - 不加权限，是正常执行
 
 # 过程
+
+======== END ========
+
 
