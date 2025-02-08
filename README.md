@@ -1,5 +1,3 @@
-
-
 ======== README.md ======== 
 
 # 鸿蒙平台上 makePhoneCall 添加权限后报错
