@@ -6,7 +6,7 @@
 权限修改不正确
 在华为官网中： https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/js-apis-call-V13#calldialdeprecated 
 显示需要一个权限：ohos.permission.PLACE_CALL
-![](README_files/1.jpg)
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250208111508185.png)
 
 但是这个权限经过实际的测试发现
 - 加上权限之后，提示没有签名权限
