@@ -11,7 +11,10 @@
 		},
 		methods: {
 			click() {
-				
+				uni.makePhoneCall({
+					phoneNumber: '17348678249' //仅为示例
+				});
+
 			}
 		}
 	}
