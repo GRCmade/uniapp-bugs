@@ -23,6 +23,12 @@
 在源码中，如果传递是数字，就会把日期变为 1970
 ![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210113743639.png)
 
+之前修改的是 runtime-harmony 仓库，但是问题出在了 uni-app-view-umd.js
 
+这个 this.start 为 1925 的来源是：
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210171220064.png)
+
+next 仓库中：
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210171252322.png)
 
 ======== END ========
