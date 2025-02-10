@@ -13,4 +13,16 @@
 ```
 
 ![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210110914609.png)
+
+这样获取到的日志是：
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210112532050.png)
+
+问题出现在这个差异：
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210113454461.png)
+
+在源码中，如果传递是数字，就会把日期变为 1970
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250210113743639.png)
+
+
+
 ======== END ========
