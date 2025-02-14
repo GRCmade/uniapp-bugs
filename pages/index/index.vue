@@ -2,7 +2,7 @@
   <view class="content">
     <SomeTest ref="someRef" :content="someText"></SomeTest>
     <HighTest ref="testRef"></HighTest>
-    <button @click="onButton">点击获取ref 3</button>
+    <button @click="onButton">点击获取ref 2025 年 2 月 14 日 20:10:25</button>
   </view>
 </template>
 
