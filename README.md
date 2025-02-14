@@ -1,5 +1,10 @@
-# uniapp-bugs-template
-uniapp-bugs中一个模板
+======== README.md ========
 
-这个是用来生成可以复现项目的模板
+# 鸿蒙next uni.canvasGetImageData 返回数据不全
+> uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
+# 问题
+
+来自 4.41
+
+======== END ========
