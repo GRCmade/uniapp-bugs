@@ -7,4 +7,7 @@
 
 来自 4.41
 
+在代码中，存在一个 `UniServiceJSBridge.invokeViewMethod` 这个暂时不清楚是哪里来的
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/undefined20250214195052153.png)
+
 ======== END ========
