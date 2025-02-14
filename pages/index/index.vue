@@ -16,6 +16,7 @@
 		methods: {
 			click() {
 				var _this = this
+				console.log(navigator.userAgent);
 				uni.chooseImage({
 					count: 1, //默认9
 					sizeType: ['original'], //可以指定是原图还是压缩图，默认二者都有
