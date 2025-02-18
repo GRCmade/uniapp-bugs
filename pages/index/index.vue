@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<button @click="click">click</button>
+		<button @click="getAppAuthorizeSetting">getAppAuthorizeSetting</button>
 		<canvas canvas-id="myCanvas"></canvas>
 	</view>
 </template>
@@ -19,7 +20,10 @@
 						console.log('条码内容:' + res.result);
 					}
 				});
-
+			},
+			getAppAuthorizeSetting(){
+				const appAuthorizeSetting = uni.getAppAuthorizeSetting()
+				console.log(appAuthorizeSetting)
 			}
 		}
 	}
