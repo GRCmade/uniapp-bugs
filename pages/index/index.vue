@@ -13,20 +13,13 @@
 		},
 		methods: {
 			click() {
-				uni.canvasGetImageData({
-					canvasId: 'myCanvas',
-					x: 0,
-					y: 0,
-					width: 100,
-					height: 100,
-					success(res) {
-						console.log(JSON.stringify(res))
-						// console.log(res.width) // 100
-						// console.log(res.height) // 100
-						// console.log(res.data instanceof Uint8ClampedArray) // true
-						// console.log(res.data.length) // 100 * 100 * 4
+				uni.scanCode({
+					success: function(res) {
+						console.log('条码类型:' + res.scanType);
+						console.log('条码内容:' + res.result);
 					}
-				})
+				});
+
 			}
 		}
 	}
