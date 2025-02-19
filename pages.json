@@ -5,19 +5,19 @@
 			"style": {
 				"navigationBarTitleText": "uni-app-1"
 			}
-		},
+		},{
+			"path": "pages/index/index3",
+			"style": {
+				"navigationBarTitleText": "uni-app-3"
+			}
+		}, 
 		{
 			"path": "pages/index/index2",
 			"style": {
 				"navigationBarTitleText": "uni-app-2"
 			}
 		},
-		{
-			"path": "pages/index/index3",
-			"style": {
-				"navigationBarTitleText": "uni-app-3"
-			}
-		},
+
 		{
 			"path": "pages/index/index4",
 			"style": {

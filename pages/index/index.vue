@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png" @click="onCLick"></image>
+		<button @click="click">click</button>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -19,20 +20,29 @@
 
 		},
 		methods: {
+			click(){
+				const ctx = uni.createCanvasContext('at-canvas');
+				console.log("createATImg------------11", ctx);
+				ctx.font = "italic bold 20px cursive";
+				const metrics = ctx.measureText("Hello World", (res) => {
+					console.log("createATImg------------22---ctx.measureText", res);
+				});
+				console.log("createATImg------------22---ctx.measureText1", metrics);
+			},
 			onCLick() {
 				uni.switchTab({
 					url: "/pages/index/index3",
 				});
 				// uni.navigateTo({
-				// 	url: '/pages/index/index2'
+				// 	url: '/pages/index/index3',
+				// 	success(res) {
+				// 		console.log(res)
+				// 	},
+				// 	fail(res) {
+				// 		console.log(res)
+				// 	}
 				// })
-				// const ctx = uni.createCanvasContext('at-canvas');
-				// console.log("createATImg------------11", ctx);
-				// ctx.font = "italic bold 20px cursive";
-				// const metrics = ctx.measureText("Hello World", (res) => {
-				// 	console.log("createATImg------------22---ctx.measureText", res);
-				// });
-				// console.log("createATImg------------22---ctx.measureText1", metrics);
+
 
 			}
 		}

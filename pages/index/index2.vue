@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<canvas canvas-id="at-canvas"></canvas>
+		<canvas canvas-id="at-canvas1"></canvas>
 	</view>
 </template>
 
@@ -20,7 +20,7 @@
 		},
 		methods: {
 			onCLick() {
-				const ctx = uni.createCanvasContext('at-canvas');
+				const ctx = uni.createCanvasContext('at-canvas1');
 				console.log("createATImg------------11", ctx);
 				ctx.font = "italic bold 20px cursive";
 				const metrics = ctx.measureText("Hello World", (res) => {

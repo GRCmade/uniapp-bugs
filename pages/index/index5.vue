@@ -19,7 +19,7 @@
 		},
 		methods: {
 			onCLick() {
-				const ctx = uni.createCanvasContext('at-canvas');
+				const ctx = uni.createCanvasContext('at-canvas5');
 				console.log("createATImg------------11", ctx);
 				ctx.font = "italic bold 20px cursive";
 				const metrics = ctx.measureText("Hello World", (res) => {
