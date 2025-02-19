@@ -1,0 +1,16 @@
+{
+	"BuildOptions":{
+		"BUNDLE_NAME":"com.yuhe.template",
+		"SELECT_BUILD_MODE":"",
+		"BUILD_PATH":{
+			"OUTPUT_PATH":"/Users/gaoruicheng/Downloads/testCanvas/unpackage/debug/app-harmony-9b825588/build/outputs/default"
+		},
+		"SELECT_BUILD_PRODUCT":"default"
+	},
+	"CommonInfo":{
+		"crossplatform.projectType":"",
+		"project.ide.version":"5.0.7.210",
+		"current.select.product":"default",
+		"current.select.buildMode":""
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app-1"
+			}
+		},
+		{
+			"path": "pages/index/index2",
+			"style": {
+				"navigationBarTitleText": "uni-app-2"
+			}
+		},
+		{
+			"path": "pages/index/index3",
+			"style": {
+				"navigationBarTitleText": "uni-app-3"
+			}
+		},
+		{
+			"path": "pages/index/index4",
+			"style": {
+				"navigationBarTitleText": "uni-app-4"
+			}
+		},
+		{
+			"path": "pages/index/index5",
+			"style": {
+				"navigationBarTitleText": "uni-app-5"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+
+	"tabBar": {
+		"color": "#505155",
+		"selectedColor": "#287EF0",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index3",
+				"iconPath": "static/tabbar/n0.png",
+				"selectedIconPath": "static/tabbar/n0_on.png",
+				"text": "tab 1"
+			},
+			{
+				"pagePath": "pages/index/index4",
+				"iconPath": "static/tabbar/n02.png",
+				"selectedIconPath": "static/tabbar/n02_on.png",
+				"text": "tab 2"
+			},
+			{
+				"pagePath": "pages/index/index5",
+				"iconPath": "static/tabbar/n04.png",
+				"selectedIconPath": "static/tabbar/n04_on.png",
+				"text": "tab 3"
+			}
+		]
+	}
+}
