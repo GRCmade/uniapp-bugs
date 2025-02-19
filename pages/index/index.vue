@@ -6,11 +6,13 @@
 </template>
 
 <script setup>
-import { getCurrentInstance } from 'vue'
-
+	import {
+		getCurrentInstance
+	} from 'vue'
+	const instance = getCurrentInstance()
 	const click = () => {
-		const instance = getCurrentInstance()
-		const res = uni.createWebviewContext('webviewid',instance)
+		console.log("click", instance)
+		const res = uni.createWebviewContext('webviewid', instance)
 		let str = 'console.table("webview-yuhe")'
 		res.evalJS(str)
 	}
