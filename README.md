@@ -32,8 +32,6 @@ napi_call_function 是华为的 nodeapi 的方法
 14:05:00.446     at callWithErrorHandling (http://localhost/file6.js:3075:27)
 14:05:00.446     at callWithAsyncErrorHandling (http://localhost/file6.js:3082:23)
 ```
-
-
 # 问题
 
 ======== END ========
