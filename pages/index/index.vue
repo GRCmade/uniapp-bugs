@@ -5,21 +5,14 @@
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {}
-		},
-		methods: {
-			click() {
-				const res = uni.createWebviewContext('webviewid',this)
-				let str = 'console.table("webview-yuhe")'
-				res.evalJS(str)
-			},
-			log(){
-				
-			}
-		}
+<script setup>
+import { getCurrentInstance } from 'vue'
+
+	const click = () => {
+		const instance = getCurrentInstance()
+		const res = uni.createWebviewContext('webviewid',instance)
+		let str = 'console.table("webview-yuhe")'
+		res.evalJS(str)
 	}
 </script>
 
