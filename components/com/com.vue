@@ -1,16 +1,21 @@
 <template>
 	<view>
-		组件： com
+		<view class="" @click="click">组件： com click</view>
 	</view>
 </template>
 
 <script>
 	export default {
-		name:"com",
+		name: "com",
 		data() {
 			return {
-				
+
 			};
+		},
+		methods: {
+			click() {
+				this.$emit('click');
+			}
 		}
 	}
 </script>

@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<button @click="click">click</button>
+		<com @click="click"></com>
 	</view>
 </template>
 
@@ -11,7 +12,7 @@
 		},
 		methods: {
 			click() {
-				
+				console.log("index.vue - click")
 			}
 		}
 	}
