@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<button @click="click">click</button>
-		<com @click="click"></com>
+		<com style="background-color: red;" @click="click"></com>
 	</view>
 </template>
 
