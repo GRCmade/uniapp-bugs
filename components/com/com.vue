@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		组件： com
 	</view>
 </template>
 
