@@ -1,23 +1,8 @@
 <template>
-  <view>
-   <button @click="click">click</button>
-  </view>
+	<com />
+	<com />
 </template>
-
-
-<script>
-export default {
-  data() {
-    return {}
-  },
-  methods: {
-    click(){
-			
-    }
-  }
-}
+<script setup lang="ts">
+	import com from "./com.vue"
 </script>
-
-
 <style></style>
-

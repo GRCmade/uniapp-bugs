@@ -1,12 +1,8 @@
-# cli 模板
+======== README.md ========
 
-cli 模板
+# 编译微信小程序节点id属性消失
+> uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
-# 更新 cli 依赖
-npx @dcloudio/uvm@latest
-npx @dcloudio/uvm@latest alpha
-
-
-# 与 uni-app-next 联动
-pnpm add @dcloudio/%包名%@%uni-app本地仓库路径%/packages/%包名%
-pnpm add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-mp-weixin
+# 问题
+未复现
+======== END ========
