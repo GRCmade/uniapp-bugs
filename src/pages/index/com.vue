@@ -10,4 +10,14 @@
 
 	const click = () => { }
 </script>
+<script lang="ts">
+export default {
+  name: 'wd-drop-menu',
+  options: {
+    virtualHost: true,
+    addGlobalClass: true,
+    styleIsolation: 'shared'
+  }
+}
+</script>
 <style></style>
