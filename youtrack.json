@@ -1,6 +1,7 @@
 {
 	"name": "uniapp-bugs",
 	"properity": {
-		"project": "UB"
+		"project": "UB",
+		"platform": ["android"]
 	}
 }
