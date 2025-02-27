@@ -138,7 +138,7 @@ app.get('/download/header', (req, res) => {
   // 检查文件是否存在
   if (fs.existsSync(filePath)) {
     // 设置响应头
-    res.setHeader('Content-Disposition', 'attachment; filename="uni-app1"');
+    res.setHeader('Content-Disposition', 'attachment; filename=uni-app1.pdf');
     res.setHeader('Content-Type', 'application/pdf');
 
     // 创建一个文件流并将文件内容发送给客户端
@@ -148,6 +148,79 @@ app.get('/download/header', (req, res) => {
     // 如果文件不存在，返回 404 错误
     res.status(404).send('File not found');
   }
+});
+
+// 处理文件下载请求
+app.get('/download/header1', (req, res) => {
+  // 检查文件是否存在
+  if (fs.existsSync(filePath)) {
+    // 设置响应头
+    res.setHeader('Content-Disposition', 'attachment; filename="uni-app-h1.pdf"');
+    res.setHeader('Content-Type', 'application/pdf');
+
+    // 创建一个文件流并将文件内容发送给客户端
+    const fileStream = fs.createReadStream(filePath);
+    fileStream.pipe(res);
+  } else {
+    // 如果文件不存在，返回 404 错误
+    res.status(404).send('File not found');
+  }
+});
+
+// 处理文件下载请求
+app.get('/download/header2', (req, res) => {
+  // 检查文件是否存在
+  if (fs.existsSync(filePath)) {
+    // 设置响应头
+    res.setHeader('Content-Disposition', "attachment; filename='uni-app-h2.pdf'");
+    res.setHeader('Content-Type', 'application/pdf');
+
+    // 创建一个文件流并将文件内容发送给客户端
+    const fileStream = fs.createReadStream(filePath);
+    fileStream.pipe(res);
+  } else {
+    // 如果文件不存在，返回 404 错误
+    res.status(404).send('File not found');
+  }
+});
+
+// 处理文件下载请求
+app.get('/download/header3', (req, res) => {
+  // 检查文件是否存在
+  if (fs.existsSync(filePath)) {
+    // 设置响应头
+    res.setHeader('Content-Disposition', "attachment; filename=\"uni-app-h2.pdf\"");
+    res.setHeader('Content-Type', 'application/pdf');
+
+    // 创建一个文件流并将文件内容发送给客户端
+    const fileStream = fs.createReadStream(filePath);
+    fileStream.pipe(res);
+  } else {
+    // 如果文件不存在，返回 404 错误
+    res.status(404).send('File not found');
+  }
+});
+
+// 处理文件下载请求
+app.get('/download/header4', (req, res) => {
+  // 检查文件是否存在
+  if (fs.existsSync(filePath)) {
+    // 设置响应头
+    res.setHeader('Content-Disposition', "attachment; filename=\"\"");
+    res.setHeader('Content-Type', 'application/pdf');
+
+    // 创建一个文件流并将文件内容发送给客户端
+    const fileStream = fs.createReadStream(filePath);
+    fileStream.pipe(res);
+  } else {
+    // 如果文件不存在，返回 404 错误
+    res.status(404).send('File not found');
+  }
+});
+
+// 处理文件下载请求
+app.get('/download/senfile', (req, res) => {
+  res.sendFile(filePath)
 });
 
 app.use('/file', express.static(path.join(__dirname, 'file')));
