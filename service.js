@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require('path');
 const app = express();
 const port = 3000;
 const os = require("os");
@@ -128,6 +129,28 @@ wss.on("connection", (ws) => {
     console.log("WebSocket connection closed");
   });
 });
+
+// 文件路径
+const filePath = path.join(__dirname, '/file/uni-app.pdf');
+
+// 处理文件下载请求
+app.get('/download/header', (req, res) => {
+  // 检查文件是否存在
+  if (fs.existsSync(filePath)) {
+    // 设置响应头
+    res.setHeader('Content-Disposition', 'attachment; filename="uni-app1"');
+    res.setHeader('Content-Type', 'application/pdf');
+
+    // 创建一个文件流并将文件内容发送给客户端
+    const fileStream = fs.createReadStream(filePath);
+    fileStream.pipe(res);
+  } else {
+    // 如果文件不存在，返回 404 错误
+    res.status(404).send('File not found');
+  }
+});
+
+app.use('/file', express.static(path.join(__dirname, 'file')));
 
 server.listen(port, () => {
   const localIP = getLocalIPAddress();
