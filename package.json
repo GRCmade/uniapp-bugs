@@ -11,6 +11,7 @@
     "mp3toutiao": "node uni-app/mp.js 3 toutiao",
     "mp3alipay": "node uni-app/mp.js 3 alipay",
     "mp3xhs": "node uni-app/mp.js 3 xhs",
+    "mp2xhs": "node uni-app/mp.js 2 xhs",
     "git": "bash git/uniappbugs-git.sh"
   },
   "author": "",
