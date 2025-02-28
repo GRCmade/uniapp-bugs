@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": ["harmony","android","ios","mp-weixin"],
+		"platforms": ["harmony","android","ios","mp-weixin","mp-alipay"],
 		"url":"yuhe.space"
 	}
 }
