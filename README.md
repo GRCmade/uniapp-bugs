@@ -1,3 +1,12 @@
+======== README.md ========
+
+# uniapp-bugs 的 template-cli 模板
+> uniapp-bugs https://github.com/GRCmade/uniapp-bugs
+
+# 问题
+
+======== END ========
+
 # cli 模板
 
 cli 模板
