@@ -1,3 +1,4 @@
+1123
 ======== README.md ========
 
 # uniapp-bugs 的 template-cli 模板
@@ -9,3 +10,4 @@
 
 ======== END ========
 
+123
