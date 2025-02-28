@@ -1,10 +1,11 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<button @click="click" class="color">click xhs</button>
 	</view>
 </template>
 
 <script>
+	import './index.css'
 	export default {
 		data() {
 			return {}
