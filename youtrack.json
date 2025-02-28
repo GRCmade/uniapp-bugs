@@ -1,7 +1,9 @@
 {
 	"name": "uniapp-bugs",
+	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platform": ["android"]
+		"platforms": [],
+		"url":""
 	}
 }
