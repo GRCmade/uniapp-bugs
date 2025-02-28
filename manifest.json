@@ -68,7 +68,7 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "3",
+    "vueVersion" : "2",
     "app-harmony" : {
         "distribute" : {
             "bundleName" : "com.yuhe.template",
