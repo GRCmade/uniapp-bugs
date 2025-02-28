@@ -8,7 +8,10 @@
     "mp2weixin": "node uni-app/mp.js 2 weixin",
     "mp3weixin": "node uni-app/mp.js 3 weixin",
     "mp3kuaishou": "node uni-app/mp.js 3 kuaishou",
-    "mp3toutiao": "node uni-app/mp.js 3 toutiao"
+    "mp3toutiao": "node uni-app/mp.js 3 toutiao",
+    "mp3alipay": "node uni-app/mp.js 3 alipay",
+    "mp3xhs": "node uni-app/mp.js 3 xhs",
+    "git": "bash git/uniappbugs-git.sh"
   },
   "author": "",
   "license": "ISC",

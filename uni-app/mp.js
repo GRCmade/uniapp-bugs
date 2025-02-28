@@ -12,7 +12,7 @@ if (![2, 3].includes(vueVersion) || typeof platform !== 'string') {
   console.error('请提供有效的参数：数字（2 或 3）表示 Vue 版本，字符串表示小程序平台');
   process.exit(1);
 }
-const platforms = ['weixin','kuaishou',"toutiao"]
+const platforms = ['weixin','kuaishou',"toutiao","alipay","xhs"]
 if(!platforms.includes(platform)){
   console.error('有效的参数：'+platforms.join('，'));
   process.exit(1);
