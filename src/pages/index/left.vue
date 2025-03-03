@@ -8,12 +8,12 @@
 export default {
   data() {
     return {
-      title: 'leftdkhsadjkhaskjdhk',
+      title: 'leftdkhsadjkhaskjdhk111',
       searchValue: ''
     }
   },
-  onLoad() {
-
+  mounted() {
+    console.log(uni.getLocale())
   },
   methods: {
 

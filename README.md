@@ -5,11 +5,13 @@
 
 - npx @dcloudio/uvm@latest
 - pnpm add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-mp-weixin
+- pnpm add @dcloudio/uni-h5@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-h5
 # 问题
 以 uni-search-bar 为例
 ![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250303161102096.png)
 
 这个组件在初始化的时候，使用了
+
 ```
 import {
   initVueI18n
