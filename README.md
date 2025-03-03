@@ -1,6 +1,6 @@
 ======== README.md ========
 
-# uniapp-bugs 的 template 模板
+# uni.uploadFile在安卓平台，触发success后会再触发一次onProgressUpdate事件
 > uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
 # 问题
