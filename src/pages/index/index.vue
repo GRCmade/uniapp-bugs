@@ -1,6 +1,7 @@
 <template>
   <view>
-   <button @click="click">click</button>
+    <button @click="click">click</button>
+    <uni-search-bar v-model="searchValue" @confirm="" placeholder=""/>
   </view>
 </template>
 
@@ -8,11 +9,13 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      searchValue: ''
+    }
   },
   methods: {
-    click(){
-			
+    click() {
+
     }
   }
 }
@@ -20,4 +23,3 @@ export default {
 
 
 <style></style>
-
