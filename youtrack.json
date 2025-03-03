@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": ["android"],
+		"platforms": ["android","ios"],
 		"url":"https://github.com/dcloudio/uni-app/issues/5200#issuecomment-2689728113"
 	}
 }
