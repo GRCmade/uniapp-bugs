@@ -12,7 +12,7 @@ const fs = require('fs');
 // 设置 multer 存储配置
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'file/'); // 修改存储路径为 file 文件夹
+    cb(null, 'upload/'); // 修改存储路径为 file 文件夹
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' + file.originalname);
