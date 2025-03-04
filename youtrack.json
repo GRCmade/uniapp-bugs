@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": ["harmony"],
+		"platforms": [""],
 		"url":""
 	}
 }

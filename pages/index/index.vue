@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<button @click="click">click</button>
+		<uni-icons type="close" size="30"></uni-icons>
 	</view>
 </template>
 

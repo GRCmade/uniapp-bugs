@@ -5,22 +5,25 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},
-		{
-			"path" : "pages/tabbar/tabbar-1/tabbar-1",
-			"style" : 
-			{
-				"navigationBarTitleText" : "tabbar-1"
+		}, {
+			"path": "pages/tabbar/tabbar-1/tabbar-1",
+			"style": {
+				"navigationBarTitleText": "tabbar-1"
 			}
-		},
-		{
-			"path" : "pages/tabbar/tabbar-2/tabbar-2",
-			"style" : 
-			{
-				"navigationBarTitleText" : "tabbar-2"
+		}, {
+			"path": "pages/tabbar/tabbar-2/tabbar-2",
+			"style": {
+				"navigationBarTitleText": "tabbar-2"
 			}
 		}
 	],
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -50,5 +53,4 @@
 			"text": "接口"
 		}]
 	}
-
 }
