@@ -1,6 +1,8 @@
 <template>
-  <view>{{ title }}
+  <view>
+    {{ title }}
     <uni-search-bar v-model="searchValue" @confirm="" />
+    
   </view>
 </template>
 
@@ -8,7 +10,7 @@
 export default {
   data() {
     return {
-      title: 'leftdkhsadjkhaskjdhk111',
+      title: 'left-window',
       searchValue: ''
     }
   },

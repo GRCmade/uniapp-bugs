@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      searchValue: '1'
+      searchValue: ''
     }
   },
   methods: {
