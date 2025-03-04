@@ -1,9 +1,9 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<view>1个参数： {{$t('global.pleaseInput')}}</view>
+		<view>2个参数： {{$t('global.pleaseInput', { key: $t('login.tenantName') })}}</view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -11,11 +11,15 @@
 		},
 		methods: {
 			click() {
-				
+				console.log("upx", uni.rpx2px(121))
 			}
 		}
 	}
 </script>
-
-
-<style></style>
+<style lang="scss">
+	.box {
+		width: 121rpx;
+		height: 121rpx;
+		background-color: red;
+	}
+</style>
