@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-search-bar v-model="searchValue" @confirm="" />
+    <view>组件中</view>
     <view>{{ '文字：' + cancelTextI18n }}</view>
     <view>{{ '语言：' + local }}</view>
   </view>
