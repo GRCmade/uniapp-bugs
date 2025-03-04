@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": ["harmony"],
-		"url":""
+		"platforms": ["h5","android"],
+		"url":"https://ask.dcloud.net.cn/question/206074"
 	}
 }
