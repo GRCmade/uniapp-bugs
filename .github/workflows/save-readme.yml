@@ -1,0 +1,53 @@
+name: Save README on Branch Push
+
+on:
+  push:
+    branches:
+      - '**'  # 监听所有分支的推送事件
+
+jobs:
+  save-readme:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取所有分支的历史记录
+
+      - name: Set up environment
+        id: setup
+        run: |
+          # 获取当前分支名称
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          echo "Current branch: $BRANCH_NAME"
+
+          # 创建目标目录
+          TARGET_DIR="all-branch-info/$BRANCH_NAME"
+          mkdir -p "$TARGET_DIR"
+
+          # 检查 README.md 是否存在
+          if [ -f "README.md" ]; then
+            # 将 README.md 复制到目标目录
+            cp README.md "$TARGET_DIR/README.md"
+            echo "README.md saved to $TARGET_DIR/README.md"
+          else
+            echo "README.md not found in branch $BRANCH_NAME"
+          fi
+
+          # 输出目标目录路径
+          echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV
+
+      - name: Commit and push changes
+        if: success()
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          # 添加更改并提交
+          git add all-branch-info/
+          git commit -m "Save README for branch $BRANCH_NAME"
+
+          # 推送更改到仓库
+          git push origin main  # 假设将更改推送到 main 分支
