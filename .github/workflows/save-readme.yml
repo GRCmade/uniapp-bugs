@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # 获取所有分支的历史记录
-
       - name: Set up environment
         id: setup
         run: |
