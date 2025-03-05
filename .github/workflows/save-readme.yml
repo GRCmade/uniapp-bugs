@@ -68,6 +68,14 @@ jobs:
           # 将 README.md 同步到 all-branch-info 分支
           cp -r all-branch-info target/
           cd target
-          git add .
-          git commit -m "Sync README from branch $BRANCH_NAME"
-          git push origin all-branch-info
+
+          # 检查是否有文件变动
+          if git diff --quiet; then
+            echo "没有文件变动，跳过提交"
+          else
+            # 提交并推送变动
+            git add .
+            git commit -m "Sync README from branch $BRANCH_NAME"
+            git push origin all-branch-info
+            echo "README.md 已同步到 all-branch-info 分支"
+          fi
