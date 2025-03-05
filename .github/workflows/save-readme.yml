@@ -1,15 +1,13 @@
 name: Save README on Branch Push
 
 on:
-  label:
-    types: [created, edited]
   push:
     branches:
       - "**" # 监听所有分支的推送事件
 
 jobs:
   save-readme:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
 
     steps:
       - name: Checkout repository
