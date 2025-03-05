@@ -1,9 +1,11 @@
 name: Save README on Branch Push
 
 on:
+  label:
+    types: [created, edited]
   push:
     branches:
-      - '**'  # 监听所有分支的推送事件
+      - "**" # 监听所有分支的推送事件
 
 jobs:
   save-readme:
