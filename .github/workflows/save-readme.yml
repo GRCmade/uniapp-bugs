@@ -33,41 +33,58 @@ jobs:
             echo "README.md not found in branch $BRANCH_NAME"
           fi
 
+          # 检查 youtrack.json 是否存在
+          if [ -f "youtrack.json" ]; then
+            # 将 youtrack.json 复制到目标目录
+            cp youtrack.json "$TARGET_DIR/youtrack.json"
+            echo "youtrack.json saved to $TARGET_DIR/youtrack.json"
+          else
+            echo "youtrack.json not found in branch $BRANCH_NAME"
+          fi
+
           # 输出目标目录路径
           echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV
 
       - name: Sync to main branch
         run: |
-          # 使用GitHub Token认证
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
           REPO_URL="https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
 
-          # 尝试克隆目标分支
-          if git clone -b main --single-branch "$REPO_URL" target 2>/dev/null; then
-            echo "成功克隆 main 分支"
+          # 检查远程是否存在 main 分支
+          if git ls-remote --heads "$REPO_URL" main | grep -q 'refs/heads/main'; then
+            echo "克隆现有的 main 分支..."
+            git clone -b main "$REPO_URL" target
           else
-            echo "目标分支不存在，创建新分支"
-            
-            # 如果 target 目录已存在，删除它
-            if [ -d "target" ]; then
-              rm -rf target
-            fi
-            
-            # 创建 target 目录并初始化 Git 仓库
+            echo "创建新的 main 分支..."
+            rm -rf target
             mkdir -p target
             cd target
             git init
             git remote add origin "$REPO_URL"
             git checkout -b main
-            touch .gitkeep  # 创建空文件用于初始提交
+            touch .gitkeep
             git add .gitkeep
+            git config user.name "GitHub Action"
+            git config user.email "action@github.com"
             git commit -m "初始化 main 分支"
             git push origin main
             cd ..
           fi
 
-          # 将 README.md 同步到 main 分支
-          cp -r main target/
+          # 进入 target 目录并配置用户信息
           cd target
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+          # 拉取最新的 main 分支更改
+          git pull origin main --rebase
+
+          # 将生成的 main 目录内容复制到 target 仓库
+          cp -r ../main .
+
+          # 提交更改
           git add .
-          git commit -m "Sync README from branch $BRANCH_NAME"
+          git commit -m "Sync README from branch $BRANCH_NAME" || echo "没有变更，无需提交"
+
+          # 推送更改
           git push origin main
