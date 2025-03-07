@@ -21,7 +21,7 @@ jobs:
           echo "Current branch: $BRANCH_NAME"
 
           # 创建目标目录
-          TARGET_DIR="all-branch-info/$BRANCH_NAME"
+          TARGET_DIR="docs/$BRANCH_NAME"
           mkdir -p "$TARGET_DIR"
 
           # 检查 README.md 是否存在
@@ -36,14 +36,14 @@ jobs:
           # 输出目标目录路径
           echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV
 
-      - name: Sync to all-branch-info branch
+      - name: Sync to main branch
         run: |
           # 使用GitHub Token认证
           REPO_URL="https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
 
           # 尝试克隆目标分支
-          if git clone -b all-branch-info --single-branch "$REPO_URL" target 2>/dev/null; then
-            echo "成功克隆 all-branch-info 分支"
+          if git clone -b main --single-branch "$REPO_URL" target 2>/dev/null; then
+            echo "成功克隆 main 分支"
           else
             echo "目标分支不存在，创建新分支"
             
@@ -57,17 +57,17 @@ jobs:
             cd target
             git init
             git remote add origin "$REPO_URL"
-            git checkout -b all-branch-info
+            git checkout -b main
             touch .gitkeep  # 创建空文件用于初始提交
             git add .gitkeep
-            git commit -m "初始化 all-branch-info 分支"
-            git push origin all-branch-info
+            git commit -m "初始化 main 分支"
+            git push origin main
             cd ..
           fi
 
-          # 将 README.md 同步到 all-branch-info 分支
-          cp -r all-branch-info target/
+          # 将 README.md 同步到 main 分支
+          cp -r main target/
           cd target
           git add .
           git commit -m "Sync README from branch $BRANCH_NAME"
-          git push origin all-branch-info
+          git push origin main
