@@ -91,3 +91,35 @@ jobs:
 
           # 推送更改
           git push origin main
+
+      - name: Send API Request
+        run: |
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          API_URL="http://yuhe.space:7004/youtrack/update-v2"
+
+          # 安装 jq 用于 JSON 处理（如果尚未安装）
+          sudo apt-get install -y jq
+
+          # 构建基础 JSON
+          JSON_DATA=$(jq -n --arg ref "$BRANCH_NAME" '{ref: $ref}')
+
+          # 添加 README.md 内容
+          if [ -f "README.md" ]; then
+            README_CONTENT=$(jq -Rs . README.md)
+            JSON_DATA=$(echo "$JSON_DATA" | jq --argjson readme "$README_CONTENT" '. + {readme: $readme}')
+          fi
+
+          # 添加 youtrack.json 内容
+          if [ -f "youtrack.json" ]; then
+            YOUTRACK_CONTENT=$(jq -c . youtrack.json)
+            JSON_DATA=$(echo "$JSON_DATA" | jq --argjson youtrack "$YOUTRACK_CONTENT" '. + {youtrack: $youtrack}')
+          fi
+
+          # 发送请求（添加 -v 参数用于调试）
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d "$JSON_DATA" \
+            "$API_URL"
+
+          echo "API request sent with data:"
+          echo "$JSON_DATA" | jq .
