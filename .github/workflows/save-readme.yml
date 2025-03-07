@@ -55,10 +55,10 @@ jobs:
 
           # 检查远程是否存在 main 分支
           if git ls-remote --heads "$REPO_URL" main | grep -q 'refs/heads/main'; then
-            echo "克隆现有的 main 分支..."
+            echo "Cloning existing main branch..."
             git clone -b main "$REPO_URL" target
           else
-            echo "创建新的 main 分支..."
+            echo "Creating new main branch..."
             rm -rf target
             mkdir -p target
             cd target
@@ -69,7 +69,7 @@ jobs:
             git add .gitkeep
             git config user.name "GitHub Action"
             git config user.email "action@github.com"
-            git commit -m "初始化 main 分支"
+            git commit -m "Initialize main branch"
             git push origin main
             cd ..
           fi
@@ -85,13 +85,16 @@ jobs:
           # 将生成的 main 目录内容复制到 target 仓库
           cp -r ../main .
 
-          # 提交更改
-          git add .
-          git commit -m "Sync README from branch $BRANCH_NAME" || echo "没有变更，无需提交"
-
-          # 推送更改
-          git push origin main
-
+          # 检查是否有变更
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+          else
+            # 提交更改
+            git add .
+            git commit -m "Sync README from branch $BRANCH_NAME"
+            # 推送更改
+            git push origin main
+          fi
       - name: Send API Request
         run: |
           BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
