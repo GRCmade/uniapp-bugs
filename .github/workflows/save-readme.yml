@@ -98,7 +98,7 @@ jobs:
       - name: Send API Request
         run: |
           BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
-          API_URL="http://yuhe.space:7004/youtrack/update-v2"
+          API_URL="http://yuhe.space:7204/youtrack/update-v2"
 
           # 安装 jq 用于 JSON 处理（如果尚未安装）
           # sudo apt-get install -y jq
