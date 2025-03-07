@@ -5,5 +5,4 @@
 
 # 问题
 main
-youtrack.json
 ======== END ========
