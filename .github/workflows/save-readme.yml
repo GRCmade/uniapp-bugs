@@ -98,7 +98,7 @@ jobs:
           API_URL="http://yuhe.space:7004/youtrack/update-v2"
 
           # 安装 jq 用于 JSON 处理（如果尚未安装）
-          sudo apt-get install -y jq
+          # sudo apt-get install -y jq
 
           # 构建基础 JSON
           JSON_DATA=$(jq -n --arg ref "$BRANCH_NAME" '{ref: $ref}')
