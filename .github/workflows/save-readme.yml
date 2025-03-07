@@ -21,7 +21,7 @@ jobs:
           echo "Current branch: $BRANCH_NAME"
 
           # 创建目标目录
-          TARGET_DIR="docs/$BRANCH_NAME"
+          TARGET_DIR="main/$BRANCH_NAME"
           mkdir -p "$TARGET_DIR"
 
           # 检查 README.md 是否存在
