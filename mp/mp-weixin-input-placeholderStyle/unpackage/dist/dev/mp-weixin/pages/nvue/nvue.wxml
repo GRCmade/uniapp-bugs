@@ -1,1 +1,0 @@
-<view><list u-s="{{['d']}}" u-i="2dcee698-0" bind:__l="__l"><cell wx:for="{{a}}" wx:for-item="item" u-s="{{['d']}}" style="background-color:#ebee16" u-i="{{item.a}}" bind:__l="__l"><rich-text nodes="{{b}}"></rich-text></cell></list></view>

@@ -1,1 +1,0 @@
-<view class="content"><image class="logo" src="{{a}}"></image><view class="text-area"><text class="title" bindtap="{{c}}">{{b}}</text></view><view class="title" bindtap="{{d}}"> yuhe </view><input placeholder-style="color:#FFFFFF" type="text" placeholder="请输入订单号"></input></view>

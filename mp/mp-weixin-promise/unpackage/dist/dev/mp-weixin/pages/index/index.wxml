@@ -1,1 +1,0 @@
-<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text data-event-opts="{{[['tap',[['testFun',['$event']]]]]}}" class="title" bindtap="__e">{{title}}</text></view></view>

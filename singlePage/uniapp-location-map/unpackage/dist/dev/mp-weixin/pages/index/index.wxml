@@ -1,1 +1,0 @@
-<view class="content"><image class="logo" src="{{a}}"></image><view class="text-area"><view class="title" bindtap="{{c}}">{{b}}</view><view class="title" bindtap="{{e}}">{{d}}</view><view class="title" bindtap="{{g}}">{{f}}</view><view>{{h}}</view></view><button bindtap="{{i}}">map</button></view>

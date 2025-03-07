@@ -1,2 +1,0 @@
-export type RestartApp = () => void
-export type ExitApp = () => void

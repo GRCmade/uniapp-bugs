@@ -1,3 +1,0 @@
-export const rpx2px = (rpx : number) => {
-	return uni.rpx2px(rpx)
-}

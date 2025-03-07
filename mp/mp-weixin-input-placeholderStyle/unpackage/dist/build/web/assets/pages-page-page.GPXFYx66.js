@@ -1,1 +1,0 @@
-import{_ as o,b as n,o as s,i as t}from"./index-D07Rz7tE.js";const a=o({data:()=>({}),onShow(){console.log("onShow-2")},methods:{}},[["render",function(o,a,e,r,d,c){const i=t;return s(),n(i)}]]);export{a as default};
