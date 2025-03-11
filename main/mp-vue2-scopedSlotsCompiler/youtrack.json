@@ -1,0 +1,9 @@
+{
+	"name": "uniapp-bugs",
+	"binding_branch":"",
+	"properity": {
+		"project": "UB",
+		"platforms": ["mp-weixin","mp-toutiao"],
+		"url":"https://github.com/dcloudio/uni-app/issues/5130"
+	}
+}
