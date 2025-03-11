@@ -1,8 +1,9 @@
-<template>
-	<view>
-		<button @click="click">click</button>
-		<uni-icons type="close" size="30"></uni-icons>
-	</view>
+<template>  
+  <view class="content">  
+    <com :list="[1, 2, 4]">  
+      <template v-slot:default="{ item }">{{ item }}</template>  
+    </com>  
+  </view>  
 </template>
 
 <script>

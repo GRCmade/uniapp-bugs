@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": [""],
-		"url":""
+		"platforms": ["mp-weixin","mp-toutiao"],
+		"url":"https://github.com/dcloudio/uni-app/issues/5130"
 	}
 }
