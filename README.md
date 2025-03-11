@@ -11,4 +11,5 @@
 ![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250311150252662.png)
 
 设置为 scopedSlotsCompiler 时 slot 有问题
+mp-vue2-scopedSlotsCompiler
 ======== END ========
