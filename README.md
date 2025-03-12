@@ -2,6 +2,8 @@
 
 `uniapp-bugs` 项目，是 https://github.com/dcloudio/uni-app 中，可以复现的项目仓库，各个可以复现的项目，以`分支`的形式保存。除了个别有特殊用途的分支，其余分支都是 uniapp 项目。
 
+uniapp-bugs 的复现项目下载方式：` git clone https://github.com/GRCmade/uniapp-bugs.git -b <分支名> `
+
 ## 预览问题
 
 想要查看可复现的项目，可以到：http://yuhe.space:7203/dashboard?id=158-0 ，这里的问题，与本仓库内容同步
