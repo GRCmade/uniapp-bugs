@@ -3,7 +3,7 @@
 	"binding_branch":"",
 	"properity": {
 		"project": "UB",
-		"platforms": [""],
-		"url":""
+		"platforms": ["ios"],
+		"url":"https://github.com/dcloudio/uni-ui/issues/991"
 	}
 }
