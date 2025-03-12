@@ -5,6 +5,7 @@
 
 - npx @dcloudio/uvm@latest
 - pnpm add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-mp-weixin
+
 # 问题
 
 ======== END ========
