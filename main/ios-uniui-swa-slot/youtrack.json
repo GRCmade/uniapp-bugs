@@ -1,0 +1,9 @@
+{
+	"name": "uniapp-bugs",
+	"binding_branch":"",
+	"properity": {
+		"project": "UB",
+		"platforms": ["ios"],
+		"url":"https://github.com/dcloudio/uni-ui/issues/991"
+	}
+}
