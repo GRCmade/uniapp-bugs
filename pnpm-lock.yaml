@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@dcloudio/uni-h5': link:/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-h5
+
 importers:
 
   .:
