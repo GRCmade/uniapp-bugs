@@ -26,7 +26,13 @@
 			{
 				"navigationBarTitleText" : "tabbar-2"
 			}
-		}
+		},
+    {
+      "path": "pages/index/relaunch",
+      "style": {
+        "navigationBarTitleText": "relaunch"
+      }
+    }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

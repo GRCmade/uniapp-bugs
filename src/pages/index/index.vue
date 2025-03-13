@@ -1,10 +1,6 @@
 <template>
   <view>
-    <button @click="click">click</button>
-    <uni-badge text="1"></uni-badge>
-    <uni-badge text="2" type="success" @click="bindClick"></uni-badge>
-    <uni-badge text="3" type="primary" :inverted="true"></uni-badge>
-    <com></com>
+    <button @click="click">relaunch click</button>
   </view>
 </template>
 
@@ -16,7 +12,10 @@ export default {
   },
   methods: {
     click() {
-
+      console.log("uni.canIUse('hideHomeButton')", uni.canIUse('hideHomeButton'))
+      uni.reLaunch({
+        url: '/pages/index/relaunch'
+      })
     }
   }
 }
