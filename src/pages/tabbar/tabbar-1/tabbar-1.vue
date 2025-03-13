@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<button @click="chooseImage">chooseImage</button>
 	</view>
 </template>
 
@@ -12,7 +12,13 @@
 			}
 		},
 		methods: {
-			
+			chooseImage() {
+				uni.chooseImage({
+					count: 1,
+					sizeType: ['original', 'compressed'],
+					sourceType: ['album', 'camera'],
+				})
+			}
 		}
 	}
 </script>

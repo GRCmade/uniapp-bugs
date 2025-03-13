@@ -1,10 +1,7 @@
 <template>
   <view>
     <button @click="click">click</button>
-    <uni-badge text="1"></uni-badge>
-    <uni-badge text="2" type="success" @click="bindClick"></uni-badge>
-    <uni-badge text="3" type="primary" :inverted="true"></uni-badge>
-    <com></com>
+    <web-view src="http://192.168.31.148:5500"></web-view>
   </view>
 </template>
 
