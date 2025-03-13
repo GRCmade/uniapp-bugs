@@ -5,6 +5,7 @@
 
 - npx @dcloudio/uvm@latest
 - pnpm add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-mp-weixin
+- pnpm add pnpm add @dcloudio/uni-h5@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-h5
 
 # 问题
 uni.hideHomeButton()  在文档中的描述是 h5 不支持

@@ -41,7 +41,7 @@
     "@dcloudio/uni-app-harmony": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-app-plus": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-components": "3.0.0-alpha-4050220250208001",
-    "@dcloudio/uni-h5": "3.0.0-alpha-4050220250208001",
+    "@dcloudio/uni-h5": "link:/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-h5",
     "@dcloudio/uni-mp-alipay": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-mp-baidu": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-mp-jd": "3.0.0-alpha-4050220250208001",
@@ -53,6 +53,8 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-4050220250208001",
     "@dcloudio/uni-ui": "^1.5.7",
+    "add": "^2.0.6",
+    "pnpm": "^10.6.2",
     "vue": "^3.5.13",
     "vue-i18n": "^9.14.2"
   },
@@ -66,5 +68,8 @@
     "sass": "^1.85.1",
     "sass-loader": "10.1.1",
     "vite": "5.2.8"
+  },
+  "resolutions": {
+    "@dcloudio/uni-h5": "link:/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-h5"
   }
 }

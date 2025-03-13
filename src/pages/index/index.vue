@@ -13,6 +13,7 @@ export default {
   methods: {
     click() {
       console.log("uni.canIUse('hideHomeButton')", uni.canIUse('hideHomeButton'))
+      console.log("uni.canIUse('scanCode')", uni.canIUse('scanCode'))
       // uni.reLaunch({
       //   url: '/pages/index/relaunch'
       // })
