@@ -13,9 +13,9 @@ export default {
   methods: {
     click() {
       console.log("uni.canIUse('hideHomeButton')", uni.canIUse('hideHomeButton'))
-      uni.reLaunch({
-        url: '/pages/index/relaunch'
-      })
+      // uni.reLaunch({
+      //   url: '/pages/index/relaunch'
+      // })
     }
   }
 }
