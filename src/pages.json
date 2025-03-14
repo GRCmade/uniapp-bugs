@@ -13,6 +13,18 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		},
+    {
+      "path": "pages/index/index-next",
+      "style": {
+        "navigationBarTitleText": "index-next"
+      }
+    },
+    {
+      "path": "pages/index/index-next-next",
+      "style": {
+        "navigationBarTitleText": "index-next-next"
+      }
+    },
 		{
 			"path" : "pages/tabbar/tabbar-1/tabbar-1",
 			"style" : 
