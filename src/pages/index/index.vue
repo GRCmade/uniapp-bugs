@@ -16,9 +16,9 @@ export default {
   },
   methods: {
     click() {
-      uni.navigateTo({
-        url: '/pages/index/index-next'
-      })
+      // uni.navigateTo({
+      //   url: '/pages/index/index-next'
+      // })
     }
   }
 }
