@@ -2,8 +2,8 @@ name: Save README on Branch Push
 
 on:
   push:
-    branches:
-      - "**" # 监听所有分支的推送事件
+    branches-ignore:
+      - 'main' # 忽略 main 分支的推送事件，其他所有分支都会触发
 
 jobs:
   save-readme:
@@ -14,10 +14,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 获取当前分支名称
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          echo "Current branch: $BRANCH_NAME"
+          
+          # 清理工作目录
+          rm -rf ./* || true
+          rm -rf ./.* || true
+          
+          # 直接克隆当前分支，使用浅克隆加速
+          git clone --depth=1 --single-branch --branch "$BRANCH_NAME" "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" .
+          
+          # 设置 git 配置
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
 
       - name: Set up environment
         id: setup
