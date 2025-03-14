@@ -3,9 +3,6 @@
 # textarea 组件在APP端 iOS 模拟器中无法渲染，无法输入
 > uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
-- npx @dcloudio/uvm@latest
-- pnpm add @dcloudio/uni-mp-weixin@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/uni-mp-weixin
-
 # 问题
 在编译时：textarea
 
@@ -21,4 +18,6 @@
 ```
 <textarea v-model="text"></textarea>
 ```
+
+执行 add-next
 ======== END ========
