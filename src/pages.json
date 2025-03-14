@@ -14,6 +14,12 @@
 			}
 		},
     {
+      "path": "pages/index/frame",
+      "style": {
+        "navigationBarTitleText": "frame"
+      }
+    },
+    {
       "path": "pages/index/index-next",
       "style": {
         "navigationBarTitleText": "index-next"
