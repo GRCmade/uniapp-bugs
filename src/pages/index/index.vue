@@ -20,11 +20,18 @@ export default {
       //   url: '/pages/index/index-next'
       // })
       console.log("1. 调用前");
-      uni.getNetworkType({
-        success: () => {
-          console.log("3. success回调");
+      uni.getSystemInfo({
+        success: function (res) {
+          console.log('getSystemInfo',res.appName)
         }
       });
+			uni.setClipboardData({
+				data: 'hello',
+				success: function () {
+					console.log('setClipboardData,success');
+				}
+			});
+
       console.log("2. 调用后");
     }
   }
