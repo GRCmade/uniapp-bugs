@@ -19,6 +19,13 @@ export default {
       // uni.navigateTo({
       //   url: '/pages/index/index-next'
       // })
+      console.log("1. 调用前");
+      uni.getNetworkType({
+        success: () => {
+          console.log("3. success回调");
+        }
+      });
+      console.log("2. 调用后");
     }
   }
 }
