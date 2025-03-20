@@ -3,9 +3,10 @@
 
 ======== README.md ========
 
-# uniapp-bugs 的 template 模板 now3.8
+# 鸿蒙 next  createWebviewContext  的 back 方法无法执行
 > uniapp-bugs https://github.com/GRCmade/uniapp-bugs
 
 # 问题
 
+可以稳定复现：back 和 reload 会闪退
 ======== END ========

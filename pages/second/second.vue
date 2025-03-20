@@ -1,9 +1,7 @@
 <template>
 	<view>
-		<button @click="back">back</button>
-		<button @click="reload">reload</button>
-		<button @click="forward">forward</button>
-		<web-view id="webview" style="margin-top: 300rpx;" src="https://ask.dcloud.net.cn/">
+		<button @click="click">click</button>
+		<web-view id="webview" style="margin-top: 100rpx;" src="https://ask.dcloud.net.cn/">
 			<cover-view>button</cover-view>
 		</web-view>
 	</view>
@@ -24,17 +22,11 @@
 			})
 		},
 		methods: {
-			back() {
+			click() {
 				// uni.navigateTo({
 				// 	url:"/pages/second/second"
 				// })
 				this.webviewcontext.back()
-			},
-			reload(){
-				this.webviewcontext.reload()
-			},
-			forward(){
-				this.webviewcontext.forward()
 			}
 		}
 	}

@@ -15,6 +15,13 @@
 			"style": {
 				"navigationBarTitleText": "tabbar-2"
 			}
+		},
+		{
+			"path" : "pages/second/second",
+			"style" : 
+			{
+				"navigationBarTitleText" : "second"
+			}
 		}
 	],
 	"easycom": {
