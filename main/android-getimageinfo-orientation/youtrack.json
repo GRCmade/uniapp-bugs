@@ -1,0 +1,9 @@
+{
+	"name": "uniapp-bugs",
+	"binding_branch":"",
+	"properity": {
+		"project": "UB",
+		"platforms": ["android"],
+		"url":"https://github.com/dcloudio/uni-app/issues/4708"
+	}
+}
