@@ -1,0 +1,9 @@
+{
+	"name": "uniapp-bugs",
+	"binding_branch":"",
+	"properity": {
+		"project": "UB",
+		"platforms": ["h5","hbuilderx"],
+		"url":"https://ask.dcloud.net.cn/question/207224"
+	}
+}
