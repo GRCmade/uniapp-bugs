@@ -15,10 +15,19 @@ export default {
   },
   methods: {
     click() {
-      // uni.navigateTo({
-      //   url: '/pages/index/index-next'
-      // })
-      
+      uni.setClipboardData({
+        data: "333",
+        showToast: true,
+        success: function (e) {
+          console.log("copy result: ", e);
+        },
+				fail: function (e) {
+				  console.log("copy fail: ", e);
+				},
+        complete: function (e) {
+          console.log("copy result: ", JSON.stringify(e));
+        }
+      });
     }
   }
 }
