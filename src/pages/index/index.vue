@@ -8,7 +8,7 @@
 </template>
 
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {}
@@ -18,7 +18,8 @@ export default {
       // uni.navigateTo({
       //   url: '/pages/index/index-next'
       // })
-      
+      const res: string = '1'
+      console.log(res)
     }
   }
 }

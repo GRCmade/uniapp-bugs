@@ -63,9 +63,13 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4050620250312001",
     "@dcloudio/uni-stacktracey": "3.0.0-4050620250312001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4050620250312001",
+    "@types/webpack-env": "^1.18.4",
+    "@types/node": "^20.11.28",
     "@vue/runtime-core": "^3.5.13",
     "sass": "^1.85.1",
     "sass-loader": "10.1.1",
-    "vite": "5.2.8"
+    "typescript": "^5.4.2",
+    "vite": "5.2.8",
+    "vue-tsc": "^2.0.6"
   }
 }
