@@ -100,12 +100,21 @@
         }
     },
     "h5" : {
+        // "sdkConfigs" : {
+        //     "maps" : {
+        //         "tencent" : {
+        //             "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
+        //         }
+        //     }
+        // }
         "sdkConfigs" : {
-            "maps" : {
-                "tencent" : {
-                    "key" : "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
-                }
-            }
-        }
+          "maps" : {
+              "amap" : {
+                  "key" : "dfbba5195248d28ab9518db25befef44",
+                  "securityJsCode" : "b4d21b9b71494157191f5f4bf3bb1e20",
+                  "serviceHost" : ""
+              }
+          }
+      }
     }
 }
