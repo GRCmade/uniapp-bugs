@@ -3,25 +3,14 @@
     <button @click="click">click</button>
     <uni-badge text="1"></uni-badge>
     <com></com>
-
   </view>
 </template>
 
-
-<script lang="ts">
-export default {
-  data() {
-    return {}
-  },
-  methods: {
-    click() {
-      // uni.navigateTo({
-      //   url: '/pages/index/index-next'
-      // })
-      const res: string = '1'
-      console.log(res)
-    }
-  }
+<script lang="ts" setup>
+import { ref } from 'vue'
+const str = ref<string>('123')
+const click = () => {
+  console.log('click', str.value)
 }
 </script>
 
