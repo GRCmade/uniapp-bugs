@@ -1,0 +1,142 @@
+name: Save README on Branch Push
+
+on:
+  push:
+    branches-ignore:
+      - 'main' # 忽略 main 分支的推送事件，其他所有分支都会触发
+
+jobs:
+  save-readme:
+    runs-on: [self-hosted, linux]
+    concurrency:
+      group: save-readme-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout repository
+        run: |
+          # 获取当前分支名称
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          echo "Current branch: $BRANCH_NAME"
+          
+          # 清理工作目录
+          rm -rf ./* || true
+          rm -rf ./.* || true
+          
+          # 直接克隆当前分支，使用浅克隆加速
+          git clone --depth=1 --single-branch --branch "$BRANCH_NAME" "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" .
+          
+          # 设置 git 配置
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Set up environment
+        id: setup
+        run: |
+          # 获取当前分支名称
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          echo "Current branch: $BRANCH_NAME"
+
+          # 创建目标目录
+          TARGET_DIR="main/$BRANCH_NAME"
+          mkdir -p "$TARGET_DIR"
+
+          # 检查 README.md 是否存在
+          if [ -f "README.md" ]; then
+            # 将 README.md 复制到目标目录
+            cp README.md "$TARGET_DIR/README.md"
+            echo "README.md saved to $TARGET_DIR/README.md"
+          else
+            echo "README.md not found in branch $BRANCH_NAME"
+          fi
+
+          # 检查 youtrack.json 是否存在
+          if [ -f "youtrack.json" ]; then
+            # 将 youtrack.json 复制到目标目录
+            cp youtrack.json "$TARGET_DIR/youtrack.json"
+            echo "youtrack.json saved to $TARGET_DIR/youtrack.json"
+          else
+            echo "youtrack.json not found in branch $BRANCH_NAME"
+          fi
+
+          # 输出目标目录路径
+          echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV
+
+      - name: Sync to main branch
+        run: |
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          REPO_URL="https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+
+          # 检查远程是否存在 main 分支
+          if git ls-remote --heads "$REPO_URL" main | grep -q 'refs/heads/main'; then
+            echo "Cloning existing main branch..."
+            git clone -b main "$REPO_URL" target
+          else
+            echo "Creating new main branch..."
+            rm -rf target
+            mkdir -p target
+            cd target
+            git init
+            git remote add origin "$REPO_URL"
+            git checkout -b main
+            touch .gitkeep
+            git add .gitkeep
+            git config user.name "GitHub Action"
+            git config user.email "action@github.com"
+            git commit -m "Initialize main branch"
+            git push origin main
+            cd ..
+          fi
+
+          # 进入 target 目录并配置用户信息
+          cd target
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+          # 拉取最新的 main 分支更改
+          git pull origin main --rebase
+
+          # 将生成的 main 目录内容复制到 target 仓库
+          cp -r ../main .
+
+          # 检查是否有变更
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+          else
+            # 提交更改
+            git add .
+            git commit -m "Sync README from branch $BRANCH_NAME"
+            # 推送更改
+            git push origin main
+          fi
+      - name: Send API Request
+        run: |
+          BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
+          API_URL="http://yuhe.space:7204/youtrack/update-v2"
+
+          # 安装 jq 用于 JSON 处理（如果尚未安装）
+          # sudo apt-get install -y jq
+
+          # 构建基础 JSON
+          JSON_DATA=$(jq -n --arg ref "$BRANCH_NAME" '{ref: $ref}')
+
+          # 添加 README.md 内容
+          if [ -f "README.md" ]; then
+            README_CONTENT=$(jq -Rs . README.md)
+            JSON_DATA=$(echo "$JSON_DATA" | jq --argjson readme "$README_CONTENT" '. + {readme: $readme}')
+          fi
+
+          # 添加 youtrack.json 内容
+          if [ -f "youtrack.json" ]; then
+            YOUTRACK_CONTENT=$(jq -c . youtrack.json)
+            JSON_DATA=$(echo "$JSON_DATA" | jq --argjson youtrack "$YOUTRACK_CONTENT" '. + {youtrack: $youtrack}')
+          fi
+
+          # 发送请求（添加 -v 参数用于调试）
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d "$JSON_DATA" \
+            "$API_URL"
+
+          echo "API request sent with data:"
+          echo "$JSON_DATA" | jq .

@@ -14,16 +14,16 @@ export default {
   },
   methods: {
     async click() {
-      const res = await uni.chooseImage({
-        count: 1,
-        sizeType: ['original', 'compressed'],
-        sourceType: ['album', 'camera']
-      });
-      const tempFilePaths = res.tempFilePaths;
-      console.log(tempFilePaths);
+      // const res = await uni.chooseImage({
+      //   count: 1,
+      //   sizeType: ['original', 'compressed'],
+      //   sourceType: ['album', 'camera']
+      // });
+      // const tempFilePaths = res.tempFilePaths;
+      // console.log(tempFilePaths);
       const result = await uni.uploadFile({
-        url: 'http://192.168.31.148:3000/uploadfile',
-        filePath: tempFilePaths[0],
+        url: 'http://192.168.3.1:3000/uploadfile',
+        files: [],
         name: 'file',
         formData: {
           'user': 'test'
