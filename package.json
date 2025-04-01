@@ -33,9 +33,10 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "copy-files": "node ./build/copy-runtime.js",
+    "copy-files": "node ./scripts/copy-runtime.js",
     "build-and-copy": "npm run build:harmony && npm run copy-files",
-    "add-next": "node ./build/pnpm-add-next.js"
+    "add-next": "node ./scripts/pnpm-add-next.js",
+    "copy-src-to-hbuilderx": "node ./scripts/copy-src-to-hbuilderx.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4050620250312001",
@@ -63,9 +64,11 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4050620250312001",
     "@dcloudio/uni-stacktracey": "3.0.0-4050620250312001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4050620250312001",
-    "@types/webpack-env": "^1.18.4",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.28",
+    "@types/webpack-env": "^1.18.4",
     "@vue/runtime-core": "^3.5.13",
+    "fs-extra": "^11.3.0",
     "sass": "^1.85.1",
     "sass-loader": "10.1.1",
     "typescript": "^5.4.2",
