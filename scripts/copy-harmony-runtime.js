@@ -1,10 +1,12 @@
-const a = "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-now-cli/dist/build/app-harmony"
-const b = "/Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/entry/src/main/resources/resfile/apps/HBuilder/www"
 
 // 写一个脚本，把 a 文件夹下的所有文件拷贝到 b 文件夹下
 
 const fs = require('fs');
 const path = require('path');
+const { Repository } = require('./config/config.js');
+const a = path.join(__dirname, '../dist/build/app-harmony')
+const b = Repository.runtime_harmony
+
 
 function copyFiles(src, dest) {
     if (!fs.existsSync(dest)) {

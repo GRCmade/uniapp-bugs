@@ -11,7 +11,8 @@ const DefaultRepository = {
   dev: "/Users/gaoruicheng/Documents/DcloudProject/uni-app-dev",
   hbuilderx_alpha: "/Applications/HBuilderX-Alpha.app/Contents/HBuilderX",
   hbuilderx_vue3_path: "/plugins/uniapp-cli-vite/node_modules/@dcloudio",
-  hbuilderx_vue2_path: "/plugins/uniapp-cli/node_modules/@dcloudio"
+  hbuilderx_vue2_path: "/plugins/uniapp-cli/node_modules/@dcloudio",
+  runtime_harmony: "/Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/entry/src/main/resources/resfile/apps/HBuilder/www"
 }
 
 // 获取仓库配置
