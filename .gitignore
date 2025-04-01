@@ -21,3 +21,4 @@ dist
 *.sw?
 
 now-hbuilderx/unpackage
+scripts/config/local-config.js

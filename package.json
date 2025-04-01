@@ -36,7 +36,8 @@
     "copy-files": "node ./scripts/copy-runtime.js",
     "build-and-copy": "npm run build:harmony && npm run copy-files",
     "add-next": "node ./scripts/pnpm-add-next.js",
-    "copy-src-to-hbuilderx": "node ./scripts/copy-src-to-hbuilderx.js"
+    "copy-src-to-hbuilderx": "node ./scripts/copy-src-to-hbuilderx.js",
+    "source": "node ./scripts/copy-source.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4050620250312001",
