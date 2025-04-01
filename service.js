@@ -91,10 +91,28 @@ app.get('/api/data', (req, res) => {
 
 // 处理文件上传
 app.post('/uploadfile', upload.single('file'), (req, res) => {
+  console.log(req.file);
   res.send({
     message: 'File uploaded successfully',
     filename: req.file.filename
   });
+});
+
+// 上传多个文件
+app.post('/uploadfiles', upload.array('file', 10), (req, res) => {
+  try {
+    console.log("files", req.files);
+    res.send({
+      message: 'Files uploaded successfully',
+      filenames: req.files.map(file => file.filename)
+    });
+  } catch (error) {
+    console.error("上传文件错误:", error);
+    res.status(400).send({
+      message: '文件上传失败',
+      error: error.message
+    });
+  }
 });
 
 // 处理文件上传并转换为 base64 编码
@@ -224,6 +242,22 @@ app.get('/download/senfile', (req, res) => {
 });
 
 app.use('/file', express.static(path.join(__dirname, 'file')));
+
+// 添加错误处理中间件
+app.use((err, req, res, next) => {
+  if (err instanceof multer.MulterError) {
+    if (err.code === 'LIMIT_UNEXPECTED_FILE') {
+      return res.status(400).send({
+        message: '字段名称错误。对于多文件上传，请使用字段名 "files"'
+      });
+    }
+    return res.status(400).send({
+      message: '文件上传错误',
+      error: err.message
+    });
+  }
+  next(err);
+});
 
 server.listen(port, () => {
   const localIP = getLocalIPAddress();
