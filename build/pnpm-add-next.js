@@ -14,7 +14,7 @@ const rootDir = path.resolve(__dirname, '..');
 // package.json 文件路径
 const packageJsonPath = path.join(rootDir, 'package.json');
 // uni-app-next 本地路径
-const uniAppNextPath = '/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages';
+const uniAppNextPath = '/Volumes/valum/Dcloud/uni-app-next/packages';
 
 // 读取 package.json 文件
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
