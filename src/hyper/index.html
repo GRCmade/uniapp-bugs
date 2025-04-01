@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文件上传示例</title>
+    <style>
+      .upload-container {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .progress-bar {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+      .progress {
+        height: 20px;
+        background-color: #4caf50;
+        border-radius: 4px;
+        width: 0%;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+      }
+      .status {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="upload-container">
+      <h2>文件上传示例</h2>
+      <input type="file" id="fileInput" title="请选择一个文件" />
+      <button onclick="uploadFile()">上传文件</button>
+      <button onclick="uploadEmptyFile()">发送空文件</button>
+      <div class="progress-bar">
+        <div class="progress" id="progress">0%</div>
+      </div>
+      <div class="status" id="status"></div>
+    </div>
+
+    <script>
+      function uploadFile() {
+        const fileInput = document.getElementById("fileInput");
+        const progressBar = document.getElementById("progress");
+        const statusDiv = document.getElementById("status");
+
+        if (!fileInput.files.length) {
+          statusDiv.textContent = "请选择一个文件";
+          return;
+        }
+
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("user", "test");
+
+        const xhr = new XMLHttpRequest();
+
+        // 监听上传进度
+        xhr.upload.addEventListener("progress", function (e) {
+          if (e.lengthComputable) {
+            const percentComplete = Math.round((e.loaded / e.total) * 100);
+            progressBar.style.width = percentComplete + "%";
+            progressBar.textContent = percentComplete + "%";
+          }
+        });
+
+        // 监听上传完成事件
+        xhr.addEventListener("load", function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            statusDiv.textContent = "上传成功！";
+            statusDiv.style.color = "green";
+            console.log("上传成功，服务器响应：", xhr.responseText);
+          } else {
+            statusDiv.textContent = "上传失败：" + xhr.statusText;
+            statusDiv.style.color = "red";
+            console.error("上传失败：", xhr.statusText);
+          }
+        });
+
+        // 监听上传错误
+        xhr.addEventListener("error", function () {
+          statusDiv.textContent = "网络错误，上传失败";
+          statusDiv.style.color = "red";
+          console.error("网络错误，上传失败");
+        });
+
+        // 打开连接并发送数据
+        xhr.open("POST", "http://192.168.3.1:3000/uploadfile", true);
+        xhr.send(formData);
+
+        statusDiv.textContent = "正在上传...";
+        progressBar.style.width = "0%";
+        progressBar.textContent = "0%";
+      }
+
+      function uploadEmptyFile() {
+        const progressBar = document.getElementById("progress");
+        const statusDiv = document.getElementById("status");
+        
+        const formData = new FormData();
+        formData.append("user", "test");
+        // 发送空的文件数组
+        formData.append("files", JSON.stringify([]));
+        
+        const xhr = new XMLHttpRequest();
+
+        // 监听上传进度
+        xhr.upload.addEventListener("progress", function (e) {
+          if (e.lengthComputable) {
+            const percentComplete = Math.round((e.loaded / e.total) * 100);
+            progressBar.style.width = percentComplete + "%";
+            progressBar.textContent = percentComplete + "%";
+          }
+        });
+
+        // 监听上传完成事件
+        xhr.addEventListener("load", function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            statusDiv.textContent = "空文件请求发送成功！";
+            statusDiv.style.color = "green";
+            console.log("空文件请求发送成功，服务器响应：", xhr.responseText);
+          } else {
+            statusDiv.textContent = "请求失败：" + xhr.statusText;
+            statusDiv.style.color = "red";
+            console.error("请求失败：", xhr.statusText);
+          }
+        });
+
+        // 监听上传错误
+        xhr.addEventListener("error", function () {
+          statusDiv.textContent = "网络错误，请求失败";
+          statusDiv.style.color = "red";
+          console.error("网络错误，请求失败");
+        });
+
+        // 打开连接并发送数据
+        xhr.open("POST", undefined, true);
+        xhr.send(formData);
+
+        statusDiv.textContent = "正在发送请求...";
+        progressBar.style.width = "0%";
+        progressBar.textContent = "0%";
+      }
+    </script>
+  </body>
+</html>
