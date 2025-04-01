@@ -24,13 +24,13 @@ const paths = {
     base: Repository.dev,
     resource: path.join(Repository.dev, "packages", name),
     target: path.join(Repository.hbuilderx_alpha, Repository.hbuilderx_vue2_path, name),
-    command: `npm run build:uni-${platform}`
+    command: `npm run build:${name}`
   },
   3: {
     base: Repository.next,
     resource: path.join(Repository.next, "packages", name),
     target: path.join(Repository.hbuilderx_alpha, Repository.hbuilderx_vue3_path, name),
-    command: `npm run build uni-${platform}`
+    command: `npm run build ${name}`
   }
 }[vueVersion];
 
