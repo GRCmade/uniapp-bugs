@@ -6,6 +6,8 @@
  * 之后，切换到该分支
  * 最后，提交该分支
  * 
+ * 在执行这个脚本之前，执行 npm run copy-src-to-hbuilderx 命令
+ * 
  * 提交的信息，就是 youtrack.json 文件中的 branch 字段
  * 提供一个默认参数
  * 如果什么也不传，就上传所有的更改,并且推送到远程分支
@@ -64,6 +66,14 @@ function branchExists(branch) {
 
 // 主要逻辑
 function main() {
+  // 先执行 npm run copy-src-to-hbuilderx 命令
+  console.log('执行 npm run copy-src-to-hbuilderx 命令...');
+  if (!execCommand('npm run copy-src-to-hbuilderx')) {
+    console.error('执行 npm run copy-src-to-hbuilderx 失败，退出程序');
+    process.exit(1);
+  }
+  console.log('复制源代码到 HBuilderX 完成');
+
   console.log(`处理分支: ${branchName}`);
 
   // 检查分支是否存在
