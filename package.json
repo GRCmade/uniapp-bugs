@@ -36,7 +36,8 @@
     "copy-harmony-runtime": "npm run build:harmony && node ./scripts/copy-harmony-runtime.js",
     "copy-src-to-hbuilderx": "node ./scripts/copy-src-to-hbuilderx.js",
     "copy-source": "node ./scripts/copy-source.js",
-    "pnpm-add-next": "node ./scripts/pnpm-add-next.js"
+    "pnpm-add-next": "node ./scripts/pnpm-add-next.js",
+    "git-new-branch": "node ./scripts/git-new-branch.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4050620250312001",

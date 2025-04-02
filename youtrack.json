@@ -1,9 +1,10 @@
 {
-	"name": "uniapp-bugs",
-	"binding_branch":"",
-	"properity": {
-		"project": "UB",
-		"platforms": [""],
-		"url":""
-	}
+  "name": "uniapp-bugs",
+  "branch": "",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": [""],
+    "url": ""
+  }
 }
