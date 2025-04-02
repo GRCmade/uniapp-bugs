@@ -24,7 +24,7 @@ jobs:
           rm -rf ./.* || true
           
           # 直接克隆当前分支，使用浅克隆加速
-          git clone --depth=1 --single-branch --branch "$BRANCH_NAME" "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" .
+          git clone --depth=1 --single-branch --branch "$BRANCH_NAME" "git@github.com:$GITHUB_REPOSITORY.git" .
           
           # 设置 git 配置
           git config user.name "GitHub Action"
@@ -65,7 +65,7 @@ jobs:
       - name: Sync to main branch
         run: |
           BRANCH_NAME=$(echo "$GITHUB_REF" | sed 's/refs\/heads\///')
-          REPO_URL="https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+          REPO_URL="git@github.com:$GITHUB_REPOSITORY.git"
 
           # 检查远程是否存在 main 分支
           if git ls-remote --heads "$REPO_URL" main | grep -q 'refs/heads/main'; then
