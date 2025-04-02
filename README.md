@@ -1,11 +1,9 @@
 ======== README.md ========
 
-# uniapp-bugs 的 template-cli 模板 now-cli
-> uniapp-bugs https://github.com/GRCmade/uniapp-bugs
+# 计算属性不变导致this.$nextTick不被回调
 
-链接 next 仓库
+在页面上面有一个 nexttick 在微信小程序上不触发，在 H5 上触发
 
-# 问题
-
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/picgo/20250402110006.png)
 
 ======== END ========

@@ -9,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
     "types": [
       "@dcloudio/types",
       "webpack-env"
