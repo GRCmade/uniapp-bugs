@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "binding_branch": "",
+  "branch": "mp-weixin-nexttick-bug",
+  "properity": {
+    "project": "UB",
+    "platforms": ["mp-weixin"],
+    "url": "https://github.com/dcloudio/uni-app/issues/5374"
+  }
+}
