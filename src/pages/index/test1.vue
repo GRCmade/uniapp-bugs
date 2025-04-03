@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<view @click="jump">界面2</view>
 	</view>
 </template>
 
@@ -12,7 +12,11 @@
 			}
 		},
 		methods: {
-			
+			jump(){
+				uni.navigateTo({
+					url:'/pages/index/index'
+				})
+			}
 		}
 	}
 </script>

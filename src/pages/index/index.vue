@@ -1,18 +1,18 @@
 <template>
-  <view>
-    <button @click="click">click 123 </button>
-    <!-- <uni-badge text="1"></uni-badge> -->
-    <com></com>
-  </view>
+	<view>
+		<view @click="jump">界面1</view>
+	</view>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-const str = ref<string>('123')
-const click = () => {
-  console.log('click', str.value)
-}
+<script>
+	
+	export default {
+		methods: {
+			jump(){
+				uni.navigateTo({
+					url:'/pages/index/test1'
+				})
+			}
+		},
+	};
 </script>
-
-
-<style></style>

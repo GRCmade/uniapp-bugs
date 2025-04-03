@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "",
+  "branch": "ios-titleview-not-show",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": [""],
-    "url": ""
+    "platforms": ["ios"],
+    "url": "https://ask.dcloud.net.cn/question/207691"
   }
 }
