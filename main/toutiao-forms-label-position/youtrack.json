@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "toutiao-forms-label-position",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["mp-toutiao"],
+    "url": "https://ask.dcloud.net.cn/question/207710"
+  }
+}
