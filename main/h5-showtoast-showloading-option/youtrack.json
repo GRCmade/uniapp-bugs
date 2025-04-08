@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "h5-showtoast-showloading-option",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["h5"],
+    "url": "https://github.com/dcloudio/uni-app/issues/4430"
+  }
+}
