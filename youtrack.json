@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "",
+  "branch": "ios-movable-view-change",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": [""],
-    "url": ""
+    "platforms": ["ios", "mp-weixin"],
+    "url": "https://github.com/dcloudio/uni-app/issues/5383"
   }
 }
