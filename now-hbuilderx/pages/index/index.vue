@@ -1,18 +1,16 @@
 <template>
-  <view>
-    <button @click="click">click 123 </button>
-    <!-- <uni-badge text="1"></uni-badge> -->
-    <com></com>
-  </view>
+  <com v-if="false" />
+  <com-slot :value="1">
+    <com />
+  </com-slot>
+  <com-slot :value="2">
+    <com />
+  </com-slot>
+  <com-slot :value="3">
+    <com />
+  </com-slot>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-const str = ref<string>('123')
-const click = () => {
-  console.log('click', str.value)
-}
+
 </script>
-
-
-<style></style>

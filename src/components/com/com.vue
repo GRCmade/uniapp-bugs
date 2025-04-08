@@ -1,12 +1,13 @@
 <template>
-  <div>
-    com
-  </div>
+  <view>console mounted</view>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+import {
+  onMounted
+} from 'vue';
+
+onMounted(() => {
+  console.info('onMounted');
+});
 </script>
-
-<style scoped>
-
-</style>
