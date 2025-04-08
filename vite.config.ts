@@ -8,5 +8,17 @@ export default defineConfig({
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
-  }
+  },
+  // build: {
+  //   minify: 'terser',
+  //   terserOptions: {
+  //     compress: {
+  //       drop_console: true,
+  //       drop_debugger: true
+  //     },
+  //     format: {
+  //       comments: false
+  //     }
+  //   }
+  // }
 }) 
