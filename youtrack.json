@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "",
+  "branch": "mp-weixin-com-clikstop",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": [""],
-    "url": ""
+    "platforms": ["mp-weixin"],
+    "url": "https://github.com/dcloudio/uni-app/issues/5385"
   }
 }
