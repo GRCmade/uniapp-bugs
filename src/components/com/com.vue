@@ -7,9 +7,6 @@
 <script>
 export default {
   name: 'com',
-  options: {
-    virtualHost: true
-  },
   props: {
     msg: {
       type: String,
