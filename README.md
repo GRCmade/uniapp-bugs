@@ -2,7 +2,9 @@
 
 # 鸿蒙x中的部分内容
 
-# 鸿蒙x中的编译内容
+# 鸿蒙x中的部分问题
+
+
 
 ## 1. v-for v-if 编译之后的内容
 
@@ -67,7 +69,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
 
 
 
-修改的方法是，在底层，修改了 createElement 相关方法，在运行时，将相关的 元素，转换成了 CustomFrameNode
+在底层，修改了 createElement 相关方法，在运行时，将相关的 元素，转换成了 CustomFrameNode
 
 
 
@@ -81,7 +83,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
 
 ## 2. 层叠样式示例
 
-注：目前不支持ID选择器，类选择器生效
+
 
 ```css
 /* 1. 选择器特异性演示 */
@@ -105,7 +107,15 @@ view {
 
 ![image-20250409143910975](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/picgo/image-20250409143910975.png)
 
-在样式的解析中，.class 的内容，都会解析到 style
+
+
+这个只能看到最后展示在页面上的效果
+
+
+
+
+
+在样式的解析中，class 的内容，都会解析到 style
 
 runtime/src/main/ets/runtime/dom/UniElement.ets
 
@@ -161,7 +171,7 @@ runtime/src/main/ets/runtime/dom/UniElement.ets
 }
 
 .box.animated {
-	transform: rotate(360deg) scale(1.5) translateX(100px);
+	transform: rotate(290deg) scale(1.5) translateX(100px);
 }
 
 .toggle-btn {
@@ -239,6 +249,12 @@ runtime/src/main/ets/runtime/dom/UniElement.ets
 ```
 
 ![image-20250409150045322](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/picgo/image-20250409150045322.png)
+
+
+
+在本例的代码中，旋转了290度，可以看到，在最后的结果中 angle 是 290
+
+![image-20250409170713865](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/picgo/image-20250409170713865.png)
 
 
 
@@ -350,7 +366,7 @@ margin 这个属性比较特殊，在arkui的 属性检查中，不会展示有 
 
 ![image-20250409155020265](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/picgo/image-20250409155020265.png)
 
-这个 margin 在源码中，主要是作用于 元素的位置等信息
+这个 margin 在源码中，主要是作用于 元素的位置等信息，会经由排版器转换成为其它非 margin 的内容，转化成 x,y 和 元素大小等信息， 以此来构成相对的 margin 效果
 
 ```ts
   updateNativeNodeStyle(key: string, value: Object | undefined, commonAttribute?: CommonAttribute): void {
@@ -422,6 +438,8 @@ x 是 21 ， y 是 49.77
 可以看见，y是相同的
 
 在左侧有 margin较大，因此就会把x 增大，同时长度也会发生变化
+
+
 
 
 

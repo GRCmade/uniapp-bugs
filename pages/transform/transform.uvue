@@ -45,7 +45,7 @@
 }
 
 .box.animated {
-	transform: rotate(360deg) scale(1.5) translateX(100px);
+	transform: rotate(290deg) scale(1.5) translateX(100px);
 }
 
 .toggle-btn {

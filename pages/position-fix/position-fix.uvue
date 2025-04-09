@@ -1,4 +1,7 @@
 <template>
+	<!-- #ifdef APP -->
+	<scroll-view style="flex:1">
+	<!-- #endif -->
 		<view class="container">
 			<view class="content">
 				<view class="item" v-for="(item, index) in 20" :key="index">列表项 {{index + 1}}</view>
@@ -6,6 +9,9 @@
 			<view class="fixed-top">顶部固定区域</view>
 			<view class="fixed-bottom">底部固定区域</view>
 		</view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif --> 
 </template>
 
 <script>
