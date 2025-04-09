@@ -1,0 +1,58 @@
+<template>
+	<!-- #ifdef APP -->
+	<scroll-view style="flex:1">
+	<!-- #endif -->
+		<view class="container">
+			<view class="box" :class="{ 'animated': isAnimating }" @click="toggleAnimation"></view>
+			<button @click="toggleAnimation" class="toggle-btn">{{ isAnimating ? '停止' : '开始' }}动画</button>
+		</view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif -->
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				isAnimating: false
+			}
+		},
+		methods: {
+			toggleAnimation() {
+				this.isAnimating = !this.isAnimating;
+			}
+		}
+	}
+</script>
+
+<style>
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	background-color: #007AFF;
+	margin-bottom: 30px;
+	transition: transform 1.5s ease-in-out;
+	transform: rotate(0deg) scale(1) translateX(0);
+}
+
+.box.animated {
+	transform: rotate(360deg) scale(1.5) translateX(100px);
+}
+
+.toggle-btn {
+	background-color: #007AFF;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+}
+</style>

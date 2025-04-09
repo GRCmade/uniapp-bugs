@@ -5,6 +5,41 @@
 			"style": {
 				"navigationBarTitleText": "uni-app x"
 			}
+		},
+		{
+			"path" : "pages/for-if/for-if",
+			"style" : 
+			{
+				"navigationBarTitleText" : "for-if"
+			}
+		},
+		{
+			"path" : "pages/cascading-style/cascading-style",
+			"style" : 
+			{
+				"navigationBarTitleText" : "cascading-style"
+			}
+		},
+		{
+			"path" : "pages/transform/transform",
+			"style" : 
+			{
+				"navigationBarTitleText" : "transform"
+			}
+		},
+		{
+			"path" : "pages/position-fix/position-fix",
+			"style" : 
+			{
+				"navigationBarTitleText" : "position-fix"
+			}
+		},
+		{
+			"path" : "pages/margin/margin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "margin"
+			}
 		}
 	],
 	"globalStyle": {

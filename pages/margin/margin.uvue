@@ -1,0 +1,122 @@
+<template>
+	<!-- #ifdef APP -->
+	<scroll-view style="flex:1">
+	<!-- #endif -->
+		<view class="container">
+			<view class="title">Margin 示例</view>
+			
+			<view class="section">
+				<view class="section-title">margin: 10px</view>
+				<view class="box margin-10">
+					<text>margin: 10px (四周均为10px)</text>
+				</view>
+			</view>
+			
+			<view class="section">
+				<view class="section-title">margin: 10px 20px</view>
+				<view class="box margin-10-20">
+					<text>margin: 10px 20px (上下10px，左右20px)</text>
+				</view>
+			</view>
+			
+			<view class="section">
+				<view class="section-title">margin: 10px 20px 30px 40px</view>
+				<view class="box margin-10-20-30-40">
+					<text>margin: 10px 20px 30px 40px (上10px，右20px，下30px，左40px)</text>
+				</view>
+			</view>
+			
+			<view class="section">
+				<view class="section-title">单独设置margin</view>
+				<view class="box margin-top">
+					<text>margin-top: 20px</text>
+				</view>
+				<view class="box margin-right">
+					<text>margin-right: 20px</text>
+				</view>
+				<view class="box margin-bottom">
+					<text>margin-bottom: 20px</text>
+				</view>
+				<view class="box margin-left">
+					<text>margin-left: 20px</text>
+				</view>
+			</view>
+		</view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif -->
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+.container {
+	padding: 15px;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.section {
+	margin-bottom: 30px;
+	border: 1px dashed #ccc;
+	padding: 10px;
+}
+
+.section-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.box {
+	background-color: #f0f0f0;
+	padding: 15px;
+	border: 1px solid #ddd;
+}
+
+/* margin 示例 */
+.margin-10 {
+	margin: 10px;
+}
+
+.margin-10-20 {
+	margin: 10px 20px;
+}
+
+.margin-10-20-30-40 {
+	margin: 10px 20px 30px 40px;
+}
+
+/* 单独设置margin */
+.margin-top {
+	margin-top: 20px;
+}
+
+.margin-right {
+	margin-right: 20px;
+}
+
+.margin-bottom {
+	margin-bottom: 20px;
+}
+
+.margin-left {
+	margin-left: 20px;
+}
+</style>

@@ -1,0 +1,23 @@
+<template>
+	<view>
+		<button @click="click">yuhe</button>
+		<view v-for="(item,index) in data" :key="index">
+			<text v-if="index != 2">{{item}}</text>
+		</view>
+	</view>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				data:['0','1','2','3','4']
+			}
+		},
+		methods: {
+			click() {
+				
+			}
+		}
+	}
+</script>
+<style></style>

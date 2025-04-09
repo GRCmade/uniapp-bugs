@@ -1,17 +1,27 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<view v-for="(item,index) in data" :key="index" >
+			<button @click="nav(item)">{{item}}</button>
+		</view>
 	</view>
 </template>
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				data:['for-if','cascading-style','transform','position-fix','margin']
+			}
 		},
 		methods: {
 			click() {
 				
+			},
+			nav(item:string){
+				uni.navigateTo({
+					url:`/pages/${item}/${item}`
+				})
 			}
+			
 		}
 	}
 </script>
