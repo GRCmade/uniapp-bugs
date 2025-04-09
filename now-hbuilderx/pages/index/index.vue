@@ -1,12 +1,12 @@
 <template>
   <view>
     <!-- <uni-badge text="1"></uni-badge> -->
-    <com @click.native="handler"></com>
+    <com ></com>
     <view class="outer" @click="outerClick">
       外层元素
       <button @click.stop="innerClick">阻止冒泡按钮</button>
       <button @click="normalClick">普通按钮</button>
-      <com @click.native.stop="handler"></com>
+      <com ></com>
     </view>
 
   </view>
@@ -24,10 +24,7 @@ export default {
       console.log('外层元素被点击了')
     },
     
-    handler() {
-      console.log('组件被点击了')
-    },
-    
+
     innerClick() {
       console.log('内层按钮被点击了，不会触发外层事件')
     },

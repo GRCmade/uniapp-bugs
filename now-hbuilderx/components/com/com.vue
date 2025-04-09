@@ -1,6 +1,6 @@
 <template>
-  <div>
-    com 组件(自定义组件)
+  <div @click.stop="handler">
+    com 组件(自定义组件1)
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     msg: {
       type: String,
       default: '默认消息'
+    }
+  },
+  methods: {
+    handler() {
+      console.log('com 组件被点击了')
     }
   }
 }
