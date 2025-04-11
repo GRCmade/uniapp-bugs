@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "",
+  "branch": "app-condition-query",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": [""],
-    "url": ""
+    "platforms": ["android", "ios", "mp-weixin"],
+    "url": "https://github.com/dcloudio/uni-app/issues/4375"
   }
 }
