@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "xhs-button-open-type",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["mp-xhs"],
+    "url": ""
+  }
+}
