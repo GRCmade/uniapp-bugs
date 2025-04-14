@@ -10,9 +10,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 const click = () => {
-  uni.navigateTo({
-    url: '/subPackage/pages/index'
-  })
+  
 }
 </script>
 
