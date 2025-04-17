@@ -1,16 +1,18 @@
 <template>
   <view>
     <button @click="click">click 123 </button>
-    <!-- <uni-badge text="1"></uni-badge> -->
-    <com></com>
+
   </view>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-const str = ref<string>('123')
+type Style = {
+	name:string
+}
+const styles = ref<Style[]>([]);
 const click = () => {
-  console.log('click', str.value)
+  console.log(styles.value)
 }
 </script>
 

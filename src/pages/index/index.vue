@@ -1,7 +1,5 @@
 <template>
   <view>
-    <!-- <uni-badge text="1"></uni-badge> -->
-    <!-- <com></com> -->
     <button @click="click">click 123 </button>
 
   </view>
@@ -9,8 +7,12 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+type Style = {
+	name:string
+}
+const styles = ref<Style[]>([]);
 const click = () => {
-  
+  console.log(styles.value)
 }
 </script>
 
