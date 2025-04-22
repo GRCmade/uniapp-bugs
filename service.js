@@ -8,6 +8,10 @@ const http = require("http");
 const WebSocket = require("ws");
 const multer = require("multer");
 const fs = require('fs');
+const cookieParser = require('cookie-parser'); // 用于解析 Cookie
+
+app.use(cookieParser());
+
 
 // 设置 multer 存储配置
 const storage = multer.diskStorage({
@@ -79,14 +83,32 @@ const exampleObject = {
 };
 
 
+// 设置 cookie 的接口
+app.get('/api/set-cookie', (req, res) => {
+  res.cookie('myCookie', 'cookieValue123', {
+    httpOnly: true, // 仅服务器可访问
+    maxAge: 1000 * 60 * 500 // 5 分钟过期
+  });
+  res.send('Cookie has been set!');
+});
+
+app.get('/api/cookie-data', (req, res) => {
+  // 打印 cookie 内容
+  console.log('Cookies received:', req.cookies);
+ res.send("cookie-data"); // 返回字符串
+});
+
 app.get('/api/data', (req, res) => {
-  // 手动转换为字符串
-  const jsonString = JSON.stringify(exampleObject) + "1";
-  console.log(jsonString+"111",typeof jsonString);
+  // 打印 cookie 内容
+  console.log('Cookies received:', req.cookies);
   
-  // 设置响应头，并返回字符串
-  res.setHeader('Content-Type', "text/plain");
-  res.send(jsonString); // 返回字符串
+ // 手动转换为字符串
+ const jsonString = JSON.stringify(exampleObject) + "1";
+ console.log(jsonString+"111",typeof jsonString);
+ 
+ // 设置响应头，并返回字符串
+ res.setHeader('Content-Type', "text/plain");
+ res.send(jsonString); // 返回字符串
 });
 
 // 处理文件上传
