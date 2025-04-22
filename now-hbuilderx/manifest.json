@@ -1,5 +1,5 @@
 {
-    "name" : "harmony",
+    "name" : "uniapp-bugs-now-cli",
     "appid" : "__UNI__3F0B853",
     "description" : "",
     "versionName" : "1.0.0",
@@ -68,7 +68,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx84abd7c997413458",
         "setting" : {
             "urlCheck" : false
         },
@@ -107,5 +107,13 @@
                 }
             }
         }
+    },
+    // ,"amap": {
+    //   "key": "dfbba5195248d28ab9518db25befef44",
+    //   "securityJsCode": "b4d21b9b71494157191f5f4bf3bb1e20",
+    //   "serviceHost": ""
+    // }
+    "mp-xhs" : {
+        "appid" : "649bcf45be816d0051838458"
     }
 }
