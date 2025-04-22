@@ -59,7 +59,7 @@ struct Index {
         .onClick(async () => {
           // 启动小程序
           const mp = openUniMP(this.mpId, {
-            redirectPath: 'pages/index/index',
+            redirectPath: 'pages/index/index?data=666',
             extraData:{
               data : 'data from harmonyos'
             }
