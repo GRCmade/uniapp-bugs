@@ -22,3 +22,6 @@ dist
 
 now-hbuilderx/unpackage
 scripts/config/local-config.js
+
+
+src/wxcomponents/vant/lib/*

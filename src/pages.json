@@ -11,7 +11,12 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "uni-app",
+        "usingComponents": {
+          "van-button":"/wxcomponents/vant/dist/button/index",
+          "van-cell-group":"/wxcomponents/vant/dist/cell-group/index",
+          "van-field":"/wxcomponents/vant/dist/field/index"
+        }
       }
     },
     {
