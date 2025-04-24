@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "",
+  "branch": "h5-choose-fail",
   "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app"],
-    "url": ""
+    "url": "https://github.com/dcloudio/uni-app/issues/4731"
   }
 }
