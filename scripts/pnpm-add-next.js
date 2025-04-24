@@ -8,13 +8,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { getRepository } = require('./config/config.js')
 
 // 项目根目录路径
 const rootDir = path.resolve(__dirname, '..');
 // package.json 文件路径
 const packageJsonPath = path.join(rootDir, 'package.json');
 // uni-app-next 本地路径
-const uniAppNextPath = '/Volumes/valum/Dcloud/uni-app-next/packages';
+const uniAppNextPath = path.join(getRepository().next, 'packages');
 
 // 读取 package.json 文件
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -49,7 +50,7 @@ Object.keys(dcloudDependencies).forEach(dep => {
   const localPackagePath = `${uniAppNextPath}/${packageName}`;
   // 链接格式路径
   const linkPath = `link:${localPackagePath}`;
-  
+
   // 检查本地包路径是否存在
   if (fs.existsSync(localPackagePath)) {
     try {
@@ -61,7 +62,7 @@ Object.keys(dcloudDependencies).forEach(dep => {
         packageJson.devDependencies[dep] = linkPath;
         console.log(`已将 devDependencies 中的 ${dep} 更新为 ${linkPath}`);
       }
-      
+
       // 更新 resolutions
       packageJson.resolutions[dep] = linkPath;
       console.log(`已将 ${dep} 添加到 resolutions: ${linkPath}`);

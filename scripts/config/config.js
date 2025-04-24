@@ -33,5 +33,6 @@ const Repository = getRepository();
 console.log(Repository);
 
 module.exports = {
-  Repository
+  Repository,
+  getRepository
 }
