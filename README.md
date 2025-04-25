@@ -6,4 +6,5 @@
 
 修复vue3 : https://github.com/dcloudio/uni-app/commit/36e9839860840c286ec83ac4f1773397ea0724dd
 修复vue2 : bf52f5e8c818f079289d36afbd0ede4a29970299
+
 ======== END ========
