@@ -33,11 +33,10 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "copy-harmony-runtime": "npm run build:harmony && node ./scripts/copy-harmony-runtime.js",
-    "copy-src-to-hbuilderx": "node ./scripts/copy-src-to-hbuilderx.js",
-    "copy-source": "node ./scripts/copy-source.js",
-    "pnpm-add-next": "node ./scripts/pnpm-add-next.js",
-    "git-new-branch": "node ./scripts/git-new-branch.js"
+    "copy-harmony-runtime": "npm run build:harmony && node ../scripts/copy-harmony-runtime.js",
+    "copy-src-to-hbuilderx": "node ../scripts/copy-src-to-hbuilderx.js",
+    "copy-source": "node ../scripts/copy-source.js",
+    "pnpm-add-next": "node ../scripts/pnpm-add-next.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4050720250324001",

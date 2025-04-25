@@ -1,7 +1,7 @@
 /**
  * 写一个脚本
  * 把 package.json 中的 dependencies 中的 @dcloudio 的 依赖
- * 执行：- pnpm add @dcloudio/...@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/...
+ * 执行：- yarn add @dcloudio/...@/Users/gaoruicheng/Documents/DcloudProject/uni-app-next/packages/...
  * 并且 加入到 package.json 的 resolutions 中
  */
 
@@ -11,11 +11,11 @@ const { execSync } = require('child_process');
 const { getRepository } = require('./config/config.js')
 
 // 项目根目录路径
-const rootDir = path.resolve(__dirname, 'vue3');
+const rootDir = path.resolve(__dirname, 'vue2');
 // package.json 文件路径
 const packageJsonPath = path.join(rootDir, 'package.json');
 // uni-app-next 本地路径
-const uniAppNextPath = path.join(getRepository().next, 'packages');
+const uniAppNextPath = path.join(getRepository().dev, 'packages');
 
 // 读取 package.json 文件
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -78,11 +78,11 @@ Object.keys(dcloudDependencies).forEach(dep => {
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2), 'utf8');
 console.log('已更新 package.json 文件');
 
-// 执行 pnpm install 以应用更改
+// 执行 yarn install 以应用更改
 try {
-  console.log('执行 pnpm install 以应用更改...');
-  execSync('pnpm install', { stdio: 'inherit', cwd: rootDir });
-  console.log('pnpm install 执行完成');
+  console.log('执行 yarn install 以应用更改...');
+  execSync('yarn install', { stdio: 'inherit', cwd: rootDir });
+  console.log('yarn install 执行完成');
 } catch (error) {
-  console.error('pnpm install 执行失败:', error.message);
+  console.error('yarn install 执行失败:', error.message);
 }
