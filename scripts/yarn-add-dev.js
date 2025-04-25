@@ -11,7 +11,7 @@ const { execSync } = require('child_process');
 const { getRepository } = require('./config/config.js')
 
 // 项目根目录路径
-const rootDir = path.resolve(__dirname, 'vue2');
+const rootDir = path.resolve(__dirname, '../vue2');
 // package.json 文件路径
 const packageJsonPath = path.join(rootDir, 'package.json');
 // uni-app-next 本地路径
@@ -19,6 +19,8 @@ const uniAppNextPath = path.join(getRepository().dev, 'packages');
 
 // 读取 package.json 文件
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+if (fs.existsSync('node_modules')) execSync("rm node_modules")
 
 // 获取所有 @dcloudio 依赖
 const dcloudDependencies = {};
@@ -45,11 +47,12 @@ if (!packageJson.resolutions) {
 // 处理每个 @dcloudio 依赖
 Object.keys(dcloudDependencies).forEach(dep => {
   // 获取包名（去掉 @dcloudio/ 前缀）
+  if (['@dcloudio/uni-template-compiler'].includes(dep)) return
   const packageName = dep.replace('@dcloudio/', '');
   // 本地包路径
   const localPackagePath = `${uniAppNextPath}/${packageName}`;
   // 链接格式路径
-  const linkPath = `link:${localPackagePath}`;
+  const linkPath = `${localPackagePath}/`;
 
   // 检查本地包路径是否存在
   if (fs.existsSync(localPackagePath)) {
@@ -64,7 +67,7 @@ Object.keys(dcloudDependencies).forEach(dep => {
       }
 
       // 更新 resolutions
-      packageJson.resolutions[dep] = linkPath;
+      // packageJson.resolutions[dep] = linkPath;
       console.log(`已将 ${dep} 添加到 resolutions: ${linkPath}`);
     } catch (error) {
       console.error(`处理 ${dep} 失败:`, error.message);

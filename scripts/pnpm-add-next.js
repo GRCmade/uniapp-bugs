@@ -11,7 +11,7 @@ const { execSync } = require('child_process');
 const { getRepository } = require('./config/config.js')
 
 // 项目根目录路径
-const rootDir = path.resolve(__dirname, 'vue3');
+const rootDir = path.resolve(__dirname, '../vue3');
 // package.json 文件路径
 const packageJsonPath = path.join(rootDir, 'package.json');
 // uni-app-next 本地路径
