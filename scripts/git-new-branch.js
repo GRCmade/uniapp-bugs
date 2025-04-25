@@ -84,23 +84,23 @@ function main() {
 
   // 根据参数执行不同的操作
   switch (action) {
-    case 'commit':
+    case 'all':
+      // 提交所有更改并推送到远程
+      console.log('提交所有更改并推送到远程');
+      execCommand('git add .');
+      execCommand(`git commit -m "${branchName}"`);
+      execCommand(`git push -u origin ${branchName}`);
+      break;
+
+    case 'push':
       // 只提交暂存区的更改
       console.log('提交暂存区的更改');
       execCommand(`git commit -m "${branchName}"`);
       break;
 
-    case 'push':
+    default:
       // 提交暂存区并推送
       console.log('提交暂存区的更改并推送到远程');
-      execCommand(`git commit -m "${branchName}"`);
-      execCommand(`git push -u origin ${branchName}`);
-      break;
-
-    default:
-      // 提交所有更改并推送到远程
-      console.log('提交所有更改并推送到远程');
-      execCommand('git add .');
       execCommand(`git commit -m "${branchName}"`);
       execCommand(`git push -u origin ${branchName}`);
       break;
