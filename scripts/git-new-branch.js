@@ -6,7 +6,6 @@
  * 之后，切换到该分支
  * 最后，提交该分支
  * 
- * 在执行这个脚本之前，执行 npm run copy-src-to-hbuilderx 命令
  * 
  * 提交的信息，就是 youtrack.json 文件中的 branch 字段
  * 提供一个默认参数
@@ -66,14 +65,6 @@ function branchExists(branch) {
 
 // 主要逻辑
 function main() {
-  // 先执行 npm run copy-src-to-hbuilderx 命令
-  console.log('执行 npm run copy-src-to-hbuilderx 命令...');
-  if (!execCommand('npm run copy-src-to-hbuilderx')) {
-    console.error('执行 npm run copy-src-to-hbuilderx 失败，退出程序');
-    process.exit(1);
-  }
-  console.log('复制源代码到 HBuilderX 完成');
-
   console.log(`处理分支: ${branchName}`);
 
   // 检查分支是否存在
@@ -93,23 +84,23 @@ function main() {
 
   // 根据参数执行不同的操作
   switch (action) {
-    case 'commit':
+    case 'all':
+      // 提交所有更改并推送到远程
+      console.log('提交所有更改并推送到远程');
+      execCommand('git add .');
+      execCommand(`git commit -m "${branchName}"`);
+      execCommand(`git push -u origin ${branchName}`);
+      break;
+
+    case 'push':
       // 只提交暂存区的更改
       console.log('提交暂存区的更改');
       execCommand(`git commit -m "${branchName}"`);
       break;
 
-    case 'push':
+    default:
       // 提交暂存区并推送
       console.log('提交暂存区的更改并推送到远程');
-      execCommand(`git commit -m "${branchName}"`);
-      execCommand(`git push -u origin ${branchName}`);
-      break;
-
-    default:
-      // 提交所有更改并推送到远程
-      console.log('提交所有更改并推送到远程');
-      execCommand('git add .');
       execCommand(`git commit -m "${branchName}"`);
       execCommand(`git push -u origin ${branchName}`);
       break;
