@@ -20,7 +20,7 @@ const uniAppNextPath = path.join(getRepository().dev, 'packages');
 // 读取 package.json 文件
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
-if (fs.existsSync('node_modules')) execSync("rm node_modules")
+if (fs.existsSync('node_modules')) execSync("rm -rf node_modules")
 
 // 获取所有 @dcloudio 依赖
 const dcloudDependencies = {};
