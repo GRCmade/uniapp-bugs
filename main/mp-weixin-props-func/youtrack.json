@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "mp-weixin-props-func",
   "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app"],
-    "url": ""
+    "url": "https://github.com/dcloudio/uni-app/issues/4156"
   }
 }
