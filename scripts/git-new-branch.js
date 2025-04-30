@@ -101,6 +101,7 @@ function main() {
     default:
       // 提交暂存区并推送
       console.log('提交暂存区的更改并推送到远程');
+      execCommand('git add .');
       execCommand(`git commit -m "${branchName}"`);
       execCommand(`git push -u origin ${branchName}`);
       break;
