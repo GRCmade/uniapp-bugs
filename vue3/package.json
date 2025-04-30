@@ -66,14 +66,14 @@
     "@dcloudio/uni-stacktracey": "3.0.0-alpha-4060320250423001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-4060320250423001",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.11.28",
-    "@types/webpack-env": "^1.18.4",
+    "@types/node": "^20.17.27",
+    "@types/webpack-env": "^1.18.8",
     "@vue/runtime-core": "^3.5.13",
     "fs-extra": "^11.3.0",
     "sass": "^1.85.1",
     "sass-loader": "10.1.1",
-    "typescript": "^5.4.2",
+    "typescript": "^5.8.2",
     "vite": "5.2.8",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.2.8"
   }
 }
