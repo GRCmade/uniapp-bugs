@@ -48,7 +48,9 @@
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
     "yarn-add-dev": "node ../scripts/yarn-add-dev.js",
     "lint": "eslint --ext .js,.ts,.vue src/",
-    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix"
+    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,vue,json,css,scss}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,vue,json,css,scss}\""
   },
   "dependencies": {
     "@dcloudio/uni-app": "^2.0.2-4040520250103001",
@@ -107,7 +109,10 @@
     "eslint-plugin-vue": "^7.20.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "@typescript-eslint/eslint-plugin": "^4.33.0"
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "prettier": "^2.8.8",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "browserslist": [
     "Android >= 4.4",

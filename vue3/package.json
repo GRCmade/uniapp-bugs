@@ -38,7 +38,9 @@
     "copy-source": "node ../scripts/copy-source.js",
     "pnpm-add-next": "node ../scripts/pnpm-add-next.js",
     "lint": "eslint --ext .js,.ts,.vue src/",
-    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix"
+    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,vue,json,css,scss}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,vue,json,css,scss}\""
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-4060320250423001",
@@ -81,6 +83,9 @@
     "eslint-plugin-vue": "^9.21.1",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@typescript-eslint/parser": "^6.21.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0"
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "prettier": "^3.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3"
   }
 }

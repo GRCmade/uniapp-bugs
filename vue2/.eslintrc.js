@@ -8,7 +8,8 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
-    '@vue/typescript/recommended'
+    '@vue/typescript/recommended',
+    'plugin:prettier/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -22,7 +23,8 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vue/no-v-model-argument': 'off',
     '@typescript-eslint/no-empty-function': 'off',
-    'no-empty-function': 'off'
+    'no-empty-function': 'off',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }]
   },
   globals: {
     uni: true,

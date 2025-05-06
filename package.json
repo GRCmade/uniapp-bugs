@@ -14,7 +14,13 @@
     "lint:vue2": "cd vue2 && npm run lint",
     "lint:vue2:fix": "cd vue2 && npm run lint:fix",
     "lint:vue3": "cd vue3 && npm run lint",
-    "lint:vue3:fix": "cd vue3 && npm run lint:fix"
+    "lint:vue3:fix": "cd vue3 && npm run lint:fix",
+    "format": "npm run format:vue2 && npm run format:vue3",
+    "format:vue2": "cd vue2 && npm run format",
+    "format:vue3": "cd vue3 && npm run format",
+    "format:check": "npm run format:check:vue2 && npm run format:check:vue3",
+    "format:check:vue2": "cd vue2 && npm run format:check",
+    "format:check:vue3": "cd vue3 && npm run format:check"
   },
   "author": "",
   "license": "ISC",

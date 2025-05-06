@@ -1,12 +1,7 @@
 <template>
-  <div>
-    com
-  </div>
+  <div>com</div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

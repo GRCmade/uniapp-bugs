@@ -8,7 +8,8 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    '@vue/typescript/recommended'
+    '@vue/typescript/recommended',
+    'plugin:prettier/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2021,
@@ -21,7 +22,10 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/require-default-prop': 'off',
-    'vue/script-setup-uses-vars': 'error'
+    'vue/script-setup-uses-vars': 'error',
+    '@typescript-eslint/no-empty-function': 'off',
+    'no-empty-function': 'off',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }]
   },
   globals: {
     uni: true,
