@@ -3,14 +3,14 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {}
-    },
-    methods: {
-      click() {}
-    }
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    click() {}
   }
+}
 </script>
 
 <style></style>

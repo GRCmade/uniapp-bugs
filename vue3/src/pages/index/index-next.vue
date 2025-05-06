@@ -6,18 +6,18 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {}
-    },
-    methods: {
-      click() {
-        uni.navigateTo({
-          url: '/pages/index/index-next-next'
-        })
-      }
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    click() {
+      uni.navigateTo({
+        url: '/pages/index/index-next-next'
+      })
     }
   }
+}
 </script>
 
 <style></style>

@@ -11,8 +11,24 @@ module.exports = {
   bracketSameLine: false,
   arrowParens: 'avoid',
   htmlWhitespaceSensitivity: 'css',
-  vueIndentScriptAndStyle: true,
+  vueIndentScriptAndStyle: false,
   endOfLine: 'lf',
   proseWrap: 'preserve',
-  embeddedLanguageFormatting: 'auto'
-} 
+  embeddedLanguageFormatting: 'auto',
+  singleAttributePerLine: false,
+  overrides: [
+    {
+      files: '*.vue',
+      options: {
+        parser: 'vue',
+        vueIndentScriptAndStyle: false
+      }
+    },
+    {
+      files: '*.{js,ts}',
+      options: {
+        parser: 'typescript'
+      }
+    }
+  ]
+}

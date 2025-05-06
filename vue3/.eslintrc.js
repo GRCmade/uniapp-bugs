@@ -25,12 +25,27 @@ module.exports = {
     'vue/script-setup-uses-vars': 'error',
     '@typescript-eslint/no-empty-function': 'off',
     'no-empty-function': 'off',
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }]
+    'prettier/prettier': [
+      'error',
+      {
+        vueIndentScriptAndStyle: false
+      }
+    ],
+    'vue/html-indent': ['error', 2],
+    'vue/script-indent': ['error', 2, { baseIndent: 0 }]
   },
   globals: {
     uni: true,
     wx: true,
     plus: true,
     getCurrentPages: true
-  }
-} 
+  },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off'
+      }
+    }
+  ]
+}

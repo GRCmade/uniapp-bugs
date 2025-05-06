@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts" setup>
-  import { test } from '../utils/test.js'
-  const click = () => {
-    test()
-  }
+import { test } from '../utils/test.js'
+const click = () => {
+  test()
+}
 </script>
