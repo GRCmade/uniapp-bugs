@@ -1,0 +1,77 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# uni-app 多平台开发注意事项
+
+本项目支持多平台开发，以下是在使用uni-app进行跨平台开发时的重要注意事项。
+
+## 平台差异说明
+
+uni-app支持多个平台，但各平台间存在差异。开发时应注意:
+
+### 条件编译
+
+使用条件编译区分平台特定代码:
+
+```js
+// #ifdef H5
+H5平台特有代码
+// #endif
+
+// #ifdef MP-WEIXIN
+微信小程序特有代码
+// #endif
+```
+
+参考[vue2/src/pages.json](mdc:vue2/src/pages.json)和[vue3/src/pages.json](mdc:vue3/src/pages.json)中的配置示例。
+
+### API差异
+
+不同平台API支持度不同:
+- 部分API仅在特定平台可用
+- 某些API在不同平台有不同实现
+- 使用条件编译或uni.canIUse()检测API可用性
+
+### 样式差异
+
+- rpx单位: 在不同设备上自适应的响应式尺寸单位
+- 样式隔离: 小程序平台有严格的样式隔离
+- CSS支持度: 不同平台对CSS特性支持不同
+
+参考[vue2/src/uni.scss](mdc:vue2/src/uni.scss)和[vue3/src/uni.scss](mdc:vue3/src/uni.scss)获取统一样式变量。
+
+## 常见平台bug类型
+
+在不同平台上常见的bug类型:
+
+1. 布局渲染不一致
+2. 事件处理差异
+3. API可用性问题
+4. 性能问题
+5. 网络请求差异
+6. 生命周期差异
+7. 页面栈管理差异
+
+## Vue2与Vue3差异
+
+本项目同时支持Vue2和Vue3版本的uni-app开发:
+
+### Vue2特有功能
+- Vuex状态管理
+- Mixin机制
+- Vue.use()插件系统
+
+### Vue3特有功能
+- Composition API
+- setup语法糖
+- TypeScript更好的集成
+- Pinia状态管理
+
+## 测试技巧
+
+1. 针对不同平台分别测试，不要假设跨平台兼容性
+2. 使用真机测试验证小程序和App行为
+3. 针对特定平台bug，创建最小复现用例
+4. 记录环境信息、设备型号和操作系统版本

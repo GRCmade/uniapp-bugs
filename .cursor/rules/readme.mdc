@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+在需要修改 [README.md](mdc:README.md) 这个文件的时候,需要遵循如下规则:
+
+- 不要修改这个文件的结构
+- 这个文件所有的写入在 `======== README.md ========` 和 `======== END ========` 之间进行

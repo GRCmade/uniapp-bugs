@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+在修改 [youtrack.json](mdc:youtrack.json) 这个文件的时候,需要遵循如下规则:
+
+- 不要修改这个文件的结构,只能在对应的 key/value 的value 处修改
+- 其中的 properity 中的 platforms 可以取以下的值
+  harmony
+  h5
+  android
+  ios
+  HbuilderX
+  mp-weixin
+  mp-kuaishou
+  mp-alipay
+  mp-xhs
+  mp-toutiao
+
+- 

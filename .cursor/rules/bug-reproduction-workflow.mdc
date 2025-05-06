@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# uni-app Bug复现工作流程
+
+本项目设计用于复现uni-app框架中的bug。以下是使用此项目进行bug复现的标准工作流。
+
+## Bug复现步骤
+
+1. 根据bug的具体情况，选择在Vue2或Vue3子项目中进行复现
+2. 通过 `npm run git-new-branch` 创建一个新的分支来跟踪此bug（分支名在[youtrack.json](mdc:youtrack.json)中配置）
+3. 在选定的项目中实现最小复现示例
+4. 测试复现结果
+5. 提交代码并推送到远程分支
+
+## Vue2项目结构说明
+
+Vue2项目使用Vue CLI构建，关键目录和文件:
+- 页面文件夹: [vue2/src/pages](mdc:vue2/src/pages)
+- 组件文件夹: [vue2/src/components](mdc:vue2/src/components)
+- 样式设置: [vue2/src/uni.scss](mdc:vue2/src/uni.scss)
+- 构建配置: [vue2/vue.config.js](mdc:vue2/vue.config.js)
+
+## Vue3项目结构说明
+
+Vue3项目使用Vite构建，关键目录和文件:
+- 页面文件夹: [vue3/src/pages](mdc:vue3/src/pages)
+- 组件文件夹: [vue3/src/components](mdc:vue3/src/components)
+- 类型定义: [vue3/src/types](mdc:vue3/src/types)
+- 工具函数: [vue3/src/utils](mdc:vue3/src/utils)
+- 构建配置: [vue3/vite.config.ts](mdc:vue3/vite.config.ts)
+
+## 跨平台测试
+
+根据bug涉及的平台，可以使用各项目中的脚本进行不同平台的构建测试:
+
+### Vue2平台测试命令
+- H5: `cd vue2 && npm run dev:h5`
+- 微信小程序: `cd vue2 && npm run dev:mp-weixin`
+- App: `cd vue2 && npm run dev:app-plus`
+
+### Vue3平台测试命令
+- H5: `cd vue3 && npm run dev:h5`
+- 微信小程序: `cd vue3 && npm run dev:mp-weixin`
+- 鸿蒙应用: `cd vue3 && npm run build:harmony`
+
+## Bug报告规范
+
+在复现成功后，建议包含以下信息:
+- uni-app版本信息
+- 运行环境
+- 复现步骤
+- 预期结果与实际结果
+- 可能的解决方案建议

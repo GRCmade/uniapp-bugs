@@ -1,0 +1,59 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# uniapp-bugs 项目结构指南
+
+本项目是用于复现uni-app框架在不同环境下的bug的模板项目。它包含两个主要子项目，分别基于Vue2和Vue3。
+
+## 项目概览
+
+- 项目名称: [uniapp-bugs-now-cli](mdc:package.json)
+- 分支管理配置: [youtrack.json](mdc:youtrack.json)
+
+## 项目结构
+
+### Vue2子项目
+
+Vue2子项目基于Vue CLI构建:
+- 入口文件: [vue2/src/main.ts](mdc:vue2/src/main.ts)
+- 页面配置: [vue2/src/pages.json](mdc:vue2/src/pages.json)
+- 项目配置: [vue2/package.json](mdc:vue2/package.json)
+- manifest: [vue2/src/manifest.json](mdc:vue2/src/manifest.json)
+
+### Vue3子项目
+
+Vue3子项目基于Vite构建:
+- 入口文件: [vue3/src/main.ts](mdc:vue3/src/main.ts)
+- 页面配置: [vue3/src/pages.json](mdc:vue3/src/pages.json)
+- 项目配置: [vue3/package.json](mdc:vue3/package.json)
+- manifest: [vue3/src/manifest.json](mdc:vue3/src/manifest.json)
+
+## 构建与工具脚本
+
+### 主要脚本
+
+- 安装依赖: [scripts/build-all.sh](mdc:scripts/build-all.sh)
+- Git分支管理: [scripts/git-new-branch.js](mdc:scripts/git-new-branch.js)
+- Vue3依赖更新: [scripts/pnpm-add-next.js](mdc:scripts/pnpm-add-next.js)
+- Vue2依赖更新: [scripts/yarn-add-dev.js](mdc:scripts/yarn-add-dev.js)
+- 代码复制工具: [scripts/copy-source.js](mdc:scripts/copy-source.js)
+- HBuilderX代码复制: [scripts/copy-src-to-hbuilderx.js](mdc:scripts/copy-src-to-hbuilderx.js)
+- 鸿蒙运行时复制: [scripts/copy-harmony-runtime.js](mdc:scripts/copy-harmony-runtime.js)
+
+## 使用指南
+
+1. 使用 `npm run all` 安装所有依赖
+2. 使用 `npm run vue2` 启动Vue2项目开发服务器
+3. 使用 `npm run vue3` 启动Vue3项目开发服务器
+4. 使用 `npm run git-new-branch` 创建新分支(基于youtrack.json配置)
+
+## 支持平台
+
+两个子项目都支持以下平台的编译:
+- H5
+- 各类小程序(微信、支付宝、百度、头条等)
+- App-plus
+- 快应用
+- 鸿蒙应用(Vue3项目)
