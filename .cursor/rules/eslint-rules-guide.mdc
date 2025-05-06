@@ -1,0 +1,123 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# ESLint 和 Prettier 代码规范指南
+
+本项目使用 ESLint 和 Prettier 来保证代码质量和统一的格式化风格。以下是主要的代码规范说明。
+
+## 配置文件
+
+- Vue2 项目：
+  - ESLint 配置：[vue2/.eslintrc.js](mdc:vue2/.eslintrc.js)
+  - Prettier 配置：[vue2/.prettierrc.js](mdc:vue2/.prettierrc.js)
+
+- Vue3 项目：
+  - ESLint 配置：[vue3/.eslintrc.js](mdc:vue3/.eslintrc.js)
+  - Prettier 配置：[vue3/.prettierrc.js](mdc:vue3/.prettierrc.js)
+
+## 主要规则说明
+
+### 基础规则
+
+1. **分号使用**
+   - 不使用分号结尾
+   - 配置：`semi: false`
+
+2. **引号使用**
+   - 使用单引号
+   - 配置：`singleQuote: true`
+
+3. **缩进风格**
+   - 使用 2 个空格
+   - 配置：`tabWidth: 2`
+   - 不使用 Tab：`useTabs: false`
+
+4. **行宽限制**
+   - 最大行宽 100 字符
+   - 配置：`printWidth: 100`
+
+### Vue 相关规则
+
+1. **组件命名**
+   - 关闭多词组件名要求：`vue/multi-word-component-names: off`
+
+2. **Script Setup 相关**
+   - Vue3 启用 setup 变量检查：`vue/script-setup-uses-vars: error`
+   - Script 标签缩进配置：`vueIndentScriptAndStyle: false`
+
+3. **Props 相关**
+   - Vue3 关闭 props 默认值要求：`vue/require-default-prop: off`
+
+### TypeScript 相关规则
+
+1. **类型检查**
+   - 关闭显式返回类型要求：`@typescript-eslint/explicit-module-boundary-types: off`
+   - 允许使用 any：`@typescript-eslint/no-explicit-any: off`
+
+2. **空函数**
+   - 允许空函数：`@typescript-eslint/no-empty-function: off`
+
+### 开发环境规则
+
+1. **调试相关**
+   - 生产环境警告 console：`no-console: process.env.NODE_ENV === 'production' ? 'warn' : 'off'`
+   - 生产环境警告 debugger：`no-debugger: process.env.NODE_ENV === 'production' ? 'warn' : 'off'`
+
+## 格式化命令
+
+在项目根目录：
+```bash
+# 检查代码格式
+npm run lint
+
+# 自动修复格式
+npm run lint:fix
+
+# 使用 Prettier 格式化
+npm run format
+```
+
+在子项目目录：
+```bash
+# Vue2 项目
+cd vue2
+npm run lint      # 检查代码
+npm run lint:fix  # 修复代码
+npm run format    # 格式化代码
+
+# Vue3 项目
+cd vue3
+npm run lint      # 检查代码
+npm run lint:fix  # 修复代码
+npm run format    # 格式化代码
+```
+
+## VS Code 集成
+
+推荐在 VS Code 中安装以下插件：
+1. ESLint
+2. Prettier
+3. Vue Language Features (Volar) - Vue3
+4. Vetur - Vue2
+
+项目已包含 VS Code 配置：[.vscode/settings.json](mdc:.vscode/settings.json)，会自动：
+- 保存时格式化代码
+- 保存时修复 ESLint 错误
+- 使用正确的文件结尾（LF）
+- 移除尾随空格
+
+## 常见问题处理
+
+1. **行尾换行符问题**
+   - 统一使用 LF（Unix 风格）
+   - 配置：`endOfLine: lf`
+
+2. **Script Setup 缩进问题**
+   - Vue3 项目中禁用了 script 和 style 标签的额外缩进
+   - 配置：`vueIndentScriptAndStyle: false`
+
+3. **TypeScript 解析问题**
+   - 使用 `@typescript-eslint/parser`
+   - 支持 ES 模块：`sourceType: 'module'`
