@@ -8,7 +8,13 @@
     "vue3": "cd vue3 && nr",
     "vue2": "cd vue2 && nr",
     "git-new-branch": "node ./scripts/git-new-branch.js",
-    "git-new-branch all": "node ./scripts/git-new-branch.js all"
+    "git-new-branch all": "node ./scripts/git-new-branch.js all",
+    "lint": "npm run lint:vue2 && npm run lint:vue3",
+    "lint:fix": "npm run lint:vue2:fix && npm run lint:vue3:fix",
+    "lint:vue2": "cd vue2 && npm run lint",
+    "lint:vue2:fix": "cd vue2 && npm run lint:fix",
+    "lint:vue3": "cd vue3 && npm run lint",
+    "lint:vue3:fix": "cd vue3 && npm run lint:fix"
   },
   "author": "",
   "license": "ISC",

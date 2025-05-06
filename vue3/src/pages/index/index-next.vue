@@ -1,7 +1,9 @@
 <template>
   <view>
     当前页面： index-next
-    <button @click="click">index-next-next</button>
+    <button @click="click">
+      index-next-next
+    </button>
   </view>
 </template>
 

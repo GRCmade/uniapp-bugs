@@ -1,7 +1,9 @@
 <template>
   <view>
     <text>subpage</text>
-    <button @click="click">click</button>
+    <button @click="click">
+      click
+    </button>
   </view>
 </template>
 

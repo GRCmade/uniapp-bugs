@@ -36,7 +36,9 @@
     "copy-harmony-runtime": "npm run build:harmony && node ../scripts/copy-harmony-runtime.js",
     "copy-src-to-hbuilderx": "node ../scripts/copy-src-to-hbuilderx.js",
     "copy-source": "node ../scripts/copy-source.js",
-    "pnpm-add-next": "node ../scripts/pnpm-add-next.js"
+    "pnpm-add-next": "node ../scripts/pnpm-add-next.js",
+    "lint": "eslint --ext .js,.ts,.vue src/",
+    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-4060320250423001",
@@ -72,8 +74,13 @@
     "fs-extra": "^11.3.0",
     "sass": "^1.85.1",
     "sass-loader": "10.1.1",
-    "typescript": "^5.4.2",
+    "typescript": "~5.3.3",
     "vite": "5.2.8",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.0.6",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.21.1",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0"
   }
 }

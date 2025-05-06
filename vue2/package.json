@@ -46,7 +46,9 @@
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "yarn-add-dev": "node ../scripts/yarn-add-dev.js"
+    "yarn-add-dev": "node ../scripts/yarn-add-dev.js",
+    "lint": "eslint --ext .js,.ts,.vue src/",
+    "lint:fix": "eslint --ext .js,.ts,.vue src/ --fix"
   },
   "dependencies": {
     "@dcloudio/uni-app": "^2.0.2-4040520250103001",
@@ -98,9 +100,14 @@
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
     "postcss-comment": "^2.0.0",
-    "typescript": "~4.5.5",
+    "typescript": "~4.4.4",
     "unplugin-vue2-script-setup": "^0.11.4",
-    "vue-template-compiler": ">= 2.6.14 < 2.7"
+    "vue-template-compiler": ">= 2.6.14 < 2.7",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0"
   },
   "browserslist": [
     "Android >= 4.4",
