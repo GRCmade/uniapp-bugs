@@ -1,0 +1,51 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# YouTrack JSON 修改规则
+
+在修改 [youtrack.json](mdc:youtrack.json) 文件时，必须遵循以下规则：
+
+1. **保持原有结构**
+   - 不允许删除或重命名已存在的顶级属性
+   - 不允许修改已存在属性的数据类型
+   - 只能修改现有属性的值
+
+2. **platforms 属性规范**
+   - 只能使用以下预定义的平台值：
+     - harmony
+     - h5
+     - android
+     - ios
+     - HbuilderX
+     - mp-weixin
+     - mp-kuaishou
+     - mp-alipay
+     - mp-xhs
+     - mp-toutiao
+     - mp-qq
+
+3. **修改示例**
+   正确的修改方式：
+   ```json
+   {
+     "properity": {
+       "platforms": ["android", "ios"]  // 只修改值，不改变结构
+     }
+   }
+   ```
+
+   错误的修改方式：
+   ```json
+   {
+     "name": "new-name",  // ❌ 不能修改或删除原有属性
+     "properity": {
+       "newField": "value"  // ❌ 不能添加新的属性
+     }
+   }
+   ```
+
+4. **版本信息规范**
+   - version 字段中的 cli 和 sdk 值应该保持现有格式
+   - 不能删除或重命名这些版本相关的字段
