@@ -121,3 +121,10 @@ npm run format    # 格式化代码
 3. **TypeScript 解析问题**
    - 使用 `@typescript-eslint/parser`
    - 支持 ES 模块：`sourceType: 'module'`
+
+
+# README.md 修改规则
+
+- 不要修改这个文件的结构
+- 这个文件所有的写入在 `======== README.md ========` 和 `======== END ========` 之间进行
+
