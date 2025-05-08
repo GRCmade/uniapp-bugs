@@ -12,4 +12,11 @@
 
 经过反馈 45 正常 45 之后失效了
 
+## 排查
+
+经过排查,downloadfile的临时路径是:
+/data/storage/el2/base/cache/HBuilder/uni-download .....
+
+这样的路径不允许在 [setPathAllowingUniversalAccess](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/js-apis-webview-V13#setpathallowinguniversalaccess12) 中设置,导致图片无法加载
+
 ======== END ========
