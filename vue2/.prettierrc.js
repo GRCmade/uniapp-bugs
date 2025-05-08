@@ -11,8 +11,8 @@ module.exports = {
   bracketSameLine: false,
   arrowParens: 'avoid',
   htmlWhitespaceSensitivity: 'css',
-  vueIndentScriptAndStyle: true,
+  vueIndentScriptAndStyle: false,
   endOfLine: 'lf',
   proseWrap: 'preserve',
   embeddedLanguageFormatting: 'auto'
-} 
+}

@@ -1,5 +1,5 @@
 <template>
-  <view> 当前页面： index-next-next </view>
+  <view>当前页面： index-next-next</view>
 </template>
 
 <script>
