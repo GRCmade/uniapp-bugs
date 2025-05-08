@@ -5,7 +5,7 @@
 ## Bug 复现步骤
 
 1. 根据 bug 的具体情况，选择在 Vue2 或 Vue3 子项目中进行复现
-2. 通过 `npm run git-new-branch` 创建一个新的分支来跟踪此 bug（分支名在中配置）
+2. 通过 `npm run git-new-branch` 创建一个新的分支来跟踪此 bug（分支名在项目根目录的 `youtrack.json` 文件中配置，对应 `branch` 字段）
 3. 在选定的项目中实现最小复现示例,最小复现示例要求:vue3 在 [index.vue](mdc:vue3/src/pages/index/index.vue) , vue2 在 [index.vue](mdc:vue2/src/pages/index/index.vue) , 如果一个页面无法复现,再新建文件
 4. 测试复现结果
 5. 提交代码并推送到远程分支
