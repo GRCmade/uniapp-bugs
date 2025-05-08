@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "harmony-image-tempfilepath-lifecircle",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app","harmony"],
+    "url": "https://docs.qq.com/sheet/DU3B5eXN0bFRCVmpE?tab=c10pbe&_t=1732932343733"
   }
 }
