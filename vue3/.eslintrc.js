@@ -31,7 +31,7 @@ module.exports = {
         vueIndentScriptAndStyle: false
       }
     ],
-    'vue/html-indent': ['error', 2],
+    'vue/html-indent': 'off',
     'vue/script-indent': ['error', 2, { baseIndent: 0 }]
   },
   globals: {

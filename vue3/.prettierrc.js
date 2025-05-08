@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 100,
+  printWidth: 200,
   tabWidth: 2,
   useTabs: false,
   semi: false,
@@ -8,7 +8,7 @@ module.exports = {
   jsxSingleQuote: false,
   trailingComma: 'none',
   bracketSpacing: true,
-  bracketSameLine: false,
+  bracketSameLine: true,
   arrowParens: 'avoid',
   htmlWhitespaceSensitivity: 'css',
   vueIndentScriptAndStyle: false,
@@ -21,7 +21,8 @@ module.exports = {
       files: '*.vue',
       options: {
         parser: 'vue',
-        vueIndentScriptAndStyle: false
+        vueIndentScriptAndStyle: false,
+        htmlWhitespaceSensitivity: 'ignore'
       }
     },
     {
