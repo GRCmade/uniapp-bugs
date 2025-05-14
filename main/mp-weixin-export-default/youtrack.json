@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "mp-weixin-export-default",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","mp-weixin"],
+    "url": "https://ask.dcloud.net.cn/question/209264"
+  }
+}
