@@ -2,15 +2,8 @@
     "version" : "1.0",
     "configurations" : [
         {
-            "playground" : "standard",
+            "playground" : "custom",
             "type" : "uni-app:app-android"
-        },
-	{
-		"app-plus" : 
-		{
-			"launchtype" : "local"
-		},
-		"type" : "uniCloud"
-	}
+        }
     ]
 }
