@@ -1,7 +1,7 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
-  "binding_branch": "app-mapcontext-method-error",
+  "branch": "app-mapcontext-method-error",
+  "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app","android","ios"],
