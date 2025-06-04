@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "mp-weixin-coverview-view",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","mp-weixin"],
+    "url": ""
+  }
+}
