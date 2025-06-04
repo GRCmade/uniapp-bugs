@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 100,
+  printWidth: 200,
   tabWidth: 2,
   useTabs: false,
   semi: false,
@@ -22,7 +22,9 @@ module.exports = {
       options: {
         parser: 'vue',
         vueIndentScriptAndStyle: false,
-        htmlWhitespaceSensitivity: 'ignore'
+        htmlWhitespaceSensitivity: 'ignore',
+        singleAttributePerLine: false,
+        printWidth: 200
       }
     },
     {
