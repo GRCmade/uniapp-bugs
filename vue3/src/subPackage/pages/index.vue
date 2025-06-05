@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { test } from '../utils/test.js'
+import { test } from '../utils/test'
 const click = () => {
   test()
 }
