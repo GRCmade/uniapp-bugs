@@ -1,14 +1,22 @@
 <template>
-  <button @click="click">click 123</button>
+  <view>
+    当前页面： index-next
+    <button @click="click">index-next</button>
+  </view>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-const num = ref(0)
-
-const click = () => {
-  console.log(num)
+<script>
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    click() {
+      uni.navigateTo({
+        url: '/pages/index/index-next'
+      })
+    }
+  }
 }
 </script>
 
