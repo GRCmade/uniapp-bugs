@@ -1,22 +1,14 @@
 <template>
   <view>
-    当前页面： index-next
-    <button @click="click">index-next</button>
+    <button @click="click">button</button>
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {}
-  },
-  methods: {
-    click() {
-      uni.navigateTo({
-        url: '/pages/index/index-next'
-      })
-    }
-  }
+<script lang="ts" setup>
+const click = () => {
+  // uni.navigateTo({
+  //   url: '/pages/index/index-next'
+  // })
 }
 </script>
 
