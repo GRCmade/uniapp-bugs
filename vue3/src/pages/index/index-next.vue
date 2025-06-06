@@ -10,6 +10,11 @@ export default {
   data() {
     return {}
   },
+  onLoad(options) {
+    console.log('onload-options', options)
+    let pages = getCurrentPages()
+    console.log('getCurrentPages-options', pages[pages.length - 1].options)
+  },
   methods: {
     click() {
       uni.navigateTo({

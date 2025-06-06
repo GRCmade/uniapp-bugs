@@ -1,0 +1,9 @@
+import './harmony-button.ets'
+
+interface harmonButton {
+	name : string
+}
+
+export const harmonyButton : harmonButton = {
+	name: 'harmonyButton'
+}
