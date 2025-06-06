@@ -2,7 +2,7 @@
 	<embed class="native-button" tag="button" :options="options" @buttonclick="onClick"></embed>
 </template>
 <script>
-	import { harmonyButton } from '@/uni_modules/harmony-button'
+	import '@/uni_modules/harmony-button'
 	export default {
 		data() {
 			return {
