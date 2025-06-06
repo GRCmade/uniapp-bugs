@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "uniapp-x-ios-active-view",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app-x", "ios"],
+    "url": "raycast-ios效果"
   }
 }

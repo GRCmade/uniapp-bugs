@@ -1,10 +1,9 @@
 <template>
 	<view>
 		<image class="logo" src="/static/logo.png"></image>
-		<text class="title">{{title}}</text>
+		<text class="title" @click="click">{{title}}</text>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -16,11 +15,25 @@
 
 		},
 		methods: {
-
+			click() {
+				uni.openDialogPage({
+					url: "/pages/dialog-page/dialog-page",
+					animationType: 'slide-in-bottom',
+					animationDuration: 300,
+					success(res) {
+						console.log('openDialogPage1 success', res)
+					},
+					fail(err) {
+						console.log('openDialogPage1 fail', err)
+					},
+					complete(res) {
+						console.log('openDialogPage1 complete', res)
+					}
+				})
+			}
 		}
 	}
 </script>
-
 <style>
 	.logo {
 		height: 100px;
@@ -31,6 +44,6 @@
 	.title {
 		font-size: 18px;
 		color: #8f8f94;
-    text-align: center;
+		text-align: center;
 	}
 </style>

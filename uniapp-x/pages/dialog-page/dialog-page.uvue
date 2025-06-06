@@ -1,0 +1,39 @@
+<template>
+	<!-- #ifdef APP -->
+	<scroll-view class="scroll" style="flex:1" show-scrollbar="false">
+	<!-- #endif -->
+		<view class="box" @click="close"> dialog-page </view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif -->
+</template>
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			close() {
+				uni.closeDialogPage({
+					animationType: 'slide-out-bottom',
+					animationDuration: 300
+				})
+			}
+		}
+	}
+</script>
+<style>
+	.scroll {
+		margin-top: 100px;
+		/* height: 1000px; */
+		/* background-color: red; */
+	}
+
+	.box {
+		width: 100%;
+		height: 1000px;
+		background-color: aqua;
+	}
+</style>
