@@ -1,0 +1,20 @@
+{
+	"string": [
+		{
+			"name": "get_camera_tips",
+			"value": "huoqulanya"
+		},
+		{
+			"name": "get_camera_explain",
+			"value": "获取用户手机相册用于快捷拍照功能"
+		},
+		{
+			"name": "get_microphone_explain",
+			"value": "用户录音朗读内容"
+		},
+		{
+			"name": "get_location_explain",
+			"value": "运行期间访问位置信息"
+		}
+	]
+}

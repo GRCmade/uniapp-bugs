@@ -3,24 +3,20 @@
     "name": "entry",
     "type": "entry",
     "description": "$string:module_desc",
-    "mainElement": "EntryAbility",
+    "mainElement": "./ets/entryability/EntryAbility.ets",
     "deviceTypes": [
-      "phone",
-      "tablet",
-      "2in1"
+	  "phone"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
+    "virtualMachine": "ark",
     "abilities": [
       {
         "name": "EntryAbility",
         "srcEntry": "./ets/entryability/EntryAbility.ets",
-        "description": "$string:EntryAbility_desc",
-        "icon": "$media:layered_image",
-        "label": "$string:EntryAbility_label",
         "startWindowIcon": "$media:startIcon",
-        "startWindowBackground": "$color:start_window_background",
+		"startWindowBackground": "$color:start_window_background",
         "exported": true,
         "skills": [
           {
@@ -28,30 +24,86 @@
               "entity.system.home"
             ],
             "actions": [
-              "action.system.home"
+              "ohos.want.action.home"
             ]
           }
         ]
       }
     ],
-    "requestPermissions": [
-      {
-        "name": "ohos.permission.INTERNET"
-      },{
-        "name": "ohos.permission.APPROXIMATELY_LOCATION",
-        "reason": "$string:EntryAbility_desc",
-        "usedScene": {"when": "inuse"}
-      },{
-        "name": "ohos.permission.LOCATION",
-        "reason": "$string:EntryAbility_desc",
-        "usedScene": {"when": "inuse"}
-      }
-    ],
-    "metadata": [
-      {
-        "name": "TENCENT_MAP_KEY",
-        "value": "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
-      }
-    ]
-  }
+    	"requestPermissions": [
+			{//网络权限
+				"name": "ohos.permission.INTERNET",
+				"reason": "$string:get_camera_tips",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//麦克风
+				"name": "ohos.permission.MICROPHONE",
+				"reason": "$string:get_microphone_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//相机权限
+				"name": "ohos.permission.CAMERA",
+				"reason": "$string:get_camera_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//获取模糊位置信息
+				"name": "ohos.permission.APPROXIMATELY_LOCATION",
+				"reason": "$string:get_location_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//获取精确位置信息
+				"name": "ohos.permission.LOCATION",
+				"reason": "$string:get_location_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//允许应用读写用户外部存储中的媒体文件信息
+				"name": "ohos.permission.WRITE_MEDIA",
+				"reason": "$string:get_location_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			},
+			{//允许应用读取用户外部存储中的媒体文件信息 
+				"name": "ohos.permission.READ_MEDIA",
+				"reason": "$string:get_location_explain",
+				"usedScene": {
+				    "abilities": [
+				    "FormAbility"
+				    ],
+				    "when":"inuse"
+				}
+			}
+    	]
+  },
+  // "targetModuleName": "feature",
+  // "targetPriority": 50,
+  // "isolationMode": "nonisolationFirst"
 }
