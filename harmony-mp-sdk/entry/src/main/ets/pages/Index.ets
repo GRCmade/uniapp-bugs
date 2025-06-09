@@ -8,11 +8,9 @@ interface MPres {
 @Entry
 @Component
 struct Index {
-  @State mpId: string = '__UNI__F0B54C3';
-  @State pageList: string[] = ['pages/index/index', 'pages/second/second', 'pages/third/third']
+  @State mpList: string[] = ['__UNI__F0B54C3']
 
-  async aboutToAppear() {
-    const mpId = this.mpId
+  async func(mpId:string) {
     await new Promise<void>((resolve, reject) => {
       try {
         // 判断应用是否已释放到运行目录
@@ -33,17 +31,18 @@ struct Index {
 
   build() {
     Column() {
-      Text('鸿蒙 uni小程序sdk小功能 - 打开小程序指定页面')
+      Text('鸿蒙 uni小程序sdk')
         .fontSize(30)
       Text('下方三个按钮是打开同一个小程序的三个页面')
         .margin({ top: 20 })
-      ForEach(this.pageList, (item: string, index: number) => {
+      ForEach(this.mpList, (item: string, index: number) => {
         Button(item)
           .fontSize(30)
           .margin({ top: 20 })
           .onClick(async () => {
+            await this.func(item)
             // 启动小程序
-            const mp = openUniMP(this.mpId, {
+            const mp = openUniMP(item, {
               redirectPath: item
             })
             mp.on('show', () => {
@@ -51,23 +50,6 @@ struct Index {
             })
           })
       })
-      Text('下方按钮打开小程序并且传入参数')
-        .margin({ top: 20 })
-      Button('传入参数')
-        .fontSize(30)
-        .margin({ top: 20 })
-        .onClick(async () => {
-          // 启动小程序
-          const mp = openUniMP(this.mpId, {
-            redirectPath: 'pages/index/index?data=666',
-            extraData:{
-              data : 'data from harmonyos'
-            }
-          })
-          mp.on('show', () => {
-            console.log('UniMP-show:', 'pages/index/index')
-          })
-        })
     }.margin(20)
   }
 }
