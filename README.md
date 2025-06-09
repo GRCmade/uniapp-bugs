@@ -1,5 +1,5 @@
 ======== README.md ========
 
-# uni 小程序 sdk 基本工程
+#鸿蒙上 uni 小程序 sdk previewImage 第二次打开不显示
 
 ======== END ========

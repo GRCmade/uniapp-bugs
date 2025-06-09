@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-mp-sdk",
+  "branch": "harmony-mp-sdk-previewImage",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app", "mp-sdk"],
-    "url": ""
+    "platforms": ["uni-app", "mp-sdk" , "harmony"],
+    "url": "华为卢冰0609"
   }
 }
