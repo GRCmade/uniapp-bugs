@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "template-mp-sdk",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app", "mp-sdk"],
+    "url": ""
+  }
+}
