@@ -14,7 +14,7 @@ struct Index {
     await new Promise<void>((resolve, reject) => {
       try {
         // 判断应用是否已释放到运行目录
-        let isExists = isExistsUniMP(mpId)
+        let isExists = isExistsUniMP(mpId);
         console.log("isExists:" + isExists)
         // 拼接wgt包路径
         let path = getContext().resourceDir + "/" + mpId + ".wgt"
