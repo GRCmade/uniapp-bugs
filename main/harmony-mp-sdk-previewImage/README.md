@@ -1,54 +1,22 @@
 ======== README.md ========
 
-#鸿蒙上 uni 小程序 sdk previewImage 第二次打开不显示
+# 鸿蒙上 uni 小程序 sdk previewImage 第二次打开不显示
 
-修复了一个版本:
+之前的实现是自定义弹窗,鸿蒙已经不推荐了:https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-common-components-custom-dialog
 
-```
-let pageId:string
-let imagePreviewerController: CustomDialogController
-function initImagePreviewerOnce(pageIdIn:string) : CustomDialogController {
-  if(imagePreviewerController && (pageId == pageIdIn)) {
-    return imagePreviewerController
-  }
-  // new CustomDialogController所在的作用域的this必须指向Component
-  imagePreviewerController = new CustomDialogController({
-    builder: ImagePreviewer({
-      urls: previewImageUrls,
-      state: previewImageState
-    }),
-    alignment: DialogAlignment.Center,
-    // backgroundColor: '#FF000000', // 此属性在customStyle: true时无效果
-    customStyle: true
-  })
-  return imagePreviewerController
-}
+现在需要改造为 == promptAction.openCustomDialog == :https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-promptaction#promptactionopencustomdialog11
 
-interface IPreviewImageOptions {
-  urls: string[],
-  current?: string
-  showmenu?: boolean
-}
+实现参考的文章: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-uicontext-custom-dialog
 
-export function previewImage(options: IPreviewImageOptions, page: Object) {
-  let id:string = page["id_"]
-  // 切页面relaunch到其他页面不影响预览界面显示
-  initImagePreviewerOnce.bind(page)(id)
-  pageId = id
-  imagePreviewerController.close()
-  previewImageUrls.splice(0, previewImageUrls.length)
-  const urls = options.urls
-  const currentUrl = options.current || urls[0] || ''
-  previewImageState.currentIndex = Math.max(0, urls.indexOf(currentUrl))
-  previewImageState.showmenu = options.showmenu === false ? false : true
-  urls.forEach(url => {
-    previewImageUrls.push(url)
-  })
-  imagePreviewerController.open()
-}
+@Builder是一个函数:https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-builder
 
-```
 
-添加了一个`page["id_"]` 来标识页面,通过这样解决
+发现非当前的问题:
+- 传入 urls 不生效
+- 传入 currrnet 的类型有问题(报错: previewImage: Invalid args: type check failed for args "current". Expected String with value "1", got Number with value 1.)
+- 保存图片的时候会弹出去
+- 长按不生效了
+- 保存图片之后,showActionMenu的点击index都是 0 了 (传函数那种写法不生效 , 使用 .then 好了)
 
 ======== END ========
+
