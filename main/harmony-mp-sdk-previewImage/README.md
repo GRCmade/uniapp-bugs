@@ -18,5 +18,10 @@
 - 长按不生效了
 - 保存图片之后,showActionMenu的点击index都是 0 了 (传函数那种写法不生效 , 使用 .then 好了)
 
+
+这个问题已经修复了，previewImage在之前使用的是这个：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-common-components-custom-dialog ， 现在更改了实现的方式，使用了：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-uicontext-custom-dialog 。 你可以替换文件测试一下
+
+![](https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250610165537673.png)
+
 ======== END ========
 
