@@ -20,13 +20,8 @@
 		onLoad() {},
 		methods: {
 			click(index) {
-				let ls = this.list
 				uni.previewImage({
-					urls: ['https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250610144702277.png',
-						'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250609172511009.png',
-						'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250606152202354.png',
-						'https://yuhepicgo.oss-cn-beijing.aliyuncs.com/20250604144729362.png'
-					],
+					urls: this.list,
 					current: index
 				})
 			}
