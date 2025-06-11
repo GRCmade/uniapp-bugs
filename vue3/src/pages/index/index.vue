@@ -7,7 +7,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-const text = ref('')
+const text = ref(
+  'dksahdjkahskd \n dsadsad \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n sadasd \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n dsadsada \n\n\n\n\n\n\n\n\n\n\n\n\n d999  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n dsadsada \n\n\n\n\n\n\n\n\n\n\n\n\n d999 '
+)
 </script>
 
 <style lang="scss" scoped>
