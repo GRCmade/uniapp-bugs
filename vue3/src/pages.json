@@ -48,6 +48,12 @@
           "style": {
             "navigationBarTitleText": "subpage"
           }
+        },
+        {
+          "path": "visit/visit",
+          "style": {
+            "navigationBarTitleText": "visit"
+          }
         }
       ]
     }

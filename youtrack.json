@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "mp-weixin-subpackages-js",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app","mp-weixin"],
+    "url": "https://ask.dcloud.net.cn/question/210143"
   }
 }
