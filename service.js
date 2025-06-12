@@ -40,8 +40,17 @@ function getLocalIPAddress() {
 // 启用所有CORS请求
 app.use(cors());
 
+// 添加中间件来解析 JSON 和表单数据
+app.use(express.json()); // 解析 JSON 格式的请求体
+app.use(express.urlencoded({ extended: true })); // 解析表单数据
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
+});
+
+app.post("/api/test", (req, res) => {
+  console.log("test", req.body); // 使用 req.body 而不是 req.data
+  res.send(req.body);
 });
 
 function objectToString(obj) {
