@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "harmony-array-bug",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony"],
+    "url": "卢冰0612"
+  }
+}
