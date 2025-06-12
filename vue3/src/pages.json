@@ -66,7 +66,7 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index/vue3",
         "iconPath": "/static/logo.png",
         "selectedIconPath": "/static/logo-click.png",
         "text": "组件"
