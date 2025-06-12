@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Repository } = require('./config/config.js');
-const a = path.join(__dirname, '../dist/build/app-harmony')
+const a = path.join(__dirname, '../vue3/dist/build/app-harmony')
 const b = Repository.runtime_harmony
 
 
