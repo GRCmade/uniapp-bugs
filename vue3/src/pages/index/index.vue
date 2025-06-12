@@ -21,6 +21,7 @@ const imageList = ref<string[]>([
 
 const ls = ref<number[]>([])
 const click = () => {
+	ls.value = []
   ls.value.push(1)
   ls.value.push(2)
   ls.value.push(3)
