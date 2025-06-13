@@ -2,6 +2,7 @@
 	<view>
 		<image class="logo" src="/static/logo.png"></image>
 		<text class="title" @click="click">{{title}}</text>
+		<native-button></native-button>
 	</view>
 </template>
 <script>
