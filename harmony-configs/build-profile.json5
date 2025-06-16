@@ -21,6 +21,7 @@
         "signingConfig": "default",
         "compatibleSdkVersion": "5.0.0(12)",
         "runtimeOS": "HarmonyOS",
+				compatibleSdkVersionStage: "beta6",
         "buildOption": {
           "strictMode": {
             "caseSensitiveCheck": true,
@@ -32,6 +33,7 @@
         "name": "release",
         "signingConfig": "release",
         "compatibleSdkVersion": "5.0.0(12)",
+				compatibleSdkVersionStage: "beta6",
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {

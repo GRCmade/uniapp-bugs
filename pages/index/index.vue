@@ -15,11 +15,15 @@
 			click() {
 				const appAuthorizeSetting = uni.getAppAuthorizeSetting()
 				console.log(JSON.stringify(appAuthorizeSetting))
+				console.log(JSON.stringify(appAuthorizeSetting.locationAuthorized))
 			},
 			getLocation(){
 				uni.getLocation({
 					success(res) {
 						console.log(res);
+					},
+					fail(err) {
+						console.log("fail",JSON.stringify(err))
 					}
 				})
 			}
