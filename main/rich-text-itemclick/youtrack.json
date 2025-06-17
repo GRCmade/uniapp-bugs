@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "rich-text-itemclick",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","android","ios"],
+    "url": ""
+  }
+}
