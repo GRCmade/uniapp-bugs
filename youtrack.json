@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "harmony-hide-status-bar",
+  "branch": "template-cli",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app","harmony"],
+    "platforms": ["uni-app"],
     "url": ""
   }
 }
