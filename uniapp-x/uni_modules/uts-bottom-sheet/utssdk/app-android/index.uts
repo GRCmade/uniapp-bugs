@@ -1,0 +1,9 @@
+import { BottomSheetManager } from "com.yuhe.view"
+
+/**
+ * 获取内存信息
+ */
+export const showBottomSheet = function () {
+  BottomSheetManager.show()
+}
+

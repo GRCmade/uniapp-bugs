@@ -1,15 +1,23 @@
 <template>
-	<view>
-		<image class="logo" src="/static/logo.png"></image>
-		<text class="title" @click="click">{{title}}</text>
-		<native-button></native-button>
-	</view>
+	<!-- #ifdef APP -->
+	<scroll-view :style="`flex: 1;border-top:20px solid red`">
+	<!-- #endif -->
+		<view>
+			<image class="logo" src="/static/logo.png"></image>
+			<text class="title" @click="click">{{title}}</text>
+			<!-- <native-button></native-button> -->
+		</view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif -->
 </template>
 <script>
+	import { showBottomSheet } from "@/uni_modules/uts-bottom-sheet"
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				statusBarHeight: 0
 			}
 		},
 		onLoad() {
@@ -17,28 +25,33 @@
 		},
 		methods: {
 			click() {
-				uni.openDialogPage({
-					url: "/pages/dialog-page/dialog-page",
-					animationType: 'slide-in-bottom',
-					animationDuration: 300,
-					success(res) {
-						console.log('openDialogPage1 success', res)
-					},
-					fail(err) {
-						console.log('openDialogPage1 fail', err)
-					},
-					complete(res) {
-						console.log('openDialogPage1 complete', res)
-					}
-				})
+				showBottomSheet()
+				// if (this.statusBarHeight > 0) {
+				// 	this.statusBarHeight = 0
+				// } else {
+				// 	const { statusBarHeight } = uni.getWindowInfo()
+				// 	this.statusBarHeight = statusBarHeight
+				// }
 			}
 		}
 	}
 </script>
 <style>
-	.logo {
+	.scroll {
+		flex: 1;
+		/* border-top: 20px solid red; */
+		box-sizing: border-box;
+	}
+
+	.row {
+		width: 100%;
 		height: 100px;
-		width: 100px;
+		background-color: aqua;
+	}
+
+	.logo {
+		height: 100rpx;
+		width: 100rpx;
 		margin: 100px auto 25px auto;
 	}
 
