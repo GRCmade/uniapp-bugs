@@ -43,13 +43,27 @@ struct Index {
             await this.func(item)
             // 启动小程序
             const mp = openUniMP(item, {
-              redirectPath: item
+              redirectPath: item,
+              capsuleMenuActionSheetItems: [
+                {
+                  id: '1',
+                  title: 'send'
+                }
+              ]
             })
             mp.on('show', () => {
               console.log('UniMP-show:', item)
             })
-            mp.on('uniMPEvent',()=>{
-
+            mp.on('uniMPEvent',(res)=>{
+              console.log('mp uniMPEvent', res)
+            })
+            mp.on('menuItemClick',(id: string)=>{
+              if(id == '1'){
+                mp.sendUniMPEvent("unimp-event", {
+                  a: 1,
+                  b: "2"
+                });
+              }
             })
           })
       })
