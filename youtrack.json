@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-mp-sdk",
+  "branch": "harmony-mp-sdk-leixing",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app", "mp-sdk"],
+    "platforms": ["uni-app", "mp-sdk", "harmony"],
     "url": ""
   }
 }

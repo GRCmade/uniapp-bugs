@@ -48,6 +48,9 @@ struct Index {
             mp.on('show', () => {
               console.log('UniMP-show:', item)
             })
+            mp.on('uniMPEvent',()=>{
+
+            })
           })
       })
     }.margin(20)
