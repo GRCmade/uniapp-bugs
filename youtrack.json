@@ -1,10 +1,10 @@
 {
-  "name": "uni-app-x-harmony-sdk-size",
+  "name": "uniapp-bugs",
   "branch": "template-mp-sdk",
   "binding_branch": "",
-  "properties": {
+  "properity": {
     "project": "UB",
-    "platforms": ["uni-app x", "mp-sdk", "harmony"],
-    "url": "https://github.com/dcloudio/uni-app-x-harmony.git"
+    "platforms": ["uni-app", "mp-sdk"],
+    "url": ""
   }
 }
