@@ -2,11 +2,10 @@
   "modelVersion": "5.0.0",
   "description": "Please describe the basic information.",
   "dependencies": {
-    "@dcloudio/uni-app-x-runtime": "^4.72.2025061801"
+    "@dcloudio/uni-app-runtime":"4.71.2025061201"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.19",
     "@ohos/hamock": "1.0.0"
-  },
-  "dynamicDependencies": {}
+  }
 }
