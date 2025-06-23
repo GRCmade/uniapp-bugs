@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "app-swiper-vif-bug",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
+    "platforms": ["uni-app", "harmony"],
     "url": ""
   }
 }
