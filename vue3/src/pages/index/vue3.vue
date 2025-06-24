@@ -1,11 +1,14 @@
 <template>
-  <view>
-    <button @click="click">button</button>
-  </view>
+  <com class="btn" name="123" :d='1' :dname='undefined' :func="doCalc" @click="doCalc"><text>index</text></com>
 </template>
-
-<script lang="ts" setup>
-const click = () => {}
+<script setup lang="ts">
+import BtnCustom from '@/components/BtnCustom/BtnCustom.vue'
+function doCalc() {
+  console.log(1 + 3)
+}
 </script>
-
-<style></style>
+<style scoped>
+.btn {
+  background-color: aqua;
+}
+</style>

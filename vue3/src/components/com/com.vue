@@ -1,7 +1,15 @@
 <template>
-  <div>com</div>
+  <button>
+    <slot />
+  </button>
 </template>
-
-<script setup></script>
-
-<style scoped></style>
+<script lang="ts">
+export default {
+  inheritAttrs: false
+}
+</script>
+<script setup lang="ts">
+import { useAttrs } from 'vue'
+const attrs = useAttrs()
+console.log('attr', attrs)
+</script>
