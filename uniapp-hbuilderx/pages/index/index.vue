@@ -1,14 +1,17 @@
 <template>
 	<view>
-		<button @click="handleClick('open')">Click me</button>
+		<button @click="handleClick('open')">Click me uni</button>
 		<button @click="handleClick">close</button>
 	</view>
 </template>
 <script>
-	function onchange(res){
+	function onchange(res) {
 		console.log(res.isConnected);
 		console.log(res.networkType);
 	}
+	const listener = function(res) {
+		console.log("onNetworkStatusChange" + JSON.stringify(res))
+	};
 	export default {
 		data() {
 			return {
@@ -17,12 +20,9 @@
 		},
 		methods: {
 			handleClick(type) {
-				const listener = function(res){
-					console.log("onNetworkStatusChange"+JSON.stringify(res))
-				};
-				if(type == 'open'){
+				if (type == 'open') {
 					uni.onNetworkStatusChange(listener);
-				}else{
+				} else {
 					uni.offNetworkStatusChange(listener);
 				}
 			},
