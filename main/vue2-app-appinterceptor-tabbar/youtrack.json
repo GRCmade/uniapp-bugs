@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "vue2-app-appinterceptor-tabbar",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","android","ios"],
+    "url": "https://ask.dcloud.net.cn/question/147649"
+  }
+}
