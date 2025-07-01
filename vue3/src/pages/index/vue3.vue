@@ -10,8 +10,9 @@
 			<text v-else-if="currentData.type == 2" style="color: #000;">
 				{{ currentData.text }}
 			</text>
-			<view class=""> text:{{currentData.type}} index:{{index}}
-			</view>
+			<view> currentData.type:{{currentData.type}} </view>
+			<view> index:{{index}}</view>
+			<view> currentData.type == 1:{{currentData.type == 1}}</view>
 		</view>
 		<view class="next-btn" @click="next">
 			<text>下一题</text>

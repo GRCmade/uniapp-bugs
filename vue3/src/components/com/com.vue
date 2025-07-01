@@ -28,10 +28,10 @@
 		},
 		mounted() {
 			// 注释修改高度的代码就正常显示
-			setTimeout(() => {
-				this.allQuestionHeight = 101
+			// setTimeout(() => {
+				// this.allQuestionHeight = 200
 				console.log('change allQuestionHeight')
-			}, 500)
+			// }, 500)
 		},
 		methods: {
 			handleMove(event) {
