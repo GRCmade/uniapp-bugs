@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "android-createInnerAudioContext+bug",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","android"],
+    "url": "https://ask.dcloud.net.cn/question/211073"
+  }
+}
