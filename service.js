@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
 const os = require("os");
 const http = require("http");
 const WebSocket = require("ws");
@@ -46,6 +46,12 @@ app.use(express.urlencoded({ extended: true })); // 解析表单数据
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
+});
+
+app.get("/set-timeout", (req, res) => {
+  setTimeout(() => {
+    res.send("Hello World!");
+  }, 2000);
 });
 
 app.post("/api/test", (req, res) => {
