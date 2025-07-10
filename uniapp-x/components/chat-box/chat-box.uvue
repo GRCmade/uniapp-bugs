@@ -1,0 +1,51 @@
+<template>
+	<view class="chat-box" :style="{'bottom':bottom}">
+		<textarea class="textarea" :style="{'min-height':minHeight}" type="text" placeholder="请输入4.75"
+			:adjust-position="false" @focus="inputFocus" @blur="inputBlur" @keyboardheightchange="keyboardheightchange" />
+	</view>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				bottom: "20px",
+				minHeight: '50px'
+			}
+		},
+		methods: {
+			inputFocus() {
+				// this.bottom = "350px"
+			},
+			inputBlur() {
+				// this.bottom = "20px"
+			},
+			keyboardheightchange(e : UniInputKeyboardHeightChangeEvent) {
+				// console.log("e",e)
+				if (e.detail.height > 0) {
+					this.minHeight = '100px'
+				} else {
+					this.minHeight = '50px'
+				}
+				this.bottom = e.detail.height + 20 + 'px'
+			}
+		}
+	}
+</script>
+<style lang="scss">
+	.chat-box {
+		border-radius: 20px;
+		position: fixed;
+		bottom: 20px;
+		left: 5%;
+		width: 90%;
+		background-color: red;
+		box-sizing: border-box;
+		padding: 20px;
+		transition: bottom 0.1s ease-in-out;
+	}
+
+	.textarea {
+		width: 100%;
+		height: 50px;
+	}
+</style>

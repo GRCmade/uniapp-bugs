@@ -1,36 +1,34 @@
 <template>
-	<view>
-		<image class="logo" src="/static/logo.png"></image>
-		<text class="title">{{title}}</text>
-	</view>
+	<!-- #ifdef APP -->
+	<scroll-view class="scroll" style="flex: 1;" scroll-y="true">
+	<!-- #endif -->
+		<chat-box></chat-box>
+		<view class="bgc">
+			{{ state }}
+		</view>
+	<!-- #ifdef APP -->
+	</scroll-view>
+	<!-- #endif -->
 </template>
-
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
+<script setup>
+	const state = ref(false)
+	uni.getSystemInfo({
+		success: (res : GetSystemInfoResult) => {
+			console.log("getSystemInfo",res.appTheme)
+			const appTheme = res.appTheme == "auto" ? res.osTheme! : res.appTheme!
+			state.value = appTheme.trim() == 'dark';
 		}
-	}
+	})
+	uni.onOsThemeChange((res : OsThemeChangeResult) => {
+		state.value = res.osTheme.trim() == 'dark';
+		console.log("onAppThemeChange", state.value)
+	})
 </script>
-
-<style>
-	.logo {
-		height: 100px;
-		width: 100px;
-		margin: 100px auto 25px auto;
+<style lang="scss">
+	.scroll {
+		background-color: var(--yuhe-bg-primary)
 	}
-
-	.title {
-		font-size: 18px;
-		color: #8f8f94;
-    text-align: center;
+	.bgc{
+		color: var(--yuhe-bg-primary);
 	}
 </style>

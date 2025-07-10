@@ -35,6 +35,7 @@
 </script>
 
 <style>
+	@import url("@/style/theme.scss");
 	/*每个页面公共css */
 	.uni-row {
 		flex-direction: row;

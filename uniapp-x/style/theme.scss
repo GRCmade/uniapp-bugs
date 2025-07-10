@@ -1,0 +1,82 @@
+/* 
+	每个页面公共css 
+	在书写 css 样式,指定颜色时,需要使用 '@/style/theme.scss' 中的颜色来进行定义,因为这样能够适配深色主题
+	如果没有可以加入新的颜色,但是注意,需要补齐深色和浅色的主题
+*/
+/*每个页面公共css */
+	:root {
+		/* 浅色主题 */
+		/* 文字颜色 - 从深到浅 */
+		--yuhe-text-primary: #1a1a1a;      /* 主要文字 - 深 */
+		--yuhe-text-secondary: #4a4a4a;    /* 次要文字 - 中 */
+		--yuhe-text-tertiary: #8a8a8a;     /* 辅助文字 - 浅 */
+		--yuhe-text-disabled: #c0c0c0;     /* 禁用文字 */
+		--yuhe-text-placeholder: #999999;  /* 占位符文字 */
+		
+		/* 背景颜色 - 从深到浅 */
+		--yuhe-bg-primary: #ffffff;        /* 主背景 - 浅 */
+		--yuhe-bg-secondary: #f8f9fa;      /* 次背景 - 中 */
+		--yuhe-bg-tertiary: #f1f3f4;       /* 辅助背景 - 深 */
+		--yuhe-bg-hover: #e8eaed;          /* 悬停背景 */
+		--yuhe-bg-active: #dadce0;         /* 激活背景 */
+		
+		/* 边框颜色 - 从深到浅 */
+		--yuhe-border-primary: #d0d7de;    /* 主边框 - 深 */
+		--yuhe-border-secondary: #e1e8ed;  /* 次边框 - 中 */
+		--yuhe-border-tertiary: #f0f6fc;   /* 辅助边框 - 浅 */
+		
+		/* 品牌色 - 从深到浅 */
+		--yuhe-brand-primary: #007bff;     /* 主品牌色 - 深 */
+		--yuhe-brand-secondary: #409eff;   /* 次品牌色 - 中 */
+		--yuhe-brand-tertiary: #b3d9ff;    /* 辅助品牌色 - 浅 */
+		
+		/* 状态色 */
+		--yuhe-success: #28a745;           /* 成功色 */
+		--yuhe-warning: #ffc107;           /* 警告色 */
+		--yuhe-error: #dc3545;             /* 错误色 */
+		--yuhe-info: #17a2b8;              /* 信息色 */
+		
+		/* 阴影 */
+		--yuhe-shadow-light: rgba(0, 0, 0, 0.1);
+		--yuhe-shadow-medium: rgba(0, 0, 0, 0.15);
+		--yuhe-shadow-heavy: rgba(0, 0, 0, 0.25);
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			/* 深色主题 */
+			/* 文字颜色 - 从深到浅 */
+			--yuhe-text-primary: #ffffff;      /* 主要文字 - 浅 */
+			--yuhe-text-secondary: #e0e0e0;    /* 次要文字 - 中 */
+			--yuhe-text-tertiary: #b0b0b0;     /* 辅助文字 - 深 */
+			--yuhe-text-disabled: #666666;     /* 禁用文字 */
+			--yuhe-text-placeholder: #888888;  /* 占位符文字 */
+			
+			/* 背景颜色 - 从深到浅 */
+			--yuhe-bg-primary: #1a1a1a;        /* 主背景 - 深 */
+			--yuhe-bg-secondary: #2a2a2a;      /* 次背景 - 中 */
+			--yuhe-bg-tertiary: #3a3a3a;       /* 辅助背景 - 浅 */
+			--yuhe-bg-hover: #4a4a4a;          /* 悬停背景 */
+			--yuhe-bg-active: #5a5a5a;         /* 激活背景 */
+			
+			/* 边框颜色 - 从深到浅 */
+			--yuhe-border-primary: #555555;    /* 主边框 - 深 */
+			--yuhe-border-secondary: #0e0202;  /* 次边框 - 中 */
+			--yuhe-border-tertiary: #333333;   /* 辅助边框 - 浅 */
+			
+			/* 品牌色 - 从深到浅 */
+			--yuhe-brand-primary: #0d6efd;     /* 主品牌色 - 深 */
+			--yuhe-brand-secondary: #6ea8fe;   /* 次品牌色 - 中 */
+			--yuhe-brand-tertiary: #cfe2ff;    /* 辅助品牌色 - 浅 */
+			
+			/* 状态色 */
+			--yuhe-success: #20c997;           /* 成功色 */
+			--yuhe-warning: #ffc107;           /* 警告色 */
+			--yuhe-error: #dc3545;             /* 错误色 */
+			--yuhe-info: #0dcaf0;              /* 信息色 */
+			
+			/* 阴影 */
+			--yuhe-shadow-light: rgba(255, 255, 255, 0.1);
+			--yuhe-shadow-medium: rgba(255, 255, 255, 0.15);
+			--yuhe-shadow-heavy: rgba(255, 255, 255, 0.25);
+		}
+	}
