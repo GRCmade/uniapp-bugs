@@ -1,23 +1,24 @@
 <template>
-	<view>
-		<button @click="handleClick">Click me</button>
-	</view>
+  <view>
+    <button @click="click">button</button>
+    <button @click="hideLoading">hideLoading</button>
+  </view>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			message: 'Hello, World!'
-		}
-	},
-	methods: {
-		handleClick() {
-			console.log('Button clicked')
-		}
-	}
+<script lang="ts" setup>
+const click = () => {
+  uni.showLoading({
+    title: '加载中',
+    mask: true
+  })
+  setTimeout(() => {
+    uni.hideLoading()
+  }, 4000)
+}
+
+const hideLoading = () => {
+  uni.hideLoading()
 }
 </script>
 
-<style scoped>
-</style>
+<style></style>
