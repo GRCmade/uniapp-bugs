@@ -5,6 +5,27 @@
 			"style": {
 				"navigationBarTitleText": "uni-app x"
 			}
+		},
+		{
+			"path" : "pages/tabbar1/tabbar1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "tabbar1"
+			}
+		},
+		{
+			"path" : "pages/tabbar2/tabbar2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "tabbar2"
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "登录页面"
+			}
 		}
 	],
 	"globalStyle": {
@@ -12,6 +33,28 @@
 		"navigationBarTitleText": "uni-app x",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/c1.png",
+			"selectedIconPath": "/static/c1.png",
+			"text": "组件"
+		}, {
+			"pagePath": "pages/tabbar1/tabbar1",
+			"iconPath": "/static/api.png",
+			"selectedIconPath": "/static/api.png",
+			"text": "tabbar1"
+		}, {
+			"pagePath": "pages/tabbar2/tabbar2",
+			"iconPath": "/static/logo.png",
+			"selectedIconPath": "/static/logo.png",
+			"text": "tabbar2"
+		}]
 	},
 	"uniIdRouter": {}
 }

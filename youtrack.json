@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "uniapp-x-tabbar-intercept",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app x"],
+    "url": "https://ask.dcloud.net.cn/question/211455"
   }
 }

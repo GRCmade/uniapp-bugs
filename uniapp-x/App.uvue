@@ -3,6 +3,27 @@
 	export default {
 		onLaunch: function () {
 			console.log('App Launch')
+			const switchTabInterceptor = {
+				invoke: function (options : SwitchTabOptions) {
+					console.log('拦截 switchTab 接口传入参数为：', options)
+					if(options.url != '/pages/index/index'){
+						uni.navigateTo({
+							url:"/pages/login/login"
+						})
+					}
+					return false
+				},
+				success: function (res : SwitchTabSuccess) {
+					console.log('拦截 switchTab 接口 success 返回参数为：', res)
+				},
+				fail: function (err : SwitchTabFail) {
+					console.log('拦截 switchTab 接口 fail 返回参数为：', err)
+				},
+				complete: function (res : SwitchTabComplete) {
+					console.log('拦截 switchTab 接口 complete 返回参数为：', res)
+				}
+			} as AddInterceptorOptions
+			uni.addInterceptor('switchTab', switchTabInterceptor)
 		},
 		onShow: function () {
 			console.log('App Show')
@@ -33,7 +54,6 @@
 		},
 	}
 </script>
-
 <style>
 	/*每个页面公共css */
 	.uni-row {
