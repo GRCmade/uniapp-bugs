@@ -1,36 +1,33 @@
 <template>
 	<view>
-		<image class="logo" src="/static/logo.png"></image>
-		<text class="title">{{title}}</text>
+		<button @click="handleClick">Click me</button>
+		<uni-popup ref="popup">
+			<view class="pop">
+				底部弹出 Popup 自定义圆角
+			</view>
+		</uni-popup>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				message: 'Hello, World!',
+				popup: null as UniElement | null
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-
+			handleClick() {
+				const popup = this.$refs['popup'] as ComponentPublicInstance
+				popup.$callMethod('open')
+			}
 		}
 	}
 </script>
-
-<style>
-	.logo {
-		height: 100px;
-		width: 100px;
-		margin: 100px auto 25px auto;
-	}
-
-	.title {
-		font-size: 18px;
-		color: #8f8f94;
-    text-align: center;
+<style scoped>
+	.pop{
+		width: 100%;
+		height: 200px;
+		background-color: red;
 	}
 </style>
