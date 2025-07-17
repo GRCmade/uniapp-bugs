@@ -91,15 +91,9 @@
   },
   "vueVersion": "3",
   "app-harmony": {
+		"darkmode":true,
     "distribute": {
-      "bundleName": "com.yuhe.template",
-      "modules": {
-        "uni-map": {
-          "tencent": {
-            "key": "IYJBZ-VNKWH-DNLDF-WFXMG-JPHVT-R4FAU"
-          }
-        }
-      }
+      "bundleName": "com.yuhe.template"
     }
   },
   "h5": {

@@ -3,6 +3,9 @@ export default {
   onLaunch: function () {
     console.log('App Launch')
   },
+	onThemeChange(res) {
+		console.log("appvue,onThemeChange",JSON.stringify(res))
+	},
   onShow: function () {
     console.log('App Show')
   },
