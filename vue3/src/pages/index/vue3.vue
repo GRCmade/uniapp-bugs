@@ -5,7 +5,11 @@
 </template>
 
 <script lang="ts" setup>
-const click = () => {}
+const click = () => {
+  uni.navigateTo({
+    url: '/pages/index/index-next'
+  })
+}
 </script>
 
 <style></style>
