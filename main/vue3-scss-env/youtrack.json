@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "vue3-scss-env",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","h5"],
+    "url": ""
+  }
+}
