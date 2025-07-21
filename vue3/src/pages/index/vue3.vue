@@ -1,11 +1,16 @@
 <template>
-  <view>
-    <button @click="click">button</button>
-  </view>
+  <view class="body"></view>
 </template>
 
 <script lang="ts" setup>
 const click = () => {}
 </script>
 
-<style></style>
+<style lang="scss">
+@import './style.scss';
+.body {
+  background-color: var(--primary-color);
+  width: 100px;
+  height: 100px;
+}
+</style>

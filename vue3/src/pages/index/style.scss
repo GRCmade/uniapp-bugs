@@ -1,0 +1,9 @@
+@if $env == 'development' {
+  :root {
+    --primary-color: red;
+  }
+} @else {
+  :root {
+    --primary-color: blue;
+  }
+}
