@@ -1,7 +1,8 @@
 <template>
   <view>
     当前页面： index-next
-    <button @click="click">index-next</button>
+    <button @click="loadURL">loadURL</button>
+    <button @click="loadURLEmpty">loadURLEmpty</button>
     <button @click="close">close</button>
   </view>
 </template>
@@ -12,9 +13,14 @@ export default {
     return {}
   },
   methods: {
-    click() {
+    loadURL() {
       let wv = plus.webview.create('', 'custom-webview', { height: '200px', width: '200px' })
       wv.loadURL('http://192.168.31.157:3000', { tes: 'yuhe' })
+      wv.show()
+    },
+    loadURLEmpty() {
+      let wv = plus.webview.create('', 'custom-webview', { height: '200px', width: '200px' })
+      wv.loadURL('http://192.168.31.157:3000')
       wv.show()
     },
     close() {
