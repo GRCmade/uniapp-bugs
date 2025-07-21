@@ -1,6 +1,6 @@
 ======== README.md ========
 
-# 鸿蒙上支持 plus loadURL
+# 鸿蒙上支持 plus loadURL 和 webviewContext 的 loadUrl
 
 sdk.js 上修改这个
 
