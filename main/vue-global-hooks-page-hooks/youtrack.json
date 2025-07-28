@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "vue-global-hooks-page-hooks",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","h5"],
+    "url": "https://ask.dcloud.net.cn/question/212075"
+  }
+}
