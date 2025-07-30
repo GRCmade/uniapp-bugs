@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "h5-movable-view-x-bug",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app", "h5"],
+    "url": "https://ask.dcloud.net.cn/question/212162"
+  }
+}
