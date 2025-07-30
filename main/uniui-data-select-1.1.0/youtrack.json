@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniui-data-select-1.1.0",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app"],
+    "url": ""
+  }
+}
