@@ -2,7 +2,8 @@
 	<view>
 		<uni-section title="多选使用插槽" subTitle="多选的时候,超过2个显示省略;" type="line">
 			<view class="uni-px-5 uni-pb-5">
-				<uni-data-select ref="uniDataSelect" v-model="multipleValue" multiple mode="underline" placement="bottom" :localdata="range">
+				<uni-data-select ref="uniDataSelect" v-model="multipleValue" multiple mode="underline" placement="bottom"
+					:localdata="range">
 					<template v-slot:selected="{selectedItems}">
 						<view class="slot-box">
 							<view v-for="item in sliceArray(selectedItems)" :key="item.value" class="slot-content-item">
@@ -19,7 +20,7 @@
 								:disabled="item.disable"></uni-list-item>
 						</view>
 					</template>
-				<!-- 可以拦截点击事件之后自定义
+					<!-- 可以拦截点击事件之后自定义
 					<template v-slot:option="{item,itemSelected}">
 						<view @click.stop>
 							<uni-list-item showSwitch :switchChecked="itemSelected" :title="item.text" :note="item.value+''"
@@ -34,6 +35,12 @@
 					</template>
 				</uni-data-select>
 			</view>
+		</uni-section>
+		<uni-section title="云端数据" sub-title="" type="line">
+			<uni-data-select collection="opendb-app-list" field="appid as value, name as text" label="应用选择" v-model="appid" :clear="false" />
+		</uni-section>
+		<uni-section title="form" sub-title="" type="line">
+			
 		</uni-section>
 	</view>
 </template>
