@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "x-uni-wifi",
   "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app"],
-    "url": ""
+    "url": "https://ask.dcloud.net.cn/question/212199"
   }
 }
