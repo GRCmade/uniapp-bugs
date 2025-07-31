@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "harmony-screen-brightness",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony","uni-app x"],
+    "url": "https://uniapp.dcloud.net.cn/api/system/brightness.html"
+  }
+}
