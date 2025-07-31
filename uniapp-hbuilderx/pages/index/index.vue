@@ -1,23 +1,37 @@
 <template>
 	<view>
-		<button @click="handleClick">Click me</button>
+		<button @click="click">click</button>
 	</view>
 </template>
+<script lang="ts">
+	import { WifiOption } from '@/uni_modules/uni-wifi/utssdk/interface'
 
-<script>
-export default {
-	data() {
-		return {
-			message: 'Hello, World!'
-		}
-	},
-	methods: {
-		handleClick() {
-			console.log('Button clicked')
+	export default {
+		data() {
+			return {
+				title: 'Hello'
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+			click() {
+				uni.startWifi({
+					complete: e => {
+						console.log("startWifi", e)
+					}
+				})
+				uni.getConnectedWifi({
+					success(res) {
+						console.log("res", res)
+					}, fail(res) {
+						console.log("fail", res)
+					}
+				})
+			}
 		}
 	}
-}
 </script>
-
-<style scoped>
+<style>
 </style>
