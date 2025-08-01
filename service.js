@@ -49,9 +49,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/set-timeout", (req, res) => {
+  console.log("set-timeout");
   setTimeout(() => {
+    console.log("set-timeout end");
     res.send("Hello World!");
-  }, 2000);
+  }, 12000);
 });
 
 app.post("/api/test", (req, res) => {
@@ -174,14 +176,22 @@ const wss = new WebSocket.Server({ server });
 
 wss.on("connection", (ws) => {
   console.log("WebSocket connection established");
+  let count = 0;
+  let interval = setInterval(() => {
+    ws.send("ping"+count);
+    count++;
+  }, 1000);
+  if(count>10){
+    clearInterval(interval);
+  }
 
   ws.on("message", (message) => {
     console.log(`Received message: ${message}`);
     ws.send(`Server received: ${message}`);
   });
 
-  ws.on("close", () => {
-    console.log("WebSocket connection closed");
+  ws.on("close", (message) => {
+    console.log("WebSocket connection closed",message);
   });
 });
 
