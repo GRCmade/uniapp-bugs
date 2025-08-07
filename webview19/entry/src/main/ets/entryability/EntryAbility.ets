@@ -1,13 +1,14 @@
 import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { createNWeb, setOSRuntime } from '../pages/sdk'
+// import { createNWeb, setOSRuntime } from '../pages/sdk'
 // import {myNodeController} from  '../pages/common'
-import {WebBuilder} from '../pages/common'
+import { createNWeb } from '../pages/common'
 
-setOSRuntime({
-  WebBuilder
-})
+
+// setOSRuntime({
+//   WebBuilder
+// })
 
 const DOMAIN = 0x0000;
 
