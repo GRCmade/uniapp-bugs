@@ -1,0 +1,53 @@
+
+
+.u-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.u-row-between {
+    justify-content: space-between;
+}
+.u-row-around {
+    justify-content: space-around;
+}
+.u-row-center {
+    justify-content: center;
+}
+.u-row-column {
+    flex-direction: column;
+}
+.u-row-end {
+    justify-content: flex-end;
+}
+.u-flex-wrap {
+    flex-wrap: wrap;
+}
+.u-f-s {
+    flex-shrink: 0;
+}
+.u-f-g-2 {
+    flex-shrink: 2;
+}
+.u-popup__content {
+	border-radius: 20rpx 20rpx 0 0;
+}
+view {
+    box-sizing: border-box;
+}
+.u-button--active::before {
+	background-color: transparent !important; 
+	opacity: 1 !important;
+}
+
+/* #ifdef MP-WEIXIN */
+scroll-view ::v-deep ::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+   color: transparent
+}
+/* #endif */
+
+.u-navbar--fixed {
+	z-index: 100 !important;
+}
