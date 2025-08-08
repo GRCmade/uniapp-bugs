@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"@alipay/authbase": "./libs/authbase.har",
+		"@alipay/aliyunfacade": "./libs/aliyunfacade.har"
+	}
+}

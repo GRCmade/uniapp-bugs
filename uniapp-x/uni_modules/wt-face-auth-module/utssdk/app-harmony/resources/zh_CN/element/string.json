@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "internet_reason",
+      "value": "需要获取您的网络权限，用于获取网络资源展示数据"
+    },
+    {
+      "name": "camera_permission_reason",
+      "value": "用于拍照或录制视频."
+    },
+    {
+      "name": "microphone_permission_reason",
+      "value": "用于录制视频."
+    },
+  ]
+}

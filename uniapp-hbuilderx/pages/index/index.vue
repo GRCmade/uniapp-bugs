@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import {test} from "@/uni_modules/harmony-button"
 export default {
 	data() {
 		return {

@@ -1,0 +1,46 @@
+import { FaceAuthInitOptions, FaceAuthMetaInfoOptions, FaceAuthVerifyOptions, FaceAuthSuccess } from '../interface'
+import { FaceAuthFailImpl } from '../unierror'
+
+import { ZimConstant, ZimFacade, ZimResponse } from '@alipay/aliyunfacade'
+import { HashMap } from '@kit.ArkTS'
+import { JSONUtil, StringUtil } from '@alipay/authbase'
+
+export function initializeSDK(options : FaceAuthInitOptions) : void {
+	try {
+		if (options.isIpv6) {
+			ZimFacade.init(getContext(), options.params)
+		} else {
+			ZimFacade.initIPv6(getContext(), options.params)
+		}
+		options.success?.({
+			code: 1000,
+			data: {},
+			msg: ''
+		} as FaceAuthSuccess)
+	} catch (error) {
+		console.log('init face auth sdk error', error)
+		options.fail?.(new FaceAuthFailImpl(9010001))
+	}
+}
+
+export function getMetaInfos(options : FaceAuthMetaInfoOptions) : void {
+	try {
+		const metaInfos = ZimFacade.getMetaInfos(getContext(), options.params)
+		options.success?.({
+			code: 1000,
+			data: metaInfos,
+			msg: ''
+		} as FaceAuthSuccess)
+	} catch (error) {
+		console.log('igetMetaInfos error', error)
+		options.fail?.(new FaceAuthFailImpl(9010002))
+	}
+}
+
+export function verify(options : FaceAuthVerifyOptions) {
+	options.success?.({
+		code: 1000,
+		data: "",
+		msg: ''
+	} as FaceAuthSuccess)
+} 

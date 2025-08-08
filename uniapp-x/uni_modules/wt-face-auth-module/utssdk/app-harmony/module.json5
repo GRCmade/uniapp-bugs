@@ -1,0 +1,31 @@
+{
+  "module": {
+    "name": "uni_modules__wt_face_auth_module", // 鸿蒙模块名，默认值生成规则见下文
+    "type": "har", // 固定为har
+    "deviceTypes": [ // 支持的设备类型
+      "default",
+      "tablet",
+      "2in1"
+    ],
+    "requestPermissions": [
+			{
+				"name": "ohos.permission.INTERNET",
+				"reason": "$string:internet_reason"
+			},
+			{
+				"name": "ohos.permission.CAMERA",
+				"reason": "$string:amera_permission_reason",
+				"usedScene": {
+					"when": "always"
+				}
+			},
+			{
+				"name": "ohos.permission.MICROPHONE",
+				"reason": "$string:microphone_permission_reason",
+				"usedScene": {
+					"when": "always"
+				}
+			}
+		]
+  }
+}

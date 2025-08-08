@@ -1,0 +1,19 @@
+{
+  "modelVersion": "5.0.0",
+  "description": "Please describe the basic information.",
+  "dependencies": {
+    "@uni_modules/harmony-button": "./uni_modules/harmony-button",
+    "@dcloudio/uni-app-runtime": "./libs/UniAppRuntime.har",
+    "@uni_modules/hmr-for-uni-app": "./libs/uni_modules__hmr_for_uni_app.har"
+  },
+  "devDependencies": {
+    "@ohos/hypium": "1.0.19",
+    "@ohos/hamock": "1.0.0"
+  },
+	"overrides":{
+		"@alipay/authbase": "./uni_modules/harmony-button/utssdk/app-harmony/libs/authbase.har",
+		"@alipay/livenessverify":"./uni_modules/harmony-button/utssdk/app-harmony/libs/livenessverify.har",
+		"@alipay/ocrverify":"./uni_modules/harmony-button/utssdk/app-harmony/libs/ocrverify.har",
+		"@alipay/aliyunfacade":"./uni_modules/harmony-button/utssdk/app-harmony/libs/aliyunfacade.har"
+	}
+}

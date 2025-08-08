@@ -1,0 +1,57 @@
+import { FaceAuthInitOptions, FaceAuthMetaInfoOptions, FaceAuthVerifyOptions, FaceAuthSuccess } from '../interface'
+import { FaceAuthFailImpl } from '../unierror'
+
+import ZIMCallback from 'com.alipay.face.api.ZIMCallback'
+import ZIMFacade from 'com.alipay.face.api.ZIMFacade'
+import ZIMFacadeBuilder from 'com.alipay.face.api.ZIMFacadeBuilder'
+import ZIMResponse from "com.alipay.face.api.ZIMResponse"
+
+export function initializeSDK(options : FaceAuthInitOptions) : void {
+	try {
+		if (options.isIpv6) {
+			ZIMFacade.install(UTSAndroid.getAppContext()!)
+		} else {
+			ZIMFacade.installIPv6(UTSAndroid.getAppContext()!)
+		}
+		options.success?.({
+			code: 1000,
+			data: {} as UTSJSONObject
+		} as FaceAuthSuccess)
+	} catch (error : any) {
+		console.log('init face auth sdk error', error)
+		options.fail?.(new FaceAuthFailImpl(9010001))
+	}
+}
+
+export function getMetaInfos(options : FaceAuthMetaInfoOptions) : void {
+	try {
+		const metaInfos = ZIMFacade.getMetaInfos(UTSAndroid.getAppContext()!)
+		options.success?.({
+			code: 1000,
+			data: metaInfos
+		} as FaceAuthSuccess)
+	} catch (error : any) {
+		console.log('getMetaInfos error', error)
+		options.fail?.(new FaceAuthFailImpl(9010002))
+	}
+}
+
+export function verify(options : FaceAuthVerifyOptions) {
+	const callback = new (class implements ZIMCallback {
+		override response(reseponse ?: ZIMResponse) : boolean {
+
+		}
+
+	})
+	try {
+		const zimFacade = ZIMFacadeBuilder.create(UTSAndroid.getUniActivity()!)
+		zimFacade.verify(options.certifyId, true, options.params, callback)
+		options.success?.({
+			code: 1000,
+			data: ""
+		} as FaceAuthSuccess)
+	} catch (error : any) {
+		console.log('verify error', error)
+		options.fail?.(new FaceAuthFailImpl(9010003))
+	}
+}

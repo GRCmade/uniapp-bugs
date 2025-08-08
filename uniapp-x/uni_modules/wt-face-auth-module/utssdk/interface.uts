@@ -1,0 +1,116 @@
+/** 参考：https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/integrate-sdk-for-android-into-an-android-application?spm=a2c4g.11186623.0.i1#27f80d58ee2e1 */
+
+/**
+ * 初始化SDK
+ */
+export declare function initializeSDK(options : FaceAuthInitOptions) : void
+
+/**
+ * 获取当前移动端环境信息
+ */
+export declare function getMetaInfos(options : FaceAuthMetaInfoOptions) : void
+
+/**
+ * 发起认证请求
+ */
+export declare function verify(options : FaceAuthVerifyOptions) : void
+
+/**
+ *  阿里云实人认证SDK初始化参数
+ */
+export type FaceAuthInitOptions = {
+	/**
+	 * 是否使用IPv6网络初始化
+	 */
+	isIpv6 : boolean
+	/**
+	 * 初始化参数，仅鸿蒙支持
+	 */
+	params : Map<string, string> | null
+	/**
+	 * 初始化成功回调
+	 */
+	success ?: (res : FaceAuthSuccess) => void
+	/**
+	 * 初始化失败回调
+	 */
+	fail ?: (res : FaceAuthFail) => void
+}
+
+/**
+ * 获取当前移动端环境信息请求参数
+ */
+export type FaceAuthMetaInfoOptions = {
+	/**
+	 * 初始化参数，仅鸿蒙支持
+	 */
+	params : Map<string, string> | null
+	/**
+	 * 成功回调
+	 */
+	success ?: (res : FaceAuthSuccess) => void
+	/**
+	 * 失败回调
+	 */
+	fail ?: (res : FaceAuthFail) => void
+}
+
+/**
+ * 发起认证请求参数
+ */
+export type FaceAuthVerifyOptions = {
+	/**
+	 * 从服务端初始化认证接口（InitFaceVerify）获取的CertifyId
+	 */
+	certifyId : string
+	/**
+	 * 自定义参数
+	 */
+	params : Map<string, string> | null
+	/**
+	 * 成功回调
+	 */
+	success ?: (res : FaceAuthSuccess) => void
+	/**
+	 * 失败回调
+	 */
+	fail ?: (res : FaceAuthFail) => void
+}
+
+/**
+ * 实人认证插件内部接口调用成功参数
+ */
+export type FaceAuthSuccess = {
+	code : FaceResultCode
+	data : any
+	msg : string | null
+}
+
+/**
+ * 结果错误码
+ * 
+ * - 1000 成功
+ * - 1001 系统错误
+ * - 1003 验证中断
+ * - 2002 网络错误
+ * - 2003 客户端设备时间错误
+ * - 2006 失败次数过多，或刷脸验证失败
+ */
+export type FaceResultCode = 1000 | 1001 | 1003 | 2002 | 2003 | 2006
+
+/**
+ * 错误码
+ * 
+ * 根据uni错误码规范要求，建议错误码以90开头，以下是错误码示例：
+ * - 9010001 初始化SDK失败
+ * - 9010002 获取当前设备环境信息失败
+ * - 9010003 发起认证请求失败
+ */
+export type FaceAuthErrorCode = 9010001 | 9010002 | 9010003
+
+/**
+ * 错误回调参数
+ */
+export interface FaceAuthFail extends IUniError {
+	errCode : FaceAuthErrorCode
+};

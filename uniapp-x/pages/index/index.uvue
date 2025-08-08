@@ -1,10 +1,12 @@
 <template>
 	<view>
+		<input @blur="inpfocus" @focus="inpfocus" @confirm="inputsou" cursor-color="#00a894" auto-focus class="input" type="text" placeholder="可搜索 昵称、手机号、邮箱" placeholder-class="inputplaceholder"></input>
 		<button @click="click">click</button>
 	</view>
 </template>
 
 <script>
+	import {initializeSDK } from "@/uni_modules/wt-face-auth-module"
 	export default {
 		data() {
 			return {
@@ -15,6 +17,12 @@
 
 		},
 		methods: {
+			inputsou(){
+				console.log("inputsou")
+			},
+			inpfocus(){
+				console.log("inpfocus")
+			},
 			click(){
 				console.log("click")
 			}

@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"@alipay/aliyunfacade": "./libs/aliyunfacade.har",
+		"@alipay/authbase": "./libs/authbase.har",
+		"@alipay/livenessverify": "./libs/livenessverify.har",
+		"@alipay/ocrverify": "./libs/ocrverify.har"
+	}
+}

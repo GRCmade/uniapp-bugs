@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "internet_reason",
+      "value": "You need to obtain your network permission to obtain network resource display data."
+    },
+    {
+      "name": "camera_permission_reason",
+      "value": "Used for taking pictures or recording videos."
+    },
+    {
+      "name": "microphone_permission_reason",
+      "value": "Used for recording videos."
+    }
+  ]
+}

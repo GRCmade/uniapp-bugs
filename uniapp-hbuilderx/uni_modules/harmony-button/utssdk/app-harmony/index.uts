@@ -1,1 +1,6 @@
 import './harmony-button.ets'
+
+
+export function test(){
+	console.log("test")
+}
