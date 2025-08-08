@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "vue2-uview-import-harmony",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","mp-weixin"],
+    "url": "https://ask.dcloud.net.cn/question/212537"
+  }
+}
