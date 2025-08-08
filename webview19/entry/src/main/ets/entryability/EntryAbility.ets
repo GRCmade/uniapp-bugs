@@ -1,15 +1,19 @@
 import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { createNWeb, setOSRuntime } from '../pages/sdk'
+import { createNWeb, setOSRuntime,init } from '../pages/sdk'
 // import {myNodeController} from  '../pages/common'
 import {WebBuilder} from '../pages/common'
-
+import {getRealPath} from  "../res/sdk"
 setOSRuntime({
   WebBuilder
 })
 
 const DOMAIN = 0x0000;
+// let filesDir = "";
+// function getFilesDir() :string{
+//   return f;
+// }
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
@@ -24,6 +28,7 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     // Main window is created, set main page for this ability
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    init()
 
     windowStage.loadContent('pages/Index', (err) => {
       let windowClass: window.Window = windowStage.getMainWindowSync();
@@ -32,7 +37,8 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       // let baseNode = new myNodeController();
-      createNWeb('https://www.baidu.com', windowClass.getUIContext());
+      // createNWeb('https://www.baidu.com', windowClass.getUIContext());
+      createNWeb('file:///data/storage/el1/bundle/entry/resources/resfile/index.html', windowClass.getUIContext());
       if (err.code) {
         hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
         return;
