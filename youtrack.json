@@ -1,10 +1,9 @@
 {
-  "name": "uniapp-bugs",
-  "branch": "template-cli",
-  "binding_branch": "",
-  "properity": {
-    "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
-  }
+	"name": "uniapp-bugs",
+	"binding_branch":"android-uploadfile-onProgressUpdate",
+	"properity": {
+		"project": "UB",
+		"platforms": ["uni-app","android","ios"],
+		"url":"https://github.com/dcloudio/uni-app/issues/5200"
+	}
 }
