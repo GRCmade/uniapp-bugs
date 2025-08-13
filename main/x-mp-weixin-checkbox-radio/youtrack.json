@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "x-mp-weixin-checkbox-radio",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app x","mp-weixin"],
+    "url": ""
+  }
+}
