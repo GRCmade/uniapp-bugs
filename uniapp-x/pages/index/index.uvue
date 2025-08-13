@@ -1,26 +1,26 @@
 <template>
-	<view>
-		<button @click="click">click</button>
-	</view>
+  <view>
+		<checkbox><text>uniapp-x</text></checkbox> 123
+    <radio-group>
+      <radio class="list-cell" label="选项1" name="radio">选项 1</radio>
+      <radio class="list-cell" label="选项2" name="radio">选项 2</radio>
+    </radio-group>
+    <button @click="click">button</button>
+  </view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-			click(){
-				console.log("click")
-			}
-		}
-	}
+<script lang="ts" setup>
+import { ref } from 'vue'
+const radioValue = ref('选项1')
+const click = () => {}
 </script>
 
 <style>
+.list-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
 </style>
