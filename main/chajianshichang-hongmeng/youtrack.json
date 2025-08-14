@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "chajianshichang-hongmeng",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app"],
+    "url": ""
+  }
+}
