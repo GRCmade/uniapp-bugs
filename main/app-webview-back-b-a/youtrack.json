@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "app-webview-back-b-a",
+  "binding_branch": "app-webview-back-b-a",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app"],
+    "url": "https://ask.dcloud.net.cn/question/212712"
+  }
+}
