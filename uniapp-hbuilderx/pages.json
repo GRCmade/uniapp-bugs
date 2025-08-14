@@ -5,6 +5,20 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path" : "pages/test/test",
+			"style" : 
+			{
+				"navigationBarTitleText" : "test"
+			}
+		},
+		{
+			"path" : "pages/temp/temp",
+			"style" : 
+			{
+				"navigationBarTitleText" : "temp"
+			}
 		}
 	],
 	"globalStyle": {
