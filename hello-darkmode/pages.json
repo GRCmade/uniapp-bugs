@@ -1,0 +1,90 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/index/test",
+			"style": {
+				"navigationBarTitleText": "TabBar Page"
+			}
+		},
+		{
+			"path": "pages/index/test2",
+			"style": {
+				"navigationBarTitleText": "二级页面"
+			}
+		},
+		{
+			"path": "pages/button/button",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/switch/switch",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/picker/picker",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/picker-view/picker-view",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/popup/popup",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "@navigationBarTextStyle",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "@navigationBarBackgroundColor",
+		"backgroundColor": "@backgroundColor"
+	},
+	"tabBar": {
+		"color": "@tabBarColor",
+		"selectedColor": "@tabBarSelectedColor",
+		"borderStyle": "@tabBarBorderStyle",
+		"backgroundColor": "@tabBarBackgroundColor",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "@iconPathIndex",
+				"selectedIconPath": "@selectedIconPathIndex"
+			},
+			{
+				"pagePath": "pages/index/test",
+				"text": "TabBar Page",
+				"iconPath": "@iconPathText",
+				"selectedIconPath": "@selectedIconPathText"
+			}
+		],
+		"midButton": {
+			"width": "60px",
+			"height": "60px",
+			"backgroundImage": "@midButtonImage"
+		}
+	},
+	"uniIdRouter": {}
+}
