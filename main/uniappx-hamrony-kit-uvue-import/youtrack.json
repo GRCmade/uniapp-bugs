@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniappx-hamrony-kit-uvue-import",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app x","hamrony"],
+    "url": "https://ask.dcloud.net.cn/question/212816"
+  }
+}
