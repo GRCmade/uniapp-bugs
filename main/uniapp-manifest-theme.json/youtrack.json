@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniapp-manifest-theme.json",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app"],
+    "url": "https://ask.dcloud.net.cn/question/212782"
+  }
+}
