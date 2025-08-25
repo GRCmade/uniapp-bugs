@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniapp-x-picker-view-column-null",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app x"],
+    "url": "https://github.com/dcloudio/uni-app/issues/5643"
+  }
+}
