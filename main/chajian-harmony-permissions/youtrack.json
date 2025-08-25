@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "chajian-harmony-permissions",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony"],
+    "url": "https://ext.dcloud.net.cn/plugin?name=harmony-permissions"
+  }
+}
