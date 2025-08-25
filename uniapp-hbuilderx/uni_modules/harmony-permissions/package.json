@@ -1,16 +1,16 @@
 {
-	"id": "harmony-button",
-	"displayName": "harmony-button",
+	"id": "harmony-permissions",
+	"displayName": "鸿蒙权限配置 harmony-permissions",
 	"version": "1.0.0",
-	"description": "harmony-button",
+	"description": "harmony-permissions",
 	"keywords": [
-        "harmony-button"
+        "harmony-permissions"
     ],
 	"repository": "",
 	"engines": {
 		"HBuilderX": "^3.6.8",
-		"uni-app": "^3.1.0",
-		"uni-app-x": "^3.1.0"
+		"uni-app": "^4.45",
+		"uni-app-x": "^4.45"
 	},
 	"dcloudext": {
 		"type": "uts",
@@ -26,23 +26,23 @@
 			"qq": ""
 		},
 		"declaration": {
-			"ads": "",
-			"data": "",
-			"permissions": ""
+			"ads": "无",
+			"data": "无",
+			"permissions": "无"
 		},
 		"npmurl": "",
-		"darkmode": "-",
-		"i18n": "-",
-		"widescreen": "-"
+		"darkmode": "x",
+		"i18n": "x",
+		"widescreen": "x"
 	},
 	"uni_modules": {
 		"dependencies": [],
 		"encrypt": [],
 		"platforms": {
 			"cloud": {
-				"tcb": "-",
-				"aliyun": "-",
-				"alipay": "-"
+				"tcb": "√",
+				"aliyun": "√",
+				"alipay": "√"
 			},
 			"client": {
 				"uni-app": {
@@ -59,7 +59,7 @@
 						"nvue": "-",
 						"android": "-",
 						"ios": "-",
-						"harmony": "-"
+						"harmony": "√"
 					},
 					"mp": {
 						"weixin": "-",
@@ -85,7 +85,7 @@
 					"app": {
 						"android": "-",
 						"ios": "-",
-						"harmony": "-"
+						"harmony": "√"
 					},
 					"mp": {
 						"weixin": "-"
