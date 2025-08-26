@@ -1,0 +1,17 @@
+{
+    "version" : "1.0",
+    "configurations" : [
+        {
+            "env" : {
+                "UNI_APP_X_TYPE_VALIDATION" : true
+            },
+            "type" : "uni-app:app-ios_simulator"
+        },
+        {
+            "env" : {
+                "UNI_APP_X_TYPE_VALIDATION" : true
+            },
+            "type" : "uni-app:app-android"
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "uniapp-x-harmony-border-zindex",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app x","harmony"],
+    "url": "https://issues.dcloud.net.cn/pages/issues/detail?id=20950"
   }
 }
