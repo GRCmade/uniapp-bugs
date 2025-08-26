@@ -1,4 +1,15 @@
 <template>
+	<!-- #ifdef APP-HARMONY -->
+	<!-- 鸿蒙不支持 list -->
+	<scroll-view scroll-y class="list">
+		<view v-for="(item, index) in dataList" :key="item.id" @click="onclick">
+			<view class="list-item">
+				<text>{{item.name}}</text>
+			</view>
+		</view>
+	</scroll-view>
+	<!-- #endif -->
+	<!-- #ifndef APP-HARMONY -->
 	<list class="list" :offset-accuracy="5" :bounce="false" isSwiperList="true">
 		<refresh class="refresh" @refresh="onrefresh" @pullingdown="onpullingdown"
 			:display="refreshing ? 'show' : 'hide'">
@@ -12,6 +23,7 @@
 			</view>
 		</cell>
 	</list>
+	<!-- #endif -->
 </template>
 
 <script>
