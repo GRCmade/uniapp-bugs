@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "ext-uni-data-picker",
   "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app"],
-    "url": ""
+    "url": "https://ext.dcloud.net.cn/plugin?id=3796"
   }
 }
