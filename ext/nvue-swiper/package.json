@@ -1,0 +1,15 @@
+{
+    "id": "nvue-swiper",
+    "name": "nvue-swiper",
+    "version": "1.0.1",
+    "description": "nvue 多页签滑动效果",
+    "keywords": [
+        "nvue-swiper"
+    ],
+    "dcloudext": {
+        "category": [
+            "uni-app前端模板",
+            "前端页面模板"
+        ]
+    }
+}
