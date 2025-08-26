@@ -1,0 +1,1 @@
+{"bsonType":"object","description":"用户主表","required":["username"],"permission":{"read":true,"create":true,"update":true,"delete":true},"properties":{"_id":{"description":"用户唯一ID"},"username":{"bsonType":"string","description":"用户名"}}}

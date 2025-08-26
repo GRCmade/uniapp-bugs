@@ -1,0 +1,25 @@
+{
+  "bsonType": "object",
+  "description": "订单副表",
+  "required": ["product_name", "user_id"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "订单ID"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "foreignKey": "user._id", // 指向 user 表的 _id
+      "description": "关联的用户ID"
+    },
+    "product_name": {
+      "bsonType": "string",
+      "description": "商品名称"
+    }
+  }
+}

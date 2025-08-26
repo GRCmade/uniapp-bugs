@@ -1,0 +1,67 @@
+{
+  "bsonType": "object",
+  "required": ["name", "age"],
+  "permission": {
+    "read": "auth.uid != null",
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "name": {
+      "label": "姓名",
+      "bsonType": "string",
+      "description": "请输入姓名",
+      "minLength": 2,
+      "maxLength": 8,
+      "errorMessage": {
+        "required": "{label}必填",
+        "minLength": "{label}不能小于{minLength}个字符",
+        "maxLength": "{label}不能大于{maxLength}个字符"
+      }
+    },
+    "age": {
+      "title": "年龄",
+      "bsonType": "int",
+      "description": "请输入年龄",
+      "minimum": 22,
+      "maximum": 35
+    },
+    "gender": {
+      "bsonType": "string",
+      "title": "性别",
+      "description": "用户性别：0 未知 1 男性 2 女性",
+      "defaultValue": '0',
+      "enum": [{
+          "text": "未知",
+          "value": '0'
+        },
+        {
+          "text": "男",
+          "value": '1'
+        },
+        {
+          "text": "女",
+          "value": '2'
+        }
+      ]
+    },
+    "createTime": {
+      "bsonType": "timestamp",
+      "title": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    },
+    "ip": {
+      "bsonType": "string",
+      "title": "ip",
+      "forceDefaultValue": {
+        "$env": "clientIP"
+      }
+    }
+  }
+}
