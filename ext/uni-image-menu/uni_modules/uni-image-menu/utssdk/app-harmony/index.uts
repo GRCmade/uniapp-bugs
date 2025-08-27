@@ -1,0 +1,28 @@
+import { common } from '@kit.AbilityKit';
+import { systemShare } from '@kit.ShareKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+export function uniShare(list : string[]) {
+	let data : systemShare.SharedData = new systemShare.SharedData({
+		utd: uniformTypeDescriptor.UniformDataType.PLAIN_TEXT,
+		content: 'Hello HarmonyOS'
+	} as systemShare.SharedRecord);
+
+	for (var i = 0; i < list.length; i++) {
+		data.addRecord({
+			utd: uniformTypeDescriptor.UniformDataType.PNG,
+			uri: list[i]
+		} as systemShare.SharedRecord);
+	}
+
+	let controller : systemShare.ShareController = new systemShare.ShareController(data);
+
+	const uiContext = UTSHarmony.getCurrentWindow()!.getUIContext()
+
+	let context : common.UIAbilityContext = uiContext.getHostContext() as common.UIAbilityContext;
+
+	controller.show(context, {
+		previewMode: systemShare.SharePreviewMode.DETAIL,
+		selectionMode: systemShare.SelectionMode.SINGLE
+	} as systemShare.ShareControllerOptions);
+}
