@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniapp-test-auto-debug",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app"],
+    "url": ""
+  }
+}
