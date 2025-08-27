@@ -1,0 +1,15 @@
+{
+    "id": "swiper-sticky",
+    "name": "swiper-sticky",
+    "version": "1.0.1",
+    "description": "nvue 多页签滑动吸顶效果",
+    "keywords": [
+        "swiper-sticky"
+    ],
+    "dcloudext": {
+        "category": [
+            "uni-app前端模板",
+            "前端页面模板"
+        ]
+    }
+}
