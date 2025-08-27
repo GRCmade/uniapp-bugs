@@ -1,6 +1,14 @@
 <template>
 	<view>
-		<button @click="handleClick">Click me</button>
+			<view class="stickey">
+				121233
+			</view>
+		<view v-for="(item,index) in 100" :key="index">
+
+			<view >
+				{{item}}
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -8,8 +16,12 @@
 export default {
 	data() {
 		return {
-			message: 'Hello, World!'
+			message: 'Hello, World!',
+			data:[]
 		}
+	},
+	onLoad() {
+		// this.data =
 	},
 	methods: {
 		handleClick() {
@@ -20,4 +32,15 @@ export default {
 </script>
 
 <style scoped>
+	view {
+		min-height: 50px;
+		padding: 10px;
+	}
+	.stickey{
+		position: sticky !important;
+		top: 0 !important;
+		z-index: 10;
+		background-color: white;
+		width: 100%;
+	}
 </style>

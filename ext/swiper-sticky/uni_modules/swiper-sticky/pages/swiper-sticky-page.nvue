@@ -1,6 +1,6 @@
 <template>
 	<view class="uni-swiper-page">
-		<list ref="list" class="list" :offset-accuracy="5" :bounce="true" isSwiperList="true">
+		<list ref="list" class="list" :offset-accuracy="5" :bounce="true" isSwiperList="true" :scroll-enabled="canScroll">
 			<cell v-for="(item, index) in dataList" :key="item.id" :ref="'item'+index" @click="onclick">
 				<view class="list-item">
 					<text>{{item.name}}</text>
@@ -26,7 +26,9 @@
 		data() {
 			return {
 				scrollable: true,
-				dataList: []
+				dataList: [],
+				canScroll: false,  // 是否允许滚动
+				isActive: false    // 是否是当前活跃页面
 			}
 		},
 		created() {
@@ -62,12 +64,12 @@
 
 <style scoped>
 	.uni-swiper-page {
-		flex: 1;
+/* 		flex: 1;
 		position: absolute;
 		left: 0;
 		top: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 0; */
 	}
 
 	.list {
