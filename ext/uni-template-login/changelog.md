@@ -1,3 +1,5 @@
+## 0.2.24（2025-08-28）
+新增支持鸿蒙平台
 ## 0.2.23（2021-05-27）
 - 升级uni-id到3.1.0版本，默认对邮箱、用户名忽略大小写 [详情](https://uniapp.dcloud.net.cn/uniCloud/uni-id?id=case-sensitive)
 ## 0.2.22（2021-04-13）

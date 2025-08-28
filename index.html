@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正则表达式分割中文示例</title>
+</head>
+<body>
+  <h1>正则表达式分割中文和非中文字符示例</h1>
+  <p><strong>原始文本:</strong> <span id="originalText"></span></p>
+  <p><strong>正则表达式:</strong> <code>/[\p{Script=Han}]|[^\p{Script=Han}]+/gu</code></p>
+  <p><strong>分割结果:</strong></p>
+  <div id="result"></div>
+
+  <script>
+    const text = "Hello世界123你好";
+    const matches = text.match(/[\p{Script=Han}]|[^\p{Script=Han}]+/gu);
+
+    // 显示原始文本
+    document.getElementById('originalText').textContent = text;
+
+    // 显示分割结果
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '<ul>' + matches.map((match, index) =>
+      `<li><strong>索引 ${index}:</strong> "${match}" <em>(${/[\p{Script=Han}]/u.test(match) ? '中文字符' : '非中文字符'})</em></li>`
+    ).join('') + '</ul>';
+
+    // 也在控制台输出
+    console.log(matches);
+  </script>
+</body>
+</html>

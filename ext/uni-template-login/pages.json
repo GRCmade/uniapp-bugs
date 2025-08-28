@@ -20,12 +20,16 @@
 			"style": {
 				"navigationBarTitleText": "找回密码"
 			}
-		}, {
+		},
+		// #ifndef APP-HARMONY 
+		{
 			"path": "pages/pwd/update-password",
 			"style": {
 				"navigationBarTitleText": "修改密码"
 			}
-		}, {
+		},
+		// #endif
+		{
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "我的"

@@ -27,7 +27,12 @@ export default class SliceMsgToLastMsg {
 			return //console.log('被终止');
 		}
 		this.sliceMsgIng = true
-    const msgsArr = this.msgs.match(/[\p{Script=Han}]|[^\p{Script=Han}]+/gu);
+		// #ifdef APP-HARMONY
+		const msgsArr = this.msgs.match(/[\p{Script=Han}]|[^\p{Script=Han}]+/gu);
+		// #endif
+		// #ifndef APP-HARMONY
+		const msgsArr = this.msgs.match(/[\p{Script=Han}]|[^\p{Script=Han}]+/gu);
+		// #endif
 		let msg = msgsArr.reverse().pop()
 		// console.log('msg', msg);
 		// 更新最后一条消息的内容
