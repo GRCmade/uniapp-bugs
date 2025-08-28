@@ -331,7 +331,12 @@
   }
 
   .tab-box {
-    flex: 1;
+		/* #ifndef APP-HARMONY */
+		flex: 1;
+		/* #endif */
+		/* #ifdef APP-HARMONY */
+		height: 100vh;
+		/* #endif */
   }
 
   .uni-tab-item {
