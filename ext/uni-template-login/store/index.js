@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// import Vue from 'vue'
+import { createStore } from 'vuex'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
-const store = new Vuex.Store({
+const store = createStore({
 	state: {
 		/**
 		 * 是否需要强制登录
