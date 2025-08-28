@@ -8,7 +8,7 @@
     "compatConfig" : {
         "MODE" : 2 // 2代表兼容Vue2模式，3代表非兼容Vue2模式
     },
-    "vueVersion" : "2",
+    "vueVersion" : "3",
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
