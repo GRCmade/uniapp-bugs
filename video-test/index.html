@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Child Page</title>
+	<script src="./uni.webview.1.5.4.js"></script>
+</head>
+<body>
+  <h2>视频</h2>
+  <video id="myVideo" width="560" height="315" controls autoplay muted playsinline>
+    <source src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4" type="video/mp4" />
+    您的浏览器不支持 video 标签。
+  </video>
+	<button id="btn" style="width: 200px;height: 100px;font-size: 30px;">分享</button>
+
+  <script>
+    const video = document.getElementById("myVideo");
+    video.addEventListener('pause',()=>{
+      console.log("video - pause")
+    })
+		document.getElementById("btn").addEventListener("click", () => {
+			// uni.postMessage({data: {status: 1}});
+			console.log('btn click')
+      plus.webview.postMessageToUniNView({
+        type: "WEB_INVOKE_APPSERVICE",
+        args: {
+          data: {
+            arg:{
+              status:1
+            },
+            name:"postMessage",
+            options: {
+              timestamp:1756453427563
+            }
+          },
+          webviewIds: ["1"]
+        }
+      }, "__uniapp__service");
+		})
+  </script>
+</body>
+</html>
