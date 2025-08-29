@@ -1,8 +1,17 @@
 <script lang="uts">
+	import emitter from '@ohos.events.emitter'
+
+	emitter.on('message', (data) => {
+		console.log('message - uniappx:', data.data)
+	})
+
 	let firstBackTime = 0
 	export default {
 		onLaunch: function () {
 			console.log('App Launch')
+			emitter.emit('launch', {
+				data: 'launch - uniappx'
+			})
 		},
 		onShow: function () {
 			console.log('App Show')
@@ -33,7 +42,6 @@
 		},
 	}
 </script>
-
 <style>
 	/*每个页面公共css */
 	.uni-row {

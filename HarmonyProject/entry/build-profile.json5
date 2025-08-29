@@ -1,6 +1,14 @@
 {
   "apiType": "stageMode",
   "buildOption": {
+    "arkOptions": {
+      "runtimeOnly": {
+        "sources": [
+          "./src/main/resources/resfile/uni-app-x/apps/__UNI__6035534/www/import/app-config.ets",
+          "./src/main/resources/resfile/uni-app-x/apps/__UNI__6035534/www/import/app-service.ets"
+        ]
+      }
+    }
   },
   "buildOptionSet": [
     {

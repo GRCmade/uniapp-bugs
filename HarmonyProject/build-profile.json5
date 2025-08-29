@@ -27,6 +27,10 @@
   },
   "modules": [
     {
+      "name": "uni_modules__harmony_emiitter",
+      "srcPath": "./uni_modules/harmony-emiitter"
+    },
+    {
       "name": "entry",
       "srcPath": "./entry",
       "targets": [

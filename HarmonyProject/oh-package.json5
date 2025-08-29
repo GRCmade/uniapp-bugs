@@ -2,6 +2,8 @@
   "modelVersion": "5.1.1",
   "description": "Please describe the basic information.",
   "dependencies": {
+    "@dcloudio/uni-app-x-runtime": "4.75.*",
+    "@uni_modules/harmony-emiitter": "./uni_modules/harmony-emiitter"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.21",

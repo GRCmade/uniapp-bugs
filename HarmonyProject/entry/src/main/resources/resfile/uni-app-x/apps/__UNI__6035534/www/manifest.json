@@ -1,0 +1,17 @@
+{
+  "id": "__UNI__6035534",
+  "name": "uniapp-x",
+  "description": "",
+  "version": {
+    "name": "1.0.0",
+    "code": "100"
+  },
+  "uni-app-x": {
+    "compilerVersion": "4.75"
+  },
+  "app-harmony": {
+    "distribute": {
+      "bundleName": "com.yuhe.template"
+    }
+  }
+}

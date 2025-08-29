@@ -1,0 +1,12 @@
+import emitter from '@ohos.events.emitter';
+
+export const utsEmitter = () => {
+	console.log("utsEmitter")
+	let data : emitter.EventData = {
+		data: {
+			"data": "yuhe"
+		}
+	}
+	emitter.emit('launch', data)
+	emitter.emit('message', data)
+}

@@ -1,20 +1,25 @@
+import { openUniApp } from '@dcloudio/uni-app-x-runtime'
+
+import emitter from '@ohos.events.emitter'
+
+emitter.on('launch', (data) => {
+  console.log('launch - harmony:', JSON.stringify(data))
+
+  emitter.emit('message', {
+    data: 'hello - harmony'
+  })
+})
+
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
-
   build() {
     RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
+      Button('Open')
         .onClick(() => {
-          this.message = 'Welcome';
+          openUniApp('__UNI__6035534', {
+            animationType: 'fade-in',
+          })
         })
     }
     .height('100%')
