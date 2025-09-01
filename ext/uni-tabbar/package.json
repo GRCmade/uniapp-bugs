@@ -1,22 +1,15 @@
 {
-  "id": "uni-template-login",
-  "displayName": "云端一体登录模板",
-  "version": "0.2.24",
-  "description": "登录模板，已集成uni-id、uni-captcha",
+  "id": "uni-tabbar",
+  "name": "底部选项卡模板",
+  "displayName": "底部选项卡模板",
+  "version": "1.0.0",
+  "description": "中间带+号的底部选项卡",
   "keywords": [
-    "登录",
-    "login",
-    "云端一体登录",
-    "验证码登录"
+    "tabbar",
+    "uni-tabbar",
+    "选项卡"
 ],
-  "repository": "https://github.com/dcloudio/uni-template-login",
-  "engines": {
-    "HBuilderX": "^3.1.0",
-    "uni-app": "^4.07",
-    "uni-app-x": ""
-  },
   "dcloudext": {
-    "type": "unicloud-template-project",
     "sale": {
       "regular": {
         "price": "0.00"
@@ -34,18 +27,18 @@
       "permissions": "无"
     },
     "npmurl": "",
+    "type": "uniapp-template-project",
     "darkmode": "x",
     "i18n": "x",
     "widescreen": "x"
   },
+  "repository": "",
   "uni_modules": {
-    "dependencies": [],
-    "encrypt": [],
     "platforms": {
       "cloud": {
         "tcb": "√",
         "aliyun": "√",
-        "alipay": "√"
+        "alipay": "x"
       },
       "client": {
         "uni-app": {
@@ -96,5 +89,10 @@
         }
       }
     }
+  },
+  "engines": {
+    "HBuilderX": "^3.1.0",
+    "uni-app": "^4.07",
+    "uni-app-x": ""
   }
 }

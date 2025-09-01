@@ -30,6 +30,7 @@
 	 * @value modal		错误信息modal显示
 	 * @event {Function} submit 提交时触发
 	 */
+	// #ifdef VUE2
 	import Vue from 'vue'
 	Vue.prototype.binddata = function(name, value, formName) {
 		if (formName) {
@@ -47,6 +48,8 @@
 			formVm.setValue(name, value)
 		}
 	}
+	// #endif
+
 
 	import Validator from './validate.js'
 

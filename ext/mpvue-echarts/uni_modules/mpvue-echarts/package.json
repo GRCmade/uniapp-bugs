@@ -51,8 +51,8 @@
 						"vue3": "√"
 					},
 					"web": {
-						"safari": "-",
-						"chrome": "-"
+						"safari": "√",
+						"chrome": "√"
 					},
 					"app": {
 						"vue": "√",
@@ -62,9 +62,9 @@
 						"harmony": "√"
 					},
 					"mp": {
-						"weixin": "-",
-						"alipay": "-",
-						"toutiao": "-",
+						"weixin": "√",
+						"alipay": "√",
+						"toutiao": "√",
 						"baidu": "-",
 						"kuaishou": "-",
 						"jd": "-",
