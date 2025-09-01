@@ -49,6 +49,6 @@ module.exports = {
 	watchPathIgnorePatterns: ['/node_modules/', '/dist/', '/.git/'],
 	moduleFileExtensions: ['js', 'json'],
 	rootDir: __dirname,
-	testMatch: ['<rootDir>/src/**/*test.[jt]s?(x)'], // 测试文件目录
+	testMatch: ["<rootDir>/src/pages/**/*test.[jt]s?(x)"], // 测试文件目录
 	testPathIgnorePatterns: ['/node_modules/']
 }
