@@ -14,12 +14,12 @@ module.exports = {
 			android: {
 				appid: "", //自定义基座测试需配置manifest.json中的appid
 				package: "", //自定义基座测试需配置Android包名
-        "executablePath": "/Applications/HBuilderX-Dev.app/Contents/HBuilderX/plugins/launcher/base/android_base.apk"
+        "executablePath": "/Applications/HBuilderX.app/Contents/HBuilderX/plugins/launcher/base/android_base.apk"
 			},
 			ios: {
 				// uuid 必须配置，目前仅支持模拟器，可以（xcrun simctl list）查看要使用的模拟器 uuid
         "id": "D7A3172B-9685-49FF-93B8-F062E9407F53",
-        "executablePath": "/Applications/HBuilderX-Dev.app/Contents/HBuilderX/plugins/launcher/base/Pandora_simulator.app"
+        "executablePath": "/Applications/HBuilderX.app/Contents/HBuilderX/plugins/launcher/base/Pandora_simulator.app"
 			}
 		},
 		"mp-weixin": {
@@ -49,6 +49,6 @@ module.exports = {
 	watchPathIgnorePatterns: ['/node_modules/', '/dist/', '/.git/'],
 	moduleFileExtensions: ['js', 'json'],
 	rootDir: __dirname,
-	testMatch: ["<rootDir>/src/pages/**/*test.[jt]s?(x)"], // 测试文件目录
+	testMatch: ['<rootDir>/src/**/*test.[jt]s?(x)'], // 测试文件目录
 	testPathIgnorePatterns: ['/node_modules/']
 }
