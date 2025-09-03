@@ -1,26 +1,54 @@
 <template>
-	<view>
-		<button @click="click">click</button>
+	<button @click="changeStatus">visible === {{visible}}</button>
+	<view style="position: relative;height: 100px;">
+		<scroll-view style="height: 100px;" :class="visible === 'A' ? 'visible' : 'hidden'" class="absolute">
+			<button @click="log('a')">A</button>
+		</scroll-view>
+		<scroll-view style="height: 100px;" :class="visible === 'B' ? 'visible' : 'hidden'" class="absolute">
+			<button @click="log('b')">B</button>
+		</scroll-view>
+		<scroll-view style="height: 100px;" :class="visible === 'C' ? 'visible' : 'hidden'" class="absolute">
+			<button @click="log('c')">C</button>
+		</scroll-view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				visible: 'A'
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-			click(){
-				console.log("click")
+			log(msg : string) {
+				console.log('log', msg)
+			},
+			changeStatus(){
+				if(this.visible == 'A'){
+					this.visible = 'B'
+				}else if(this.visible == 'B'){
+					this.visible = 'C'
+				}else if(this.visible == 'C'){
+					this.visible = 'A'
+				}
 			}
 		}
 	}
 </script>
-
 <style>
+	.absolute {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.visible {
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.hidden {
+		visibility: hidden;
+		pointer-events: none;
+	}
 </style>
