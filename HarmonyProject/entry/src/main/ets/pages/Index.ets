@@ -3,8 +3,7 @@ import hilog from '@ohos.hilog';
 @Entry
 @Component
 struct Index {
-  scrollerA: Scroller = new Scroller();
-  scrollerB: Scroller = new Scroller();
+  scroller: Scroller = new Scroller();
   @State message: string = 'Hello World';
   @State visible: string = 'A';
 
@@ -15,26 +14,18 @@ struct Index {
           this.visible = this.visible == 'A' ? 'B' : 'A'
         })
       RelativeContainer(){
-        Scroll(this.scrollerA){
+        Scroll(this.scroller){
           Button('A').onClick(()=>{
             hilog.info(0x100,'1','A')
           })
-            .position({
-              left:0,
-              top:0
-            })
         }
         .visibility(this.visible == 'A' ? Visibility.Visible : Visibility.Hidden)
         .height('100vp')
         .width('100%')
-        Scroll(this.scrollerB){
+        Scroll(this.scroller){
           Button('B').onClick(()=>{
             hilog.info(0x100,'1','B')
           })
-            .position({
-              left:0,
-              top:0
-            })
         }
         .visibility(this.visible == 'B' ? Visibility.Visible : Visibility.Hidden)
         .height('100vp')
