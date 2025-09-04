@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "harmony-fileManager-file-data",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
+    "platforms": ["uni-app","harmony"],
     "url": ""
   }
 }
