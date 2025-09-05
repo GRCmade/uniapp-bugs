@@ -16,8 +16,8 @@
 			mediaType: ['image'],
 			sourceType: ['album', 'camera'],
 			success: (res) => {
-				console.log("chooseMedia", JSON.stringify(res))
 				tempFilePath.value = res.tempFiles[0].tempFilePath;
+				console.log("chooseMedia", JSON.stringify(tempFilePath.value))
 				try {
 					const result = fileSystemManager.readFileSync(tempFilePath.value);
 					console.log("readFileSync - result", JSON.stringify(result))
@@ -34,20 +34,35 @@
 	const chooseImage = () => {
 		uni.chooseImage({
 			count: 1,
-			mediaType: ['image'],
-			sourceType: ['album', 'camera'],
-			success: (res) => {
-				console.log("chooseImage", JSON.stringify(res))
-				tempFilePath.value = res.tempFiles[0].path;
+			albumMode: "system",
+			// sizeType: ["original"],
+			sourceType: ["album", "camera"],
+			success: (e) => {
+				console.log(e.tempFilePaths[0])
 				try {
-					const result = fileSystemManager.readFileSync(tempFilePath.value);
-					console.log("readFileSync - result", JSON.stringify(result))
-				} catch (err) {
-					console.log('readFileSync', JSON.stringify(err))  //  
+					let res = uni.getFileSystemManager().openSync({
+						filePath: e.tempFilePaths[0]
+					})
+					console.log('success:', JSON.stringify(res))
+					let fileStas = uni.getFileSystemManager().fstatSync({
+						"fd": res
+					})
+					console.log('fileStas:', JSON.stringify(fileStas))
+					// let readFile = uni.getFileSystemManager().readFileSync(e.tempFilePaths[0])
+					// console.log('readFile:', JSON.stringify(readFile))
+					uni.getFileSystemManager().readFile({
+						filePath: e.tempFilePaths[0],
+						success({ data } : any) {
+							let base64 = uni.arrayBufferToBase64(data)
+							console.log("base64", JSON.stringify(base64))
+						},
+						fail() {
+
+						}
+					})
+				} catch (e) {
+					console.log(e)
 				}
-			},
-			fail: (err) => {
-				console.log('chooseImage', err);
 			}
 		})
 	}
