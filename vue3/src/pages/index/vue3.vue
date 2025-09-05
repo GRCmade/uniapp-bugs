@@ -1,6 +1,6 @@
 <template>
   <view>
-    <web-view id="webview" src="https://www.baidu.com" :fullscreen="false" style="width: 200px; height: 200px"></web-view>
+    <web-view id="webview" src="" :fullscreen="false" style="width: 200px; height: 200px"></web-view>
     <button @click="click">button</button>
     <button @click="back">back</button>
     <button @click="loadUrl">loadUrl</button>
@@ -24,15 +24,15 @@ export default {
     },
     loadUrl() {
       this.webviewcontext.loadUrl({
-        url: 'http://192.168.31.157:3000',
+        url: 'http://192.168.31.64:3001/html',
         headers: [{ headerKey: 'test', headerValue: 'yuhe' }]
       })
     },
-		loadUrlEmpty() {
-		  this.webviewcontext.loadUrl({
-		    url: 'http://192.168.31.157:3000'
-		  })
-		},
+    loadUrlEmpty() {
+      this.webviewcontext.loadUrl({
+        url: 'http://192.168.31.64:3001/html'
+      })
+    },
     navigateTo() {
       uni.navigateTo({
         url: '/pages/index/index-next'

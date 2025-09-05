@@ -1,36 +1,49 @@
 <template>
 	<view>
-		<image class="logo" src="/static/logo.png"></image>
-		<text class="title">{{title}}</text>
+		<web-view id="webview" src="https://www.baidu.com" :fullscreen="false"
+			style="width: 500px; height: 500px"></web-view>
+		<button @click="click">button</button>
+		<button @click="back">back</button>
+		<button @click="loadUrl">loadUrl</button>
+		<button @click="loadUrlEmpty">loadUrlEmpty</button>
+		<button @click="navigateTo">navigateTo</button>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				webviewcontext:null
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-
+			click() {
+				this.webviewcontext = uni.createWebviewContext('webview', this)
+				// this.webviewcontext.loadData({
+				// 	data: 'yuhe',
+				// 	baseURL: 'https://www.huawei.com'
+				// })
+			},
+			back() {
+				this.webviewcontext.back()
+			},
+			loadUrl() {
+				this.webviewcontext.loadUrl({
+					url: 'http://192.168.31.64:3001/html',
+					headers: [{ headerKey: 'test', headerValue: 'yuhe' }]
+				})
+			},
+			loadUrlEmpty() {
+				this.webviewcontext.loadUrl({
+					url: 'http://192.168.31.64:3001/html'
+				})
+			},
+			navigateTo() {
+				uni.navigateTo({
+					url: '/pages/index/index-next'
+				})
+			}
 		}
 	}
 </script>
-
-<style>
-	.logo {
-		height: 100px;
-		width: 100px;
-		margin: 100px auto 25px auto;
-	}
-
-	.title {
-		font-size: 18px;
-		color: #8f8f94;
-    text-align: center;
-	}
-</style>
+<style></style>
