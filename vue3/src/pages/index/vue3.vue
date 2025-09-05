@@ -1,11 +1,15 @@
 <template>
   <view>
-    <button @click="click">button</button>
+    <button @click="click">index-next</button>
   </view>
 </template>
 
 <script lang="ts" setup>
-const click = () => {}
+const click = () => {
+	uni.navigateTo({
+		url:"/pages/index/index-next"
+	})
+}
 </script>
 
 <style></style>

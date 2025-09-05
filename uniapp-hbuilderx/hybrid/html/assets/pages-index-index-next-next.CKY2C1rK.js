@@ -1,0 +1,1 @@
+import{c as e,w as t,e as n,o as s,b as a}from"./index-C3YQcaRC.js";import{_ as o}from"./_plugin-vue_export-helper.BCo6x5W8.js";const r=o({data:()=>({}),methods:{click(){}}},[["render",function(o,r,d,i,l,u){const c=n;return s(),e(c,null,{default:t((()=>[a("当前页面： index-next-next")])),_:1})}]]);export{r as default};

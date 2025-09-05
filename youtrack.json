@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "uniapp-webview-navigate-backpress",
   "binding_branch": "",
   "properity": {
     "project": "UB",
     "platforms": ["uni-app"],
-    "url": ""
+    "url": "长沙农村商业银行"
   }
 }

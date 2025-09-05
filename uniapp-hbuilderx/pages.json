@@ -5,6 +5,20 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path" : "pages/loacl-webview/loacl-webview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "loacl-webview"
+			}
+		},
+		{
+			"path" : "pages/baidu/baidu",
+			"style" : 
+			{
+				"navigationBarTitleText" : "baidu"
+			}
 		}
 	],
 	"globalStyle": {
