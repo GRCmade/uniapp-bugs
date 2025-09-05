@@ -45,6 +45,8 @@ app.use(express.json()); // 解析 JSON 格式的请求体
 app.use(express.urlencoded({ extended: true })); // 解析表单数据
 
 app.get("/", (req, res) => {
+  // 打印 header
+  console.log("headers", req.headers);
   res.send("Hello World!");
 });
 
@@ -112,20 +114,20 @@ app.get('/api/set-cookie', (req, res) => {
 app.get('/api/cookie-data', (req, res) => {
   // 打印 cookie 内容
   console.log('Cookies received:', req.cookies);
- res.send("cookie-data"); // 返回字符串
+  res.send("cookie-data"); // 返回字符串
 });
 
 app.get('/api/data', (req, res) => {
   // 打印 cookie 内容
   console.log('Cookies received:', req.cookies);
-  
- // 手动转换为字符串
- const jsonString = JSON.stringify(exampleObject) + "1";
- console.log(jsonString+"111",typeof jsonString);
- 
- // 设置响应头，并返回字符串
- res.setHeader('Content-Type', "text/plain");
- res.send(jsonString); // 返回字符串
+
+  // 手动转换为字符串
+  const jsonString = JSON.stringify(exampleObject) + "1";
+  console.log(jsonString + "111", typeof jsonString);
+
+  // 设置响应头，并返回字符串
+  res.setHeader('Content-Type', "text/plain");
+  res.send(jsonString); // 返回字符串
 });
 
 // 处理文件上传
@@ -133,7 +135,7 @@ app.post('/uploadfile', upload.single('file'), (req, res) => {
   console.log(req.file);
   res.send({
     message: 'File uploaded successfully',
-    filename: req.file.filename
+    // filename: req.file.filename
   });
 });
 
@@ -178,10 +180,10 @@ wss.on("connection", (ws) => {
   console.log("WebSocket connection established");
   let count = 0;
   let interval = setInterval(() => {
-    ws.send("ping"+count);
+    ws.send("ping" + count);
     count++;
   }, 1000);
-  if(count>10){
+  if (count > 10) {
     clearInterval(interval);
   }
 
@@ -191,7 +193,7 @@ wss.on("connection", (ws) => {
   });
 
   ws.on("close", (message) => {
-    console.log("WebSocket connection closed",message);
+    console.log("WebSocket connection closed", message);
   });
 });
 
@@ -289,6 +291,29 @@ app.get('/download/senfile', (req, res) => {
 });
 
 app.use('/file', express.static(path.join(__dirname, 'file')));
+
+// 专门处理 index.html 文件的路由
+app.get('/html', (req, res) => {
+  // 打印请求的 header 信息
+  console.log('=== HTML Request Headers ===');
+  console.log('Time:', new Date().toISOString());
+  console.log('Headers:', JSON.stringify(req.headers, null, 2));
+  console.log('User-Agent:', req.headers['user-agent']);
+  console.log('Host:', req.headers['host']);
+  console.log('Accept:', req.headers['accept']);
+  console.log('================================');
+  
+  // 提供 index.html 文件
+  const htmlFilePath = path.join(__dirname, 'file', 'index.html');
+  
+  // 检查文件是否存在
+  if (fs.existsSync(htmlFilePath)) {
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.sendFile(htmlFilePath);
+  } else {
+    res.status(404).send('HTML file not found');
+  }
+});
 
 // 添加错误处理中间件
 app.use((err, req, res, next) => {
