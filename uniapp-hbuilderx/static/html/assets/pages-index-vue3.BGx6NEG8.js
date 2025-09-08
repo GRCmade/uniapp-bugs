@@ -1,0 +1,1 @@
+import{d as e,o as a,c as s,w as n,a as t,b as u,n as d,i as o,e as r}from"./index-C3YQcaRC.js";const i=e({__name:"vue3",setup(e){const i=()=>{d({url:"/pages/index/index-next"})};return(e,d)=>{const l=o,x=r;return a(),s(x,null,{default:n((()=>[t(l,{onClick:i},{default:n((()=>[u("index-next")])),_:1})])),_:1})}}});export{i as default};

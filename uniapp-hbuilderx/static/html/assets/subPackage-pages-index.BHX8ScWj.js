@@ -1,0 +1,1 @@
+import{d as s,o as a,c as e,w as t,a as l,b as n,f as o,i as u,e as c}from"./index-C3YQcaRC.js";const d=s({__name:"index",setup(s){const d=()=>{console.log("test")};return(s,r)=>{const f=o,i=u,_=c;return a(),e(_,null,{default:t((()=>[l(f,null,{default:t((()=>[n("subpage")])),_:1}),l(i,{onClick:d},{default:t((()=>[n("click")])),_:1})])),_:1})}}});export{d as default};

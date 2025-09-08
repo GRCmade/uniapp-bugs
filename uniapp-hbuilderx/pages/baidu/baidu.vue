@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<web-view src="https://uniapp.dcloud.net.cn/"></web-view>
+		<web-view src="https://www.baidu.com/"></web-view>
 	</view>
 </template>
 

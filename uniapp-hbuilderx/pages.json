@@ -5,19 +5,18 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},
-		{
-			"path" : "pages/loacl-webview/loacl-webview",
-			"style" : 
-			{
-				"navigationBarTitleText" : "loacl-webview"
+		}, {
+			"path": "pages/loacl-webview/loacl-webview",
+			"style": {
+				"navigationBarTitleText": "loacl-webview",
+				"app-plus": {
+					"popGesture": "none"
+				}
 			}
-		},
-		{
-			"path" : "pages/baidu/baidu",
-			"style" : 
-			{
-				"navigationBarTitleText" : "baidu"
+		}, {
+			"path": "pages/baidu/baidu",
+			"style": {
+				"navigationBarTitleText": "baidu"
 			}
 		}
 	],

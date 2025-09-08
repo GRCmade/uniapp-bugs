@@ -8,6 +8,9 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		onBackPress() {
+			console.log("onBackPress")
 		}
 	}
 </script>
