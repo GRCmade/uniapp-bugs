@@ -1,11 +1,98 @@
 <template>
-  <view>
-    <button @click="click">button</button>
-  </view>
+	<view class="">
+		<view class="content">
+			<map id="map" class="map" :show-location="true" :latitude="latitude" :longitude="longitude"></map>
+		</view>
+		<button @click="getCenter">getCenter</button>
+	</view>
+
 </template>
-
-<script lang="ts" setup>
-const click = () => {}
+<script>
+	const img = '/static/logo.png';
+	export default {
+		data() {
+			return {
+				latitude: 23.099994,
+				longitude: 113.324520,
+			}
+		},
+		onReady() {
+			this._mapContext = uni.createMapContext("map", this);
+			// 仅调用初始化，才会触发 on.("markerClusterCreate", (e) => {})
+			this._mapContext.initMarkerCluster({
+				enableDefaultStyle: false,
+				zoomOnClick: true,
+				gridSize: 60,
+				complete(res) {
+					console.log('initMarkerCluster', res)
+				}
+			});
+			this._mapContext.on("markerClusterCreate", (e) => {
+				console.log("markerClusterCreate", e);
+			});
+			this.addMarkers();
+		},
+		methods: {
+			getCenter() {
+				this._mapContext.getCenterLocation({
+					success(res) {
+						console.log("res", res)
+					},
+					fail(res) {
+						console.log("failres", res)
+					},
+				})
+			},
+			addMarkers() {
+				const positions = [{
+					latitude: 23.099994,
+					longitude: 113.324520,
+				}, {
+					latitude: 23.099994,
+					longitude: 113.322520,
+				}, {
+					latitude: 23.099994,
+					longitude: 113.326520,
+				}, {
+					latitude: 23.096994,
+					longitude: 113.329520,
+				}]
+				const markers = []
+				positions.forEach((p, i) => {
+					console.log(i)
+					markers.push(Object.assign({}, {
+						id: i + 1,
+						iconPath: img,
+						width: 50,
+						height: 50,
+						joinCluster: true, // 指定了该参数才会参与聚合
+						label: {
+							width: 50,
+							height: 30,
+							borderWidth: 1,
+							borderRadius: 10,
+							bgColor: '#ffffff',
+							content: `label ${i + 1}`
+						}
+					}, p))
+				})
+				this._mapContext.addMarkers({
+					markers,
+					clear: false,
+					complete(res) {
+						console.log('addMarkers', res)
+					}
+				})
+			}
+		}
+	}
 </script>
+<style>
+	.content {
+		flex: 1;
+	}
 
-<style></style>
+	.map {
+		flex: 1;
+	}
+</style>

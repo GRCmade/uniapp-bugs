@@ -71,7 +71,14 @@
     "vueVersion" : "3",
     "app-harmony" : {
         "distribute" : {
-            "bundleName" : "com.yuhe.template"
+            "bundleName" : "com.yuhe.template",
+            "modules" : {
+                "uni-map" : {
+                    "tencent" : {
+                        "key" : ""
+                    }
+                }
+            }
         }
     }
 }
