@@ -8,4 +8,7 @@
 问题是这个导致的
 
 runtime/src/main/ets/runtime/dom/UniScroll/UniScroll.ets
+
+
+主要是由 attributeModifier 引起的
 ======== END ========
