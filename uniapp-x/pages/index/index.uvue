@@ -1,14 +1,14 @@
 <template>
 	<button @click="changeStatus">visible === {{visible}}</button>
 	<view style="position: relative;height: 200px;">
-		<scroll-view style="height: 100px;width: 150px;" :class="visible === 'A' ? 'visible' : 'hidden'" class="absolute">
+		<scroll-view style="height: 100px;width: 150px;" :class="visible === 'A' ? 'visible' : 'hidden'" class="absolute" @click="log('a-scroll')">
 			<button @click="log('a')">A</button>
-			<button @click="log('a')">A</button>
+			<!-- <button @click="log('a')">A</button> -->
 		</scroll-view>
-		<scroll-view style="height: 100px;width: 300px;" :class="visible === 'B' ? 'visible' : 'hidden'" class="absolute">
+		<scroll-view style="height: 100px;width: 100px;" :class="visible === 'B' ? 'visible' : 'hidden'" class="absolute" @click="log('b-scroll')">
 			<button @click="log('b')">B</button>
 		</scroll-view>
-		<scroll-view style="height: 100px;" :class="visible === 'C' ? 'visible' : 'hidden'" class="absolute">
+		<scroll-view style="height: 100px;width: 100px;" :class="visible === 'C' ? 'visible' : 'hidden'" class="absolute" @click="log('c-scroll')">
 			<button @click="log('c')">C</button>
 		</scroll-view>
 		<!-- <button @click="log('a')">A</button> -->
@@ -49,6 +49,7 @@
 <style>
 	.absolute {
 		position: absolute;
+		background-color: aqua;
 		/* left: 0; */
 		/* top: 0; */
 	}
