@@ -1,5 +1,5 @@
 ======== README.md ========
 
-# 标题
+# harmony - canvasGetImageData
 
 ======== END ========
