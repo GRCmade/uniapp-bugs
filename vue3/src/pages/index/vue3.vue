@@ -1,11 +1,15 @@
+
 <template>
   <view>
-    <button @click="click">button</button>
+		<web-view src="http://192.168.31.162:5500/test.html" style="height: 500px;"></web-view>
   </view>
 </template>
-
-<script lang="ts" setup>
-const click = () => {}
+<script>
+export default {
+  data() {
+    return {
+    }
+  }
+}
 </script>
-
 <style></style>

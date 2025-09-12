@@ -1,25 +1,36 @@
 <template>
   <view>
-    <com></com>
-    <button @click="click">click</button>
+    <view class="page-body">
+      <view class="page-section page-section-gap" style="text-align: center">
+        <audio
+          style="text-align: left"
+          :src="current.src"
+          :poster="current.poster"
+          :name="current.name"
+          :author="current.author"
+          :action="audioAction"
+          controls
+          autoplay
+        ></audio>
+      </view>
+    </view>
   </view>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   data() {
     return {
-      title: 'Hello',
-      name: 'yuhe'
+      current: {
+        poster: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/music-a.png',
+        name: '致爱丽丝',
+        author: '暂无',
+        src: 'https://web-ext-storage.dcloud.net.cn/uni-app/ForElise.mp3'
+      },
+      audioAction: {
+        method: 'pause'
+      }
     }
-  },
-  onLoad() {},
-  methods: {
-    click() {}
   }
-})
+}
 </script>
-
 <style></style>

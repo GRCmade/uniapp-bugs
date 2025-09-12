@@ -68,10 +68,13 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "3",
+    "vueVersion" : "2",
     "app-harmony" : {
         "distribute" : {
             "bundleName" : "com.yuhe.template"
         }
+    },
+    "mp-jd" : {
+        "appid" : "jd1234"
     }
 }

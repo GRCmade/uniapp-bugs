@@ -1,23 +1,15 @@
-<template>
-	<view>
-		<button @click="handleClick">Click me</button>
-	</view>
-</template>
 
+<template>
+  <view>
+		<web-view src="http://192.168.31.162:5500/test.html" style="height: 500px;"></web-view>
+  </view>
+</template>
 <script>
 export default {
-	data() {
-		return {
-			message: 'Hello, World!'
-		}
-	},
-	methods: {
-		handleClick() {
-			console.log('Button clicked')
-		}
-	}
+  data() {
+    return {
+    }
+  }
 }
 </script>
-
-<style scoped>
-</style>
+<style></style>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音频播放示例</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .audio-container {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    audio {
+      width: 100%;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>音频播放示例</h1>
+
+  <div class="audio-container">
+    <h3>自动播放音频</h3>
+    <p>页面加载时自动播放（注意：现代浏览器可能阻止自动播放）</p>
+    <audio src="https://web-ext-storage.dcloud.net.cn/uni-app/ForElise.mp3" autoplay controls>
+      您的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="audio-container">
+    <h3>手动控制音频</h3>
+    <p>用户需要点击播放按钮来播放音频</p>
+    <audio src="https://web-ext-storage.dcloud.net.cn/uni-app/ForElise.mp3" controls>
+      您的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="audio-container">
+    <h3>循环播放音频</h3>
+    <p>音频播放完毕后会自动重新开始</p>
+    <audio src="https://web-ext-storage.dcloud.net.cn/uni-app/ForElise.mp3" controls loop>
+      您的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <script>
+    // 监听音频事件
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((audio, index) => {
+      audio.addEventListener('play', () => {
+        console.log(`音频 ${index + 1} 开始播放`);
+      });
+
+      audio.addEventListener('pause', () => {
+        console.log(`音频 ${index + 1} 暂停播放`);
+      });
+
+      audio.addEventListener('ended', () => {
+        console.log(`音频 ${index + 1} 播放结束`);
+      });
+    });
+  </script>
+</body>
+</html>
