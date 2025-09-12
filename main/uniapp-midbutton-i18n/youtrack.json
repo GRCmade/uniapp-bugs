@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "uniapp-midbutton-i18n",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","h5"],
+    "url": "https://ask.dcloud.net.cn/question/213598"
+  }
+}
