@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "hbuilderx-jd-release",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","mp-jd","hbuilderx"],
+    "url": "https://ask.dcloud.net.cn/question/213580"
+  }
+}
