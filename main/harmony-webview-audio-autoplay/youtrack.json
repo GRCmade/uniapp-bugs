@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "harmony-webview-audio-autoplay",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony"],
+    "url": "lubing-0912"
+  }
+}
