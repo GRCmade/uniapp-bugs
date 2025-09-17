@@ -1,6 +1,5 @@
 <template>
-	<view>
-		<button @click="handleClick">Click requireNativePlugin('uniMP') </button>
+	<view> vue 3 小程序 <button @click="handleClick">Click</button>
 	</view>
 </template>
 <script>
@@ -12,8 +11,7 @@
 		},
 		methods: {
 			handleClick() {
-				const mp = uni.requireNativePlugin('uniMP');
-				console.log("mp",mp)
+				console.log("mp")
 			}
 		}
 	}
