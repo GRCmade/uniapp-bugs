@@ -1,11 +1,22 @@
 <template>
-  <view>
-    <button @click="click">button</button>
-  </view>
+	<view>
+		<button @click="handleClick">Click requireNativePlugin('uniMP') </button>
+	</view>
 </template>
-
-<script lang="ts" setup>
-const click = () => {}
+<script>
+	export default {
+		data() {
+			return {
+				message: 'Hello, World!'
+			}
+		},
+		methods: {
+			handleClick() {
+				const mp = uni.requireNativePlugin('uniMP');
+				console.log("mp",mp)
+			}
+		}
+	}
 </script>
-
-<style></style>
+<style scoped>
+</style>
