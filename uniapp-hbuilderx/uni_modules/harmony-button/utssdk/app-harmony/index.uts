@@ -1,1 +1,24 @@
 import './harmony-button.ets'
+import settings from '@ohos.settings';
+import window from '@ohos.window';
+
+let _window : window.Window;
+
+UTSHarmony.onAppAbilityWindowStageCreate((windowStage : window.WindowStage) => {
+	_window = windowStage.getMainWindowSync()
+})
+
+export const settingGetValue = () => {
+	// const context : Context = getContext();
+	const context : Context | undefined = _window.getUIContext().getHostContext();
+
+	if (context) {
+		settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, (err, value) => {
+			if (err) {
+				console.error(`Failed to get the setting. ${err.message} `);
+				return;
+			}
+			console.log(`SCREEN_BRIGHTNESS_STATUS getUIContext: ${JSON.stringify(value)}`)
+		});
+	}
+}
