@@ -1,9 +1,10 @@
 <template>
 	<view>
-		<button @click="click">click</button>
+		<image class="logo" src="/static/logo.png"></image>
+		<text class="title">{{title}}</text>
+		<button @click="takePhoto">鸿蒙测试</button>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -15,12 +16,52 @@
 
 		},
 		methods: {
-			click(){
-				console.log("click")
+			takePhoto() {
+				uni.chooseImage({
+					count: 1,
+					sizeType: ["compressed"],
+					sourceType: ["album", "camera"],
+					success(res) {
+						const path = res.tempFilePaths[0];
+
+						console.log("chooseImage success ----------------->>>> ", path);
+
+						uni.getFileSystemManager().access({
+							path: path,
+							success() {
+								console.log("文件存在");
+							},
+							fail(err : FileSystemManagerFail) {
+								console.error("文件不存在 -0------------------?", err.errCode);
+							},
+						});
+
+						// TODO: 鸿蒙有 bug ，需要处理
+						// const base64File = uni
+						// 	.getFileSystemManager()
+						// 	.readFileSync(path, "base64");
+
+						// console.log('chooseImage success', res)
+						// console.log('chooseImage success base64 ', `data:image/png;base64,${base64File}`)
+					},
+					fail(err) {
+						console.log('chooseImage fail', err)
+					},
+				})
 			}
 		}
 	}
 </script>
-
 <style>
+	.logo {
+		height: 100px;
+		width: 100px;
+		margin: 100px auto 25px auto;
+	}
+
+	.title {
+		font-size: 18px;
+		color: #8f8f94;
+		text-align: center;
+	}
 </style>
