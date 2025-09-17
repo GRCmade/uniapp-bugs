@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "harmony-uniapp-sdk-adapt",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony"],
+    "url": "lubing-0916"
+  }
+}
