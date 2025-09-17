@@ -13,25 +13,27 @@ chooseImage 从相册中
 核心: file转 data
 
 ```
-const getSandbox = (imgUri: string , cacheDir:string): string =>{
-    let fileName = new uri.URI(imgUri).getLastSegment();
-    let file = fs.openSync(imgUri)
-    let fileSandbox = cacheDir + '/' + fileName;
-    try {
-        fs.copyFileSync(file.fd, fileSandbox)
-    } finally {
-        fs.close(file)
-    }
-    return fileSandbox;
+function getSandbox (fileUri: string): string {
+  const tempDirPath = `${getEnv().CACHE_PATH}/uni-media`;
+	if (!fs.accessSync(tempDirPath)) {
+		fs.mkdirSync(tempDirPath, true);
+	}
+	let fileName = new uri.URI(fileUri).getLastSegment();
+  let fileSandboxPath = tempDirPath + '/' + fileName;
+
+	const fileSandBox = fs.openSync(fileSandboxPath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+	const file = fs.openSync(fileUri);
+
+	fs.copyFileSync(file.fd, fileSandBox.fd);
+	fs.closeSync(file);
+	return fileSandboxPath;
 }
-const useGetRealPath = (filepath: string): string =>{
-    if (filepath.startsWith('/data/storage/')) return filepath;
-    if (filepath.startsWith('file://')){
-        const tempDirPath = `${getEnv__4().CACHE_PATH}/uni-media`;
-        return getSandbox(filepath,tempDirPath)
-    }
-    return (runtimeGetRealPath(filepath) as string).replace(/^file:\/\/\//, '/');
-};
+
+function useGetRealPath(filepath: string): string {
+  if (filepath.startsWith('/data/storage/')) return filepath
+  if (filepath.startsWith('file://') && !filepath.startsWith('file:///')) return getSandbox(filepath)
+  return (runtimeGetRealPath(filepath) as string).replace(/^file:\/\/\//, '/')
+}
 ```
 
 ## 内容
@@ -49,4 +51,29 @@ file:// ：当我们需要在应用中访问一个具体的文件或目录，并
 /data ：当我们在开发过程中需要在设备上存储应用的数据或配置文件时，通常使用/data目录下的相应子目录。这是管理应用数据和缓存的常用方式。
 通过了解这两种路径的差异和用途，我们可以更好地在鸿蒙应用开发中有效地管理和使用文件资源。
 
+
+
+## new 问题 0917
+
+E     [UniAppRuntime][17952] 10 <- napi_call_function(workData->context->napiEnv, nullptr, callback, workData->args.size(), retArg, &ret) at /Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/UniAppRuntime/src/main/cpp/napi_init_t.cpp:671
+E     [UniAppRuntime][17952] 3 <- napi_get_value_string_utf8(env, value, nullptr, 0, &size) at /Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/UniAppRuntime/src/main/cpp/napi_init_t.hpp:450
+E     [UniAppRuntime][17952] 3 <- napi_get_value_string_utf8(env, value, &resultStr[0], size + 1, &size) at /Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/UniAppRuntime/src/main/cpp/napi_init_t.hpp:453
+E     [UniAppRuntime][17952] NT:JSVMCallFunction run failed: napi_call_function failed
+          at openSync (UniAppRuntime/src/main/ets/uni-app-harmony/uni.api.ets:6371:26)
+          at _invokeStoreReference (UniAppRuntime/src/main/ets/uni-mp-sdk/sdk.js:887:1)
+          at invokeStoreReference (UniAppRuntime/src/main/ets/uni-mp-sdk/sdk.js:897:1)
+          at anonymous (UniAppRuntime/src/main/ets/uni-mp-sdk/sdk.js:1070:1)
+          at anonymous (UniAppRuntime/src/main/ets/uni-mp-sdk/sdk.js:974:1)
+I     Error: No such file or directory at pages/index/vue3.vue:85
+I     App Hide at App.vue:10
+
+
+这个 10 代表了 arkts 中抛错到了 jsvm 中
+
+
+
+https://developer.huawei.com/consumer/cn/forum/topic/0204166811541385910?fid=0109140870620153026
+
+
+copyFileSync 之前需要 openSync
 ======== END ========
