@@ -10,4 +10,13 @@ https://nativesupport.dcloud.net.cn/UniMPDocs/UniappHost/unimpapi.html#%E5%AE%BF
 uniapp-hbuilderx 是宿主
 vue3 是小程序
 
+## 调试问题
+
+E     [UniAppRuntime][15260] 9 <- OH_JSVM_OpenInspector(runtime->env, "localhost", 9225) at /Users/gaoruicheng/Documents/DcloudProject/runtime-harmony/UniAppRuntime/src/main/cpp/napi_init_t.cpp:398
+
+uniapp 本身有一个jsvm ，在 新调研 openUnimp 之后新开一个，就报错了
+
+当前 jsvm 中打开调试端口，9225
+
+
 ======== END ========

@@ -1,5 +1,5 @@
 <template>
-	<view> vue 3 小程序 <button @click="handleClick">Click</button>
+	<view> vue 3 小程序 <button @click="sendHostEvent">sendHostEvent</button>
 	</view>
 </template>
 <script>
@@ -10,9 +10,13 @@
 			}
 		},
 		methods: {
-			handleClick() {
-				console.log("mp")
-			}
+			sendHostEvent() {
+				uni.sendNativeEvent("test", "yuhe", (ret) => {
+					//发送消息成功回调
+					console.log("来自项目 vue3")
+					console.log('Send event to Host: ' + JSON.stringify(ret));
+				});
+			},
 		}
 	}
 </script>
