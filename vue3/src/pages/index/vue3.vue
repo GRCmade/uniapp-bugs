@@ -11,7 +11,7 @@
 		},
 		methods: {
 			sendHostEvent() {
-				uni.sendNativeEvent("test", "yuhe", (ret) => {
+				uni.sendNativeEvent("uniMPEvent", "yuhe", (ret) => {
 					//发送消息成功回调
 					console.log("来自项目 vue3")
 					console.log('Send event to Host: ' + JSON.stringify(ret));
