@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "harmony-picker-value-empty",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app","harmony"],
+    "url": "lubing-0929"
   }
 }
