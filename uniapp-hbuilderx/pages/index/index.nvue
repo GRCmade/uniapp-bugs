@@ -1,0 +1,42 @@
+<template>
+  <view :style="publicStyle">
+    <swiper class="home-view" :current="active" :disable-touch="true" :style="{
+        width: sys.windowWidth + 'px',
+        height: sys.windowHeight - 50 - sys.safeAreaInsets.bottom + 'px',
+      }">
+      <swiper-item v-for="(item, index) in pageList" :key="item.com" :style="{
+        width: sys.windowWidth + 'px',
+        height: sys.windowHeight - 50 - sys.safeAreaInsets.bottom + 'px'
+      }">
+        <jgweb :key="'web' + item.com" :src="item.com" :hasTabBar="true"></jgweb>
+      </swiper-item>
+    </swiper>
+
+    <jgTabbar :hasSafe="true" @change="change"></jgTabbar>
+  </view>
+</template>
+<style scoped lang="scss">
+  .home-view {}
+</style>
+<script setup lang="ts">
+  import { ref } from "vue";
+
+  import jgweb from "@/components/jgweb/jgweb.nvue";
+  const sys = uni.getSystemInfoSync();
+
+  const active = ref(0);
+  const change = (index : number) => {
+    active.value = index;
+  };
+  const publicStyle = {
+    width: sys.windowWidth + "px",
+    height: sys.windowHeight + "px",
+  };
+
+  const pageList = [
+    { id: "home", com: 'https://www.baidu.com' },
+    { id: "picture", com: 'https://www.bing.com/?mkt=zh-cn&mkt=zh-cn&mkt=zh-cn&mkt=zh-cn&mkt=zh-cn&mkt=zh-cn' },
+    { id: "navigation", com: 'https://pinyin.sogou.com/mac/' },
+    { id: "column", com: 'https://uniapp.dcloud.net.cn/' },
+  ];
+</script>

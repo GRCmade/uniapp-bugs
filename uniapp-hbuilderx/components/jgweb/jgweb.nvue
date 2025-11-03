@@ -1,0 +1,29 @@
+<script setup lang="ts">
+  import { computed } from 'vue';
+
+  interface IJGWeb {
+    src : string,
+    hasTabBar ?: boolean
+  }
+  const props = withDefaults(defineProps<IJGWeb>(), {
+
+  });
+  const sys = uni.getSystemInfoSync();
+
+  const publicStyle = computed(() => {
+    const width = sys.windowWidth;
+    const height = props.hasTabBar ? sys.windowHeight - sys.safeAreaInsets.bottom - 50 : sys.windowHeight
+    return {
+      width: width + "px",
+      height: height + "px",
+    }
+  })
+</script>
+<style scoped>
+  .jgweb {}
+</style>
+<template>
+  <web-view :id="props.src" :src="props.src" class="jgweb" :style="publicStyle" :webview-styles="{
+        progress: false
+      }"></web-view>
+</template>
