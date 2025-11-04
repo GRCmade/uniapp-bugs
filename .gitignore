@@ -4,6 +4,7 @@ package-lock.json
 scripts/config/local-config.js
 unpackage
 dist
+test-data
 
 build
 .hvigor
