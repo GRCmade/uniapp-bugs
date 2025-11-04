@@ -12,9 +12,11 @@ const send = async () => {
   console.log('start: ' + ++count)
   requestTask = uni.request({
     url: 'https://mp-740c4f25-0fdf-4df3-8af2-156cb0aab142.cdn.bspapp.com/test.json',
+    dataType: 'string',
     success: (res: any) => {
-      console.log('------end1:', JSON.stringify(res))
-      console.log('------end2:', JSON.stringify(res.data?.length))
+      let ls = JSON.parse(res.data)
+      console.log('------end1:', JSON.stringify(ls))
+      console.log('------end2:', JSON.stringify(ls?.length))
       requestTask.abort()
       setTimeout(() => {
         send()
