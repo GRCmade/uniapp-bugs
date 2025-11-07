@@ -1,10 +1,10 @@
 {
   "name": "uniapp-bugs",
-  "branch": "template-cli",
+  "branch": "app-slider-value-float",
   "binding_branch": "",
   "properity": {
     "project": "UB",
-    "platforms": ["uni-app"],
-    "url": ""
+    "platforms": ["uni-app","android"],
+    "url": "https://ask.dcloud.net.cn/question/215171"
   }
 }
