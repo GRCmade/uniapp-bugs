@@ -1,0 +1,10 @@
+{
+  "name": "uniapp-bugs",
+  "branch": "harmony-scroll-view-ka",
+  "binding_branch": "",
+  "properity": {
+    "project": "UB",
+    "platforms": ["uni-app","harmony"],
+    "url": ""
+  }
+}
