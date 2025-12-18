@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<button @click="handleClick">Click me</button>
+		<!-- <web-view src="https%3A%2F%2Fmtrip.ch.com%2Fguonei%3Fapp%3D4"></web-view> -->
+		<web-view src="https://mtrip.ch.com/guonei?app=4"></web-view>
 	</view>
 </template>
 
