@@ -1,12 +1,25 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/gaoruicheng/.ohos/config/default_HarmonyProject_KHb8jII7w3CxxQuv4BAgAkC1CWVaS_uQfyjxZC4b8UE=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001A7FA18E773F8CBDA34E007E832628FEA51EACC53A6CC17D0FA84B438444EC631B53F80CCD8F44",
+          "profile": "/Users/gaoruicheng/.ohos/config/default_HarmonyProject_KHb8jII7w3CxxQuv4BAgAkC1CWVaS_uQfyjxZC4b8UE=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/gaoruicheng/.ohos/config/default_HarmonyProject_KHb8jII7w3CxxQuv4BAgAkC1CWVaS_uQfyjxZC4b8UE=.p12",
+          "storePassword": "0000001A0FA63529D0384A259DA5E0823BC518BDE8B8A458CEAD21A6A5919BE916A5DC3AF60423D56F1C"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
-        "targetSdkVersion": "5.1.1(19)",
-        "compatibleSdkVersion": "5.1.1(19)",
+        "compatibleSdkVersion": "5.0.0(12)",
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {

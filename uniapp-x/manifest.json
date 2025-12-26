@@ -63,7 +63,10 @@
 	},
 	"app-harmony": {
 		"distribute": {
-			"bundleName": "com.yuhe.template"
+			"bundleName": "com.yuhe.template",
+			"splashScreens": {
+				"startWindowIcon": "/Users/gaoruicheng/Documents/MyProject/uniapp-bugs/uniapp-bugs-now-cli/uniapp-x/static/WechatIMG348.png"
+			}
 		}
 	}
 }

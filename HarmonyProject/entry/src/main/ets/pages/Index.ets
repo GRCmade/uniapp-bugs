@@ -5,19 +5,16 @@ struct Index {
 
   build() {
     RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+      Image($r('app.media.startIcon'))
+        .objectFit(ImageFit.Fill)
+        .overlay("Winter is a beautiful season, especially when it snows.", {
+          align: Alignment.TopStart,  // 文本底部对齐
+          offset: { x: 0, y: 100 }  // 垂直向上偏移15单位
         })
-        .onClick(() => {
-          this.message = 'Welcome';
-        })
+      // Text('yueh')
     }
     .height('100%')
     .width('100%')
+    // .backgroundColor("#0075ff")
   }
 }

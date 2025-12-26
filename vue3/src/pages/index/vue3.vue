@@ -1,11 +1,11 @@
 <template>
-  <view>
-    <button @click="click">button</button>
-  </view>
+  <view class="content"></view>
 </template>
 
-<script lang="ts" setup>
-const click = () => {}
-</script>
-
-<style></style>
+<style>
+.content {
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+}
+</style>
