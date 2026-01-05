@@ -72,6 +72,7 @@
     "app-harmony" : {
         "distribute" : {
             "bundleName" : "com.yuhe.template"
-        }
+        },
+				"darkmode" : true
     }
 }
