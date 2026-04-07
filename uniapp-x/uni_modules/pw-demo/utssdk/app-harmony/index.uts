@@ -1,0 +1,6 @@
+export class Demo {
+	public static getInstance() {
+		return "hello world"
+	}
+	public static yname:string = 'yuhe'
+}

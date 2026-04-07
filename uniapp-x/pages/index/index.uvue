@@ -1,10 +1,18 @@
 <template>
-	<view>
-		<button @click="click">click</button>
+	<view class="content">
+		<image class="logo" src="/static/logo.png"></image>
+		<view class="text-area">
+			<text class="title">{{title}}</text>
+		</view>
+		<view>
+			<button @tap="test">测试</button>
+			<button @tap="test2">测试2</button>
+		</view>
 	</view>
 </template>
 
 <script>
+	import { Demo } from '@/uni_modules/pw-demo'
 	export default {
 		data() {
 			return {
@@ -15,12 +23,46 @@
 
 		},
 		methods: {
-			click(){
-				console.log("click")
+			test() {
+				const name = Demo.yname;
+				console.log(name)
+				console.log("test")
+				const message = Demo.getInstance();
+				console.log(message)
+				// 在6.1的系统上会出现 getInstance is not a function的报错
+			},
+			test2() {
+				let demo = new Demo()
+				console.log("test2",demo.yname)
 			}
 		}
 	}
 </script>
 
 <style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
 </style>

@@ -1,69 +1,80 @@
 {
-	"name": "uniapp-x",
-	"appid": "__UNI__6035534",
-	"description": "",
-	"versionName": "1.0.0",
-	"versionCode": "100",
-	"uni-app-x": {},
-	/* 快应用特有相关 */
-	"quickapp": {},
-	/* 小程序特有相关 */
-	"mp-weixin": {
-		"appid": "",
-		"setting": {
-			"urlCheck": false
-		},
-		"usingComponents": true
-	},
-	"mp-alipay": {
-		"usingComponents": true
-	},
-	"mp-baidu": {
-		"usingComponents": true
-	},
-	"mp-toutiao": {
-		"usingComponents": true
-	},
-	"uniStatistics": {
-		"enable": false
-	},
-	"vueVersion": "3",
-	"app": {
-		"distribute": {
-			"icons": {
-				"android": {
-					"hdpi": "",
-					"xhdpi": "",
-					"xxhdpi": "",
-					"xxxhdpi": ""
-				}
-			}
-		}
-	},
-	"app-android": {
-		"distribute": {
-			"modules": {},
-			"icons": {
-				"hdpi": "",
-				"xhdpi": "",
-				"xxhdpi": "",
-				"xxxhdpi": ""
-			},
-			"splashScreens": {
-				"default": {}
-			}
-		}
-	},
-	"app-ios": {
-		"distribute": {
-			"modules": {},
-			"icons": {},
-			"splashScreens": {}
-		}
-	},
-	"app-harmony": {
-		"distribute": {
-			"bundleName": "com.yuhe.template"
-		}
-	}
+    "name" : "uniapp-x",
+    "appid" : "__UNI__6035534",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "uni-app-x" : {},
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "3",
+    "app" : {
+        "distribute" : {
+            "icons" : {
+                "android" : {
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : "",
+                    "xxxhdpi" : ""
+                }
+            }
+        }
+    },
+    "app-android" : {
+        "distribute" : {
+            "modules" : {},
+            "icons" : {
+                "hdpi" : "",
+                "xhdpi" : "",
+                "xxhdpi" : "",
+                "xxxhdpi" : ""
+            },
+            "splashScreens" : {
+                "default" : {}
+            }
+        }
+    },
+    "app-ios" : {
+        "distribute" : {
+            "modules" : {},
+            "icons" : {},
+            "splashScreens" : {}
+        }
+    },
+    "app-harmony" : {
+        "distribute" : {
+            "bundleName" : "com.yuhe.template",
+            "signingConfigs" : {
+                "default" : {
+                    "certpath" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1769515271857.cer",
+                    "keyAlias" : "debugKey",
+                    "keyPassword" : "0000001B751EA6BC3AABCDB84573F390F0AC354F03217D9BE9CC1BF5548A98BBEE1E3F36ECE0C4B8BFF605",
+                    "profile" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1775214712364.p7b",
+                    "signAlg" : "SHA256withECDSA",
+                    "storeFile" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1769515271857.p12",
+                    "storePassword" : "0000001B751EA6BC3AABCDB84573F390F0AC354F03217D9BE9CC1BF5548A98BBEE1E3F36ECE0C4B8BFF605"
+                }
+            }
+        }
+    }
 }
