@@ -5,6 +5,7 @@
 		<slider :value="slider" @change="sliderChange" step="1" />
 		<button @click="setScreenBrightness(20)">setScreenBrightness 20</button>
 		<button @click="setScreenBrightness(-10)">setScreenBrightness -10</button>
+		<button @click="setScreenBrightness(-100)">setScreenBrightness -100</button>
 		<button @click="setScreenBrightness(1999)">setScreenBrightness 1999</button>
 		<button @click="getScreenBrightness">getScreenBrightness</button>
 		<button @click="setKeepScreenOn(true)">setKeepScreenOn true</button>
@@ -15,7 +16,7 @@
 	import { ref } from 'vue'
 
 	const setScreenBrightness = (value : number) => {
-		console.log("click")
+		console.log("click" , value / 100)
 		slider.value = value
 		uni.setScreenBrightness({
 			value: value / 100,
@@ -49,7 +50,7 @@
 		console.log('value 发生变化：' + e.detail.value)
 	}
 
-	setScreenBrightness(slider.value)
+	// setScreenBrightness(slider.value)
 
 	const setKeepScreenOn = (value : Boolean) => {
 		uni.setKeepScreenOn({

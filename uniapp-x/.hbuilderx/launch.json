@@ -1,0 +1,23 @@
+{
+    "version" : "1.0",
+    "configurations" : [
+        {
+            "bundleId" : "-23.ios",
+            "certificateFile" : "/Users/gaoruicheng/Documents/yuhe.p12",
+            "certificateProfileFile" : "/Users/gaoruicheng/Documents/381cac8b-4f4d-4b99-bd33-816ac960d30c.mobileprovision",
+            "env" : {
+                "UNI_APP_X_TYPE_VALIDATION" : true
+            },
+            "playground" : "standard",
+            "runSignStatus" : 0,
+            "type" : "uni-app:app-ios"
+        },
+        {
+            "env" : {
+                "UNI_APP_X_TYPE_VALIDATION" : true
+            },
+            "playground" : "standard",
+            "type" : "uni-app:app-android"
+        }
+    ]
+}

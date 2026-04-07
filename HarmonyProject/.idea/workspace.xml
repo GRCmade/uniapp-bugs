@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1678ee6d-d8b9-4737-8d9a-a0f072243df1" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/oh-package-lock.json5" beforeDir="false" afterPath="$PROJECT_DIR$/oh-package-lock.json5" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ArkTS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HiLogStateProjectLevelPreference">
+    <panelStates>
+      <hilogPanelState>
+        <option name="filterName" value="User logs of selected app" />
+        <option name="logPanelType" value="ONLINE" />
+        <option name="processName" value="com.example.test.myapplication" />
+      </hilogPanelState>
+    </panelStates>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="37EjbeYkWlus5VcWlVhiGZ9uo60" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "127.0.0.1:5555": "5370738261766664797570",
+    "2PS6R24430005441": "5378654331766731991881",
+    "Application.entry.executor": "Run",
+    "MODULE_HAP_TIME": "{\"127.0.0.1:5555entry\":\"2025-12-25T12:13:17.385851647Z\",\"2PS6R24430005441entry\":\"2025-12-26T06:53:11.366697269Z\"}",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ace.nodejs.version": "18.20.1",
+    "auto_debug_bundleName": "0000002A14296ADBB898052EF204D562DBB34258CE7F53F9DEBD570A91280C385B41D8A275D68C7C8AE54A595B7465A9EC24A5542F45C497CDEB",
+    "auto_debug_cert_list": "00000023307B966133EA8DCE1F70DBE8B13C144B075BEFBD244B00812B1037494AE3B6880AA71AA504ED2D0513C94B226D19D0",
+    "auto_debug_device_list": "0000014F77086C44307AFAD2F129074E87CD651F9EA177D8236D1580ADE2BFAD3D5F8D6225B8F8E97098878A72E261AE25935B12C7859C0166C1132A9B6C91300B6DC3E9CC05329AA8D72435D0547C097D6157F17F14BE765524535AF09074D9C6D322108AA63E3233FD821121288A81FD9A27921E46B74F4F98DA82C569DB4E9375278464BFC15A4B243E8295797E63AD11533D1F2E6FEA3F621A6445C9A74EDC99E2C3405AB158FCBD7D38F7A4C2F553FEC651F0753E1C2110D0A3D5F76BB8C7A4A4A3F15C982203C17A94CCC24BF830735C26F950E7070059465F23508FA9F149C0F35B63FA9DE556E5C5324B1D62C585F313C7CF0BF01F6601EFF5CED73FBAE12910908F246074B825A5967CEC9F54A489591207F562AD8C13596800196CC812345232FB40F5E26D2CF2EC00BB65835EFE7EDB660817E2476C6F6CF85073B43DDBC215D69B62A7137D2970667680E47110556062E9F8E55B2E44AF8907",
+    "auto_debug_package_name": "0000002AD649EE8E2FEB5E620FE16051CED2DBCF47A47A17EBB1605B0D0220A7EDDEAE74DE20268D0C08F48BFCCAB82B622CC9BB029CFA0176C0",
+    "auto_debug_team_id": "000000237566A494BB56FA2361DBEEB50F32C91BD70FFD25DE89A16A5EC576EEE86B8C39FD57B882427A9F64080F010BA2C0AD",
+    "git-widget-placeholder": "harmony-splash-screen-fix",
+    "projectSizeLastTraceTimestamp-fe2b18f359c90d47522794f0f87aada80c49b31dce2035c049b1d43f2b5c": "1770344104340"
+  },
+  "keyToStringList": {
+    "reqPermissions": []
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/entry/src/main/resources/base/media" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.entry">
+    <configuration name="entry" type="HotReLoadTask" factoryName="Hot Reload">
+      <MODULE_NAME />
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ALL_MODULES>false</ALL_MODULES>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <BLACK_COVERAGE_ENABLE_DATA>false</BLACK_COVERAGE_ENABLE_DATA>
+      <HOT_RELOAD_MODULE_NAME>entry</HOT_RELOAD_MODULE_NAME>
+      <method v="2">
+        <option name="Build.Hvigor.HotReloadBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="entry" type="OhosDebugTask" factoryName="OpenHarmony App">
+      <MODULE_NAME>entry</MODULE_NAME>
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ALL_MODULES>false</ALL_MODULES>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <BLACK_COVERAGE_ENABLE_DATA>false</BLACK_COVERAGE_ENABLE_DATA>
+      <method v="2">
+        <option name="Build.Hvigor.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用级" UseSingleDictionary="true" transferred="true" />
+</project>

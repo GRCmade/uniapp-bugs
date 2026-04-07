@@ -2,6 +2,8 @@ import { SetScreenBrightness, SetScreenBrightnessOptions, SetScreenBrightnessSuc
 import { API_SET_SCREEN_BRIGHTNESS, SetScreenBrightnessApiOptions, SetScreenBrightnessApiProtocol, API_GET_SCREEN_BRIGHTNESS, API_SET_KEEP_SECREEN_ON } from "../protocol.uts"
 import harmonyWindow from '@ohos.window'
 import { BusinessError } from '@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
+import common from '@ohos.app.ability.common';
 
 export const setScreenBrightness : SetScreenBrightness = defineAsyncApi<SetScreenBrightnessOptions, SetScreenBrightnessSuccess>(
 	API_SET_SCREEN_BRIGHTNESS,
@@ -54,6 +56,13 @@ export const getScreenBrightness : GetScreenBrightness = defineAsyncApi<GetScree
 			}
 			try {
 				let brightness = window.getWindowProperties().brightness
+        if(brightness == -1){
+          const context = UTSHarmony.getUIAbilityContext() as common.UIAbilityContext
+          let value = Number(settings.getValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '-1'));
+          if(!isNaN(value) && value >= 0){
+            brightness = formatOutputForDotNumber(value/255 , 2)
+          }
+        }
 				res.resolve({
 					value: formatOutputForDotNumber(brightness, 2)
 				} as GetScreenBrightnessSuccess)
@@ -90,3 +99,30 @@ export const setKeepScreenOn : SetKeepScreenOn = defineAsyncApi<SetKeepScreenOnO
 		});
 	}
 ) as SetKeepScreenOn
+
+export {
+    GetScreenBrightness,
+    GetScreenBrightnessComplete,
+    GetScreenBrightnessCompleteCallback,
+    GetScreenBrightnessFail,
+    GetScreenBrightnessFailCallback,
+    GetScreenBrightnessOptions,
+    GetScreenBrightnessSuccess,
+    GetScreenBrightnessSuccessCallback,
+    SetKeepScreenOn,
+    SetKeepScreenOnComplete,
+    SetKeepScreenOnCompleteCallback,
+    SetKeepScreenOnFail,
+    SetKeepScreenOnFailCallback,
+    SetKeepScreenOnOptions,
+    SetKeepScreenOnSuccess,
+    SetKeepScreenOnSuccessCallback,
+    SetScreenBrightness,
+    SetScreenBrightnessComplete,
+    SetScreenBrightnessCompleteCallback,
+    SetScreenBrightnessFail,
+    SetScreenBrightnessFailCallback,
+    SetScreenBrightnessOptions,
+    SetScreenBrightnessSuccess,
+    SetScreenBrightnessSuccessCallback
+} from "../interface.uts"
