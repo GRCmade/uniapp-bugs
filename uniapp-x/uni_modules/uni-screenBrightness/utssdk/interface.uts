@@ -2,7 +2,7 @@ export interface Uni {
 	/**
 	 * 设置屏幕亮度。
 	 * @tutorial https://uniapp.dcloud.net.cn/api/system/brightness.html
-	 * @tutorial_uni_app_x https://uniapp.dcloud.net.cn/api/system/brightness.html
+	 * @tutorial_uni_app_x https://doc.dcloud.net.cn/uni-app-x/api/system/brightness.html
 	 * @tutorial_uni_app https://uniapp.dcloud.net.cn/api/system/brightness.html
 	 *
 	 * @uniPlatform {
@@ -10,12 +10,12 @@ export interface Uni {
 	 * 		"android": {
 	 * 			"osVer": "5.0",
 	 * 			"uniVer": "√",
-	 * 			"unixVer": "x"
+	 * 			"unixVer": "5.08"
 	 * 		},
 	 * 		"ios": {
 	 * 			"osVer": "12.0",
 	 * 			"uniVer": "√",
-	 * 			"unixVer": "x"
+	 * 			"unixVer": "5.08"
 	 * 		},
 	 *    "harmony": {
 	 *      "osVer": "3.0",
@@ -76,7 +76,7 @@ export interface Uni {
 	/**
 	* 获取屏幕亮度。
 	* @tutorial https://uniapp.dcloud.net.cn/api/system/brightness.html
-	* @tutorial_uni_app_x https://uniapp.dcloud.net.cn/api/system/brightness.html
+	* @tutorial_uni_app_x https://doc.dcloud.net.cn/uni-app-x/api/system/brightness.html
 	* @tutorial_uni_app https://uniapp.dcloud.net.cn/api/system/brightness.html
 	*
 	* @uniPlatform {
@@ -84,12 +84,12 @@ export interface Uni {
 	* 		"android": {
 	* 			"osVer": "5.0",
 	* 			"uniVer": "√",
-	* 			"unixVer": "x"
+	* 			"unixVer": "5.08"
 	* 		},
 	* 		"ios": {
 	* 			"osVer": "12.0",
 	* 			"uniVer": "√",
-	* 			"unixVer": "x"
+	* 			"unixVer": "5.08"
 	* 		},
 	*    "harmony": {
 	*      "osVer": "3.0",
@@ -150,7 +150,7 @@ export interface Uni {
 	/**
 	* 设置是否保持常亮状态。仅在当前应用生效，离开应用后设置失效。
 	* @tutorial https://uniapp.dcloud.net.cn/api/system/brightness.html
-	* @tutorial_uni_app_x https://uniapp.dcloud.net.cn/api/system/brightness.html
+	* @tutorial_uni_app_x https://doc.dcloud.net.cn/uni-app-x/api/system/brightness.html
 	* @tutorial_uni_app https://uniapp.dcloud.net.cn/api/system/brightness.html
 	*
 	* @uniPlatform {
@@ -158,12 +158,12 @@ export interface Uni {
 	* 		"android": {
 	* 			"osVer": "5.0",
 	* 			"uniVer": "√",
-	* 			"unixVer": "x"
+	* 			"unixVer": "5.08"
 	* 		},
 	* 		"ios": {
 	* 			"osVer": "12.0",
 	* 			"uniVer": "√",
-	* 			"unixVer": "x"
+	* 			"unixVer": "5.08"
 	* 		},
 	*    "harmony": {
 	*      "osVer": "3.0",
@@ -174,7 +174,7 @@ export interface Uni {
 	* 	},
 	*   "web": {
 	*     "uniVer": "x",
-	*     "unixVer": "x"
+	*     "unixVer": "5.08"
 	*   },
 	*  "mp":{
 	*    "weixin": {
@@ -228,7 +228,7 @@ export type SetScreenBrightnessSuccess = {};
 export type SetScreenBrightnessSuccessCallback = (result : SetScreenBrightnessSuccess) => void;
 export type SetScreenBrightnessFail = UniError;
 export type SetScreenBrightnessFailCallback = (result : SetScreenBrightnessFail) => void;
-export type SetScreenBrightnessComplete = any;
+export type SetScreenBrightnessComplete = SetScreenBrightnessSuccess | SetScreenBrightnessFail;
 export type SetScreenBrightnessCompleteCallback = (result : SetScreenBrightnessComplete) => void;
 
 export type SetScreenBrightnessOptions = {
@@ -262,7 +262,7 @@ export type GetScreenBrightnessSuccess = {
 export type GetScreenBrightnessSuccessCallback = (result : GetScreenBrightnessSuccess) => void;
 export type GetScreenBrightnessFail = UniError;
 export type GetScreenBrightnessFailCallback = (result : GetScreenBrightnessFail) => void;
-export type GetScreenBrightnessComplete = any;
+export type GetScreenBrightnessComplete = GetScreenBrightnessSuccess | GetScreenBrightnessFail;
 export type GetScreenBrightnessCompleteCallback = (result : GetScreenBrightnessComplete) => void;
 export type GetScreenBrightnessOptions = {
 	/**
@@ -291,14 +291,14 @@ export type SetKeepScreenOnSuccess = {
 export type SetKeepScreenOnSuccessCallback = (result : SetKeepScreenOnSuccess) => void;
 export type SetKeepScreenOnFail = UniError;
 export type SetKeepScreenOnFailCallback = (result : SetKeepScreenOnFail) => void;
-export type SetKeepScreenOnComplete = any;
+export type SetKeepScreenOnComplete = SetKeepScreenOnSuccess | SetKeepScreenOnFail;
 export type SetKeepScreenOnCompleteCallback = (result : SetKeepScreenOnComplete) => void;
 
 export type SetKeepScreenOnOptions = {
 	/**
 	* 是否保持屏幕常亮
 	*/
-	keepScreenOn : Boolean,
+	keepScreenOn : boolean,
 	/**
 	 * 接口调用成功的回调函数
 	 */

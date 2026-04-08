@@ -9,7 +9,7 @@
                 "UNI_APP_X_TYPE_VALIDATION" : true
             },
             "playground" : "standard",
-            "runSignStatus" : 0,
+            "runSignStatus" : 1,
             "type" : "uni-app:app-ios"
         },
         {
@@ -18,6 +18,13 @@
             },
             "playground" : "standard",
             "type" : "uni-app:app-android"
+        },
+        {
+            "env" : {
+                "UNI_APP_X_TYPE_VALIDATION" : true
+            },
+            "playground" : "standard",
+            "type" : "uni-app:app-ios_simulator"
         }
     ]
 }

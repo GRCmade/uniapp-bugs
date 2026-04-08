@@ -4,6 +4,7 @@
     <view class="">slider : {{ slider }}</view>
     <slider :value="slider" @change="sliderChange" step="1" />
     <button @click="setScreenBrightness(20)">setScreenBrightness 20</button>
+    <button @click="setScreenBrightness(45)">setScreenBrightness 45</button>
     <button @click="setScreenBrightness(-10)">setScreenBrightness -10</button>
     <button @click="setScreenBrightness(1999)">setScreenBrightness 1999</button>
     <button @click="getScreenBrightness">getScreenBrightness</button>
