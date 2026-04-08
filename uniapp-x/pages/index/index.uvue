@@ -16,40 +16,40 @@
 				<text class="panel-text">Android/鸿蒙上此亮度设置仅影响当前页面/小程序，离开后会恢复为系统亮度</text>
 				<input class="input-box" v-model="brightnessInput" placeholder="请输入 0 到 1 的值" />
 				<view class="button-row">
-					<button class="action-button" @click="setPresetBrightness(0)">设置 0</button>
-					<button class="action-button" @click="setPresetBrightness(0.5)">设置 0.5</button>
-					<button class="action-button" @click="setPresetBrightness(0.45)">设置 0.45</button>
-					<button class="action-button" @click="setPresetBrightness(1)">设置 1</button>
+					<button id="btn-set-brightness-0" class="action-button" @click="setPresetBrightness(0)">设置 0</button>
+					<button id="btn-set-brightness-05" class="action-button" @click="setPresetBrightness(0.5)">设置 0.5</button>
+					<button id="btn-set-brightness-045" class="action-button" @click="setPresetBrightness(0.45)">设置 0.45</button>
+					<button id="btn-set-brightness-1" class="action-button" @click="setPresetBrightness(1)">设置 1</button>
 				</view>
 				<view class="button-row">
-					<button class="action-button" @click="setCustomBrightness">提交自定义值</button>
-					<button class="action-button" @click="setOverflowBrightness">传入 1.5</button>
+					<button id="btn-set-brightness-custom" class="action-button" @click="setCustomBrightness">提交自定义值</button>
+					<button id="btn-set-brightness-overflow" class="action-button" @click="setOverflowBrightness">传入 1.5</button>
 				</view>
-				<text class="result-text">success：{{ setBrightnessSuccessText }}</text>
-				<text class="result-text">fail：{{ setBrightnessFailText }}</text>
-				<text class="result-text">complete：{{ setBrightnessCompleteText }}</text>
+				<text id="set-brightness-success" class="result-text">success：{{ setBrightnessSuccessText }}</text>
+				<text id="set-brightness-fail" class="result-text">fail：{{ setBrightnessFailText }}</text>
+				<text id="set-brightness-complete" class="result-text">complete：{{ setBrightnessCompleteText }}</text>
 			</view>
 
 			<view class="panel">
 				<text class="panel-title">getScreenBrightness 示例（Web不支持）</text>
 				<text class="result-text">如果设备是自动调节亮度，Android只能获取到自动调节前的亮度。亮度有效范围为0~1</text>
-				<button class="action-button" @click="getCurrentBrightness">读取当前亮度</button>
-				<text class="result-text">当前亮度：{{ getBrightnessValueText }}</text>
-				<text class="result-text">fail：{{ getBrightnessFailText }}</text>
-				<text class="result-text">complete：{{ getBrightnessCompleteText }}</text>
+				<button id="btn-get-brightness" class="action-button" @click="getCurrentBrightness">读取当前亮度</button>
+				<text id="get-brightness-value" class="result-text">当前亮度：{{ getBrightnessValueText }}</text>
+				<text id="get-brightness-fail" class="result-text">fail：{{ getBrightnessFailText }}</text>
+				<text id="get-brightness-complete" class="result-text">complete：{{ getBrightnessCompleteText }}</text>
 			</view>
 
 			<view class="panel">
 				<text class="panel-title">setKeepScreenOn 示例</text>
 				<text class="result-text">浏览器需要https下才能生效</text>
 				<view class="button-row">
-					<button class="action-button" @click="updateKeepScreenOn(true)">keepScreenOn = true</button>
-					<button class="action-button" @click="updateKeepScreenOn(false)">keepScreenOn = false</button>
+					<button id="btn-keep-screen-on" class="action-button" @click="updateKeepScreenOn(true)">keepScreenOn = true</button>
+					<button id="btn-keep-screen-off" class="action-button" @click="updateKeepScreenOn(false)">keepScreenOn = false</button>
 				</view>
-				<text class="result-text">当前状态：{{ keepScreenOnStateText }}</text>
-				<text class="result-text">success：{{ keepScreenOnSuccessText }}</text>
-				<text class="result-text">fail：{{ keepScreenOnFailText }}</text>
-				<text class="result-text">complete：{{ keepScreenOnCompleteText }}</text>
+				<text id="keep-screen-state" class="result-text">当前状态：{{ keepScreenOnStateText }}</text>
+				<text id="keep-screen-success" class="result-text">success：{{ keepScreenOnSuccessText }}</text>
+				<text id="keep-screen-fail" class="result-text">fail：{{ keepScreenOnFailText }}</text>
+				<text id="keep-screen-complete" class="result-text">complete：{{ keepScreenOnCompleteText }}</text>
 			</view>
 
 			<view class="panel">
