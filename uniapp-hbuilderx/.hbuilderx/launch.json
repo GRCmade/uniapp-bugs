@@ -3,13 +3,17 @@
     "configurations" : [
         {
             "customPlaygroundType" : "device",
-            "playground" : "custom",
+            "playground" : "standard",
             "type" : "uni-app:app-ios_simulator"
         },
         {
             "customPlaygroundType" : "device",
             "playground" : "custom",
             "type" : "uni-app:app-ios"
+        },
+        {
+            "playground" : "standard",
+            "type" : "uni-app:app-android"
         }
     ]
 }

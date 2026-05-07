@@ -71,7 +71,18 @@
     "vueVersion" : "3",
     "app-harmony" : {
         "distribute" : {
-            "bundleName" : "com.yuhe.template"
+            "bundleName" : "com.yuhe.template",
+            "signingConfigs" : {
+                "default" : {
+                    "certpath" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1769515271857.cer",
+                    "keyAlias" : "debugKey",
+                    "keyPassword" : "0000001B751EA6BC3AABCDB84573F390F0AC354F03217D9BE9CC1BF5548A98BBEE1E3F36ECE0C4B8BFF605",
+                    "profile" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1776848311429.p7b",
+                    "signAlg" : "SHA256withECDSA",
+                    "storeFile" : "/Users/gaoruicheng/Library/Application Support/HBuilder X/extensions/launcher/agc-certs/1769515271857.p12",
+                    "storePassword" : "0000001B751EA6BC3AABCDB84573F390F0AC354F03217D9BE9CC1BF5548A98BBEE1E3F36ECE0C4B8BFF605"
+                }
+            }
         }
     }
 }
