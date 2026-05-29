@@ -1,26 +1,58 @@
 <template>
-	<view>
-		<button @click="click">click</button>
-	</view>
+    <embed
+        tag="appharmonygetphonenumber"
+        :options="options"
+        @clickprivacytext="onClickPrivacyText"
+        @getphonenumber="onGetPhoneNumber"
+        @ready="onReady"
+        @close="onClose"
+        @error="onError"
+    ></embed>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+  const agreements = [
+      {
+        text: "用户协议",
+        url: "https://xxx"
+      }, {
+        text: "隐私协议",
+        url: "https://xxx"
+      }
+  ]
+  export default {
+    data() {
+      return {
+        options: {
+          show: true,
+          privacyConfig: agreements.map(agreement => agreement.text)
+        }
+      };
+    },
+    methods: {
+      onClickPrivacyText(e) {
+        console.log("点击隐私条款", e);
 
-		},
-		methods: {
-			click(){
-				console.log("click")
-			}
-		}
-	}
+        const {tag} = e.detail
+        const agreement = agreements.find(agreement => agreement.text === tag)
+        if (agreement) {
+          uni.navigateTo({
+            url: `/pages/webview/webview?url=${encodeURIComponent(agreement.url)}`
+          })
+        }
+      },
+      onGetPhoneNumber(e) {
+        console.log("获取手机号回调", e);
+      },
+      onReady(e) {
+        console.log("插件加载完成", e);
+      },
+      onClose(e) {
+        console.log("关闭插件", e);
+      },
+      onError(e) {
+        console.log("插件报错", e);
+      }
+    }
+  };
 </script>
-
-<style>
-</style>
