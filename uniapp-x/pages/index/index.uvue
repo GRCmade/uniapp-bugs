@@ -1,26 +1,140 @@
 <template>
-	<view>
-		<button @click="click">click</button>
+	<view class="page">
+		<view class="header">
+			<text class="eyebrow">ECHARTS + VAPOR</text>
+			<text class="title">Weekly sales</text>
+			<text class="subtitle">Web npm package example</text>
+		</view>
+
+		<view class="chart-card">
+			<view id="sales-chart" class="chart"></view>
+		</view>
+
+		<button class="action-button" @click="toggleData">Switch data set</button>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+<script setup lang="ts">
+	import * as echarts from 'echarts'
 
-		},
-		methods: {
-			click(){
-				console.log("click")
-			}
+	const FIRST_WEEK : number[] = [120, 210, 180, 260, 310, 220, 350]
+	const SECOND_WEEK : number[] = [260, 180, 320, 210, 280, 360, 300]
+	const activeDataSet = ref(0)
+
+	function renderChart(values : number[]) {
+		const chartElement = uni.getElementById('sales-chart') as HTMLElement | null
+		if (chartElement == null) {
+			return
 		}
+		const existingChart = echarts.getInstanceByDom(chartElement)
+		const chart = existingChart != null ? existingChart : echarts.init(chartElement)
+		chart.setOption({
+			grid: {
+				left: 36,
+				right: 20,
+				top: 24,
+				bottom: 32
+			},
+			xAxis: {
+				type: 'category',
+				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+				axisLine: {
+					lineStyle: {
+						color: '#CBD5E1'
+					}
+				},
+				axisTick: {
+					show: false
+				}
+			},
+			yAxis: {
+				type: 'value',
+				splitLine: {
+					lineStyle: {
+						color: '#E2E8F0'
+					}
+				}
+			},
+			series: [{
+				type: 'bar',
+				data: values,
+				barWidth: '56%',
+				itemStyle: {
+					color: '#0F766E',
+					borderRadius: [6, 6, 0, 0]
+				}
+			}]
+		})
 	}
+
+	function toggleData() {
+		activeDataSet.value = activeDataSet.value == 0 ? 1 : 0
+		renderChart(activeDataSet.value == 0 ? FIRST_WEEK : SECOND_WEEK)
+	}
+
+	onReady(() => {
+		renderChart(FIRST_WEEK)
+	})
+
+	onUnload(() => {
+		const chartElement = uni.getElementById('sales-chart') as HTMLElement | null
+		if (chartElement != null) {
+			echarts.dispose(chartElement)
+		}
+
+	})
 </script>
 
 <style>
+	.page {
+		flex: 1;
+		flex-direction: column;
+		background-color: #F1F5F9;
+		padding: 24px 20px;
+	}
+
+	.header {
+		flex-direction: column;
+		margin-bottom: 24px;
+	}
+
+	.eyebrow {
+		color: #0F766E;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin-bottom: 8px;
+	}
+
+	.title {
+		color: #0F172A;
+		font-size: 28px;
+		font-weight: 700;
+		margin-bottom: 6px;
+	}
+
+	.subtitle {
+		color: #64748B;
+		font-size: 15px;
+	}
+
+	.chart-card {
+		flex-direction: column;
+		background-color: #FFFFFF;
+		border-radius: 16px;
+		padding: 12px;
+	}
+
+	.chart {
+		height: 300px;
+	}
+
+	.action-button {
+		background-color: #0F766E;
+		border-radius: 12px;
+		color: #FFFFFF;
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 20px;
+	}
 </style>
