@@ -7,28 +7,22 @@
 		</view>
 
 		<view class="chart-card">
-			<view id="sales-chart" class="chart"></view>
+			<uni-ec-canvas class="chart" canvas-id="sales-chart" height="300px" :ec="ec"></uni-ec-canvas>
 		</view>
 
 		<button class="action-button" @click="toggleData">Switch data set</button>
 	</view>
 </template>
 
-<script setup lang="ts">
-	import * as echarts from 'echarts'
+<script setup>
+	import uniEcCanvas from '@/uni_modules/echarts-for-weixin/uni-ec-canvas/uni-ec-canvas.vue'
 
-	const FIRST_WEEK : number[] = [120, 210, 180, 260, 310, 220, 350]
-	const SECOND_WEEK : number[] = [260, 180, 320, 210, 280, 360, 300]
+	const FIRST_WEEK = [120, 210, 180, 260, 310, 220, 350]
+	const SECOND_WEEK = [260, 180, 320, 210, 280, 360, 300]
 	const activeDataSet = ref(0)
 
-	function renderChart(values : number[]) {
-		const chartElement = uni.getElementById('sales-chart') as HTMLElement | null
-		if (chartElement == null) {
-			return
-		}
-		const existingChart = echarts.getInstanceByDom(chartElement)
-		const chart = existingChart != null ? existingChart : echarts.init(chartElement)
-		chart.setOption({
+	function createChartOption(values) {
+		return {
 			grid: {
 				left: 36,
 				right: 20,
@@ -64,25 +58,15 @@
 					borderRadius: [6, 6, 0, 0]
 				}
 			}]
-		})
+		}
 	}
+
+	const ec = ref({ option: createChartOption(FIRST_WEEK) })
 
 	function toggleData() {
 		activeDataSet.value = activeDataSet.value == 0 ? 1 : 0
-		renderChart(activeDataSet.value == 0 ? FIRST_WEEK : SECOND_WEEK)
+		ec.value.option = createChartOption(activeDataSet.value == 0 ? FIRST_WEEK : SECOND_WEEK)
 	}
-
-	onReady(() => {
-		renderChart(FIRST_WEEK)
-	})
-
-	onUnload(() => {
-		const chartElement = uni.getElementById('sales-chart') as HTMLElement | null
-		if (chartElement != null) {
-			echarts.dispose(chartElement)
-		}
-
-	})
 </script>
 
 <style>
